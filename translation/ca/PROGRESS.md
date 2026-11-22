@@ -11,8 +11,8 @@ the questions still open. The plan is the nine steps of the original brief.
 | 1 | Extractor and round-trip test | done |
 | 2 | Plumbing self-test (`LANG_CA=1 CA_SELFTEST=1`) | done |
 | 3 | Tooling (gentext, lint, render, gap, po, glossary, review) | done |
-| 4 | Glossary | next |
-| 5 | Translate all the text | |
+| 4 | Glossary | done (all Fusion-only terms PROPOSED, awaiting review) |
+| 5 | Translate all the text | next |
 | 6 | Font (· and any missing glyph) | |
 | 7 | Graphics with baked-in text | |
 | 8 | Credits | |
@@ -54,6 +54,9 @@ the questions still open. The plan is the nine steps of the original brief.
     translations, which the Catalan must not copy.
   - `render.py` output was looked at once (accents draw; the vanilla `·` sits high and takes
     8 px, which step 6 fixes). Its colours are approximations, not the game's palettes.
+- Glossary (step 4): `glossary.py import <mzm-cat glossary.md> --dry-run` reports no conflict
+  with mzm-cat: the 35 APPROVED rows carry mzm-cat's Catalan unchanged. The 73 Fusion-only
+  rows are PROPOSED.
 - `get_baserom.sh`: ROM already present, `$BASEROM_DIR`, and the "no source" error were each run.
   The `$BASEROM_US_URL` branch is the mzm-cat code unchanged and was not exercised here.
 
@@ -175,4 +178,7 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 
 ## Open questions
 
-None yet.
+- Glossary: the 73 PROPOSED terms need approving. The ones that shape the most text, where a
+  second option is listed: "Lady" (senyoreta / senyora / Lady), "target" and "objective" (both
+  objectiu), download (baixar / descarregar), Quarantine Bay (Sala de quarantena), Nightmare
+  (Malson), Etecoons and Dachoras (etecoons i dachores), bio-signs (senyals de vida).
