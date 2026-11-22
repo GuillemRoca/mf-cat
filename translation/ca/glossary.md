@@ -72,7 +72,7 @@ width there before approving them.
 | main silo | silo principal | sitja principal | PROPOSED | 1. Follows "Sitja del reactor". |
 | Auxiliary Power Station | Estación de energía auxiliar | Estació d'energia auxiliar | PROPOSED | 1. Literal. |
 | Restricted Laboratory, Restricted Lab | Laboratorio de seguridad | Laboratori restringit | PROPOSED | 1. Literal, matches "Zona restringida". |
-| Pump Control Unit | Unidad de control de bombeo | Unitat de control de bombament | PROPOSED | 1. Literal. |
+| Pump Control Unit | Unidad de control de bombeo | Unitat de control de bombeig | PROPOSED | 1. Literal; "bombament" is one pixel too wide for the banner. |
 | Main Boiler | Caldera principal | Caldera principal | PROPOSED | 1. Literal. |
 | Main Boiler Control Room | Sala de control de la caldera | Sala de control de la caldera | PROPOSED | 1. As the Spanish; "principal" doesn't fit the banner. |
 | breeding environments | entornos de cría | entorns de cria | PROPOSED | 1. Literal. |

@@ -1,3 +1,13 @@
 # IDs whose Catalan text is intentionally the same as the English or the Spanish (e.g. a name
 # that stays as is, or a debug string the game never shows). One per line. The linter counts
 # them as translated and doesn't warn that they match the Spanish.
+LOCATION_01  # sector name and code, kept
+LOCATION_02  # sector name and code, kept
+LOCATION_03  # sector name and code, kept
+LOCATION_04  # sector name and code, kept
+LOCATION_05  # sector name and code, kept
+LOCATION_06  # sector name and code, kept
+MESSAGE_47  # Sí / No: same as the Spanish
+LOCATION_08  # Zona restringida: same words in Catalan and Spanish
+LOCATION_24  # Caldera principal: same words in Catalan and Spanish
+LOCATION_25  # Sala de control de la caldera: same words in Catalan and Spanish

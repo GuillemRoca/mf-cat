@@ -1,0 +1,31 @@
+# Location (banners shown on entering a deck, a sector or a special room)
+#
+# One entry per line: ID = "text", with the IDs of text/english/location.txt.
+# IDs missing here show in English. See translation/ca/README.md.
+
+LOCATION_00 = "{GAP(48)}Coberta principal"
+LOCATION_01 = "{GAP(60)}Sector 1 (SRX)"
+LOCATION_02 = "{GAP(60)}Sector 2 (TRO)"
+LOCATION_03 = "{GAP(60)}Sector 3 (PYR)"
+LOCATION_04 = "{GAP(60)}Sector 4 (AQA)"
+LOCATION_05 = "{GAP(60)}Sector 5 (ARC)"
+LOCATION_06 = "{GAP(60)}Sector 6 (NOC)"
+LOCATION_07 = "{GAP(48)}Sitja del reactor"
+LOCATION_08 = "{GAP(50)}Zona restringida"
+LOCATION_09 = "{GAP(34)}Coberta d'operacions"
+LOCATION_10 = "{GAP(40)}Coberta residencial"
+LOCATION_11 = "{GAP(53)}Molls d'atracada"
+LOCATION_12 = "{GAP(48)}Sala de navegació"
+LOCATION_13 = "{GAP(62)}Sala de dades"
+LOCATION_14 = "{GAP(46)}Sala de seguretat"
+LOCATION_15 = "{GAP(46)}Sala de recàrrega"
+LOCATION_16 = "{GAP(54)}Sala de guardat"
+LOCATION_17 = "{GAP(48)}Sala d'operacions"
+LOCATION_18 = "{GAP(42)}Sala de quarantena"
+LOCATION_19 = "{GAP(36)}Contenció criogènica"
+LOCATION_20 = "{GAP(20)}Nucli del reactor central"
+LOCATION_21 = "{GAP(18)}Estació d'energia auxiliar"
+LOCATION_22 = "{GAP(32)}Laboratori restringit"
+LOCATION_23 = "{GAP(7)}Unitat de control de bombeig"
+LOCATION_24 = "{GAP(50)}Caldera principal"
+LOCATION_25 = "{GAP(7)}Sala de control de la caldera"
