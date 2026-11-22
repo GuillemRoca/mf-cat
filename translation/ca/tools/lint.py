@@ -17,7 +17,9 @@ Errors (exit 1):
   - event codes that differ, in order, from both the Spanish and the English: {SPEAKER(n)},
     {PLAY(n)}, {STOP(n)}, the raw {xHHHH} codes, and in message banners the buttons and
     {INDENT(n)}
-  - a monologue that doesn't end with {ARROW}, or a {NEW_PAGE} in one without {ARROW} before it
+  - a monologue that doesn't end with {ARROW}, or a {NEW_PAGE} in one without {ARROW} before it,
+    or a different number of {ARROW}{ARROW} than the Spanish (IntroProcessText tells the
+    cutscene to change its picture at a double arrow)
 Warnings (exit 1 with --release):
   - stale centring GAPs (fix with gap.py fix)
   - {COLOR(n)} left on at the end of a text that ends in {COLOR(0)} in Spanish, or colours
@@ -169,6 +171,11 @@ def lint(text_dir=catext.CA / "text", middot_glyph=catext.CA / "font" / "glyphs"
                     err("doesn't end with {ARROW}, the Spanish does")
                 if re.search(r"(?<!\{ARROW\})\{NEW_PAGE\}", bare):
                     err("{NEW_PAGE} without {ARROW} before it: the page would vanish without waiting")
+                doubles = len(re.findall(r"\{ARROW\}\{ARROW\}", bare))
+                es_doubles = len(re.findall(r"\{ARROW\}\{ARROW\}", re.sub(r"\{DELAY\(\d+\)\}", "", es)))
+                if doubles != es_doubles:
+                    err(f"{doubles} double {{ARROW}}{{ARROW}}, the Spanish has {es_doubles}: a double arrow"
+                        " is what makes the cutscene change its picture")
 
             used, last_colour = colours(text)
             shipped = set().union(*(colours(o[idx])[0] for o in others))

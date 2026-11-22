@@ -117,6 +117,13 @@ class LintTest(unittest.TestCase):
         items, _ = self.run_lint({"monologue": ['MONOLOGUE_08 = "Una.{ARROW}{NEW_PAGE}Dues.{ARROW}"']})
         self.assertEqual(items, [])
 
+    def test_monologue_keeps_its_double_arrows(self):
+        # MONOLOGUE_12 changes picture once, at its {ARROW}{ARROW}
+        one = 'MONOLOGUE_12 = "Una.{ARROW}{ARROW}{NEW_PAGE}Dues.{ARROW}"'
+        self.assertEqual(self.run_lint({"monologue": [one]})[0], [])
+        none = 'MONOLOGUE_12 = "Una.{ARROW}{NEW_PAGE}Dues.{ARROW}"'
+        self.assertOnly(self.run_lint({"monologue": [none]})[0], "error", "0 double {ARROW}{ARROW}")
+
     def test_monologue_page_size_is_the_shipped_one(self):
         three = 'MONOLOGUE_08 = "U\\ndos\\ntres{ARROW}"'       # over a cutscene: 2 lines
         self.assertOnly(self.run_lint({"monologue": [three]})[0], "error", "has 3 lines, the box holds 2")

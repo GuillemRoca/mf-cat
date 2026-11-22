@@ -50,7 +50,7 @@ width there before approving them.
 | English | Spanish (US ROM) | Catalan | status | notes |
 |---|---|---|---|---|
 | SR388 | SR388 | SR388 | PROPOSED | 1. A name. |
-| research station, the station | estación de investigación | estació d'investigació, l'estació | PROPOSED | 1. Literal. |
+| research station, research team | estación de investigación, equipo de investigación | estació de recerca, equip de recerca | PROPOSED | 1. "Recerca" is the usual Catalan word for scientific research, and short enough for the 224 px lines. |
 | Main Deck | Cubierta principal | Coberta principal | PROPOSED | 1. Literal. *graphic* (pause screen) |
 | Sector 1 (SRX) … Sector 6 (NOC) | Sector 1 -SRX- | Sector 1 (SRX) … Sector 6 (NOC) | PROPOSED | 1. Codes unchanged (they are drawn on the map), with the English parentheses. |
 | Reactor Silo | Silo del reactor | Sitja del reactor | PROPOSED | 1. "Sitja" is the Catalan for a silo. |
