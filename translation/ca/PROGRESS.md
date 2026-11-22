@@ -10,8 +10,8 @@ the questions still open. The plan is the nine steps of the original brief.
 |---|---|---|
 | 1 | Extractor and round-trip test | done |
 | 2 | Plumbing self-test (`LANG_CA=1 CA_SELFTEST=1`) | done |
-| 3 | Tooling (gentext, lint, render, gap, po, glossary, review) | next (gentext done) |
-| 4 | Glossary | |
+| 3 | Tooling (gentext, lint, render, gap, po, glossary, review) | done |
+| 4 | Glossary | next |
 | 5 | Translate all the text | |
 | 6 | Font (· and any missing glyph) | |
 | 7 | Graphics with baked-in text | |
@@ -42,6 +42,18 @@ the questions still open. The plan is the nine steps of the original brief.
   - Not covered by the route: message banners (item pickups, save prompt). They go through the
     same `sMessageTextPointers` table that `romcheck.py` verifies; a screenshot of one is still
     owed (step 5, once there is Catalan text to look at).
+- Tooling (step 3): `python3 -m unittest translation/ca/tools/test_*.py` runs 35 tests
+  (extractor and codec, lint and gap, .po round trip).
+  - `gap.py vanilla`: the centring rule `GAP = round_half_even((220 - w) / 2)` reproduces all
+    118 banner GAPs of the English, German and French text, 117 of the Italian and 104 of the
+    Spanish (those two were centred by hand a pixel or two off).
+  - The linter's rules were checked against what shipped: linting the vanilla German, French
+    and Spanish as if they were the Catalan gives no errors. The English gives 2 (a 225 px line
+    in `MONOLOGUE_02`, and `NAV_105`, which relies on the game's automatic wrap) and the
+    Italian 6 (a 3-line page, swapped buttons, extra `{xE000}`): real quirks of those
+    translations, which the Catalan must not copy.
+  - `render.py` output was looked at once (accents draw; the vanilla `·` sits high and takes
+    8 px, which step 6 fixes). Its colours are approximations, not the game's palettes.
 - `get_baserom.sh`: ROM already present, `$BASEROM_DIR`, and the "no source" error were each run.
   The `$BASEROM_US_URL` branch is the mzm-cat code unchanged and was not exercised here.
 
@@ -107,6 +119,22 @@ every language, so the linter just requires them to match the Spanish):
 - Cxxx sets the end state to 6 (not used by the shipped text).
 
 Button icons are two codes each (`{B_button}` = 030A 030B).
+
+## Text layout (what the linter enforces)
+
+- No line may pass 224 px. The navigation box wraps a glyph that crosses 224 px onto its second
+  line, in the middle of a word, so lines are always broken by hand.
+- `message`: 2 lines; `location`: 1; `pause`: 2 (all exactly as the Spanish). Banners are
+  centred with a leading `{GAP(n)}`; a line that fills the banner has none; an empty line is
+  `{GAP(110)}`; the Yes/No line of a prompt is `{GAP(87)}{INDENT(64)}Yes {INDENT(160)}No` and
+  is never recomputed.
+- `navigation`: pages of 1 or 2 lines. `{NEW_PAGE}` ends a page; so does `{xFB00}`, after which
+  the text continues in a fresh box (it is what follows the Yes/No confirmation).
+- `monologue`: `MONOLOGUE_00` to `07` are full-screen pages of up to 9 lines; `08` to `18`
+  are 2-line pages over a cutscene. Pages end `{ARROW}{NEW_PAGE}`, the text ends `{ARROW}`.
+- Event codes (`{SPEAKER}`, `{PLAY}`, `{STOP}`, raw codes; buttons and `{INDENT}` in banners)
+  must match the Spanish or the English in order. Colours, line breaks, page breaks and delays
+  differ between the shipped languages, so they are only sanity-checked.
 
 ## Decisions
 

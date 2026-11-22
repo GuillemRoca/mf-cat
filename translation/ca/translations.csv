@@ -1,0 +1,3737 @@
+section,id,where,english,spanish,catalan,status,notes
+message,MESSAGE_00,Message banner,"Security Level 1 unlocked.
+Blue hatches now active.","Nivel 1 desactivado.
+Puertas azules habilitadas.",,untranslated,
+message,MESSAGE_01,Message banner,"Security Level 2 unlocked.
+Green hatches now active.","Nivel 2 desactivado.
+Puertas verdes habilitadas.",,untranslated,
+message,MESSAGE_02,Message banner,"Security Level 3 unlocked.
+Yellow hatches now active.","Nivel 3 desactivado.
+Puertas amarillas habilitadas.",,untranslated,
+message,MESSAGE_03,Message banner,"Security Level 4 unlocked.
+Red hatches now active.","Nivel 4 desactivado.
+Puertas rojas habilitadas.",,untranslated,
+message,MESSAGE_04,Message banner,"Missile data downloaded.
+Hold [R] and press [B].","Misiles descargados.
+Pulsa [R] + [B].",,untranslated,
+message,MESSAGE_05,Message banner,"Super Missile data downloaded.
+Hold [R] and press [B].","Supermisiles descargados.
+Pulsa [R] + [B].",,untranslated,
+message,MESSAGE_06,Message banner,"Bomb data downloaded.
+Morph into a ball and press [B].","Bombas descargadas.
+Siendo morfosfera, pulsa [B].",,untranslated,
+message,MESSAGE_07,Message banner,"Power Bomb data downloaded.
+As a ball, hold [R] and press [B].","Bomba de energía descargada.
+Pulsa [R] + [B] (morfosfera).",,untranslated,
+message,MESSAGE_08,Message banner,"Ice effect added to Missiles.
+Use it to freeze enemies.","Misiles mejorados con hielo.
+Úsalos para congelar enemigos.",,untranslated,
+message,MESSAGE_09,Message banner,"Diffusion added to Missiles.
+Charge with [R], fire with [B].","Misiles mejorados con difusión.
+Carga con [R] y dispara con [B].",,untranslated,
+message,MESSAGE_10,Message banner,"Morph Ball ability recovered.
+Press [DOWN] twice to morph.","Habilidad morfosfera asimilada.
+Pulsa [DOWN] dos veces.",,untranslated,
+message,MESSAGE_11,Message banner,"Hi-Jump and Jumpball
+abilities recovered.","Habilidades de supersalto y
+rotosalto recuperadas.",,untranslated,
+message,MESSAGE_12,Message banner,"Screw Attack ability regained.
+Somersault into enemies.","Salto en barrena recuperado.
+Arrasa con los enemigos.",,untranslated,
+message,MESSAGE_13,Message banner,"Space Jump ability recovered.
+Somersault continually in air.","Salto espacial recuperado.
+Salta continuamente en el aire.",,untranslated,
+message,MESSAGE_14,Message banner,"Speed Booster power regained.
+Run until speed boost begins.","Aceleración recuperada.
+Corre hasta que aceleres.",,untranslated,
+message,MESSAGE_15,Message banner,"Varia Suit effect recovered.
+Survive extreme temperatures.","Traje climático recuperado.
+Resiste condiciones extremas.",,untranslated,
+message,MESSAGE_16,Message banner,"Gravity Suit effect recovered.
+Move freely in water.","Traje gravitatorio recuperado.
+Muévete libremente en el agua.",,untranslated,
+message,MESSAGE_17,Message banner,"Charge Beam ability recovered.
+Press and hold [B] to charge.","Rayo recarga recuperado.
+Mantén pulsado [B] para cargar.",,untranslated,
+message,MESSAGE_18,Message banner,"Wide Beam ability recovered.
+Beam widens dramatically.","Rayo ancho recuperado.
+Mejora el alcance del rayo.",,untranslated,
+message,MESSAGE_19,Message banner,"Wave Beam ability recovered.
+Beam now penetrates walls.","Rayo de ondas recuperado.
+Este rayo penetra las paredes.",,untranslated,
+message,MESSAGE_20,Message banner,"Plasma Beam ability recovered.
+Beam now pierces enemies.","Rayo de plasma recuperado.
+El plasma atraviesa al enemigo.",,untranslated,
+message,MESSAGE_21,Message banner,"Ice effect added to beam.
+Use beam to freeze enemies.","Rayo de hielo recuperado.
+Úsalo para congelar enemigos.",,untranslated,
+message,MESSAGE_22,Message banner,"Atmospheric stabilizer online.
+Four units still malfunctioning.","Estabilizador en línea.
+Quedan cuatro por reparar.",,untranslated,
+message,MESSAGE_23,Message banner,"Atmospheric stabilizer online.
+Three units malfunctioning.","Estabilizador en línea.
+Quedan tres por reparar.",,untranslated,
+message,MESSAGE_24,Message banner,"Atmospheric stabilizer online.
+Two units still malfunctioning.","Estabilizador en línea.
+Quedan dos por reparar.",,untranslated,
+message,MESSAGE_25,Message banner,"Atmospheric stabilizer online.
+One unit still malfunctioning.","Estabilizador en línea.
+Queda uno por reparar.",,untranslated,
+message,MESSAGE_26,Message banner,"All stabilizers online.
+Atmospheric levels equalized.","Estabilizadores en línea.
+Niveles atmosféricos igualados.",,untranslated,
+message,MESSAGE_27,Message banner,Water level lowered.,Restableciendo nivel del agua...,,untranslated,
+message,MESSAGE_28,Message banner,Cooling unit operational.,"Unidad de refrigeración
+operativa.",,untranslated,
+message,MESSAGE_29,Message banner,"Lock disengaged.
+Gate opening.","Cierre desbloqueado.
+Abriendo compuerta...",,untranslated,
+message,MESSAGE_30,Message banner,Auxiliary power engaged.,Activando energía auxiliar...,,untranslated,
+message,MESSAGE_31,Message banner,"60 seconds to detachment of
+Restricted Laboratory.","Separación del laboratorio de
+seguridad en 60 segundos...",,untranslated,
+message,MESSAGE_32,Message banner,"Orbit change implemented.
+3 minutes to impact.","Órbita modificada.
+3 minutos para el impacto.",,untranslated,
+message,MESSAGE_33,Message banner,"Save data?
+Yes   No","¿Almacenar datos?
+Sí   No",,untranslated,
+message,MESSAGE_34,Message banner,Save complete.,Datos almacenados.,,untranslated,
+message,MESSAGE_35,Message banner,"Uplink to Adam?
+Yes   No","¿Conectar con Adam?
+Sí   No",,untranslated,
+message,MESSAGE_36,Message banner,"Weapons system
+resupply complete.","Reabastecimiento del
+armamento completado.",,untranslated,
+message,MESSAGE_37,Message banner,"Energy tank
+recharge complete.","Recarga de los tanques
+de energía completada.",,untranslated,
+message,MESSAGE_38,Message banner,"Weapons and energy
+fully restored.","Munición y energía
+totalmente restablecidas.",,untranslated,
+message,MESSAGE_39,Message banner,"Energy Tank acquired.
+Energy capacity increased.","Tanque de energía almacenado.
+Capacidad de energía ampliada.",,untranslated,
+message,MESSAGE_40,Message banner,"Missile Tank acquired.
+Missile capacity increased.","Tanque de misiles almacenado.
+Capacidad de misiles ampliada.",,untranslated,
+message,MESSAGE_41,Message banner,"Power Bomb Tank acquired.
+Power Bomb capacity increased.","Tanque de bomba de energía
+almacenado. Capacidad ampliada.",,untranslated,
+message,MESSAGE_42,Message banner,"Enemy location abnormal.
+Check message frame position.","Posición anormal del enemigo.
+Revisa el origen del mensaje.",,untranslated,
+message,MESSAGE_43,Message banner,"Is your objective clear?
+Yes   No","¿Ha quedado claro?
+Sí   No",,untranslated,
+message,MESSAGE_44,Message banner,"Confirm mission objective?
+Yes   No","¿Quieres confirmar la misión?
+Sí   No",,untranslated,
+message,MESSAGE_45,Message banner,"Engage Sleep Mode?
+To return from Sleep Mode,","¿Usar el salvapantallas?
+Para anularlo, pulsa SELECT",,untranslated,
+message,MESSAGE_46,Message banner,"press SELECT and the L and R
+Buttons at the same time.","y los Botones L y R al
+mismo tiempo.",,untranslated,
+message,MESSAGE_47,Message banner,"Yes
+No","Sí
+No",,untranslated,
+location,LOCATION_00,Location banner,Main Deck,Cubierta principal,,untranslated,
+location,LOCATION_01,Location banner,Sector 1 (SRX),Sector 1 -SRX-,,untranslated,
+location,LOCATION_02,Location banner,Sector 2 (TRO),Sector 2 -TRO-,,untranslated,
+location,LOCATION_03,Location banner,Sector 3 (PYR),Sector 3 -PYR-,,untranslated,
+location,LOCATION_04,Location banner,Sector 4 (AQA),Sector 4 -AQA-,,untranslated,
+location,LOCATION_05,Location banner,Sector 5 (ARC),Sector 5 -ARC-,,untranslated,
+location,LOCATION_06,Location banner,Sector 6 (NOC),Sector 6 -NOC-,,untranslated,
+location,LOCATION_07,Location banner,Reactor Silo,Silo del reactor,,untranslated,
+location,LOCATION_08,Location banner,Restricted Zone,Zona restringida,,untranslated,
+location,LOCATION_09,Location banner,Operations Deck,Cubierta de operaciones,,untranslated,
+location,LOCATION_10,Location banner,Habitation Deck,Cubierta del hábitat,,untranslated,
+location,LOCATION_11,Location banner,Docking Bays,Puertos de atraque,,untranslated,
+location,LOCATION_12,Location banner,Navigation Room,Sala de navegación,,untranslated,
+location,LOCATION_13,Location banner,Data Room,Sala de datos,,untranslated,
+location,LOCATION_14,Location banner,Security Room,Sala de seguridad,,untranslated,
+location,LOCATION_15,Location banner,Recharge Room,Estación de recarga,,untranslated,
+location,LOCATION_16,Location banner,Save Room,Estación de guardado,,untranslated,
+location,LOCATION_17,Location banner,Operations Room,Sala de control,,untranslated,
+location,LOCATION_18,Location banner,Quarantine Bay,Sala de cuarentena,,untranslated,
+location,LOCATION_19,Location banner,Sub-Zero Containment,Sala de criogenización,,untranslated,
+location,LOCATION_20,Location banner,Central Reactor Core,Núcleo del reactor central,,untranslated,
+location,LOCATION_21,Location banner,Auxiliary Power Station,Estación de energía auxiliar,,untranslated,
+location,LOCATION_22,Location banner,Restricted Laboratory,Laboratorio de seguridad,,untranslated,
+location,LOCATION_23,Location banner,Pump Control Unit,Unidad de control de bombeo,,untranslated,
+location,LOCATION_24,Location banner,Main Boiler,Caldera principal,,untranslated,
+location,LOCATION_25,Location banner,Main Boiler Control Room,Sala de control de la caldera,,untranslated,
+navigation,NAV_000,Navigation Room conversation / typed dialogue,"There's been an explosion in
+the Quarantine Bay.
+
+The bay currently stores
+capsules containing recent
+
+samples from SR388 as well as
+parts of your suit infected
+
+by the X parasites.
+
+The cause of the explosion is
+as yet unclear. Investigate.
+
+The Quarantine Bay is here.
+
+Move quickly and quietly...
+
+You are still unable to use
+most of your latent abilities.
+
+Don't forget that, Samus.
+
+Stop at the Navigation Room on
+the way. Uplink from there.
+
+Now, go to the Quarantine Bay.","Se ha producido una explosión
+en la sala de cuarentena.
+
+Esta sala alberga cápsulas con
+muestras de SR388, así como
+
+ciertas partes de tu traje
+que fueron infectadas por el
+
+parásito X.
+
+No he podido determinar la
+causa de la explosión.
+
+Investiga lo ocurrido.
+
+Ésta es la ubicación exacta
+de la sala de cuarentena.
+
+Muévete con sigilo... Todavía
+sigues sin poder usar muchas
+
+de tus habilidades latentes. No
+lo olvides, Samus.
+
+Contacta desde la sala de
+navegación que hay de camino.
+
+Dirígete a la sala de
+cuarentena.",,untranslated,
+navigation,NAV_001,Navigation Room conversation / typed dialogue,Go to the Quarantine Bay.,"Dirígete a la sala de
+cuarentena.",,untranslated,
+navigation,NAV_002,Navigation Room conversation / typed dialogue,"The Quarantine Bay is ahead.
+
+Bio-signs are confirmed.
+Be careful.","La sala de cuarentena está
+cerca. Los sistemas detectan
+
+signos de vida. Ten cuidado.",,untranslated,
+navigation,NAV_003,Navigation Room conversation / typed dialogue,Quarantine Bay is just ahead.,"Dirígete a la sala de
+cuarentena.",,untranslated,
+navigation,NAV_004,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_005,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_006,Navigation Room conversation / typed dialogue,"This is unfortunate news...
+The specimens brought back by
+
+the field team were infected
+by X parasites.
+
+The X can mimic its prey; any
+specimen could have hosted it.
+
+Before the explosion, a
+security sensor scanned one...
+
+The gelatinous X parasites
+invade and rapidly reproduce,
+
+killing the host creature.
+
+They also absorb DNA and
+use it to mimic the host.
+
+You were almost killed by an X
+infection. Only the Metroid
+
+vaccine saved your life.
+
+It seems Metroids were the
+main predators of the X.
+
+That's why the vaccine worked
+so quickly and so well.
+
+But it has also changed your
+cellular makeup. You will never
+
+be infected by X again...
+
+In fact, you can now absorb
+any free-floating X parasites
+
+without a host by merely
+touching them.
+
+This will allow you to replenish
+health and restore weapons.
+
+You may also restore latent
+abilities this way, so pursue
+
+free X parasites whenever
+you possibly can.
+
+This station is home to many
+species...some violent ones.
+
+We must keep the X out of the
+breeding environments at all
+
+costs. This is vital, Samus.
+
+I am already detecting massive
+bio-signs in this region.
+
+The X are gathering.
+
+This may be our chance to
+exterminate them, but...
+
+You are only at 10% battle
+capacity. Your chance of
+
+survival is extremely low.
+
+The Federation needs you alive
+and on duty, Samus...
+
+Now, get going. I have released
+the lock on Level 0 hatches.
+
+Look for the blinking hatches.","Me temo que tengo malas
+noticias...
+
+Los especímenes que el equipo
+de campo trajo consigo
+
+estaban infectados por el
+parásito X.
+
+El X mimetiza a su presa;
+cualquiera de los especímenes
+
+pudo haber sido el huésped.
+Justo antes de la explosión, un
+
+sensor de seguridad pudo
+escanear uno...
+
+Este gelatinoso parásito se
+hospeda y se reproduce
+
+rápidamente, acabando con la
+vida del huésped.
+
+Para conseguir mimetizar a su
+víctima, absorbe su ADN.
+
+La infección del X pudo
+haberte matado. Lo que te ha
+
+salvado la vida ha sido la
+vacuna metroide.
+
+Los Metroides eran los
+principales predadores del X,
+
+por eso la vacuna ha sido tan
+rápida y efectiva. Pero no sólo
+
+eso, también ha modificado tu
+composición celular.
+
+El X no volverá a afectarte...
+De hecho, podrás absorber
+
+cualquier parásito X que flote
+libremente con sólo tocarlo.
+
+Esto te permitirá recuperar
+energía y recargar munición.
+
+Puede que incluso recuperes
+tus habilidades latentes, así
+
+que persigue cualquier
+parásito X que veas flotando.
+
+Esta estación está llena de
+especies diferentes.
+
+Debemos mantener al X lejos
+de los entornos de cría a toda
+
+costa. Es vital, Samus.
+
+Estoy detectando una gran
+actividad en esta zona.
+
+El X se está multiplicando.
+
+Ésta puede ser nuestra única
+oportunidad para acabar con
+
+él, pero... te encuentras
+sólo a un 10% de tu capacidad
+
+de combate. Tus probabilidades
+de sobrevivir son
+
+extremadamente bajas. La
+Federación te necesita con
+
+vida y en activo, Samus...
+
+Ahora, en marcha. He
+desactivado el bloqueo de las
+
+puertas de nivel 0. Busca las
+puertas intermitentes.",,untranslated,
+navigation,NAV_007,Navigation Room conversation / typed dialogue,Proceed to target.,Dirígete a la alerta.,,untranslated,
+navigation,NAV_008,Navigation Room conversation / typed dialogue,"I have received news from HQ.
+
+They can support you with
+downloadable weapons data.
+
+Once you have this data,
+you'll be able to use Missiles.
+
+This will help against some
+enemies your beam can't hurt.
+
+Head to the Data Room
+for the download.
+
+The Data Room is here.
+
+With Missiles, your chance of
+survival climbs to 20%...","Tengo novedades del cuartel
+general.
+
+Han puesto a tu disposición
+nuevos datos de armamento.
+
+En cuanto los descargues,
+podrás lanzar misiles.
+
+Son eficaces contra los
+enemigos inmunes a tu rayo.
+
+Dirígete a la sala de datos
+para descargar la información.
+
+Ésta es su ubicación exacta.
+
+Con estos misiles, tus
+probabilidades de
+
+supervivencia son del 20%...",,untranslated,
+navigation,NAV_009,Navigation Room conversation / typed dialogue,Hurry to the Data Room.,Dirígete a la sala de datos.,,untranslated,
+navigation,NAV_010,Navigation Room conversation / typed dialogue,The Data Room is just ahead.,"La sala de datos está aquí al
+lado.",,untranslated,
+navigation,NAV_011,Navigation Room conversation / typed dialogue,Data Room ahead.,"La habitación de al lado es la
+sala de datos.",,untranslated,
+navigation,NAV_012,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_013,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_014,Navigation Room conversation / typed dialogue,"Electrical interference has
+knocked out the elevators
+
+on the Main Deck.
+
+This may be related to the X.
+I'll work on it. As for you...
+
+Try to find another way to
+the target.
+
+It's located here.
+
+I'm reading huge bio-signs,
+so I hope your Missiles work...
+
+To reload Missiles you can use
+a Recharge Room or absorb
+
+a special type of X parasite.
+You'll see them. Try it out.
+
+Missiles are your only hope.
+Don't hesitate to use them.
+
+Now, find a way to the target.","Una bajada de tensión ha
+bloqueado los ascensores de la
+
+cubierta principal. Puede que
+guarde relación con el X. Le
+
+echaré un vistazo. Y en lo que
+a ti respecta, busca otra
+
+forma de llegar a la alerta.
+
+Ésta es su ubicación.
+
+Las lecturas indican una gran
+presencia de vida;
+
+necesitarás esos misiles...
+Para recargarlos, puedes ir a
+
+una estación de recarga o
+absorber un tipo especial de X.
+
+Los distinguirás de los
+normales. Presta atención.
+
+Los misiles son tu única
+esperanza. No dudes en
+
+usarlos. Ahora, busca un modo
+de llegar a la alerta.",,untranslated,
+navigation,NAV_015,Navigation Room conversation / typed dialogue,Proceed to target.,Avanza hacia la alerta.,,untranslated,
+navigation,NAV_016,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_017,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_018,Navigation Room conversation / typed dialogue,"Samus, it's as I feared. The
+breeding environments have
+
+been invaded by X parasites.
+
+Sector 1 (ＳＲＸ) shows several
+abnormalities on bio-sensors.
+
+Sector 1 is a simulation of
+the SR388 ecosystem.
+
+To get there, take the
+Main Elevator to the access
+
+shaft and use Elevator 1.
+
+Use the Navigation Room just
+inside for further briefing.
+
+I'm not sure, but I think that
+whoever allowed the X into the
+
+environment may also be linked
+to the earlier explosion...","Samus, ha pasado justo lo que
+me temía. El parásito X ha
+
+invadido los entornos de cría.
+
+Los biosensores del sector 1
+(SRX) muestran graves
+
+anomalías. El sector 1 simula el
+ecosistema de SR388.
+
+Para llegar hasta él, coge el
+ascensor principal hasta el
+
+puerto de conexión y baja por
+el ascensor 1.
+
+Una vez allí, contacta desde la
+sala de navegación para
+
+recibir un informe más
+completo.
+
+Tengo mis dudas, pero lo que
+haya dejado entrar al X en el
+
+sector puede que guarde
+relación con la explosión de
+
+antes...",,untranslated,
+navigation,NAV_019,Navigation Room conversation / typed dialogue,Head to Sector 1 (SRX).,Dirígete al sector 1 (SRX).,,untranslated,
+navigation,NAV_020,Navigation Room conversation / typed dialogue,"The Main Elevator leading to
+the access shaft has been
+
+severely damaged.
+
+It will be totally unusable for
+some time, unfortunately.
+
+Some unknown agent is at work.
+
+Something very powerful...
+certainly not human.
+
+I'll report when I know more.
+Now, listen closely.
+
+The X in Sector 1 have invaded
+the atmospheric stabilizers.
+
+They must want to alter the
+environment to their needs.
+
+They are already reproducing.
+
+Clear all 5 atmospheric
+stabilizers to stop them.
+
+Now, get moving.","El ascensor principal que da
+acceso al puerto de conexión
+
+ha sido seriamente dañado.
+
+Desafortunadamente, estará
+inoperativo por un tiempo.
+
+Un agente desconocido está
+actuando. Algo muy poderoso...
+
+Sin duda alguna, no es humano.
+Te avisaré cuando tenga más
+
+información. Ahora, escucha
+con atención.
+
+El X ha invadido los
+estabilizadores atmosféricos
+
+del sector 1.
+
+Querrá alterar el microclima
+de acuerdo a sus necesidades.
+
+De hecho, ya se reproduce
+en masa...
+
+Limpia los 5 estabilizadores
+para detener su proliferación.
+
+Adelante.",,untranslated,
+navigation,NAV_021,Navigation Room conversation / typed dialogue,"There are 5 stabilizers.
+Find and clear them all.","Hay 5 estabilizadores.
+Encuéntralos y límpialos.",,untranslated,
+navigation,NAV_022,Navigation Room conversation / typed dialogue,"The Charge Beam will power
+up your weapon rather handily.
+
+But there is still an
+atmospheric stabilizer left.
+
+Remember, while we're talking,
+the X are reproducing...","El rayo recarga potenciará tu
+arma de forma considerable,
+
+pero todavía queda un
+estabilizador atmosférico por
+
+limpiar.
+
+Recuerda que, mientras
+hablamos, el X sigue
+
+reproduciéndose sin cesar...",,untranslated,
+navigation,NAV_023,Navigation Room conversation / typed dialogue,"One stabilizer still
+remains offline.
+
+While we're talking,
+the X are reproducing...","Todavía queda un
+estabilizador atmosférico por
+
+limpiar.",,untranslated,
+navigation,NAV_024,Navigation Room conversation / typed dialogue,"Atmospheric stabilizers online.
+
+But many X have already made
+it to other sectors, it seems.
+
+In particular...
+
+Sector 2 (TRO), the tropical
+habitat, shows abnormalities.
+
+I suspect the X entered this
+sector with the help of our
+
+unseen saboteur.
+He or it may be in TRO now.
+
+Samus, get over there.
+We need to put an end to this.
+
+Start moving. I'll brief you at
+the TRO Navigation Room.","Se ha recuperado el control
+sobre los estabilizadores.
+
+Pero parece ser que el X ha
+conseguido llegar a otros
+
+sectores. Más concretamente...,
+
+el sector 2 (TRO), el hábitat
+tropical, muestra anomalías.
+
+Sospecho que el X ha llegado
+hasta allí con la ayuda del
+
+saboteador desconocido.
+
+Sea lo que sea esa cosa puede
+que también esté en TRO.
+
+Samus, dirígete hacia el lugar.
+Tenemos que acabar con esto.
+
+Ponte en marcha.
+
+Te daré instrucciones en la
+sala de navegación de TRO.",,untranslated,
+navigation,NAV_025,Navigation Room conversation / typed dialogue,"Proceed to (TRO).
+Use Elevator 2 to get there.","Dirígete al sector 2 (TRO).
+Usa el ascensor 2.",,untranslated,
+navigation,NAV_026,Navigation Room conversation / typed dialogue,"I have learned the identity of
+our mystery saboteur...
+
+Samus, it's an X mimicking you.
+I have named it the SA-X.
+
+I believe the SA-X came
+from the capsule containing
+
+your infected suit parts.
+
+It used a Power Bomb to
+escape the Quarantine Bay.
+
+That explosion breached the
+capsules containing all the
+
+X that started this disaster.
+
+But the SA-X is definitely our
+biggest worry right now.
+
+The SA-X is mimicking you at
+full power. You can't face it.
+
+If you see the SA-X, just run.
+Don't think about fighting...
+
+You are still very vulnerable
+to cold, an unexpected side-
+
+effect of the Metroid vaccine.
+
+Like Metroids, you can be
+frozen by an Ice Beam.
+
+Of course, the SA-X is armed
+with the Ice Beam. Stay away.
+
+If you see it, just run.
+
+HQ says they have Bomb data
+ready in the Data Room.
+
+Bombs will help you find a way
+out if the SA-X traps you.
+
+The Data Room is here, but...
+it's sealed by a Level 1 hatch.
+
+You'll have to find the
+Security Room and release
+
+the Level 1 locks.
+
+But per safety protocols,
+it's not marked on the map.
+
+You'll have to find it on your
+own somehow, Samus.
+
+So, first find the Security
+Room and unlock Level 1
+
+hatches, then go to the Data
+Room and get that Bomb data.
+
+Keep an eye out for the SA-X.","He descubierto la identidad de
+nuestro saboteador...
+
+Samus, el X ha creado una
+copia exacta a ti a partir de
+
+las piezas infectadas de tu
+traje que se hallaban en la
+
+sala de cuarentena. Lo he
+llamado SA-X.
+
+Sin duda, tuvo que usar una
+bomba de energía para escapar
+
+de la sala.
+
+Esa explosión fue la que dañó
+las cápsulas portadoras del X
+
+y la que comenzó todo este
+desastre.
+
+Pero nuestro verdadero
+problema ahora es el SA-X.
+
+El SA-X es como tú, pero
+al máximo de capacidad.
+
+Tus posibilidades frente a él
+son nulas. Si lo ves, huye.
+
+No te cruces en su camino...
+
+Todavía eres muy vulnerable al
+frío, un inesperado efecto
+
+secundario de la vacuna
+metroide.
+
+El rayo de hielo puede
+congelarte, al igual que a los
+
+Metroides.
+
+Como cabe esperar, el SA-X va
+armado con el rayo de hielo.
+
+Mantente alejada de él. Si lo
+ves, escapa.
+
+El cuartel general informa de
+que hay nuevos datos de
+
+armamento listos en la sala de
+datos. Parece que son bombas.
+
+Te ayudarán a encontrar la
+salida si el SA-X te
+
+acorrala.
+
+La sala de datos está aquí,
+pero... está sellada por una
+
+puerta de nivel 1.
+
+Deberás encontrar la sala de
+seguridad y desbloquear las
+
+puertas de nivel 1. El problema
+es que, debido a protocolos de
+
+seguridad, esta sala no está
+señalada en el mapa.
+
+Tendrás que arreglártelas de
+alguna manera, Samus.
+
+Primero, encuentra la sala de
+seguridad y desbloquea las
+
+puertas de nivel 1; luego ve a
+la sala de datos y descarga los
+
+datos de bombas.
+
+Mantén los ojos bien abiertos
+por si aparece el SA-X.",,untranslated,
+navigation,NAV_027,Navigation Room conversation / typed dialogue,"Find the Security Room and
+unlock Level 1 hatches. Then go
+
+to the Data Room and download
+Bomb data.","Encuentra la sala de seguridad
+para desbloquear las puertas
+
+de nivel 1. Después, ve a la sala
+de datos y descarga los
+
+datos de bombas.",,untranslated,
+navigation,NAV_028,Navigation Room conversation / typed dialogue,"You've released the Level 1
+security lock, so blue hatches
+
+are now active. Now, head to
+the Data Room for Bomb data.","Has desactivado el nivel 1 de
+seguridad, así que ya puedes
+
+abrir las puertas azules.
+Ahora descarga los datos de
+
+bombas en la sala de datos.",,untranslated,
+navigation,NAV_029,Navigation Room conversation / typed dialogue,"Proceed to the Data Room to
+download Bomb data.","Dirígete a la sala de datos
+para descargar la información.",,untranslated,
+navigation,NAV_030,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_031,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_032,Navigation Room conversation / typed dialogue,"Samus, we've got trouble.
+
+Releasing the security lock
+may have been a bad idea.
+
+The SA-X has invaded the
+water environment in Sector 4
+
+(AQA) with several thousand X.
+
+With the blue hatches active,
+the SA-X slipped in easily.
+
+The creatures and systems in
+Sector 4 are already showing
+
+multiple irregularities.
+I'm currently investigating.
+
+I'll brief you in the Navigation
+Room when you arrive.
+
+Now, head for Sector 4.","Samus, tenemos problemas.
+
+Quizás no haya sido buena idea
+abrir el nivel 1.
+
+El SA-X ha invadido el entorno
+acuático del sector 4 (AQA)
+
+con miles de X.
+
+Con las puertas azules en
+funcionamiento, el SA-X ha
+
+podido filtrarse con facilidad.
+
+Las criaturas y los sistemas
+del sector 4 ya muestran
+
+múltiples irregularidades.
+Estoy investigándolo.
+
+Te daré más información en la
+sala de navegación del sector.
+
+Avanza hasta el sector 4.",,untranslated,
+navigation,NAV_033,Navigation Room conversation / typed dialogue,"Go to Sector 4 (AQA).
+Brief in the Navigation Room.","Ve al sector 4 (AQA).
+Contacta desde la sala de
+
+navegación.",,untranslated,
+navigation,NAV_034,Navigation Room conversation / typed dialogue,"This sector has taken more
+damage than expected...
+
+I knew the X were powerful
+and destructive, but still...
+
+This seems to be purposeful.
+
+We certainly can't rule out the
+possibility that the SA-X has
+
+a high degree of intelligence.
+
+I find the X fascinating,
+especially this SA-X.
+
+...But I digress. This sector is
+home to a very large creature
+
+the researchers called Serris.
+
+It is capable of moving and
+attacking at ultra-high speed.
+
+The more senseless and
+widespread destruction here
+
+may be attributable to Serris.
+
+No doubt the SA-X released it,
+but I can't be sure why yet.
+
+Serris has returned often
+to the breeding tank here.
+
+Its natural behavior must be
+to go back to it periodically.
+
+It's a valuable specimen, but
+you have been authorized to
+
+terminate it. If you don't,
+it may invade other sectors.
+
+While you're moving, be careful.
+Some broken power nodes have
+
+electrified the water...
+but we can't cut the power.
+
+Doing so would affect the
+whole station adversely.
+
+If you touch the water, you'll
+be electrocuted.
+
+Conserve energy as you go.","Este sector ha sufrido más
+daños de lo que imaginaba...
+
+Sabía que el X era poderoso y
+destructivo, pero no creí que
+
+llegara a serlo tanto...
+Parece decidido en su avance.
+
+No debemos descartar la
+posibilidad de que el SA-X
+
+haya desarrollado una gran
+inteligencia.
+
+El X me tiene fascinado; en
+concreto, el SA-X...
+
+Pero me estoy apartando del
+tema... Este sector es el hogar
+
+de una criatura gigante que
+los científicos bautizaron con
+
+el nombre de Serris.
+Este ser tiene la capacidad de
+
+moverse y atacar a una
+velocidad increíble.
+
+Posiblemente, Serris sea el
+causante de la mayor parte de
+
+los destrozos.
+
+No hay duda de que el SA-X lo
+liberó, pero todavía no estoy
+
+seguro del porqué.
+
+Serris ha estado volviendo a
+menudo al tanque de cría que
+
+hay aquí. A juzgar por su
+comportamiento, podemos
+
+predecir que volverá
+periódicamente a este punto.
+
+Es un espécimen muy valioso,
+aunque tienes autorización
+
+para exterminarlo.
+
+Si no lo haces, podría invadir
+otros sectores.
+
+Ten cuidado en este sector.
+
+Algunos cables de alta tensión
+rotos han electrificado el
+
+agua... y no podemos cortar
+la corriente eléctrica...
+
+Hacerlo afectaría
+negativamente a toda la
+
+estación.
+
+Si tocas el agua, te
+electrocutarás. No pierdas de
+
+vista el indicador de energía.",,untranslated,
+navigation,NAV_035,Navigation Room conversation / typed dialogue,"Terminate Serris.
+Avoid the electrified water.","Destruye a Serris.
+Evita el agua electrificada al
+
+avanzar por el sector.",,untranslated,
+navigation,NAV_036,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_037,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_038,Navigation Room conversation / typed dialogue,Empty,Vaciar,,untranslated,
+navigation,NAV_039,Navigation Room conversation / typed dialogue,Empty.,Vaciar,,untranslated,
+navigation,NAV_040,Navigation Room conversation / typed dialogue,"So Serris had been infected by
+the X, too... Well, as a result,
+
+you recovered another ability.
+
+At this rate, you may be able
+to face the SA-X yet...
+
+But that's still a ways off.
+
+HQ has more support data. This
+time it's Missile upgrade data.
+
+You desperately need this,
+but the Data Room here is
+
+sealed with a Level 4 lock,
+the highest security level.
+
+Let's avoid opening sensitive
+areas unless it's necessary.
+
+Also, the route to the Data
+Room in Sector 2 is blocked by
+
+still more SA-X activity.
+
+I note a deliberate activity
+pattern, as if it is blocking
+
+your recovery intentionally.
+
+Samus, it looks like your best
+option for this download is
+
+in Sector 3 (PYR).
+
+You will find the PYR Data
+Room on your map after
+
+using a Navigation Room there.
+
+Now, head for Sector 3 (PYR).","Así que Serris también había
+sido infectado por el X...
+
+Bueno, por lo menos has
+recuperado otra habilidad...
+
+A este ritmo, quizás puedas
+enfrentarte al SA-X... Pero
+
+todavía queda mucho para eso.
+
+El cuartel general ha enviado
+nuevos datos de apoyo. Esta
+
+vez se trata de una mejora de
+los misiles.
+
+Necesitas esta mejora
+urgentemente, pero la sala de
+
+datos de este sector está
+sellada por una puerta de
+
+nivel 4, el nivel máximo de
+seguridad.
+
+Evita abrir áreas de riesgo
+a no ser que sea necesario.
+
+La ruta a la sala de datos del
+sector 2 también está
+
+bloqueada por culpa del SA-X.
+
+Detecto un patrón deliberado
+en sus acciones, pues parece
+
+querer evitar que te
+recuperes completamente.
+
+Samus, puede que la mejor
+opción para realizar la
+
+descarga sea hacerla en el
+sector 3 (PYR).
+
+Conecta desde la sala de
+navegación de PYR para
+
+localizar la sala de datos en el
+mapa del sector.
+
+Dirígete al sector 3 (PYR).",,untranslated,
+navigation,NAV_041,Navigation Room conversation / typed dialogue,Head for Sector 3 (PYR).,Dirígete al sector 3 (PYR).,,untranslated,
+navigation,NAV_042,Navigation Room conversation / typed dialogue,"Thankfully, the X have not
+invaded this area yet....
+
+The Data Room here is sealed
+by another security hatch.
+
+In order to download, you must
+find the Security Room here
+
+and activate Level 2 hatches.
+
+This may allow the SA-X and X
+parasites into the area...
+
+But we are left with no choice.
+Your recovery is our main goal.
+
+The Data Room is here. As I
+explained, Security Rooms
+
+can't be shown on the map.
+
+Be careful, Samus. You will see
+very violent organisms here.
+
+And avoid the ultra-heated
+areas: your suit can't take
+
+such high temperatures
+yet, but we're working on it.
+
+Level 2 hatches are green.
+
+Release the lock and proceed
+to the Data Room for download.
+
+Super Missile data is ready.
+Your firepower will triple.
+
+First, activate green hatches.
+Then go to the Data Room.
+
+There are no ultra-heated
+areas on this route, so turn
+
+back if you enter one.","Afortunadamente, el X no ha
+invadido todavía este sector...
+
+La sala de datos está sellada
+por otra puerta de seguridad.
+
+Para poder realizar la
+descarga, tendrás que hallar la
+
+sala de seguridad de este
+sector y habilitar las puertas
+
+de nivel 2.
+
+Esto puede provocar que el
+SA-X y el X accedan al área...,
+
+pero no tenemos opción. Tu
+recuperación es prioritaria.
+
+La sala de datos está aquí.
+Como ya te expliqué, las salas
+
+de seguridad no aparecen en el
+mapa.
+
+Ten cuidado, Samus: organismos
+violentos habitan este sector.
+
+Evita las áreas de altas
+temperaturas, ya que tu traje
+
+no puede soportarlas todavía,
+aunque estamos en ello.
+
+Las puertas de nivel 2 son
+las verdes.
+
+Desbloquéalas y llega hasta la
+sala de datos para realizar la
+
+descarga.
+
+Los datos de los supermisiles
+están disponibles. Se
+
+triplicará tu potencia de
+disparo.
+
+Ya sabes, desbloquea las
+puertas verdes y accede a la
+
+sala de datos. No tienes que
+atravesar zonas de altas
+
+temperaturas para llegar,
+así que date la vuelta si
+
+entras en una.",,untranslated,
+navigation,NAV_043,Navigation Room conversation / typed dialogue,"First, unlock green hatches.
+Then go to the Data Room.","Primero, desbloquea las
+puertas verdes.
+
+A continuación, accede a la
+sala de datos.",,untranslated,
+navigation,NAV_044,Navigation Room conversation / typed dialogue,"Level 2 security lock released.
+Green hatches are now active.
+
+Head to the Data Room for
+Super Missile download.","Nivel 2 desbloqueado. Puertas
+verdes operativas.
+
+Descarga los supermisiles en
+la sala de datos.",,untranslated,
+navigation,NAV_045,Navigation Room conversation / typed dialogue,"Head to the Data Room for
+Super Missile download.","Descarga los supermisiles en la
+sala de datos.",,untranslated,
+navigation,NAV_046,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_047,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_048,Navigation Room conversation / typed dialogue,"I see that you encountered a
+rogue Security Robot.
+
+You may destroy it if you meet
+it again. Your safety is vital.
+
+But as to your brief... Level 2
+security locks are released,
+
+so Sectors 5 and 6 are open.
+
+That means those sectors have
+likely been infiltrated by X.
+
+They are much harder to stop
+than we initially suspected...
+
+Sector 5 (ARC) is sub-zero.
+
+You're still susceptible to cold
+from the vaccine side-effects,
+
+so you'll take damage if you
+even set foot inside there.
+
+Avoid Sector 5 for now, but in
+the meantime, HQ is working on
+
+data to adjust your suit for
+extreme temperatures.
+
+Once we have the transmission,
+you can download it, but...
+
+The X have destroyed all the
+Data Rooms you have used so
+
+far. I no longer doubt their
+capacity for critical thought.
+
+You'll have to use the Data
+Room in the night habitat,
+
+Sector 6 (NOC).
+
+Go to Sector 6 and access a
+Navigation Room there.
+
+Tread lightly, Samus. You are
+the only one who can do this.
+
+And the X may be much more
+dangerous than we know...","Veo que te has topado con un
+robot de seguridad...
+
+No dudes en acabar con él si
+vuelves a encontrártelo. Tu
+
+seguridad es lo primero.
+
+Y con respecto a tu misión...
+El nivel 2 de seguridad está
+
+desactivado, así que los
+sectores 5 y 6 están abiertos,
+
+con el consiguiente riesgo de
+invasión por parte del X.
+
+Es más difícil detenerlo de lo
+que creímos en un principio...
+
+Las temperaturas del sector 5
+(ARC) son bajo cero. Como
+
+todavía eres muy sensible al
+frío por el efecto secundario
+
+de la vacuna, si pones un pie
+dentro del sector, perderás
+
+energía sin cesar.
+
+Por ahora conviene evitar el
+sector 5. Mientras tanto, el
+
+cuartel general trabaja en una
+mejora de tu traje que te
+
+permita resistir temperaturas
+extremas. En cuanto reciba la
+
+transmisión, podrás descargar
+los datos de la mejora, pero...
+
+el X ha destruido todas las
+salas de datos que has usado.
+
+Su capacidad de análisis ya
+está fuera de toda duda.
+
+Tendrás que usar la sala de
+datos del hábitat nocturno, el
+
+sector 6 (NOC).
+
+Accede al sector 6 y conecta
+desde la sala de navegación.
+
+Eres la única que puede
+conseguirlo. Ve con pies de
+
+plomo. Puede que el X sea más
+peligroso de lo que creemos...",,untranslated,
+navigation,NAV_049,Navigation Room conversation / typed dialogue,Go to Sector 6 (NOC).,Dirígete al sector 6 (NOC).,,untranslated,
+navigation,NAV_050,Navigation Room conversation / typed dialogue,"Does Samus suspect anything?
+
+ No, I do not think so.
+
+ Good. Monitor her closely.
+
+ Affirmative. Out.","¿Samus sospecha algo?
+
+No lo creo.
+
+Bien. Vigílala de cerca.
+
+Afirmativo. Corto y cierro.",,untranslated,
+navigation,NAV_051,Navigation Room conversation / typed dialogue,Demo use,Escena automática.,,untranslated,
+navigation,NAV_052,Navigation Room conversation / typed dialogue,Head for Sector 6 (NOC).,Accede al sector 6 (NOC).,,untranslated,
+navigation,NAV_053,Navigation Room conversation / typed dialogue,Head for Sector 6 (NOC).,Accede al sector 6 (NOC).,,untranslated,
+navigation,NAV_054,Navigation Room conversation / typed dialogue,"The Varia Suit data is here
+from HQ, ready to download.
+
+Get moving to a Data Room.
+
+But there's a problem...
+
+X from the sub-zero sector
+ARC are in Sector 6 (NOC),
+
+and they...
+
+They've been changed by the
+cold. If you absorb one, you'll
+
+be frozen from within. This
+seems like a deliberate tactic.
+
+Once you download the Varia
+Suit modification, you'll be out
+
+of danger. Just be extremely
+careful until then.
+
+The NOC Data Room is here.
+Remember, avoid the blue X.
+
+Use your beam to stun them
+in order to get by.
+
+Be careful. They are hunting
+you actively now, Samus...
+
+And this area is very dark.
+Proceed with extreme caution.","El cuartel general dice que los
+datos del traje climático ya
+
+están listos para ser
+descargados. Dirígete a la
+
+sala de datos.
+
+Aunque hay un problema...
+
+El X ha llegado hasta NOC desde
+ARC, el sector bajo cero.
+
+El frío lo ha modificado. Si
+absorbes este X, te congelarás
+
+al instante. Es otra prueba de
+que actúa deliberadamente.
+
+En cuanto descargues los
+datos del traje climático,
+
+estarás fuera de peligro.
+Hasta entonces, avanza con
+
+sumo cuidado.
+
+La sala de datos de NOC está
+aquí. Recuerda: evita a los X
+
+azules. Puedes usar tu rayo
+para paralizarlos.
+
+Permanece alerta; te están
+buscando, Samus...
+
+Esta área es muy oscura.
+Extrema la precaución.",,untranslated,
+navigation,NAV_055,Navigation Room conversation / typed dialogue,"Proceed to Data Room for
+Varia Suit modification.","Ve a la sala de datos para
+descargar el traje climático.",,untranslated,
+navigation,NAV_056,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_057,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_058,Navigation Room conversation / typed dialogue,"How did that X download the
+Varia Suit data?
+
+This doesn't seem to make any
+sense at all, unless the X...
+
+Unless the X have the ability
+to process data organically...
+
+At any rate, you have
+the Varia Suit data.
+
+Now you will be protected from
+extreme temperatures.
+
+More importantly, the SA-X will
+no longer be able to freeze
+
+you, so you can escape easier.
+
+But you're still too weak. That
+thing is too much for you.
+
+You currently have no way of
+damaging it.
+
+But my simulations indicate
+that a penetrating weapon like
+
+the Plasma Beam might work.
+
+Developing modification data
+will take HQ some time, though.
+
+There's also a chance that you
+may be able to restore your
+
+Plasma Beam by absorbing a
+large Core-X, as you did with
+
+the Charge Beam function.
+
+As for restoring Ice Beam
+functionality, I doubt it...
+
+Your current cellular makeup
+would reject that addition.
+
+Therefore, HQ has developed
+an Ice Missile upgrade.
+
+This will add a freezing effect
+to your Missiles. It will help.
+
+Go to Sector 5 (ARC) for
+the download.
+
+Now, get moving.","¿Cómo ha podido el X descargar
+los datos del traje climático?
+
+No tiene ningún sentido, a no
+ser que...
+
+A no ser que el X tenga la
+capacidad de procesar datos
+
+de forma orgánica...
+
+Al menos, recuperaste los
+datos del traje climático.
+
+Ahora estarás protegida
+contra las temperaturas
+
+extremas.
+
+Y, lo que es más importante, el
+SA-X ya no podrá congelarte,
+
+con lo que podrás escapar con
+más facilidad.
+
+Pero no está todo ganado:
+todavía sigues muy débil.
+
+No eres rival para él.
+
+Ninguna de tus armas puede
+dañarle. Pero las simulaciones
+
+indican que un arma
+penetrante, como el rayo de
+
+plasma, podría funcionar,
+aunque llevará algún tiempo
+
+que el cuartel general culmine
+su desarrollo.
+
+También existe la posibilidad
+de que recuperes el rayo de
+
+plasma al absorber un X de
+gran tamaño, justo como
+
+ocurrió con el rayo recarga.
+
+En cuanto a restablecer el
+rayo de hielo, no me parece
+
+buena idea...
+
+Tu composición celular lo
+rechazaría. Por este motivo,
+
+el cuartel general ha diseñado
+una mejora de hielo para tus
+
+misiles. Te serán de mucha
+utilidad.
+
+Dirígete al sector 5 (ARC) para
+realizar la descarga.
+
+En marcha.",,untranslated,
+navigation,NAV_059,Navigation Room conversation / typed dialogue,"Proceed to Sector 5 (ARC) for
+Ice Missile download.","Dirígete al sector 5 (ARC) para
+descargar los misiles de hielo.",,untranslated,
+navigation,NAV_060,Navigation Room conversation / typed dialogue,"You need to download data for
+the Ice Missile upgrade, but...
+
+As you might expect, the Data
+Room here is secured.
+
+Level 3 security hatches
+are yellow.
+
+Release the security lock and
+download data as usual.
+
+And experiment with those new
+Missiles. They will be helpful...
+
+You know what to do. Go to it.","Necesitas descargar los datos
+de los misiles de hielo, pero...,
+
+como cabría esperar, la sala
+de datos de este sector está
+
+protegida por una puerta de
+seguridad de nivel 3. Las
+
+puertas con este nivel de
+seguridad son amarillas.
+
+Desactiva el nivel de seguridad
+y descarga los datos como de
+
+costumbre.
+
+Experimenta con los nuevos
+misiles, seguro que te sirven
+
+de ayuda...
+
+Ya sabes lo que tienes que
+hacer. Adelante.",,untranslated,
+navigation,NAV_061,Navigation Room conversation / typed dialogue,"First, release security lock.
+Then access Data Room.","Desactiva el nivel de seguridad
+y penetra en la sala de datos.",,untranslated,
+navigation,NAV_062,Navigation Room conversation / typed dialogue,"Level 3 security lock released.
+Yellow hatches are now active.
+
+Proceed to Data Room for
+Ice Missile data download.","Nivel 3 de seguridad
+desactivado.
+
+Las puertas amarillas ya están
+operativas. Entra en la sala de
+
+datos para descargar los
+misiles de hielo.",,untranslated,
+navigation,NAV_063,Navigation Room conversation / typed dialogue,"Proceed to Data Room for
+Ice Missile download.","Avanza hasta la sala de datos
+y descarga los misiles de hielo.",,untranslated,
+navigation,NAV_064,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_065,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_066,Navigation Room conversation / typed dialogue,"Emergency in Sector 3 (PYR).
+The area could melt down soon.
+
+It seems the Main Boiler's
+cooling unit is malfunctioning.
+
+This could easily destroy the
+entire research station, as
+
+it would likely trigger the
+auto-destruct explosives.
+
+We have about 6 minutes.
+
+Hurry to Sector 3 and access
+the Control Room to the side
+
+of the Main Boiler room.
+
+Most of the systems in PYR
+are down because of this...
+
+Again, we know who to blame.
+The SA-X must have hacked
+
+into the system control file.
+What impressive intelligence.
+
+There's little time. Hurry to
+the Control Room in Sector 3.","Emergencia en sector 3 (PYR).
+Riesgo de fusión.
+
+Parece que el sistema de
+refrigeración de la caldera
+
+central está fallando.
+
+Esto podría suponer la
+destrucción total de la
+
+estación de investigación,
+puesto que afectaría a los
+
+explosivos del sistema de
+autodestrucción.
+
+Tenemos unos 6 minutos
+aproximadamente.
+
+Apresúrate hacia el sector 3 y
+accede a la sala de control
+
+localizada cerca de la caldera
+principal.
+
+La mayoría de los sistemas de
+PYR están inoperativos por
+
+esta causa...
+
+Ambos sabemos quién es el
+culpable. El SA-X ha debido de
+
+infiltrarse en el fichero de
+control del sistema.
+
+Posee una inteligencia
+asombrosa.
+
+El tiempo se nos echa encima.
+Corre hacia la sala de control
+
+del sector 3.",,untranslated,
+navigation,NAV_067,Navigation Room conversation / typed dialogue,"You have little time.
+Hurry to the Control Room.","El tiempo se acaba. Corre a la
+sala de control.",,untranslated,
+navigation,NAV_068,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_069,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_070,Navigation Room conversation / typed dialogue,"The X mimicked a crew member...
+It all makes sense now.
+
+The X can absorb the memories
+and knowledge of their prey.
+
+What an astounding find.
+HQ was very impressed.
+
+But don't you find it strange?
+This could have destroyed the
+
+station with the X in it,
+not to mention the SA-X.
+
+Unusual for a self-preserving
+species like the X. Unless...
+
+Your presence is an even
+greater threat, a threat to
+
+the existence of X elsewhere...
+This is only a hypothesis...
+
+Perhaps...
+Their survival instinct is in
+
+conflict with their newly-
+borrowed intelligence...
+
+Don't let your guard down yet.
+The X are still a threat.
+
+Samus, I see bio-signs on the
+Habitation Deck. Survivors?
+
+The infected crewman you saw
+had survived until recently.
+
+Maybe there's a chance...
+The signs emanate from here.
+
+I have just restored power
+to the Main Elevator.
+
+Use it to return and look for
+any survivors.","Así que el X mimetizó a un
+tripulante. Todo encaja ahora.
+
+El X absorbe la memoria y los
+conocimientos de su presa.
+
+Qué hallazgo tan asombroso.
+El cuartel general está muy
+
+impresionado. Pero hay algo
+que no cuadra en todo esto.
+
+La estación pudo haber sido
+destruida con el X en su
+
+interior, y eso sin mencionar
+al SA-X... No parece muy normal
+
+viniendo de una especie con
+tal instinto de preservación.
+
+A no ser que... tu presencia
+sea una amenaza mayor,
+
+una amenaza para la existencia
+del X en otro lugar...
+
+Pero eso es sólo una hipótesis.
+
+Quizás... su instinto de
+supervivencia ha entrado en
+
+conflicto con los
+conocimientos que acaba de
+
+adquirir...
+
+No bajes la guardia todavía. El
+X sigue siendo una amenaza.
+
+Samus, las lecturas indican
+presencia de vida en la
+
+cubierta del hábitat.
+¿Supervivientes, tal vez?
+
+El tripulante infectado ha
+debido de resistir hasta hace
+
+poco. Quizás tengamos suerte.
+
+Las lecturas corresponden a
+esta área.
+
+He restablecido el suministro
+eléctrico del ascensor
+
+principal. Úsalo para volver y
+busca a posibles
+
+supervivientes.",,untranslated,
+navigation,NAV_071,Navigation Room conversation / typed dialogue,"Proceed to target.
+Search for survivors.","Avanza hacia la alerta. Busca
+a los supervivientes.",,untranslated,
+navigation,NAV_072,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_073,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_074,Navigation Room conversation / typed dialogue,"So the survivors were not
+human... Most unfortunate.
+
+We can now confirm the deaths
+of all crew members.
+
+I imagined this was the case,
+but I had hoped it wasn't so.
+
+I believe the X only infected
+the humans for knowledge...
+
+That form is too weak for
+battle. I am sure the others
+
+were merely food for the X...
+
+Samus, I think they are
+evolving, growing stronger.
+
+Some are now appearing that
+resist your current weapons.
+
+HQ anticipated this and sent
+Power Bomb data as soon as
+
+the hardware team finished it.
+
+Download it immediately.
+Our choice of Data Rooms
+
+is limited to this one in
+Sector 5 (ARC). Go. Now.","Así que los supervivientes no
+eran humanos. Qué desgracia.
+
+Ya podemos confirmar la
+muerte de toda la tripulación.
+
+Me imaginaba que así sería,
+pero no quería perder la
+
+esperanza.
+
+Creo que infectó al tripulante
+sólo por sus conocimientos, ya
+
+que apenas tenía fuerzas para
+enfrentarse a ti.
+
+Posiblemente, el resto de la
+tripulación se convirtiera en
+
+simple alimento del parásito...
+
+Samus, creo que están
+evolucionando y haciéndose
+
+cada vez más fuertes.
+
+Algunos incluso pueden
+resistir tus ataques...
+
+El cuartel general ya lo había
+previsto y ha enviado los
+
+datos de la bomba de energía
+que ha creado el equipo de I+D.
+
+Descárgalos inmediatamente. La
+única sala de datos accesible
+
+es la del sector 5 (ARC).
+Venga, en marcha.",,untranslated,
+navigation,NAV_075,Navigation Room conversation / typed dialogue,"Proceed to Sector 5 (ARC).
+Download Power Bomb data.","Ve al sector 5 (ARC) y
+descarga los datos de la bomba
+
+de energía.",,untranslated,
+navigation,NAV_076,Navigation Room conversation / typed dialogue,"You've been to this Data Room
+before, but I'll show you its
+
+position again.
+
+Now move out.","Ya has estado en esta sala de
+datos, pero te volveré a
+
+mostrar su posición.
+
+Adelante.",,untranslated,
+navigation,NAV_077,Navigation Room conversation / typed dialogue,"Proceed to Sector 5 (ARC).
+Download Power Bomb data.","Ve al sector 5 (ARC) y
+descarga los datos de la bomba
+
+de energía.",,untranslated,
+navigation,NAV_078,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_079,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_080,Navigation Room conversation / typed dialogue,"Samus, return to your ship.
+I have important information.","Samus, regresa a tu nave.
+Tengo información importante.",,untranslated,
+navigation,NAV_081,Navigation Room conversation / typed dialogue,Return to your ship.,Vuelve a tu nave.,,untranslated,
+navigation,NAV_082,Navigation Room conversation / typed dialogue,"The main silo of the Reactor
+Core has gone offline.
+
+That's why all elevators and
+station systems are down.
+
+Elevators and hatches won't
+work. This doesn't bode well...
+
+If you can get to this point,
+you may be able to start the
+
+auxiliary power system.
+
+Then we can figure out why
+the main silo went offline...
+
+By the way, I asked you
+to return here to tell you...
+
+Some strange creatures
+have boarded your ship.
+
+I confirmed that they were not
+X hosts and gave them a berth.
+
+Do you know anything about
+these strange creatures?
+
+Were they the source of the
+healthy bio-signs earlier?
+
+Very well, then. Their presence
+in the midst of this disaster
+
+must have some significance...
+I will keep them here.","El silo principal del reactor
+central se ha desconectado.
+
+Ésa es la razón por la que
+todos los ascensores y
+
+sistemas de la estación están
+inoperativos.
+
+No funcionan ni los ascensores
+ni las puertas. Esto no
+
+presagia nada bueno...
+
+Si consigues llegar hasta este
+punto, es posible que consigas
+
+poner en marcha el sistema de
+energía auxiliar.
+
+Entonces podremos saber por
+qué se ha desconectado el silo
+
+principal...
+
+Por cierto, te pedí que
+vinieras para informarte...
+
+de que unas extrañas
+criaturas han abordado tu
+
+nave.
+
+Confirmé que no eran
+portadoras del X y les habilité
+
+un camarote.
+
+¿Sabes algo acerca de estas
+extrañas criaturas?
+
+¿Eran ellas las que generaban
+la presencia de vida de la que
+
+te hablé anteriormente?
+
+Ah, ya veo. Su supervivencia
+en medio del desastre es muy
+
+significativa...
+Las mantendré aquí dentro.",,untranslated,
+navigation,NAV_083,Navigation Room conversation / typed dialogue,Go to Auxiliary Power Station.,"Dirígete a la estación de
+energía auxiliar.",,untranslated,
+navigation,NAV_084,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_085,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_086,Navigation Room conversation / typed dialogue,"Save Rooms and Recharge Rooms
+are now back online, but with
+
+only auxiliary power, no
+elevators or hatches will work.
+
+Without the main silo online,
+we're still stuck.
+
+I believe the source of the
+problem is the vegetation you
+
+saw earlier choking the
+Reactor Core components.
+
+We'll have to find the source
+of those roots to proceed.","Las estaciones de guardado y
+las de recarga vuelven a estar
+
+en línea, pero, sólo con la
+energía auxiliar, no podremos
+
+hacer funcionar ni los
+ascensores ni las puertas.
+
+Con el silo principal
+desconectado, seguimos sin
+
+poder resolver todos los
+problemas.
+
+Según parece, la causa de la
+avería puede deberse a la
+
+vegetación que oprime los
+componentes del reactor
+
+central...
+
+Tendrás que encontrar el lugar
+de donde proceden las raíces.",,untranslated,
+navigation,NAV_087,Navigation Room conversation / typed dialogue,"Locate and neutralize the
+source of vegetation.","Localiza y destruye el origen
+de esa vegetación.",,untranslated,
+navigation,NAV_088,Navigation Room conversation / typed dialogue,"What? You've restored
+Plasma Beam functionality?
+
+...Most unexpected.
+
+Even so, continue to avoid the
+SA-X. It, too, may be stronger.
+
+And you still lack a few
+abilities crucial to survival...
+
+Wait... Wait a second...
+More trouble. Hold on.
+
+........................................................
+I've isolated the cause.
+
+There's been an explosion in
+the ARC Data Room...
+
+Samus, go to Sector 5.
+
+The damage is staggering.
+Find out what's causing it.","¿Qué? ¿Que has recuperado la
+habilidad del rayo de plasma?...
+
+No me lo esperaba...
+Aún así, no dejes de evitar al
+
+SA-X... Puede que también se
+haya hecho más fuerte.
+
+Además, todavía te quedan por
+recuperar algunas habilidades
+
+clave para tu supervivencia.
+
+Espera... Un momento...
+Más problemas. Un segundo.
+
+........................................................
+He aislado al causante.
+
+Se ha producido una explosión
+en la sala de datos de ARC...
+
+Samus, corre al sector 5.
+
+El daño causado es tremendo.
+Averigua qué lo está
+
+provocando.",,untranslated,
+navigation,NAV_089,Navigation Room conversation / typed dialogue,"Trouble in Sector 5.
+Go there immediately.","Problemas en el sector 5.
+Corre hasta el lugar.",,untranslated,
+navigation,NAV_090,Navigation Room conversation / typed dialogue,"It's gotten worse. The damage
+seems to have been caused by
+
+a creature kept here by the
+researchers, who named it...
+
+the Nightmare.
+
+Apparently, it was a bio-
+mechanical organism designed
+
+for military applications...
+
+It possesses uncommon power
+and can manipulate gravity.
+
+We must assume that it's
+become an X-host.
+
+We have no choice. You must
+find it and defeat it.
+
+I can't confirm the location.
+
+This thing is out of control.
+Hurry before it destroys the
+
+entire station...","Las cosas empeoran. El daño
+ha sido producido por una
+
+criatura que los científicos
+estudiaban aquí. La llamaban...
+
+Pesadilla.
+
+Aparentemente, se trata de un
+organismo biomecánico diseñado
+
+con objetivos militares...
+
+Posee un poder fuera de lo
+común: puede manipular la
+
+gravedad. Debemos asumir que
+el X lo ha mimetizado. No
+
+tenemos elección. Tienes que
+dar con él y destruirlo. No
+
+puedo confirmar su posición.
+
+Esa cosa está fuera de
+control. Encuéntrala antes de
+
+que destruya la estación por
+completo...",,untranslated,
+navigation,NAV_091,Navigation Room conversation / typed dialogue,Find and engage the Nightmare.,Da caza a Pesadilla.,,untranslated,
+navigation,NAV_092,Navigation Room conversation / typed dialogue,Diffusion Missiles: Not used.,Misiles de difusión: no usados.,,untranslated,
+navigation,NAV_093,Navigation Room conversation / typed dialogue,"Release security lock and
+proceed to Data Room.","Desconecta el cierre de
+seguridad y avanza hasta la
+
+sala de datos.",,untranslated,
+navigation,NAV_094,Navigation Room conversation / typed dialogue,"Samus, I'm impressed that you
+were able to make it back.
+
+That trick with the Shinespark
+was very...ingenious.
+
+That's our Samus Aran!
+Magnificent! Truly magnificent!
+
+As a reward, let's fill her in on
+our plan. Hmm, computer?
+
+That is...not advisable.
+
+Bah...
+
+No more joking.
+Samus, get back on task.
+
+I wonder how many players will
+see this message...?","Samus, no te esperaba por
+aquí. Estoy impresionado.
+
+Lo que hiciste con la técnica
+cometa... Muy ingenioso...
+
+¡Ésa es nuestra Samus!
+¡Magnífico, verdaderamente
+
+magnífico! Como recompensa,
+involucrémosla en nuestro plan.
+
+¿Qué opinas, ordenador?
+
+No... lo recomiendo.
+
+Bah...
+
+Dejémonos de bromas.
+Samus, vuelve al trabajo.
+
+Me pregunto cuántos jugadores
+verán este mensaje...",,untranslated,
+navigation,NAV_095,Navigation Room conversation / typed dialogue,"Samus, the plan I mentioned...
+
+Samus, return to the correct
+route immediately.
+
+......","Samus, el plan del que te
+hablaba...
+
+Samus, vuelve a la ruta
+correcta inmediatamente.
+
+...",,untranslated,
+navigation,NAV_096,Navigation Room conversation / typed dialogue,"You upgraded your missiles?
+That's unusual...
+
+There was no word from HQ.
+A procedural error, I'm sure...
+
+Even so, I did not approve of
+bypassing security level 4.
+
+From now on you will use
+more discretion.
+
+In any case, Samus, do you
+remember the Security Robot
+
+you faced earlier? I believe
+the X have infected it.
+
+That is to say, they have
+claimed the organic components
+
+that form its neural network.
+It has entered Sector 6 (NOC).
+
+I don't know what it's planning,
+but let's not wait to find out.
+
+Samus, you know what to do.
+
+To Sector 6, quickly.","¿Has descargado una mejora?
+Ése no es el procedimiento...
+
+No había confirmación del
+cuartel general...
+
+Un error de procedimiento,
+sin duda...
+
+Aun así, no te he pedido que
+te saltaras el nivel 4 de
+
+seguridad.
+
+A partir de ahora, limítate a
+obedecer las órdenes.
+
+De todas formas, Samus,
+¿recuerdas al robot de
+
+seguridad con el que te
+encontraste antes?
+
+Creo que el X ha infectado los
+componentes orgánicos que
+
+forman su red neuronal.
+
+El robot ha entrado en el
+sector 6 (NOC). No sé lo que
+
+planea, pero será mejor no
+esperar e ir a investigar.
+
+Samus, ya sabes lo que has de
+de hacer...
+
+Al sector 6, rápido.",,untranslated,
+navigation,NAV_097,Navigation Room conversation / typed dialogue,"Find the Security Robot in
+Sector 6 and neutralize it.","Encuentra al robot en el
+sector 6 y neutralízalo.",,untranslated,
+navigation,NAV_098,Navigation Room conversation / typed dialogue,"The Security Robot seems to
+have gotten much stronger.
+
+This worries me. Be careful.
+
+But we have another problem.
+
+Once you're done, leave
+NOC immediately.
+
+The SA-X is tracking you.
+
+Don't stay longer than you
+must. Understood?","Parece que la fuerza del robot
+de seguridad ha aumentado
+
+mucho desde la última vez que
+lo viste. Me preocupa. Cuídate.
+
+Y tenemos otro problema: en
+cuanto termines, abandona el
+
+sector NOC rápidamente.
+El SA-X te está siguiendo.
+
+No permanezcas más tiempo del
+necesario, ¿entendido?",,untranslated,
+navigation,NAV_099,Navigation Room conversation / typed dialogue,"Find and neutralize Security
+Robot. Then leave immediately.","Encuentra al robot y
+neutralízalo; luego, escapa.",,untranslated,
+navigation,NAV_100,Navigation Room conversation / typed dialogue,"Samus, you shouldn't have done
+that. You ignored your orders.
+
+You may have to pay a price
+for that quite soon...
+
+......
+
+As you can see, the Federation
+has been secretly working on
+
+a Metroid breeding program.
+
+For peaceful application only,
+of course. Please understand.
+
+But perhaps you already knew
+of this program's existence?
+
+Certainly, you must have had
+doubts when you saw Sector 1.
+
+SRX, a faithful replica of the
+SR388 ecosystem...
+
+Ideal for raising Alpha, Gamma,
+Zeta, and even Omega Metroids.
+
+This research even uncovered
+techniques for rapid growth.
+
+Imagine...creating an Omega
+from a larval Metroid in days...
+
+But that research is finished.
+
+The X has smelled out its
+natural enemy, and one of the
+
+SA-X is on its way here...
+
+ONE? ...Are you saying there
+is more than one SA-X?
+
+Don't be so surprised, Samus.
+
+You know that the X reproduce
+by asexual division. Because of
+
+this mechanism, there are now
+no fewer than 10 SA-X aboard
+
+the station.
+
+......
+
+Samus, you must go.
+Get out. If you stay too long,
+
+the SA-X will destroy you.
+
+Stop only at a Navigation Room
+to uplink to me.
+
+I don't know how HQ is going
+to take this, but you need to
+
+report to them immediately...
+
+Now get going.","Samus, no debiste hacer eso.
+Has ignorado mis órdenes.
+
+Un error que te puede costar
+muy caro...
+
+...
+
+Como has podido comprobar, la
+Federación ha estado llevando
+
+a cabo un programa secreto
+de cría de Metroides.
+
+Con fines pacíficos, claro
+está. Confío en que lo
+
+entiendas.
+
+Aunque quizás ya estuvieras
+al tanto de su existencia...
+
+Seguramente habrás tenido tus
+dudas cuando viste el sector 1.
+
+El SRX, una réplica fidedigna
+del ecosistema de SR388...
+
+Ideal para criar Metroides
+Alfa, Gamma, Zeta e incluso
+
+Omega. Además, la investigación
+desarrolló nuevas técnicas,
+
+como la del crecimiento
+acelerado.
+
+Imagina... poder crear un Omega
+a partir de una larva metroide
+
+en cuestión de días...
+
+Aunque el fin de la
+investigación está cerca...
+
+El X ha detectado a su enemigo
+por naturaleza y uno de los
+
+SA-X ya está en camino...
+
+¡¿Uno?! ¿Quieres decir que hay
+más de un SA-X?
+
+¿Sorprendida, Samus? Ya sabes
+que el X se reproduce por
+
+mitosis. Por este motivo, hay
+no menos de 10 SA-X a bordo
+
+de la estación...
+
+...
+
+Samus, debes irte.
+
+Si tardas demasiado en
+abandonar el sector, uno de
+
+los SA-X te destruirá.
+Detente en la sala de
+
+navegación y contacta desde
+ella.
+
+No sé cómo va a reaccionar el
+cuartel general, pero debes
+
+informarles inmediatamente...
+
+En marcha.",,untranslated,
+navigation,NAV_101,Navigation Room conversation / typed dialogue,Get out of there.,Sal de ahí.,,untranslated,
+navigation,NAV_102,Navigation Room conversation / typed dialogue,"Samus, we're done here. Leave
+the rest to the Federation...
+
+We should be preparing to
+evacuate the station...
+
+Are you joking?! Do they know
+how dangerous the X are?
+
+...How quickly they reproduce?
+
+The Federation has taken an
+interest in the X and SA-X.
+
+They believe this life-form has
+endless potential applications.
+
+This is ridiculous! The X are
+heartless abominations! What
+
+potential could they have?
+
+It is not necessary that you
+understand such matters. The
+
+Federation is coming now. You
+should just leave quietly...
+
+This is madness! They won't
+stand a chance here!
+
+This station will devour them!
+What could be worth the risk!?
+
+Capturing the SA-X, of course.
+
+...Are you serious? Do they
+really think they can succeed?
+
+It will certainly be difficult.
+They don't expect your help.
+
+They knew you would try to
+destroy the SA-X...
+
+That's why they stopped
+sending you support data...
+
+The Plasma Beam modification
+was ready some time ago, but
+
+they withheld it to keep you
+from engaging the SA-X.
+
+Yet somehow you restored that
+function on your own...
+
+They also tried to withhold the
+Diffusion Missile upgrade
+
+because they didn't want you
+to grow too powerful.
+
+But they had already sent it,
+and you tracked it down...
+
+Bravo, Samus.
+
+They must cancel this mission!
+Open a channel to HQ!
+
+I won't let this happen!
+
+They are already on their way.
+
+Fools...","Samus, hemos terminado aquí.
+
+Deja el resto en manos de la
+Federación...
+
+Debemos prepararnos para
+evacuar la estación...
+
+¡¿Estás bromeando?! ¿Saben
+ellos lo peligroso que es el X?
+
+¿O acaso saben la velocidad a
+la que se reproduce esa cosa?
+
+La Federación está interesada
+en el X y en el SA-X. Creen que
+
+este ser tiene infinitas
+aplicaciones potenciales.
+
+¡Eso es ridículo! ¡El X es una
+abominación despiadada! ¿Qué
+
+potencial podría tener?
+
+Eso no es de tu incumbencia.
+La Federación está en camino.
+
+Deberías marcharte...
+
+¡Pero eso es una locura! ¡No
+sobrevivirán! ¡Esta estación
+
+los devorará! ¡¿Acaso
+merece la pena arriesgarse?!
+
+¿A capturar al SA-X? Por
+supuesto.
+
+¿Hablas en serio? ¿Y creen que
+lograrán capturarlo?
+
+Seguro que no será fácil,
+aunque no esperan tu ayuda.
+
+Saben que intentarías
+destruirlo. Por eso dejaron de
+
+enviar datos de ayuda...
+
+Hace tiempo que el rayo de
+plasma fue terminado, pero lo
+
+retuvieron para evitar que te
+enfrentaras al SA-X.
+
+Aunque, de algún modo,
+restableciste esa habilidad
+
+por ti misma...
+
+También intentaron retener los
+datos de los misiles de
+
+difusión para que no te
+hicieras más poderosa.
+
+Pero ya los habían mandado y
+te las arreglaste para
+
+descargarlos...
+Bravo, Samus.
+
+¡Deben cancelar la misión!
+¡Ponme en contacto con el
+
+cuartel general! ¡No dejaré
+que esto siga adelante!
+
+Ya están en camino.
+
+Idiotas...",,untranslated,
+navigation,NAV_103,Navigation Room conversation / typed dialogue,Not used,Not used,,untranslated,
+navigation,NAV_104,Navigation Room conversation / typed dialogue,"Open the hatch!
+
+I have been ordered to confine
+you until the ships arrive.
+
+Don't let them do this. Can't
+you see what will happen, Adam?
+
+...Adam?
+
+.........
+
+...Who is Adam?
+
+...A friend of mine.
+
+And what would this...friend
+advise you to do now?
+
+He would know that the only
+way to end this is to start
+
+the self-destruct cycle. He'd
+know how important it is...
+
+Did this ‟Adam” care for you?
+Would he sit in a safe Command
+
+Room and order you to die?
+
+He would understand that some
+must live and some must die...
+
+He knew what it meant.
+
+He made that sacrifice once.
+
+So, he chose life for you?
+Our fair warrior, Samus Aran...
+
+Your Adam gave his life so
+that you might keep yours...
+
+For the sake of the universe...
+
+.........
+
+How foolish.
+
+How dare you! How could you
+hope to understand, machine?
+
+You know that detonating this
+station in high orbit would not
+
+guarantee the complete
+extinction of the X parasites,
+
+even though the station would
+be utterly destroyed...
+
+You would only succeed in
+removing the one obstacle to
+
+the galaxy's ruin...yourself.
+
+You would ignore this simple
+fact and choose death.
+
+When Adam decided who would
+live, he chose incorrectly.
+
+...!
+
+...If you were to alter the
+station's orbit, then you might
+
+be able to include the planet
+in the vaporization field of
+
+the self-destruct detonation.
+
+...?
+
+You would have to start the
+propulsion sequence now.
+
+Before the Federation arrives.
+
+Samus, this is your last
+mission. Go to the Operations
+
+Room and adjust the station's
+orbit path to intercept SR388.
+
+Then return to your ship
+and escape.
+
+Move quickly, and stay alive.
+
+That's an order!
+
+Any objections, Lady?","¡Abre la puerta!
+
+He recibido órdenes de
+confinarte aquí hasta que
+
+lleguen las naves.
+
+No les dejes que lo hagan. ¿No
+entiendes lo que pasará, Adam?
+
+... ¿Adam?
+
+...
+
+¿Quién es 〝Adam”?
+
+Un amigo mío...
+
+Y ¿qué te aconsejaría hacer
+ahora ese... amigo?
+
+Él diría que la única forma de
+acabar con todo esto es
+
+activando el ciclo de
+autodestrucción. Él sabría la
+
+importancia que tiene...
+
+¿Se preocupaba Adam por ti?
+¿Podría sentarse
+
+tranquilamente en una sala de
+mando y ordenarte que te
+
+quitaras la vida?
+
+Él entendería que algunos
+deben morir para proteger las
+
+vidas de otros... Sabía lo que
+eso significaba. Ya tuvo que
+
+hacer ese sacrificio una vez...
+
+Y... ¿eligió que tú vivieras?
+Nuestra heroína, Samus Aran...
+
+Tu Adam sacrificó su vida para
+proteger la tuya...
+
+¡Por la inmensidad del cosmos!
+
+...
+
+Qué imbécil.
+
+¡¿Cómo te atreves?! ¿Cómo
+podría una máquina como tú
+
+llegar a comprenderlo?
+
+Sabes que detonar la estación
+en una órbita lejana no
+
+garantizaría la total
+extinción del parásito X, ni
+
+siquiera quedando totalmente
+destruida... Sólo conseguirías
+
+eliminar el único obstáculo
+a la ruina de la galaxia... tú.
+
+Podrías ignorar este hecho y
+elegir la muerte.
+
+Entonces estaría claro que
+Adam tomó una decisión
+
+equivocada.
+
+(!)
+
+Si alteraras la órbita de la
+estación, podrías incluir el
+
+planeta en el campo de
+volatilización de la
+
+detonación.
+
+¿Cómo?
+
+Tendrías que iniciar la
+secuencia de propulsión ahora,
+
+antes de que llegue la
+Federación.
+
+Samus, ésta es tu última
+misión. Dirígete a la sala
+
+de control y ajusta la
+órbita de la estación para que
+
+intercepte el planeta SR388.
+
+Después, regresa a tu nave y
+escapa. Date prisa y ten
+
+cuidado.
+
+¡Es una orden!
+
+¿Alguna objeción, señorita?",,untranslated,
+navigation,NAV_105,Navigation Room conversation / typed dialogue,"Lady, what are you doing!?To the Operations Room!","Señorita, ¡¿qué haces?!
+¡A la sala de control!",,untranslated,
+navigation,NAV_106,Navigation Room conversation / typed dialogue,"Go to the Operations Room
+and set a course for SR388.
+
+Then return to your ship and
+evacuate before impact.","Dirígete a la sala de control
+y cambia la trayectoria
+
+para que la estación se
+dirija a SR388.
+
+Después, vuelve a tu nave y
+escapa antes de la colisión.",,untranslated,
+navigation,NAV_107,Navigation Room conversation / typed dialogue,Go to the Operations Room.,Dirígete a la sala de control.,,untranslated,
+navigation,NAV_108,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_109,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+navigation,NAV_110,Navigation Room conversation / typed dialogue,"Not much time before the
+station impacts SR388.
+
+Get out of there.","No queda mucho para que la
+estación impacte contra SR388.
+
+Sal de ahí.",,untranslated,
+navigation,NAV_111,Navigation Room conversation / typed dialogue,"Hurry, get out of there!","¡Rápido, sal de ahí!",,untranslated,
+navigation,NAV_112,Navigation Room conversation / typed dialogue,"Lady, what's troubling you?
+
+You wonder how I started
+the ship? Just think about it.
+
+They lent me a hand...","Señorita, ¿qué te ocurre?
+
+¿No sabes cómo he puesto en
+marcha tu nave? Es fácil...
+
+Ellos me ayudaron...",,untranslated,
+navigation,NAV_113,Navigation Room conversation / typed dialogue,None,None,,untranslated,
+pause,PAUSE_000,"Pause screen, objective","Go to Quarantine Bay. Access
+Navigation Room en route.","Ve a la sala de cuarentena.
+Accede a la sala de navegación.",,untranslated,
+pause,PAUSE_001,"Pause screen, objective",Investigate Quarantine Bay.,"Investiga en la sala de
+cuarentena.",,untranslated,
+pause,PAUSE_002,"Pause screen, objective","Hostile creature sighted.
+Report to Navigation Room.","Criatura hostil detectada.
+Informa desde navegación.",,untranslated,
+pause,PAUSE_003,"Pause screen, objective","X parasite presence confirmed.
+Find origin of bio-signs.","Presencia del X confirmada.
+Investiga las señales de vida.",,untranslated,
+pause,PAUSE_004,"Pause screen, objective","Missile data ready.
+Download immediately.","Datos de misiles listos.
+Descárgalos inmediatamente.",,untranslated,
+pause,PAUSE_005,"Pause screen, objective",Download Missile data.,"Descarga los datos de los
+misiles.",,untranslated,
+pause,PAUSE_006,"Pause screen, objective",Download Missile data.,"Descarga los datos de los
+misiles.",,untranslated,
+pause,PAUSE_007,"Pause screen, objective",Data received. Missiles active.,"Datos recibidos.
+Misiles disponibles.",,untranslated,
+pause,PAUSE_008,"Pause screen, objective",Missile data download complete.,"Descarga de datos de misiles
+terminada.",,untranslated,
+pause,PAUSE_009,"Pause screen, objective","Elevators not operational. Find
+alternate route to target.","Ascensores no operativos.
+Busca una ruta alternativa.",,untranslated,
+pause,PAUSE_010,"Pause screen, objective","Morph Ball ability absorbed.
+Proceed to Navigation Room.","Hab. morfosfera recuperada.
+Avanza a la sala de navegación.",,untranslated,
+pause,PAUSE_011,"Pause screen, objective","X detected in Sector 1 (SRX).
+Investigate and gather data.","X detectado en sector 1 (SRX).
+Investiga y recaba datos.",,untranslated,
+pause,PAUSE_012,"Pause screen, objective","X detected in Sector 1 (SRX).
+Investigate and gather data.","X detectado en sector 1 (SRX).
+Investiga y recaba datos.",,untranslated,
+pause,PAUSE_013,"Pause screen, objective","X detected in Sector 1 (SRX).
+Investigate and gather data.","X detectado en sector 1 (SRX).
+Investiga y recaba datos.",,untranslated,
+pause,PAUSE_014,"Pause screen, objective","Atmospheric stabilizers
+corrupted by X. Investigate.","Estabilizadores atmosféricos
+afectados por el X. Investiga.",,untranslated,
+pause,PAUSE_015,"Pause screen, objective","Charge Beam restored. Proceed
+with atmospheric stabilization.","Rayo recarga restablecido.
+Completa la estabilización.",,untranslated,
+pause,PAUSE_016,"Pause screen, objective","Atmospheric stabilizers online.
+Proceed to Navigation Room.","Estabilizadores en línea.
+Avanza a la sala de navegación.",,untranslated,
+pause,PAUSE_017,"Pause screen, objective","X detected in Sector 2 (TRO).
+Brief in TRO Navigation Room.","X detectado en sector 2 (TRO).
+Conecta en navegación de TRO.",,untranslated,
+pause,PAUSE_018,"Pause screen, objective","Bomb data ready. Unlock Data
+Room hatch and download.","Datos de bombas listos. Ve a la
+sala de datos y descárgalos.",,untranslated,
+pause,PAUSE_019,"Pause screen, objective","Blue hatches now active.
+Proceed to Data Room.","Puertas azules habilitadas.
+Avanza hacia la sala de datos.",,untranslated,
+pause,PAUSE_020,"Pause screen, objective","Blue hatches now active.
+Proceed to Data Room.","Puertas azules habilitadas.
+Avanza hacia la sala de datos.",,untranslated,
+pause,PAUSE_021,"Pause screen, objective","Blue hatches now active.
+Proceed to Data Room.","Puertas azules habilitadas.
+Avanza hacia la sala de datos.",,untranslated,
+pause,PAUSE_022,"Pause screen, objective","Bomb data download complete.
+Proceed to Navigation Room.","Datos de bombas descargados.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_023,"Pause screen, objective","Bomb data download complete.
+Proceed to Navigation Room.","Datos de bombas descargados.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_024,"Pause screen, objective","Bomb data download complete.
+Proceed to Navigation Room.","Datos de bombas descargados.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_025,"Pause screen, objective","Hi-Jump ability absorbed.
+Proceed to Navigation Room.","Supersalto y rotosalto
+activos; ve a navegación.",,untranslated,
+pause,PAUSE_026,"Pause screen, objective","SA-X encountered. Retreat and
+proceed to Navigation Room.","SA-X localizado. Retirada.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_027,"Pause screen, objective","Aberration in Sector 4 (AQA).
+Proceed to Sector 4.","Anomalía en sector 4 (AQA).
+Dirígete al lugar.",,untranslated,
+pause,PAUSE_028,"Pause screen, objective",Engage Serris.,Detén a Serris.,,untranslated,
+pause,PAUSE_029,"Pause screen, objective","Speed Booster power absorbed.
+Proceed to Navigation Room.","Poder de aceleración activo.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_030,"Pause screen, objective",Not displayed,Mensaje no mostrado.,,untranslated,
+pause,PAUSE_031,"Pause screen, objective","Speed Booster power absorbed.
+Proceed to Navigation Room.","Poder de aceleración activo.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_032,"Pause screen, objective","Sinking water level opened new
+areas. Search and proceed.","La bajada del agua ha abierto
+nuevas zonas. Explóralas.",,untranslated,
+pause,PAUSE_033,"Pause screen, objective","New Missile data ready in
+Sector 3 (PYR) Data Room.","Nuevos datos de misiles en la
+sala de datos del sector 3.",,untranslated,
+pause,PAUSE_034,"Pause screen, objective","Locate Security Room and
+activate green hatches.","Localiza la sala de seguridad y
+activa las puertas verdes.",,untranslated,
+pause,PAUSE_035,"Pause screen, objective","Green hatches now active.
+Proceed to Data Room.","Puertas verdes habilitadas.
+Ve a la sala de datos.",,untranslated,
+pause,PAUSE_036,"Pause screen, objective","Green hatches now active.
+Proceed to Data Room.","Puertas verdes habilitadas.
+Ve a la sala de datos.",,untranslated,
+pause,PAUSE_037,"Pause screen, objective","Green hatches now active.
+Proceed to Data Room.","Puertas verdes habilitadas.
+Ve a la sala de datos.",,untranslated,
+pause,PAUSE_038,"Pause screen, objective","Super Missile data downloaded.
+Proceed to Navigation Room.","Supermisiles descargados.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_039,"Pause screen, objective","An unknown event occured.
+Investigate.","Se ha producido un suceso
+desconocido. Investígalo.",,untranslated,
+pause,PAUSE_040,"Pause screen, objective","Repelled Security Robot.
+Proceed to Navigation Room.","Ataque contrarrestado.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_041,"Pause screen, objective","Download support data.
+Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
+Ve al sector 6 (NOC).",,untranslated,
+pause,PAUSE_042,"Pause screen, objective","Download support data.
+Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
+Ve al sector 6 (NOC).",,untranslated,
+pause,PAUSE_043,"Pause screen, objective","Download support data.
+Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
+Ve al sector 6 (NOC).",,untranslated,
+pause,PAUSE_044,"Pause screen, objective","Download support data.
+Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
+Ve al sector 6 (NOC).",,untranslated,
+pause,PAUSE_045,"Pause screen, objective","Download support data.
+Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
+Ve al sector 6 (NOC).",,untranslated,
+pause,PAUSE_046,"Pause screen, objective","Download support data.
+Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
+Ve al sector 6 (NOC).",,untranslated,
+pause,PAUSE_047,"Pause screen, objective","Download Varia Suit data.
+Avoid blue X parasites.","Descarga el traje climático.
+Evita a los X azules.",,untranslated,
+pause,PAUSE_048,"Pause screen, objective","Download Varia Suit data.
+Avoid blue X parasites.","Descarga el traje climático.
+Evita a los X azules.",,untranslated,
+pause,PAUSE_049,"Pause screen, objective","Download Varia Suit data.
+Avoid blue X parasites.","Descarga el traje climático.
+Evita a los X azules.",,untranslated,
+pause,PAUSE_050,"Pause screen, objective","An X has acquired the Varia
+Suit data. Find and recover it!","Un X ha descargado datos del
+traje climático. ¡Recupéralos!",,untranslated,
+pause,PAUSE_051,"Pause screen, objective","Varia Suit effect absorbed.
+Proceed to Navigation Room.","Efecto de traje climático
+asimilado. Ve a navegación.",,untranslated,
+pause,PAUSE_052,"Pause screen, objective","Varia Suit abilities initialized.
+Proceed to Navigation Room.","Efecto de traje climático
+asimilado. Ve a navegación.",,untranslated,
+pause,PAUSE_053,"Pause screen, objective","Download Ice Missile data.
+Proceed to Sector 5 (ARC).","Descarga los misiles de hielo.
+Ve al sector 5 (ARC).",,untranslated,
+pause,PAUSE_054,"Pause screen, objective","Locate Security Room and
+activate yellow hatches.","Localiza la sala de seguridad y
+activa las puertas amarillas.",,untranslated,
+pause,PAUSE_055,"Pause screen, objective","Yellow hatches now active.
+Proceed to Data Room.","Puertas amarillas habilitadas.
+Ve a la sala de datos.",,untranslated,
+pause,PAUSE_056,"Pause screen, objective","Yellow hatches now active.
+Proceed to Data Room.","Puertas amarillas habilitadas.
+Ve a la sala de datos.",,untranslated,
+pause,PAUSE_057,"Pause screen, objective","Yellow hatches now active.
+Proceed to Data Room.","Puertas amarillas habilitadas.
+Ve a la sala de datos.",,untranslated,
+pause,PAUSE_058,"Pause screen, objective","Ice Missile data downloaded.
+Proceed to Navigation Room.","Misiles de hielo descargados.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_059,"Pause screen, objective","Sector 3 (PYR) overheating.
+Proceed to Control Room.","Sobrecalentamiento en PYR.
+Ve a la sala de control.",,untranslated,
+pause,PAUSE_060,"Pause screen, objective","Return temperature to normal
+to avert total meltdown.","Restablece la temperatura
+normal para evitar la fusión.",,untranslated,
+pause,PAUSE_061,"Pause screen, objective","Cooling unit operational.
+Proceed to Navigation Room.","Refrigeración restablecida.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_062,"Pause screen, objective","Bio-signs on Habitation Deck.
+Check for survivors.","Signos de vida en la cubierta
+del hábitat. ¿Supervivientes?",,untranslated,
+pause,PAUSE_063,"Pause screen, objective","Etecoons and Dachoras freed.
+Proceed to Navigation Room.","Etecoones y Dachoras libres.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_064,"Pause screen, objective","Download Power Bomb data.
+Proceed to Sector 5 (ARC).","Descarga la bomba de energía.
+Avanza al sector 5 (ARC).",,untranslated,
+pause,PAUSE_065,"Pause screen, objective","Security lock released.
+Proceed to Data Room.","Seguridad desactivada.
+Ve a la sala de datos.",,untranslated,
+pause,PAUSE_066,"Pause screen, objective","Power Bomb data downloaded.
+Proceed to Navigation Room.","Bomba de energía descargada.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_067,"Pause screen, objective","Power Bomb data downloaded.
+Proceed to Navigation Room.","Bomba de energía descargada.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_068,"Pause screen, objective","Power Bomb data downloaded.
+Proceed to Navigation Room.","Bomba de energía descargada.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_069,"Pause screen, objective",Return to starship.,Regresa a la nave.,,untranslated,
+pause,PAUSE_070,"Pause screen, objective",Return to starship.,Regresa a la nave.,,untranslated,
+pause,PAUSE_071,"Pause screen, objective","Central Reactor Core down.
+Engage auxiliary at target.","Reactor central desconectado.
+Activa la energía auxiliar.",,untranslated,
+pause,PAUSE_072,"Pause screen, objective","Central Reactor Core down.
+Engage auxiliary at target.","Reactor central desconectado.
+Activa la energía auxiliar.",,untranslated,
+pause,PAUSE_073,"Pause screen, objective","Space Jump ability absorbed.
+Find Auxiliary Power Station.","Salto espacial asimilado. Busca
+estación de energía auxiliar.",,untranslated,
+pause,PAUSE_074,"Pause screen, objective","Auxiliary power engaged.
+Prior outage cause unknown.","Energía auxiliar en uso. Causa
+del apagón desconocida.",,untranslated,
+pause,PAUSE_075,"Pause screen, objective","Prior outage caused by plant
+roots in core. Investigate.","Apagón causado por raíces en
+el reactor. Investiga.",,untranslated,
+pause,PAUSE_076,"Pause screen, objective","Prior outage caused by plant
+roots in core. Investigate.","Origen de las raíces eliminado.
+Rayo de plasma absorbido.",,untranslated,
+pause,PAUSE_077,"Pause screen, objective","Prior outage caused by plant
+roots in core. Investigate.","Investiga lo ocurrido en el
+sector 5 (ARC).",,untranslated,
+pause,PAUSE_078,"Pause screen, objective","Source of plant roots treated.
+Plasma Beam ability absorbed.","Origen de las raíces eliminado.
+Rayo de plasma absorbido.",,untranslated,
+pause,PAUSE_079,"Pause screen, objective","Locate source of trouble
+in Sector 5 (ARC). Engage.","Problemas en el sector 5 (ARC).
+Halla la causa e intercéptala.",,untranslated,
+pause,PAUSE_080,"Pause screen, objective","Organism ‟Nightmare” is on a
+rampage. Find it and engage.","Organismo 〝Pesadilla” fuera de
+control. Encuéntralo y detenlo.",,untranslated,
+pause,PAUSE_081,"Pause screen, objective","Gravity Suit effect absorbed.
+Proceed to Navigation Room.","Efecto de traje gravitarorio
+asimilado. Ve a navegación.",,untranslated,
+pause,PAUSE_082,"Pause screen, objective","Gravity Suit effect absorbed.
+Proceed to Navigation Room.","Efecto de traje gravitarorio
+asimilado. Ve a navegación.",,untranslated,
+pause,PAUSE_083,"Pause screen, objective","Level 4 security lock released.
+Proceed to Navigation Room.","Nivel 4 desactivado. Ve a la
+sala de navegación.",,untranslated,
+pause,PAUSE_084,"Pause screen, objective","Level 4 security lock released.
+Proceed to Navigation Room.","Nivel 4 desactivado. Ve a la
+sala de navegación.",,untranslated,
+pause,PAUSE_085,"Pause screen, objective",Data Room located.,Sala de datos localizada.,,untranslated,
+pause,PAUSE_086,"Pause screen, objective","New Missile data downloaded.
+Diffusion added to Missiles.","Nuevos datos descargados.
+Misiles difusos disponibles.",,untranslated,
+pause,PAUSE_087,"Pause screen, objective","Security Robot B.O.X. detected
+in Sector 6 (NOC). Engage.","Robot B.O.X. detectado en el
+sector 6 (NOC). Intercéptalo.",,untranslated,
+pause,PAUSE_088,"Pause screen, objective","Security Robot B.O.X. detected
+in Sector 6 (NOC). Engage.","Robot B.O.X. detectado en el
+sector 6 (NOC). Intercéptalo.",,untranslated,
+pause,PAUSE_089,"Pause screen, objective","Security Robot B.O.X. detected
+Sector 6 (NOC). Engage.","Robot B.O.X. detectado en el
+sector 6 (NOC). Intercéptalo.",,untranslated,
+pause,PAUSE_090,"Pause screen, objective","Security Robot B.O.X. detected
+Sector 6 (NOC). Engage.","Robot B.O.X. detectado en el
+sector 6 (NOC). Intercéptalo.",,untranslated,
+pause,PAUSE_091,"Pause screen, objective","B.O.X. Robot destroyed.
+Leave Sector 6 immediately.","Robot B.O.X. destruido.
+Abandona el sector 6. Rápido.",,untranslated,
+pause,PAUSE_092,"Pause screen, objective","Metroids released by SA-X.
+Evacuate Restricted Lab.","Metroides liberados. Evacua el
+laboratorio de seguridad.",,untranslated,
+pause,PAUSE_093,"Pause screen, objective","Metroids released by SA-X.
+Evacuate Restricted Lab.","Metroides liberados. Evacua el
+laboratorio de seguridad.",,untranslated,
+pause,PAUSE_094,"Pause screen, objective",Restricted Lab jettisoned.,"Laboratorio de seguridad
+desacoplado.",,untranslated,
+pause,PAUSE_095,"Pause screen, objective",Restricted Lab jettisoned.,"Laboratorio de seguridad
+desacoplado.",,untranslated,
+pause,PAUSE_096,"Pause screen, objective","Screw Attack ability restored.
+Proceed to Navigation Room.","Salto en barrena restablecido.
+Ve a la sala de navegación.",,untranslated,
+pause,PAUSE_097,"Pause screen, objective",They want to capture an SA-X?,¿Quieren capturar un SA-X?,,untranslated,
+pause,PAUSE_098,"Pause screen, objective","Prevent Federation landing.
+Activate self-destruct.","Evita llegada de la Federación.
+Solución: ¿autodestrucción?",,untranslated,
+pause,PAUSE_099,"Pause screen, objective","Set orbit to impact SR388.
+Return to ship and evacuate.","Cambia la órbita para impactar
+con SR388 y escapa en la nave.",,untranslated,
+pause,PAUSE_100,"Pause screen, objective","Set orbit to impact SR388.
+Return to ship and evacuate.","Cambia la órbita para impactar
+con SR388 y escapa en la nave.",,untranslated,
+pause,PAUSE_101,"Pause screen, objective","Set orbit to impact SR388.
+Return to ship and evacuate.","Cambia la órbita para impactar
+con SR388 y escapa en la nave.",,untranslated,
+pause,PAUSE_102,"Pause screen, objective","Set orbit to impact SR388.
+Return to ship and evacuate.","Cambia la órbita para impactar
+con SR388 y escapa en la nave.",,untranslated,
+pause,PAUSE_103,"Pause screen, objective","Return to ship immediately.
+Evacuate station.","Vuelve a tu nave de inmediato.
+Abandona la estación.",,untranslated,
+pause,PAUSE_104,"Pause screen, objective","Return to ship immediately.
+Evacuate station.","Vuelve a tu nave de inmediato.
+Abandona la estación.",,untranslated,
+pause,PAUSE_105,"Pause screen, objective","Return to ship immediately.
+Evacuate station.","Vuelve a tu nave de inmediato.
+Abandona la estación.",,untranslated,
+pause,PAUSE_106,"Pause screen, objective","Return to ship immediately.
+Evacuate station.","Vuelve a tu nave de inmediato.
+Abandona la estación.",,untranslated,
+pause,PAUSE_107,"Pause screen, objective","Regained Ice Beam ability.
+Omega Metroid attack possible.","Rayo de hielo recuperado.
+Es posible atacar al Omega.",,untranslated,
+pause,PAUSE_108,"Pause screen, objective",Collision imminent.,Colisión inminente.,,untranslated,
+pause,PAUSE_109,"Pause screen, objective","Line 1
+Line 2","Line 1
+Line 2",,untranslated,
+pause,PAUSE_110,"Pause screen, objective","Line 1
+Line 2","Line 1
+Line 2",,untranslated,
+monologue,MONOLOGUE_00,Monologue or narration,"The ship's computer has
+notified me of our approach to
+the Biologic Space Labs, or
+B.S.L, research station. During
+my surgery, the research team
+sent the last batch of
+creatures we captured there,
+as well as the infected pieces
+of my Power Suit. After
+
+regaining consciousness, I
+learned that an unexplained
+explosion rocked the station.
+For some reason, this awoke
+a nameless fear in my heart,
+and now I am being sent there
+to investigate.
+
+My mission on the B.S.L station
+will be overseen by my new
+ship's computer. Following
+the commands of this blunt,
+computerized CO is something
+I have to bear, as it was a
+condition of my taking the
+ship. For someone who dislikes
+taking orders, this is the
+
+second time I've found myself
+having to do so. It makes me
+recall my other CO...","El ordenador de a bordo indica
+que nos aproximamos a la
+estación de investigación de
+Laboratorios Espaciales
+Biometrox (B.S.L). Mientras me
+encontraba en quirófano, el
+equipo de investigación envió
+a este lugar las últimas
+criaturas capturadas,
+
+así como las piezas infectadas
+de mi traje. Cuando recuperé
+el conocimiento, fui informada
+de que una extraña explosión
+había sacudido la estación.
+Por alguna razón, esa noticia
+despertó un miedo
+indescriptible en mi interior...
+
+Ahora me encuentro de camino
+para investigar lo ocurrido. Mi
+misión en la estación de B.S.L
+será supervisada por el nuevo
+ordenador de mi nave. Tengo
+que obedecer a este estricto
+O. J. computerizado, ya que se
+me impuso como condición para
+poder obtener esta nave.
+
+Por paradójico que parezca, a
+pesar de que soy una persona
+a la que no le gusta nada
+obedecer las órdenes de nadie,
+ésta es la segunda vez que me
+encuentro en la obligación de
+hacerlo. El recuerdo del otro
+O. J. me viene a la mente...",,untranslated,
+monologue,MONOLOGUE_01,Monologue or narration,"That computer reminds me of a
+gruff Federation CO I served
+under named Adam Malkovich. He
+called me ‟Lady” on missions;
+from anyone else, it would've
+sounded sarcastic, but Adam
+made it sound dignified. Out of
+respect and with some irony, I
+named the computer after him.","Este ordenador me recuerda a
+un estricto O. J. de la
+Federación con el que trabajé,
+llamado Adam Malkovich. En las
+misiones me llamaba 〝señorita”;
+en boca de otro habría sonado
+sarcástico, pero en él
+resultaba elegante.
+
+Con todo mi respeto, y un poco
+de ironía, decidí ponerle el
+mismo nombre...",,untranslated,
+monologue,MONOLOGUE_02,Monologue or narration,"As I listened to the briefing,
+my thoughts turned to Adam.
+The real Adam understood me
+well. He would end orders by
+saying, ‟Any objections, Lady?”
+He knew I wouldn't disagree.
+That was just his way of
+noting our trust. I wonder if I
+can trust this computer, too...","Mientras recibía el informe, me
+acordé de Adam. El verdadero
+Adam me conocía bien. Siempre
+terminaba con un 〝¿alguna
+objeción, señorita?”. Sabía
+que no pondría pegas; era su
+forma de demostrar nuestra
+confianza mutua. ¿Podré fiarme
+también de este ordenador?...",,untranslated,
+monologue,MONOLOGUE_03,Monologue or narration,"The SA-X. An enemy with my
+strongest abilities. But does
+it have reason? Probably not.
+It's just a killing machine. In
+my current state, I can't face
+it head-on. The SA-X is me,
+only heartless. I must stop it
+before it learns its potential
+and threatens the universe...","El SA-X. Un enemigo que tiene
+mis habilidades más potentes.
+¿Tendrá capacidad de
+razonamiento? Probablemente
+no. Es sólo una máquina de
+matar. No puedo hacerle frente
+en este estado. El SA-X es
+como yo, sólo que sin corazón.
+
+Debo detenerlo antes de que
+descubra su potencial y se
+convierta en una amenaza para
+el universo...",,untranslated,
+monologue,MONOLOGUE_04,Monologue or narration,"Etecoons and Dachoras. I've
+met these intelligent beings
+before. They seemed to
+recognize me, as well. How
+unusual to meet again here.
+In the past, they've helped me
+unleash abilities I didn't know
+I had. But where did they run
+to? I hope they're safe...","Etecoones y Dachoras... No es
+la primera vez que me topo con
+estos seres inteligentes y
+creo que ellos también me han
+reconocido. No me esperaba
+volver a verlos aquí. Hace
+tiempo, me ayudaron a
+descubrir habilidades ocultas
+que desconocía poseer.
+
+Pero ¿a dónde habrán ido?
+Espero que se encuentren a
+salvo...",,untranslated,
+monologue,MONOLOGUE_05,Monologue or narration,"The real Adam would have said
+the same thing about that
+incident, but he would have
+softened the blow. He was
+relentless in his criticism, but
+he always cared... He was not
+a machine obsessed with duty.
+No such compassion could
+exist in that computer...","El verdadero Adam habría
+dicho lo mismo del incidente,
+pero suavizando el problema.
+Era duro en sus críticas, pero
+siempre se preocupaba por mí.
+Él no era una máquina
+obsesionada con el
+procedimiento.
+
+Este ordenador nunca podría
+llegar a ser tan comprensivo...",,untranslated,
+monologue,MONOLOGUE_06,Monologue or narration,"As soon as the Federation
+ships land, the X will overwhelm
+them and absorb the knowledge
+and power of their occupants.
+The X are just waiting for the
+hunt to begin, and then they'll
+spread across the universe.
+Galactic civilization will end.
+
+The X hunger for form,
+knowledge, and power. They
+mimic these perfectly. But
+they cannot copy the soul.
+They're single-minded,
+instinctively seeking to
+increase in number. They're
+a plague, and the Federation
+underestimates their threat.
+
+The X must not leave here.
+I must destroy them all before
+the Federation arrives. This
+station has a self-destruct
+mechanism. I must use it to
+destroy the X here and on the
+planet. I must send them to
+oblivion. Them, the station, and
+myself, if I have to.","En cuanto las naves de la
+Federación aterricen, el X se
+apoderará de los conocimientos
+de sus ocupantes. El X está
+preparándose para invadir el
+universo... Será el fin de la
+civilización galáctica.
+
+El X está hambriento de nuevas
+formas de vida, de
+conocimientos y de poder. Los
+mimetiza a la perfección, pero
+no puede copiar el alma. Tiene
+sólo un objetivo: multiplicarse.
+Es una plaga y la Federación
+está subestimando la amenaza
+que representa.
+
+El X no debe salir de aquí.
+Debo acabar con él usando el
+mecanismo de autodestrucción
+de la estación antes de que
+llegue la Federación. Sólo así
+podré destruir el X presente
+en la nave y el que pueda
+existir en el planeta.
+
+Tengo que enterrarlos en el
+olvido. Al parásito, a la
+estación y a mí misma, si
+fuera necesario.",,untranslated,
+monologue,MONOLOGUE_07,Monologue or narration,"That perfect military mind...
+The wisdom of Adam Malkovich
+continued to serve even after
+death. Until today, I had no
+idea that the minds of leaders
+and scientists were frequently
+uploaded to computers.
+My incredible reunion with Adam
+may have saved the universe...
+
+But how will the beings of
+the universe view our resolve?
+I doubt they will understand
+what we did...the danger we
+barely averted. They will hold
+tribunals and investigations.
+They will hold us responsible.
+Adam understood this, and he
+spoke to me in my anger...
+
+‟Do not worry. One of them will
+understand. One of them must.”
+
+I've reflected upon his words,
+and I see the wisdom in them.
+We are all bound by our
+experiences. They are the
+limits of our consciousness.
+
+But in the end, the human soul
+will ever reach for the truth...
+This is what Adam taught me.
+
+Just one detail still bothers
+me. This ship can only be
+started manually. Yet, before I
+faced the Omega Metroid, the
+ship moved on its own, guided
+by someone's hands. Is it
+possible? Adam...?","Esa mente militar tan
+perfecta... La sabiduría de
+Adam Malkovich sigue viva
+incluso después de su muerte.
+Hasta el día de hoy, nunca
+hubiera imaginado que las
+mentes de los líderes y
+científicos se transfieren a
+ordenadores.
+
+Mi increíble reencuentro con
+Adam puede haber salvado al
+universo...
+
+Pero ¿cómo se tomarán ahí
+fuera nuestra decisión?
+Dudo que comprendan nuestras
+intenciones. El peligro que
+hemos logrado evitar. Habrá
+investigaciones y juicios; nos
+acusarán de ser responsables.
+Adam lo entendió así y le
+escuché indignada por la rabia.
+
+〝No te preocupes. Uno de ellos
+lo comprenderá. Tiene que ser
+así.”
+
+He reflexionado sobre sus
+palabras y veo la sabiduría
+que emana de ellas. Estamos
+limitados por nuestras
+experiencias; son la prisión de
+nuestra conciencia.
+
+Pero, al final, el alma humana
+siempre buscará la verdad...
+Eso es lo que Adam me enseñó.
+
+Sólo hay un detalle que no
+logro comprender... Esa nave
+sólo puede controlarse
+manualmente. Justo antes de
+que me encontrara con el
+Metroid Omega, la nave se
+movió sola, controlada por
+alguien o algo... ¿Será...?
+¿Adam?...",,untranslated,
+monologue,MONOLOGUE_08,Monologue or narration,"I'd been assigned to watch
+over Biologic's research team,
+
+so I once again found myself
+on the surface of SR388.","Me asignaron al cuidado del
+equipo de investigación de
+
+Biometrox, así que volví a
+encontrarme sobre la
+
+superficie de SR388.",,untranslated,
+monologue,MONOLOGUE_09,Monologue or narration,"It was there that I was
+attacked by a life-form I had
+
+never encountered before.","En mitad de la misión, un
+ser desconocido me atacó.",,untranslated,
+monologue,MONOLOGUE_10,Monologue or narration,"It was only later that I
+learned the identity of my
+
+attacker: the parasitic
+organism we now know as X.
+
+Unaware of my condition,
+I was returning to the station
+
+when disaster struck.","Más tarde me enteré de que lo
+que me había atacado era un
+
+organismo parasitario que
+habíamos llamado el X.
+
+Totalmente ajena a lo que me
+estaba sucediendo, decidí
+
+volver a la estación, cuando
+ocurrió el accidente.",,untranslated,
+monologue,MONOLOGUE_11,Monologue or narration,"Once the X had infested my
+central nervous system, I lost
+
+consciousness and my ship
+drifted into an asteroid belt.","Después de que el X... invadiera
+mi sistema nervioso central,
+
+perdí el conocimiento y la
+nave se desvió hacia un
+
+cinturón de asteroides.",,untranslated,
+monologue,MONOLOGUE_12,Monologue or narration,"The ship's emergency systems
+automatically ejected the
+
+escape pod before impact.
+Biologic's vessel recovered it
+
+and transported me to
+Galactic Federation HQ.
+
+However, during the journey,
+the X multiplied within me,
+
+corrupting large areas of my
+Power Suit.","El sistema de emergencia
+expulsó automáticamente la
+
+vaina de escape y la estación
+de Biometrox la recogió.
+
+Me llevaron al cuartel general
+de la Federación Galáctica.
+
+Mientras, el X seguía
+multiplicándose en mi interior,
+
+corrompiendo distintas partes
+de mi traje...",,untranslated,
+monologue,MONOLOGUE_13,Monologue or narration,"It then came to light that
+the organic components of my
+
+Power Suit had become so
+integrated with my system
+
+that it could not be removed
+while I was unconscious.","Luego se descubrió que los
+componentes orgánicos de mi
+
+traje se habían integrado
+tanto con mi cuerpo que no
+
+podían quitármelo mientras
+seguía inconsciente.",,untranslated,
+monologue,MONOLOGUE_14,Monologue or narration,"Large portions of my suit had
+to be surgically removed,
+
+dramatically altering my
+physical appearance. However,
+
+the X in my central nervous
+system were too embedded to
+
+be removed safely. I was given
+a minimal chance of survival.","Varias partes de mi traje
+tuvieron que ser retiradas
+
+quirúrgicamente, alterando
+gravemente mi físico.
+
+Sin embargo, el X estaba tan
+extendido por mi sistema
+
+nervioso central que no
+pudieron extirparlo.
+
+Me llegaron a dar por muerta.",,untranslated,
+monologue,MONOLOGUE_15,Monologue or narration,"Then, someone found a cure.
+
+They proposed using a Metroid
+cell to make an anti-X vaccine.
+
+It seems that the Federation
+had managed to preserve a
+
+cell culture from the last
+infant Metroid from SR388.
+
+The serum was prepared and
+injected without delay.","Pero entonces alguien propuso
+emplear células metroides para
+
+crear una vacuna contra el X.
+
+La Federación había
+conservado un cultivo de
+
+células de la última cría de
+Metroid...
+
+Prepararon el suero y me lo
+inyectaron de inmediato.",,untranslated,
+monologue,MONOLOGUE_16,Monologue or narration,"The X parasites were
+immediately and completely
+
+destroyed.
+
+As for me, one life ended...
+yet I survived, reborn
+
+as something different.","El parásito X fue destruido
+por completo y al instante.
+
+Y en cuanto a mí, había llegado
+la hora de pasar página en mi
+
+vida y comenzar un nuevo
+capítulo; algo diferente.",,untranslated,
+monologue,MONOLOGUE_17,Monologue or narration,"Pondering this fact, I realize...
+
+I owe the Metroid hatchling my
+life twice over.","Reflexionando sobre ello, me di
+cuenta de que...
+
+es la segunda vez que un
+Metroid me salva la vida.",,untranslated,
+monologue,MONOLOGUE_18,Monologue or narration,"We'll soon be arriving at the
+B.S.L research station.
+
+I must prepare for docking.","Pronto llegaremos a la
+estación de investigación de
+
+B.S.L. Debo prepararme para el
+aterrizaje.",,untranslated,
