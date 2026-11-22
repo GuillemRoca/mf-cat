@@ -9,8 +9,8 @@ the questions still open. The plan is the nine steps of the original brief.
 | # | Step | State |
 |---|---|---|
 | 1 | Extractor and round-trip test | done |
-| 2 | Plumbing self-test (`LANG_CA=1 CA_SELFTEST=1`) | next |
-| 3 | Tooling (gentext, lint, render, gap, po, glossary, review) | |
+| 2 | Plumbing self-test (`LANG_CA=1 CA_SELFTEST=1`) | done |
+| 3 | Tooling (gentext, lint, render, gap, po, glossary, review) | next (gentext done) |
 | 4 | Glossary | |
 | 5 | Translate all the text | |
 | 6 | Font (· and any missing glyph) | |
@@ -20,13 +20,28 @@ the questions still open. The plan is the nine steps of the original brief.
 
 ## Verified
 
-- Vanilla `make` matches `mf_us.sha1` (checked after every commit so far; no upstream file
-  touched yet).
+- Vanilla `make` matches `mf_us.sha1`, checked before every commit (last: after the LANG_CA
+  hooks went into `Makefile`, `linker.ld` and `src/new_file_intro.c`).
 - `extract.py --check`: all 2223 strings of the seven languages, re-encoded from the dumps, are
   byte for byte what their pointers read in the ROM, and together they cover the whole text
   blob (0x6b2fac-0x72eee0). The only bytes no table points at are six lone terminators (an
   unreferenced empty string after the last navigation string of each language but the first).
   `test_extract.py` runs the same check on a fresh dump and on the committed one.
+- Plumbing self-test (`make LANG_CA=1 CA_SELFTEST=1`), two ways:
+  - `romcheck.py --selftest`: `mf_us_ca.gba` has the size of the base ROM and differs from it
+    only in the 318 pointers of the English slot and in 76 581 bytes appended at 0x79ecc8;
+    every English pointer leads to an identical copy of its vanilla string.
+  - `selftest.py`: the same scripted input played on vanilla and on the self-test ROM in
+    headless mGBA from power-on gives 271 identical screenshots (pixel for pixel). The route
+    covers a new game, the whole intro (monologue text, the ship computer's typed dialogue), the
+    first briefing (coloured words, Yes/No prompt), the "Main Deck" and "Navigation Room"
+    location banners, the conversation in the first Navigation Room, the status screen and the
+    Sleep Mode prompt of the pause screen. Eleven frames are kept as PNG in
+    `translation/ca/build/selftest/` (gitignored). I looked at them: each shows what its label
+    says.
+  - Not covered by the route: message banners (item pickups, save prompt). They go through the
+    same `sMessageTextPointers` table that `romcheck.py` verifies; a screenshot of one is still
+    owed (step 5, once there is Catalan text to look at).
 - `get_baserom.sh`: ROM already present, `$BASEROM_DIR`, and the "no source" error were each run.
   The `$BASEROM_US_URL` branch is the mzm-cat code unchanged and was not exercised here.
 
@@ -107,10 +122,26 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 - **Charmap** lives in `translation/ca/charmap.txt` (upstream's `charmap.txt` is a TODO stub):
   the mzm one plus Fusion's control codes, with the button icons as two codes.
 
+## Upstream files touched
+
+- `Makefile`: one `include translation/ca/ca.mk`, right after `TARGET` gets its `.gba`.
+- `linker.ld`: under `#ifdef LANG_CA`, a `.ca_data` section after `.data` that holds
+  `translation/ca/build/ca_text.o(.rodata)`.
+- `src/new_file_intro.c`: under `#ifdef LANG_CA`, the include of the generated
+  `ca/text_tables.h`; the two blobs that are pointer tables (`sBlob_79c5c0_79cdd8`,
+  `sBlob_79ce10_79e6a0`) become arrays of pointers with the same contents except the English
+  entries; `sMonologueTextPointersEnglish` gets its 19 pointers from the same header.
+
 ## Environment notes
 
 - Toolchain used here: `binutils-arm-none-eabi` (apt), agbcc built from pret/agbcc and installed
   into `tools/agbcc` (gitignored), python3 with Pillow, libpng-dev, libmgba-dev 0.10.2.
+- `gbashot` (from mzm-cat) gained `peek8/16/32 ADDR` and `poke8/16/32 ADDR VALUE`, to read the
+  game state while scripting a route and to place Samus. Useful addresses (from `linker.ld`):
+  `gCurrentRoom` 0x0300002D, `gSamusData.xPosition` 0x0300125A, `.yPosition` 0x0300125C,
+  `gEventCounter` 0x03000B87, `gMainGameMode` 0x03000BDE.
+- The docking bay exit is on the LEFT. The first shaft (room 6) is tall; the hatch to the
+  Navigation Room is at its top left (Samus at x=0x180, y=0x23f stands next to it).
 - Base ROM: sparse checkout of `metroid-fusion/` from the private ROM repository, copied to
   `mf_us_baserom.gba` (gitignored by `*.gba`).
 

@@ -54,6 +54,9 @@ endif
 BASEROM := $(TARGET)_baserom.gba
 TARGET := $(TARGET).gba
 
+# Catalan translation (LANG_CA=1): see translation/ca/README.md
+include translation/ca/ca.mk
+
 # Default target
 .PHONY: all
 all: $(TARGET)

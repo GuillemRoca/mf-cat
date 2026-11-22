@@ -1112,4 +1112,11 @@ SECTIONS {
         src/menus/game_over.o(.data);
         src/ending.o(.data);
     } >rom
+
+#ifdef LANG_CA
+    /* Catalan translation: new data only, after everything else (translation/ca/ca.mk) */
+    .ca_data : ALIGN(4) {
+        translation/ca/build/ca_text.o(.rodata);
+    } >rom
+#endif // LANG_CA
 }

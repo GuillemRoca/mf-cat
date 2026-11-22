@@ -18,6 +18,10 @@
 #include "data/projectile_data.h"
 #include "data/audio.h"
 
+#ifdef LANG_CA
+#include "ca/text_tables.h" // generated: translation/ca/tools/gentext.py
+#endif // LANG_CA
+
 void unk_99940(void); // For V-blank callback
 u8 SpecialCutsceneGetRandomNumber(void);
 
@@ -272,7 +276,11 @@ const u16** sMonologueTextPointers[LANGUAGE_COUNT] = {
     sMonologueTextPointersSpanish
 };
 
+#ifdef LANG_CA
+static const u16* sBlob_79c5c0_79cdd8[] = { CA_TABLES_79C5C0_79CDD8 };
+#else // !LANG_CA
 static u8 sBlob_79c5c0_79cdd8[] = INCBIN_U8("data/Blob_79c5c0_79cdd8.bin");
+#endif // LANG_CA
 
 const u16** sLocationTextPointers[LANGUAGE_COUNT] = {
     (const u16**)0x879c680,
@@ -294,7 +302,11 @@ u16** sMessageTextPointers[LANGUAGE_COUNT] = {
     (u16**)0x879ccb0
 };
 
+#ifdef LANG_CA
+static const u16* sBlob_79ce10_79e6a0[] = { CA_TABLES_79CE10_79E6A0 };
+#else // !LANG_CA
 static u8 sBlob_79ce10_79e6a0[] = INCBIN_U8("data/Blob_79ce10_79e6a0.bin");
+#endif // LANG_CA
 
 static const u16* sMonologueTextPointersJapanese[19] = {
 	(const u16*)0x871e20c,
@@ -319,6 +331,9 @@ static const u16* sMonologueTextPointersJapanese[19] = {
 };
 
 static const u16* sMonologueTextPointersEnglish[19] = {
+#ifdef LANG_CA
+    CA_MONOLOGUE_TABLE
+#else // !LANG_CA
 	(const u16*)0x871fad4,
 	(const u16*)0x87200ee,
 	(const u16*)0x8720310,
@@ -338,6 +353,7 @@ static const u16* sMonologueTextPointersEnglish[19] = {
 	(const u16*)0x8722438,
 	(const u16*)0x8722550,
 	(const u16*)0x87225f8
+#endif // LANG_CA
 };
 
 static const u16* sMonologueTextPointersGerman[19] = {
