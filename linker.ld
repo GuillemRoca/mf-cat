@@ -1117,6 +1117,7 @@ SECTIONS {
     /* Catalan translation: new data only, after everything else (translation/ca/ca.mk) */
     .ca_data : ALIGN(4) {
         translation/ca/build/ca_text.o(.rodata);
+        translation/ca/build/ca_gfx.o(.rodata);
     } >rom
 #endif // LANG_CA
 }

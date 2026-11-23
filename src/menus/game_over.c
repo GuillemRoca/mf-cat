@@ -18,10 +18,18 @@ static const struct FrameData* sGameOverOamPointers[3] = {
     sGameOverSamusHelmetOam_Turning
 };
 
+#ifdef LANG_CA
+extern const u32 sCaGfx_GameOverText[]; // generated: translation/ca/tools/gfx.py
+#endif // LANG_CA
+
 static const u32* sGameOverTextGfxPointers[LANGUAGE_COUNT] = {
     sGameOverTextGfx_English,
     sGameOverTextGfx_English,
+#ifdef LANG_CA
+    sCaGfx_GameOverText,
+#else // !LANG_CA
     sGameOverTextGfx_English,
+#endif // LANG_CA
     sGameOverTextGfx_German,
     sGameOverTextGfx_French,
     sGameOverTextGfx_Italian,

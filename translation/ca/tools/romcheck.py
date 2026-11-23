@@ -8,6 +8,8 @@ must be in one of the regions the translation is allowed to write:
   - a pointer of the English slot (message, location, navigation and monologue tables), which
     must now point into the appended data;
   - the appended data: the padding after the last byte of the vanilla ROM (0x79ecc8 on);
+  - a pointer listed in gfx_assets.json (an edited graphic), which must also point into the
+    appended data;
   - the font, edited in place: the tiles of the glyphs in font/glyphs/*.png (sCharactersGfx,
     0x682fac) and the bytes of sCharacterWidths (0x576234) listed in font/widths.txt.
 Both ROMs must have the same size. With --selftest (a CA_SELFTEST=1 build) every English
@@ -21,6 +23,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catext  # noqa: E402
 import font  # noqa: E402
+import gfx  # noqa: E402
+import lz77  # noqa: E402
 
 FONT_OFFSET = 0x682FAC    # sCharactersGfx
 WIDTHS_OFFSET = 0x576234  # sCharacterWidths
@@ -60,6 +64,15 @@ def check(built_path, selftest=False):
                 data = catext.to_bytes(codes)
                 if built[target:target + len(data)] != data:
                     problems.append(f"{idx}: the appended string differs from the vanilla English")
+    for name, info in gfx.assets().items():
+        for off in (int(p, 16) for p in info["pointers"]):
+            allowed[off:off + 4] = b"\x01\x01\x01\x01"
+            pointers += 1
+            target = struct.unpack_from("<I", built, off)[0] - catext.ROM_BASE
+            if not appended <= target < end:
+                problems.append(f"{name}: its pointer at 0x{off:x} leads to 0x{target:x}, outside the appended data")
+            elif lz77.decompress(built, target)[0] != gfx.asset_tiles(name, info, selftest):
+                problems.append(f"{name}: the appended graphic is not the expected one")
     glyphs = 0
     if not selftest:
         w = catext.widths(catalan=True)
@@ -91,7 +104,7 @@ if __name__ == "__main__":
     for p in problems[:40]:
         print("error:", p)
     if stats:
-        print(f"{stats['pointers']} English pointers repointed; {stats['appended_bytes']} bytes appended at "
+        print(f"{stats['pointers']} pointers repointed; {stats['appended_bytes']} bytes appended at "
               f"0x{stats['appended_start']:x}; {stats['free_bytes']} bytes of padding left; "
               f"{stats['glyphs']} font glyphs redrawn in place; "
               f"{len(problems)} problems")

@@ -1,0 +1,9 @@
+{
+  "game_over/text_english": {
+    "source": "game_over/text_english.gfx.lz",
+    "symbol": "sCaGfx_GameOverText",
+    "tiles": 192,
+    "pointers": ["0x79e87c"],
+    "note": "sGameOverTextGfxPointers[LANGUAGE_ENGLISH] in src/menus/game_over.c; composed by gfx_game_over.py"
+  }
+}

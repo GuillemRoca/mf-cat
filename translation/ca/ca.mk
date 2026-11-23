@@ -10,6 +10,8 @@
 # (in tables that keep their place and size) change:
 #   $(CA_BUILD)/ca_text.o          the text of the English slot (gentext.py asm)
 #   $(CA_INC)/ca/text_tables.h     the pointer tables of src/new_file_intro.c (gentext.py tables)
+#   $(CA_BUILD)/ca_gfx.o           the edited graphics of gfx/ (gfx.py asm), which the C code
+#                                  points at by symbol (tools/gfx_assets.json)
 # The font is the one exception: it is edited in place (font.py), which keeps its size:
 #   $(CA_INC)/ca/font.inc          sCharactersGfx with font/glyphs/*.png drawn over it
 #   $(CA_INC)/ca/char_widths.inc   sCharacterWidths with font/widths.txt applied
@@ -31,6 +33,8 @@ CA_SELFTEST ?= 0
 
 CA_TEXT_ASM := $(CA_BUILD)/ca_text.s
 CA_TEXT_OBJ := $(CA_BUILD)/ca_text.o
+CA_GFX_ASM := $(CA_BUILD)/ca_gfx.s
+CA_GFX_OBJ := $(CA_BUILD)/ca_gfx.o
 CA_TABLES_H := $(CA_INC)/ca/text_tables.h
 CA_FONT_INC := $(CA_INC)/ca/font.inc
 CA_WIDTHS_INC := $(CA_INC)/ca/char_widths.inc
@@ -62,7 +66,7 @@ ifeq ($(LANG_CA),1)
   src/new_file_intro.s: $(CA_TABLES_H)
   src/data/text_data.s: $(CA_FONT_INC)
   src/data/menus/pause_screen_misc_data.s: $(CA_WIDTHS_INC)
-  $(TARGET:.gba=.elf): $(CA_TEXT_OBJ)
+  $(TARGET:.gba=.elf): $(CA_TEXT_OBJ) $(CA_GFX_OBJ)
 else ifeq ($(CA_SELFTEST),1)
   $(error CA_SELFTEST=1 needs LANG_CA=1)
 endif
@@ -88,6 +92,11 @@ $(CA_TEXT_ASM): $(CA_TEXT_DEPS) $(wildcard $(CA_DIR)/font/widths.txt)
 $(CA_TABLES_H): $(CA_BASEROM) $(CA_TOOLS)/gentext.py $(CA_TOOLS)/catext.py $(CA_STAMP)
 	$(MSG) GENTEXT $@
 	$Q$(PYTHON) $(CA_TOOLS)/gentext.py tables $@
+
+$(CA_GFX_ASM): $(shell find $(CA_DIR)/gfx -name '*.png' 2>/dev/null) $(CA_TOOLS)/gfx.py $(CA_TOOLS)/gfx_assets.json \
+               $(CA_TOOLS)/lz77.py $(CA_BASEROM) $(CA_STAMP)
+	$(MSG) GFX $@
+	$Q$(PYTHON) $(CA_TOOLS)/gfx.py asm $@ $(CA_GENTEXT_FLAGS)
 
 # Headless mGBA tools (need libmgba-dev): scripted screenshots, and patch checks with mGBA's
 # own BPS loader.

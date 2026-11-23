@@ -8,12 +8,13 @@ Plays the same scripted input on both ROMs with build/gbashot (headless mGBA) fr
 a new game, the whole intro (monologue text and the first typed dialogue), the first briefing
 (navigation text with coloured words and the Yes/No prompt), the walk to the first Navigation
 Room (the "Main Deck" and "Navigation Room" location banners), the conversation there, and the
-pause screen (status screen, Sleep Mode prompt). It takes a screenshot every few seconds and
+pause screen (status screen, Sleep Mode prompt) and the game over screen (the prompt graphic).
+It takes a screenshot every few seconds and
 compares them pixel by pixel. A handful of them are written as PNG to DIR (default
 translation/ca/build/selftest) for a human to look at.
 
-The route uses two RAM pokes to put Samus next to the hatch at the top of the first shaft
-instead of climbing it; both ROMs get the same pokes.
+The route uses RAM pokes to put Samus next to the hatch at the top of the first shaft instead
+of climbing it, and to switch to the game over screen; both ROMs get the same pokes.
 
 Needs `make ca-emu-tools`, mf_us.gba (vanilla build) and mf_us_ca.gba built with CA_SELFTEST=1.
 """
@@ -28,6 +29,7 @@ CA = ROOT / "translation" / "ca"
 GBASHOT = CA / "build" / "gbashot"
 
 SAMUS_X, SAMUS_Y = 0x0300125A, 0x0300125C  # gSamusData.xPosition, .yPosition
+MAIN_GAME_MODE, SUB_GAME_MODE_1 = 0x03000BDE, 0x03000BE0  # 8 = GAME_MODE_GAME_OVER
 
 # Shots kept as PNG: (label, what it shows)
 KEEP = {
@@ -42,6 +44,7 @@ KEEP = {
     "nav_012": "Navigation Room conversation: second line",
     "pause_002": "pause: status screen",
     "pause_006": "pause: Sleep Mode prompt (pause-screen text)",
+    "gameover_003": "game over: the prompt graphic",
 }
 
 
@@ -73,6 +76,10 @@ def route(shot):
     s += ["tap S", "wait 90", shot("pause"), "tap r", "wait 90", shot("pause"), "wait 60", shot("pause"),
           "tap B", "wait 60", shot("pause"), "tap l", "wait 60", shot("pause"), "wait 60", shot("pause"),
           "wait 60", shot("pause"), "tap B", "wait 60", shot("pause"), "tap S", "wait 90", shot("pause")]
+    # game over screen (the per-language prompt graphic), by switching the game mode
+    s += [f"poke16 {MAIN_GAME_MODE:x} 8", f"poke16 {SUB_GAME_MODE_1:x} 0"]
+    for i in range(4):
+        s += ["wait 60", shot("gameover")]
     return s
 
 

@@ -14,7 +14,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 4 | Glossary | done (all Fusion-only terms PROPOSED, awaiting review) |
 | 5 | Translate all the text | done: 318 of 318 entries, first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
-| 7 | Graphics with baked-in text | next (not started; inventory below) |
+| 7 | Graphics with baked-in text | in progress: game over prompt done; the rest is inventoried below |
 | 8 | Credits | |
 | 9 | Patch, CI, release | |
 
@@ -81,6 +81,20 @@ the questions still open. The plan is the nine steps of the original brief.
   accented capitals are in the vanilla font.
   - After the font hooks went in: self-test ROM still gives 271 identical screenshots and
     passes `romcheck.py --selftest`; vanilla still matches `mf_us.sha1`.
+- Graphics plumbing (step 7): `gfx.py asm` appends each asset of `gfx_assets.json` as LZ77
+  data after the text and the C code points at it by symbol. `lz77.py` was checked against
+  the ROM: 394 compressed assets of `database.json` decompress and survive a
+  compress/decompress round trip (one entry is not LZ77 data at its address), and the
+  compressor's output fits the original slot for 347 of them.
+  - Game over prompt: `gfx_game_over.py` composes "TORNAR-HO A PROVAR ? / SÍ ( CONTINUA ) /
+    NO ( SURT )" (mzm-cat's approved wording) from glyphs cut out of the five vanilla prompts;
+    the hyphen is built from the crossbar of the red H. Seen in game on the Catalan ROM
+    (`build/shots/ca_game_over.png`): the three lines fit and the helmet cursor sits beside
+    "SÍ". The big "GAME OVER" logo is part of the shared background and stays, as in mzm-cat.
+  - With the hooks in: `romcheck.py` on the Catalan ROM (319 pointers repointed, 78 772 bytes
+    appended, no stray change) and `--selftest` on the self-test ROM pass; `selftest.py` now
+    also visits the game over screen and gives 275 identical screenshots; vanilla matches
+    `mf_us.sha1`.
 - `get_baserom.sh`: ROM already present, `$BASEROM_DIR`, and the "no source" error were each run.
   The `$BASEROM_US_URL` branch is the mzm-cat code unchanged and was not exercised here.
 
@@ -202,6 +216,8 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   `ca/font.inc` (same size).
 - `src/data/menus/pause_screen_misc_data.c`: under `#ifdef LANG_CA`, the initializer of
   `sCharacterWidths` comes from the generated `ca/char_widths.inc`.
+- `src/menus/game_over.c`: under `#ifdef LANG_CA`, `sGameOverTextGfxPointers[LANGUAGE_ENGLISH]`
+  is `sCaGfx_GameOverText` (the appended graphic).
 - `src/new_file_intro.c`: under `#ifdef LANG_CA`, the include of the generated
   `ca/text_tables.h`; the two blobs that are pointer tables (`sBlob_79c5c0_79cdd8`,
   `sBlob_79ce10_79e6a0`) become arrays of pointers with the same contents except the English
@@ -220,15 +236,38 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 - Base ROM: sparse checkout of `metroid-fusion/` from the private ROM repository, copied to
   `mf_us_baserom.gba` (gitignored by `*.gba`).
 
-## Step 7 inventory so far (seen in screenshots, nothing done)
+## Step 7 inventory
 
-Graphics with English text met while playing the first minutes: the file select ("SAMUS
-DATA", "ENERGY", "TIME", "SOUND", "EXIT", "START / COPY DATA / ERASE DATA"), the title
-("PRESS START"), the "Vaccine "Metroid"" panel of the intro, the HUD "ENERGY", the pause
-screen ("SLEEP", "STATUS", "OBJECTIVE", "TARGET", "MAIN DECK" and the other area names,
-"L1-L4 LOCK"), the status screen ("ENERGY", "BEAM", "SUIT", "SAMUS" and the item names). Still
-to inventory from `database.json`: game over, ending and results, credits, demo text, link
-screens. None of these is located in the ROM yet.
+From `database.json`, rendered as tile sheets and looked at. Two kinds:
+
+Per-language graphics (the US ROM has one per Western language and a pointer table, so the
+Catalan version is appended and the English pointer repointed):
+
+| Asset | Text | State |
+|---|---|---|
+| `game_over/text_english.gfx.lz` (192 tiles) | TRY AGAIN ? / YES ( RETURN TO GAME ) / NO ( GO TO TITLE ) | done |
+| `ending/results_english_text.gfx.lz` (448 tiles) | digits, CLEAR TIME, YOUR RATE FOR COLLECTING ITEMS IS, an alphabet, "See you next mission" | to do: selected by a `switch (gLanguage)` in `src/ending.c` (lines 1013 and 1100); the sprites that place the words still have to be read |
+
+Shared graphics (one copy for every language, English text; to translate them the graphic is
+edited, put back in place if it still fits when compressed, else appended and every reference
+repointed):
+
+| Asset | Text seen | State |
+|---|---|---|
+| `menus/pause_screen/obj.gfx.lz`, `bg.gfx.lz` (1024 tiles each) | SLEEP, STATUS, OBJECTIVE, TARGET, area names (MAIN DECK…), L1-L4 LOCK, status screen (ENERGY, BEAM, SUIT, SAMUS, item names) | to do |
+| `menus/title_screen/objects.gfx.lz` | PRESS START and the title menu | to do |
+| file select (inside `Blob_73cfac_7478a0.bin`, loaded by raw address in `asm/disasm_0x0809e598.s`, e.g. `0x0873DC20`) | SAMUS DATA, ENERGY, TIME, SOUND, EXIT, START / COPY DATA / ERASE DATA | to do; not located precisely |
+| `hud/common.gfx` (uncompressed) | ENERGY | to do |
+| intro (`new_file_intro/*`, 127 assets) | the "Vaccine "Metroid"" panel | to do; asset not identified |
+| `game_over/background.gfx.lz` | the GAME OVER logo | kept in English, as mzm-cat does |
+| `ending/credits_character.gfx`, `copyright_text_*.gfx` | credits font, copyright lines | step 8 |
+
+Not looked at yet: `title_intro/*`, `ending_cutscene/*`, `monologue/*`, the demo and link
+screens, the erase-save screen (`GAME_MODE_ERASE_SRAM_MENU`).
+
+Useful for screenshots: `gMainGameMode` (0x03000BDE) set to 8 with `gSubGameMode1`
+(0x03000BE0) set to 0 during gameplay opens the game over screen; 9 is the ending, 11 the
+credits (untried).
 
 ## Open questions
 

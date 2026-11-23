@@ -29,6 +29,7 @@ text/<language>/*.txt    the vanilla text of the seven languages, dumped from th
 charmap.txt              the characters and control codes of the text
 font/glyphs/XXXX.png     edited glyphs (char ID in hex), drawn over the extracted font
 font/widths.txt          sCharacterWidths overrides for those glyphs
+gfx/<asset>.png          edited graphics; <asset> is its key in tools/gfx_assets.json
 identical.txt            IDs whose Catalan is meant to equal the English
 glossary.md              terminology (APPROVED / PROPOSED), STYLE.md, notes/translator-notes.md
 ca.mk                    the LANG_CA build, included from the top-level Makefile
@@ -39,7 +40,8 @@ build/, dist/            generated files and CI outputs; gitignored
 ```
 
 Upstream files touched: `Makefile` (one `include`), `linker.ld` (a section after `.data`, under
-`#ifdef LANG_CA`), `src/new_file_intro.c` (the three English pointer tables), `src/data/text_data.c`
+`#ifdef LANG_CA`), `src/new_file_intro.c` (the three English pointer tables),
+`src/menus/game_over.c` (the English entry of the prompt graphic), `src/data/text_data.c`
 (the font) and `src/data/menus/pause_screen_misc_data.c` (the character widths), each under
 `#ifdef LANG_CA`.
 
@@ -105,6 +107,20 @@ the game's codes; the `{GAP(n)}` at the start of a banner line is recomputed on 
 for quotation marks (the game has no straight quote; the import refuses it). Poedit's Comment
 field is the `notes` column of `translations.csv`: notes go both ways. Entries left empty keep
 their text; "Needs work" entries are imported and listed.
+
+## Graphics
+
+```sh
+python3 translation/ca/tools/gfx_game_over.py            # composes gfx/game_over/text_english.png
+python3 translation/ca/tools/gfx.py export game_over/text_english out.png   # a vanilla sheet
+python3 translation/ca/tools/gfx.py check                # the PNGs are valid
+python3 translation/ca/tools/gfx.py roundtrip            # the codec reproduces the vanilla assets
+```
+
+`tools/gfx_assets.json` lists each translated graphic: its vanilla source, the symbol the C
+code points at under `LANG_CA`, how many tiles it may hold and which ROM pointers are
+repointed. The graphic is compressed and appended after the text; the vanilla one stays where
+it is. A PNG is indexed, 256 px wide (32 tiles per row); its palette is only for viewing.
 
 ## Testing in the emulator
 
