@@ -12,9 +12,9 @@ the questions still open. The plan is the nine steps of the original brief.
 | 2 | Plumbing self-test (`LANG_CA=1 CA_SELFTEST=1`) | done |
 | 3 | Tooling (gentext, lint, render, gap, po, glossary, review) | done |
 | 4 | Glossary | done (all Fusion-only terms PROPOSED, awaiting review) |
-| 5 | Translate all the text | next |
-| 6 | Font (· and any missing glyph) | |
-| 7 | Graphics with baked-in text | |
+| 5 | Translate all the text | done: 318 of 318 entries, first draft, all awaiting your review |
+| 6 | Font (· and any missing glyph) | done |
+| 7 | Graphics with baked-in text | next (not started; inventory below) |
 | 8 | Credits | |
 | 9 | Patch, CI, release | |
 
@@ -57,6 +57,24 @@ the questions still open. The plan is the nine steps of the original brief.
 - Glossary (step 4): `glossary.py import <mzm-cat glossary.md> --dry-run` reports no conflict
   with mzm-cat: the 35 APPROVED rows carry mzm-cat's Catalan unchanged. The 73 Fusion-only
   rows are PROPOSED.
+- Text (step 5): `lint.py --release` passes with 318 of 318 entries, 0 errors, 0 warnings,
+  0 TODOs. `make LANG_CA=1` builds; `romcheck.py` finds 76 855 appended bytes and no stray
+  change. Seen in the emulator on the Catalan ROM (contact sheets of 300 frames, not kept): the
+  whole intro narration, the ship computer's box and the first full-screen monologue. The
+  pictures change at the right pages and the 9-line pages fit.
+  - NOT yet seen in game: the first briefing and everything after it, any message banner, the
+    objectives on the pause screen, the ending. `selftest.py`'s route is tied to the English
+    page counts, so a Catalan route (more A presses in the intro and briefing: gameplay starts
+    after about 190 presses instead of 182) still has to be written. Until then the only
+    guarantee for that text is the linter's pen model.
+- Font (step 6): `font/glyphs/0357.png` redraws `·` in Fusion's indices (2 fill, 3 outline) in
+  the first three columns at mid x-height, and `font/widths.txt` gives it width 2.
+  `romcheck.py` confirms the font in the Catalan ROM is the vanilla font plus that glyph, and
+  that one width byte changed. Looked at in `render.py` only ("cèl·lula", "L·L" read as one
+  word), not yet in game. No other glyph was needed: every Catalan letter, « » and the
+  accented capitals are in the vanilla font.
+  - After the font hooks went in: self-test ROM still gives 271 identical screenshots and
+    passes `romcheck.py --selftest`; vanilla still matches `mf_us.sha1`.
 - `get_baserom.sh`: ROM already present, `$BASEROM_DIR`, and the "no source" error were each run.
   The `$BASEROM_US_URL` branch is the mzm-cat code unchanged and was not exercised here.
 
@@ -139,6 +157,22 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   must match the Spanish or the English in order. Colours, line breaks, page breaks and delays
   differ between the shipped languages, so they are only sanity-checked.
 
+## Translation notes for the reviewer
+
+- Fusion's font is wide (most letters 8 px), so a line holds about 28 characters. Catalan runs
+  longer than English, so many banners are shorter than a literal translation (e.g. "Nivell 1
+  desblocat." for "Security Level 1 unlocked.", "Míssils baixats." for "Missile data
+  downloaded.", "Capacitat augmentada." without naming the tank again). The briefings add pages
+  instead, as the Spanish does.
+- `IntroProcessText` (asm, 0x080984AC) tells the cutscene to change picture at a double
+  `{ARROW}{ARROW}`. There is exactly one in MONOLOGUE_12, 15 and 16, in every language; the
+  linter requires the same count. The number of ordinary pages is free.
+- Entries the game never shows (NAV_038/039 "Empty", 051 "Demo use", 092, 103 "Not used", 113
+  "None", PAUSE_030, 109/110, MESSAGE_42) are translated plainly.
+- NAV_018 in English writes the sector code in full-width letters and has a redundant
+  `{COLOR(0)}`; the Catalan uses plain "SRX" like every other entry.
+- The drafting was done per page with a scratch markup; `text/navigation.txt` is the source.
+
 ## Decisions
 
 - **In-place tables.** The English pointer tables keep their addresses and sizes; only the
@@ -158,6 +192,10 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 - `Makefile`: one `include translation/ca/ca.mk`, right after `TARGET` gets its `.gba`.
 - `linker.ld`: under `#ifdef LANG_CA`, a `.ca_data` section after `.data` that holds
   `translation/ca/build/ca_text.o(.rodata)`.
+- `src/data/text_data.c`: under `#ifdef LANG_CA`, `sCharactersGfx` comes from the generated
+  `ca/font.inc` (same size).
+- `src/data/menus/pause_screen_misc_data.c`: under `#ifdef LANG_CA`, the initializer of
+  `sCharacterWidths` comes from the generated `ca/char_widths.inc`.
 - `src/new_file_intro.c`: under `#ifdef LANG_CA`, the include of the generated
   `ca/text_tables.h`; the two blobs that are pointer tables (`sBlob_79c5c0_79cdd8`,
   `sBlob_79ce10_79e6a0`) become arrays of pointers with the same contents except the English
@@ -175,6 +213,16 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   Navigation Room is at its top left (Samus at x=0x180, y=0x23f stands next to it).
 - Base ROM: sparse checkout of `metroid-fusion/` from the private ROM repository, copied to
   `mf_us_baserom.gba` (gitignored by `*.gba`).
+
+## Step 7 inventory so far (seen in screenshots, nothing done)
+
+Graphics with English text met while playing the first minutes: the file select ("SAMUS
+DATA", "ENERGY", "TIME", "SOUND", "EXIT", "START / COPY DATA / ERASE DATA"), the title
+("PRESS START"), the "Vaccine "Metroid"" panel of the intro, the HUD "ENERGY", the pause
+screen ("SLEEP", "STATUS", "OBJECTIVE", "TARGET", "MAIN DECK" and the other area names,
+"L1-L4 LOCK"), the status screen ("ENERGY", "BEAM", "SUIT", "SAMUS" and the item names). Still
+to inventory from `database.json`: game over, ending and results, credits, demo text, link
+screens. None of these is located in the ROM yet.
 
 ## Open questions
 

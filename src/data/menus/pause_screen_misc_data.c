@@ -150,6 +150,9 @@ const u8 sMaintainedInputDelays[7] = {
 static const u8 sBlob_576217_576234[] = INCBIN_U8("data/Blob_576217_576234.bin");
 
 const u8 sCharacterWidths[1184] = {
+#ifdef LANG_CA
+#include "ca/char_widths.inc" // generated: translation/ca/tools/font.py
+#else // !LANG_CA
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
@@ -224,6 +227,7 @@ const u8 sCharacterWidths[1184] = {
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
     8, 8, 8, 8, 8, 8, 8, 8, 8, 5, 6, 8, 4, 8, 8, 8,
     8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8
+#endif // LANG_CA
 };
 
 static const u8 sBlob_5766D4_5766e0[] = INCBIN_U8("data/Blob_5766D4_5766e0.bin");

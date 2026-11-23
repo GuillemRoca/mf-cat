@@ -15,7 +15,8 @@ blob, so nothing that exists may move or change size. `LANG_CA=1` therefore only
 
 - the Catalan text goes in a new object that `linker.ld` places after everything else (the US
   ROM has 398 KB of padding there, so it stays 8 MB);
-- the English pointer tables keep their place and size, and only their pointer values change.
+- the English pointer tables keep their place and size, and only their pointer values change;
+- the font is edited in place (one glyph and its width), which keeps its size.
 
 `tools/romcheck.py` proves it on every build: a Catalan ROM may differ from the base ROM only in
 those pointers and in the appended area. Plain `make` still matches `mf_us.sha1`.
@@ -26,6 +27,8 @@ those pointers and in the appended area. Plain `make` still matches `mf_us.sha1`
 text/<category>.txt      the Catalan text: message, location, navigation, pause, monologue
 text/<language>/*.txt    the vanilla text of the seven languages, dumped from the ROM (generated)
 charmap.txt              the characters and control codes of the text
+font/glyphs/XXXX.png     edited glyphs (char ID in hex), drawn over the extracted font
+font/widths.txt          sCharacterWidths overrides for those glyphs
 identical.txt            IDs whose Catalan is meant to equal the English
 glossary.md              terminology (APPROVED / PROPOSED), STYLE.md, notes/translator-notes.md
 ca.mk                    the LANG_CA build, included from the top-level Makefile
@@ -36,8 +39,9 @@ build/, dist/            generated files and CI outputs; gitignored
 ```
 
 Upstream files touched: `Makefile` (one `include`), `linker.ld` (a section after `.data`, under
-`#ifdef LANG_CA`) and `src/new_file_intro.c` (the three English pointer tables, under
-`#ifdef LANG_CA`).
+`#ifdef LANG_CA`), `src/new_file_intro.c` (the three English pointer tables), `src/data/text_data.c`
+(the font) and `src/data/menus/pause_screen_misc_data.c` (the character widths), each under
+`#ifdef LANG_CA`.
 
 ## Building
 

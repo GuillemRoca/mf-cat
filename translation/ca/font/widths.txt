@@ -1,0 +1,2 @@
+# sCharacterWidths overrides for the glyphs in font/glyphs: `HEXID WIDTH  # comment`.
+0357 2  # middle dot: drawn in the first 3 columns at mid x-height, so that l·l reads as one word

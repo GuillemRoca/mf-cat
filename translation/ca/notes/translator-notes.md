@@ -25,4 +25,12 @@ anyway, plainly, so that nothing in the Catalan ROM is left in English; none nee
 
 ## PROPOSED terms in use
 
-Filled in as the text is translated (step 5).
+All 73 PROPOSED rows of `glossary.md` are in use except Command Room's alternatives; the text
+follows option 1 of each. The ones that appear most, and where: Lady → "senyoreta"
+(MONOLOGUE_01, 02; NAV_104, 105, 112); target and objective → "objectiu" (every "Objectiu
+eliminat." and "Ves a l'objectiu.", MESSAGE_43, 44); download → "baixar" (banners 04 to 07, the
+objectives, most briefings); HQ → "quarter general"; CO → "comandant"; Quarantine Bay → "sala
+de quarantena"; bio-signs → "senyals de vida"; Nightmare → "Malson"; Etecoons and Dachoras →
+"etecoons i dachores"; Jumpball → "morfosalt"; Shinespark → "salt llampec" (NAV_094 only).
+Changing one means searching `text/*.txt` for it and re-running `lint.py`: a longer word can
+push a line over 224 px.

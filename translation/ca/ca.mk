@@ -10,6 +10,9 @@
 # (in tables that keep their place and size) change:
 #   $(CA_BUILD)/ca_text.o          the text of the English slot (gentext.py asm)
 #   $(CA_INC)/ca/text_tables.h     the pointer tables of src/new_file_intro.c (gentext.py tables)
+# The font is the one exception: it is edited in place (font.py), which keeps its size:
+#   $(CA_INC)/ca/font.inc          sCharactersGfx with font/glyphs/*.png drawn over it
+#   $(CA_INC)/ca/char_widths.inc   sCharacterWidths with font/widths.txt applied
 # Objects are built in-tree for both modes, so every object that depends on the mode also
 # depends on $(CA_STAMP), which changes whenever the mode does.
 
@@ -29,11 +32,15 @@ CA_SELFTEST ?= 0
 CA_TEXT_ASM := $(CA_BUILD)/ca_text.s
 CA_TEXT_OBJ := $(CA_BUILD)/ca_text.o
 CA_TABLES_H := $(CA_INC)/ca/text_tables.h
+CA_FONT_INC := $(CA_INC)/ca/font.inc
+CA_WIDTHS_INC := $(CA_INC)/ca/char_widths.inc
 
 ifeq ($(CA_SELFTEST),1)
   CA_GENTEXT_FLAGS := --selftest
+  CA_FONT_FLAGS := --vanilla
 else
   CA_GENTEXT_FLAGS :=
+  CA_FONT_FLAGS :=
 endif
 
 # Rewrite the stamp only when the mode changes, so its timestamp marks the last switch.
@@ -53,15 +60,28 @@ ifeq ($(LANG_CA),1)
   TARGET := $(TARGET:.gba=_ca.gba)
 
   src/new_file_intro.s: $(CA_TABLES_H)
+  src/data/text_data.s: $(CA_FONT_INC)
+  src/data/menus/pause_screen_misc_data.s: $(CA_WIDTHS_INC)
   $(TARGET:.gba=.elf): $(CA_TEXT_OBJ)
 else ifeq ($(CA_SELFTEST),1)
   $(error CA_SELFTEST=1 needs LANG_CA=1)
 endif
 
+CA_FONT_DEPS := $(wildcard $(CA_DIR)/font/glyphs/*.png) $(wildcard $(CA_DIR)/font/widths.txt) \
+                $(CA_TOOLS)/font.py $(CA_TOOLS)/catext.py $(CA_STAMP)
+
+$(CA_FONT_INC): data/text_characters.gfx $(CA_FONT_DEPS)
+	$(MSG) FONT $@
+	$Q$(PYTHON) $(CA_TOOLS)/font.py build $@ $(CA_FONT_FLAGS)
+
+$(CA_WIDTHS_INC): src/data/menus/pause_screen_misc_data.c $(CA_FONT_DEPS)
+	$(MSG) WIDTHS $@
+	$Q$(PYTHON) $(CA_TOOLS)/font.py widths $@ $(CA_FONT_FLAGS)
+
 CA_TEXT_DEPS := $(wildcard $(CA_DIR)/text/*.txt) $(CA_DIR)/charmap.txt $(CA_BASEROM) \
                 $(CA_TOOLS)/gentext.py $(CA_TOOLS)/catext.py $(CA_STAMP)
 
-$(CA_TEXT_ASM): $(CA_TEXT_DEPS)
+$(CA_TEXT_ASM): $(CA_TEXT_DEPS) $(wildcard $(CA_DIR)/font/widths.txt)
 	$(MSG) GENTEXT $@
 	$Q$(PYTHON) $(CA_TOOLS)/gentext.py asm $@ $(CA_GENTEXT_FLAGS)
 

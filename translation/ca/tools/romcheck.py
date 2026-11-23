@@ -7,9 +7,11 @@ Compares BUILT (default mf_us_ca.gba) with the base ROM byte by byte. Every byte
 must be in one of the regions the translation is allowed to write:
   - a pointer of the English slot (message, location, navigation and monologue tables), which
     must now point into the appended data;
-  - the appended data: the padding after the last byte of the vanilla ROM (0x79ecc8 on).
+  - the appended data: the padding after the last byte of the vanilla ROM (0x79ecc8 on);
+  - the font, edited in place: the tiles of the glyphs in font/glyphs/*.png (sCharactersGfx,
+    0x682fac) and the bytes of sCharacterWidths (0x576234) listed in font/widths.txt.
 Both ROMs must have the same size. With --selftest (a CA_SELFTEST=1 build) every English
-pointer must also lead to a copy of its vanilla string.
+pointer must also lead to a copy of its vanilla string, and the font must be untouched.
 """
 import argparse
 import struct
@@ -18,6 +20,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catext  # noqa: E402
+import font  # noqa: E402
+
+FONT_OFFSET = 0x682FAC    # sCharactersGfx
+WIDTHS_OFFSET = 0x576234  # sCharacterWidths
 
 
 def vanilla_end(rom):
@@ -54,11 +60,25 @@ def check(built_path, selftest=False):
                 data = catext.to_bytes(codes)
                 if built[target:target + len(data)] != data:
                     problems.append(f"{idx}: the appended string differs from the vanilla English")
+    glyphs = 0
+    if not selftest:
+        w = catext.widths(catalan=True)
+        for png in sorted(font.GLYPHS.glob("*.png")):
+            cid = int(png.stem, 16)
+            for off in font.glyph_tiles(cid, cid >= len(w) or w[cid] > 8):
+                allowed[FONT_OFFSET + off:FONT_OFFSET + off + 32] = b"\x01" * 32
+            glyphs += 1
+        for cid in catext.width_overrides():
+            allowed[WIDTHS_OFFSET + cid] = 1
+            if built[WIDTHS_OFFSET + cid] != w[cid]:
+                problems.append(f"the width of glyph {cid:04X} is {built[WIDTHS_OFFSET + cid]}, expected {w[cid]}")
+        if built[FONT_OFFSET:FONT_OFFSET + font.FONT_SIZE] != font.load():
+            problems.append("the font in the ROM is not the vanilla font with font/glyphs/*.png on top")
     stray = [i for i in range(len(base)) if base[i] != built[i] and not allowed[i]]
     if stray:
         problems.append(f"{len(stray)} bytes changed outside the allowed regions, first at 0x{stray[0]:x}")
     stats = {"pointers": pointers, "appended_start": appended, "appended_bytes": end - appended,
-             "free_bytes": len(base) - end}
+             "free_bytes": len(base) - end, "glyphs": glyphs}
     return problems, stats
 
 
@@ -73,5 +93,6 @@ if __name__ == "__main__":
     if stats:
         print(f"{stats['pointers']} English pointers repointed; {stats['appended_bytes']} bytes appended at "
               f"0x{stats['appended_start']:x}; {stats['free_bytes']} bytes of padding left; "
+              f"{stats['glyphs']} font glyphs redrawn in place; "
               f"{len(problems)} problems")
     sys.exit(1 if problems else 0)
