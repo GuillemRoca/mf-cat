@@ -32,6 +32,7 @@ font/widths.txt          sCharacterWidths overrides for those glyphs
 gfx/<asset>.png          edited graphics; <asset> is its key in tools/gfx_assets.json
 identical.txt            IDs whose Catalan is meant to equal the English
 glossary.md              terminology (APPROVED / PROPOSED), STYLE.md, notes/translator-notes.md
+RELEASE_CHECKLIST.md     what a release needs; TESTING.md: playing and scripting the build
 ca.mk                    the LANG_CA build, included from the top-level Makefile
 translations.csv         every string in English, Spanish and Catalan, for playtesting (generated)
 tools/                   extractor, generators, linter, GAP tool, emulator tools
@@ -53,6 +54,7 @@ make -j"$(nproc)"                            # vanilla: still matches mf_us.sha1
 make -j"$(nproc)" LANG_CA=1                  # mf_us_ca.gba, Catalan in the English slot
 make -j"$(nproc)" LANG_CA=1 CA_SELFTEST=1    # plumbing self-test: the vanilla English, appended
 python3 translation/ca/tools/romcheck.py     # the Catalan ROM changed nothing it shouldn't
+translation/ca/tools/ci.sh                   # everything CI runs, plus the .bps in dist/
 ```
 
 Switching between these is safe: objects that depend on the mode are rebuilt automatically.
@@ -132,6 +134,23 @@ make -j"$(nproc)" && make -j"$(nproc)" LANG_CA=1 CA_SELFTEST=1
 python3 translation/ca/tools/selftest.py     # same input on both ROMs, screenshots must be equal
 ```
 
+See `TESTING.md` for playing the build in mGBA and for where each kind of text shows.
+
+## Releasing
+
+A release is a `v*` tag (`v1.0.0`) on `main` plus its notes in `.github/release-notes/<tag>.md`,
+in Catalan with an English summary. Go through `RELEASE_CHECKLIST.md` first.
+
+1. Tag the release commit and push the tag: `git tag v1.0.0 && git push origin v1.0.0`. The
+   Catalan workflow builds it in release mode and names the patch `mf-cat-v1.0.0.bps`.
+2. Push the notes file to `main`. `.github/workflows/release.yml` waits for the tag's build,
+   then publishes the release "Metroid Fusion en català 1.0.0" with that patch and nothing
+   else.
+
+Editing a released notes file and pushing it updates that release's notes. Builds that aren't
+on a tag are named after the last tag and the commit (`mf-cat-v1.0.0-3-gabc1234.bps`), or after
+the commit alone while there is no tag.
+
 ## Base ROM
 
 Every build starts from your own US dump. `tools/get_baserom.sh` puts it at `mf_us_baserom.gba`
@@ -146,3 +165,18 @@ cp /path/to/your/dump.gba mf_us_baserom.gba
 translation/ca/tools/get_baserom.sh            # verifies the SHA1
 python3 tools/extractor.py && make -j"$(nproc)" && sha1sum -c mf_us.sha1
 ```
+
+### Base ROM in CI
+
+`.github/workflows/catalan.yml` needs the ROM on every run. GitHub secrets are capped at 48 KB,
+so the 8 MB ROM can't be a secret itself. Either:
+
+- **A private ROM repository with a read-only deploy key** (what this repository uses): the
+  variable `BASEROM_REPO` names the repository, `BASEROM_REPO_PATH` the folder in it that holds
+  `mf_us_baserom.gba`, and the secret `BASEROM_REPO_KEY` is the private half of a deploy key
+  that the ROM repository accepts read-only. CI checks out only that folder.
+- **A private link**: the secret `BASEROM_US_URL`, a direct download link for the `.gba` or a
+  `.zip` of it. Anyone with the link can download the ROM, so share it with nobody else.
+
+Either way, the workflow never prints the source, uploads the ROM or caches it. Pull requests
+from forks get no secrets, so their runs stop at "Get base ROM".

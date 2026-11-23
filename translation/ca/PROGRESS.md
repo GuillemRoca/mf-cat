@@ -16,7 +16,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 6 | Font (· and any missing glyph) | done |
 | 7 | Graphics with baked-in text | in progress: game over prompt done; the rest is inventoried below |
 | 8 | Credits | |
-| 9 | Patch, CI, release | |
+| 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
 ## Verified
 
@@ -95,6 +95,15 @@ the questions still open. The plan is the nine steps of the original brief.
     appended, no stray change) and `--selftest` on the self-test ROM pass; `selftest.py` now
     also visits the game over screen and gives 275 identical screenshots; vanilla matches
     `mf_us.sha1`.
+- Patch and CI (step 9): `translation/ca/tools/ci.sh` ran here from start to finish with exit
+  code 0: 36 tool tests, `extract.py --check`, vanilla SHA1, the self-test ROM (`romcheck.py
+  --selftest` and 275 identical screenshots), lint 318/318 with no errors or warnings, the
+  Catalan ROM's `romcheck.py`, and a 74 861-byte `.bps` that `bps.py apply` and mGBA's own
+  loader (`bpscheck`) both turn into exactly `mf_us_ca.gba`.
+  - The two workflow files parse as YAML. Whether they pass on GitHub (agbcc build and cache,
+    the deploy key checkout) is only known once the first run there finishes: see the end of
+    this file.
+  - `release.yml` is mzm-cat's with the names changed. It has never run here.
 - `get_baserom.sh`: ROM already present, `$BASEROM_DIR`, and the "no source" error were each run.
   The `$BASEROM_US_URL` branch is the mzm-cat code unchanged and was not exercised here.
 
@@ -200,6 +209,13 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   is the brief's rule ("only the replaced pointer values move") applied one level lower than
   `sMessageTextPointers[slot]`: since the tables themselves don't move, every raw reference to
   them (`0x879D50C`, `0x879D6D4`, `0x879cdf4`) stays valid without being touched.
+- **Step 9 before steps 7 and 8.** The brief orders graphics, credits, then patch and CI. The
+  patch and CI were done once the text, the font and the first graphic were in, because they
+  don't depend on the rest and they make every later push check the vanilla SHA1 and the
+  self-test. `RELEASE_CHECKLIST.md` says not to release before the graphics and credits are
+  done.
+- **agbcc in CI** is pret/agbcc at da598c1 (the commit built and matched here), not the
+  jiangzhengwenjz fork mzm-cat pins: Fusion's README asks for pret's.
 - **IDs** are table + index (`MESSAGE_07`, `NAV_042`, `PAUSE_003`, `MONOLOGUE_11`): upstream has
   no names for them. `PAUSE_nnn` is navigation-table entry 114 + nnn.
 - **Vanilla dumps are committed** under `text/<language>/`, as the brief asks. They are
