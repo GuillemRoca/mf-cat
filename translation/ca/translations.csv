@@ -1,167 +1,212 @@
 section,id,where,english,spanish,catalan,status,notes
 message,MESSAGE_00,Message banner,"Security Level 1 unlocked.
 Blue hatches now active.","Nivel 1 desactivado.
-Puertas azules habilitadas.",,untranslated,
+Puertas azules habilitadas.","Nivell 1 desblocat.
+Comportes blaves actives.",translated,
 message,MESSAGE_01,Message banner,"Security Level 2 unlocked.
 Green hatches now active.","Nivel 2 desactivado.
-Puertas verdes habilitadas.",,untranslated,
+Puertas verdes habilitadas.","Nivell 2 desblocat.
+Comportes verdes actives.",translated,
 message,MESSAGE_02,Message banner,"Security Level 3 unlocked.
 Yellow hatches now active.","Nivel 3 desactivado.
-Puertas amarillas habilitadas.",,untranslated,
+Puertas amarillas habilitadas.","Nivell 3 desblocat.
+Comportes grogues actives.",translated,
 message,MESSAGE_03,Message banner,"Security Level 4 unlocked.
 Red hatches now active.","Nivel 4 desactivado.
-Puertas rojas habilitadas.",,untranslated,
+Puertas rojas habilitadas.","Nivell 4 desblocat.
+Comportes vermelles actives.",translated,
 message,MESSAGE_04,Message banner,"Missile data downloaded.
 Hold [R] and press [B].","Misiles descargados.
-Pulsa [R] + [B].",,untranslated,
+Pulsa [R] + [B].","Míssils baixats.
+Mantén [R] i prem [B].",translated,
 message,MESSAGE_05,Message banner,"Super Missile data downloaded.
 Hold [R] and press [B].","Supermisiles descargados.
-Pulsa [R] + [B].",,untranslated,
+Pulsa [R] + [B].","Supermíssils baixats.
+Mantén [R] i prem [B].",translated,
 message,MESSAGE_06,Message banner,"Bomb data downloaded.
 Morph into a ball and press [B].","Bombas descargadas.
-Siendo morfosfera, pulsa [B].",,untranslated,
+Siendo morfosfera, pulsa [B].","Bombes baixades.
+En morfosfera, prem [B].",translated,
 message,MESSAGE_07,Message banner,"Power Bomb data downloaded.
 As a ball, hold [R] and press [B].","Bomba de energía descargada.
-Pulsa [R] + [B] (morfosfera).",,untranslated,
+Pulsa [R] + [B] (morfosfera).","Bombes d'energia baixades.
+En esfera: mantén [R], prem [B].",translated,
 message,MESSAGE_08,Message banner,"Ice effect added to Missiles.
 Use it to freeze enemies.","Misiles mejorados con hielo.
-Úsalos para congelar enemigos.",,untranslated,
+Úsalos para congelar enemigos.","Míssils amb efecte de gel.
+Usa'ls per congelar enemics.",translated,
 message,MESSAGE_09,Message banner,"Diffusion added to Missiles.
 Charge with [R], fire with [B].","Misiles mejorados con difusión.
-Carga con [R] y dispara con [B].",,untranslated,
+Carga con [R] y dispara con [B].","Difusió afegida als míssils.
+Càrrega amb [R], tret amb [B].",translated,
 message,MESSAGE_10,Message banner,"Morph Ball ability recovered.
 Press [DOWN] twice to morph.","Habilidad morfosfera asimilada.
-Pulsa [DOWN] dos veces.",,untranslated,
+Pulsa [DOWN] dos veces.","Morfosfera recuperada.
+Prem [DOWN] dues vegades.",translated,
 message,MESSAGE_11,Message banner,"Hi-Jump and Jumpball
 abilities recovered.","Habilidades de supersalto y
-rotosalto recuperadas.",,untranslated,
+rotosalto recuperadas.","Habilitats supersalt i
+morfosalt recuperades.",translated,
 message,MESSAGE_12,Message banner,"Screw Attack ability regained.
 Somersault into enemies.","Salto en barrena recuperado.
-Arrasa con los enemigos.",,untranslated,
+Arrasa con los enemigos.","Atac espiral recuperat.
+Envesteix enemics en ple gir.",translated,
 message,MESSAGE_13,Message banner,"Space Jump ability recovered.
 Somersault continually in air.","Salto espacial recuperado.
-Salta continuamente en el aire.",,untranslated,
+Salta continuamente en el aire.","Salt espacial recuperat.
+Encadena tombarelles a l'aire.",translated,
 message,MESSAGE_14,Message banner,"Speed Booster power regained.
 Run until speed boost begins.","Aceleración recuperada.
-Corre hasta que aceleres.",,untranslated,
+Corre hasta que aceleres.","Acceleració recuperada.
+Corre fins que s'activi.",translated,
 message,MESSAGE_15,Message banner,"Varia Suit effect recovered.
 Survive extreme temperatures.","Traje climático recuperado.
-Resiste condiciones extremas.",,untranslated,
+Resiste condiciones extremas.","Vestit climàtic recuperat.
+Resisteix calor i fred extrems.",translated,
 message,MESSAGE_16,Message banner,"Gravity Suit effect recovered.
 Move freely in water.","Traje gravitatorio recuperado.
-Muévete libremente en el agua.",,untranslated,
+Muévete libremente en el agua.","Vestit gravitatori recuperat.
+Mou-te lliurement dins l'aigua.",translated,
 message,MESSAGE_17,Message banner,"Charge Beam ability recovered.
 Press and hold [B] to charge.","Rayo recarga recuperado.
-Mantén pulsado [B] para cargar.",,untranslated,
+Mantén pulsado [B] para cargar.","Raig de càrrega recuperat.
+Mantén [B] per carregar.",translated,
 message,MESSAGE_18,Message banner,"Wide Beam ability recovered.
 Beam widens dramatically.","Rayo ancho recuperado.
-Mejora el alcance del rayo.",,untranslated,
+Mejora el alcance del rayo.","Raig ample recuperat.
+El raig s'eixampla molt.",translated,
 message,MESSAGE_19,Message banner,"Wave Beam ability recovered.
 Beam now penetrates walls.","Rayo de ondas recuperado.
-Este rayo penetra las paredes.",,untranslated,
+Este rayo penetra las paredes.","Raig d'ones recuperat.
+Ara el raig travessa parets.",translated,
 message,MESSAGE_20,Message banner,"Plasma Beam ability recovered.
 Beam now pierces enemies.","Rayo de plasma recuperado.
-El plasma atraviesa al enemigo.",,untranslated,
+El plasma atraviesa al enemigo.","Raig de plasma recuperat.
+Ara el raig perfora enemics.",translated,
 message,MESSAGE_21,Message banner,"Ice effect added to beam.
 Use beam to freeze enemies.","Rayo de hielo recuperado.
-Úsalo para congelar enemigos.",,untranslated,
+Úsalo para congelar enemigos.","Efecte de gel afegit al raig.
+Usa'l per congelar enemics.",translated,
 message,MESSAGE_22,Message banner,"Atmospheric stabilizer online.
 Four units still malfunctioning.","Estabilizador en línea.
-Quedan cuatro por reparar.",,untranslated,
+Quedan cuatro por reparar.","Estabilitzador en línia.
+En queden quatre d'avariats.",translated,
 message,MESSAGE_23,Message banner,"Atmospheric stabilizer online.
 Three units malfunctioning.","Estabilizador en línea.
-Quedan tres por reparar.",,untranslated,
+Quedan tres por reparar.","Estabilitzador en línia.
+En queden tres d'avariats.",translated,
 message,MESSAGE_24,Message banner,"Atmospheric stabilizer online.
 Two units still malfunctioning.","Estabilizador en línea.
-Quedan dos por reparar.",,untranslated,
+Quedan dos por reparar.","Estabilitzador en línia.
+En queden dos d'avariats.",translated,
 message,MESSAGE_25,Message banner,"Atmospheric stabilizer online.
 One unit still malfunctioning.","Estabilizador en línea.
-Queda uno por reparar.",,untranslated,
+Queda uno por reparar.","Estabilitzador en línia.
+En queda un d'avariat.",translated,
 message,MESSAGE_26,Message banner,"All stabilizers online.
 Atmospheric levels equalized.","Estabilizadores en línea.
-Niveles atmosféricos igualados.",,untranslated,
-message,MESSAGE_27,Message banner,Water level lowered.,Restableciendo nivel del agua...,,untranslated,
+Niveles atmosféricos igualados.","Estabilitzadors en línia.
+Nivells atmosfèrics equilibrats.",translated,
+message,MESSAGE_27,Message banner,Water level lowered.,Restableciendo nivel del agua...,Nivell de l'aigua abaixat.,translated,
 message,MESSAGE_28,Message banner,Cooling unit operational.,"Unidad de refrigeración
-operativa.",,untranslated,
+operativa.","Unitat de refrigeració
+operativa.",translated,
 message,MESSAGE_29,Message banner,"Lock disengaged.
 Gate opening.","Cierre desbloqueado.
-Abriendo compuerta...",,untranslated,
-message,MESSAGE_30,Message banner,Auxiliary power engaged.,Activando energía auxiliar...,,untranslated,
+Abriendo compuerta...","Bloqueig desactivat.
+La porta s'obre.",translated,
+message,MESSAGE_30,Message banner,Auxiliary power engaged.,Activando energía auxiliar...,Energia auxiliar activada.,translated,
 message,MESSAGE_31,Message banner,"60 seconds to detachment of
 Restricted Laboratory.","Separación del laboratorio de
-seguridad en 60 segundos...",,untranslated,
+seguridad en 60 segundos...","60 segons per a la separació
+del laboratori restringit.",translated,
 message,MESSAGE_32,Message banner,"Orbit change implemented.
 3 minutes to impact.","Órbita modificada.
-3 minutos para el impacto.",,untranslated,
+3 minutos para el impacto.","Canvi d'òrbita aplicat.
+3 minuts per a l'impacte.",translated,
 message,MESSAGE_33,Message banner,"Save data?
 Yes   No","¿Almacenar datos?
-Sí   No",,untranslated,
-message,MESSAGE_34,Message banner,Save complete.,Datos almacenados.,,untranslated,
+Sí   No","Guardar?
+Sí   No",translated,
+message,MESSAGE_34,Message banner,Save complete.,Datos almacenados.,Partida guardada.,translated,
 message,MESSAGE_35,Message banner,"Uplink to Adam?
 Yes   No","¿Conectar con Adam?
-Sí   No",,untranslated,
+Sí   No","Connectar amb l'Adam?
+Sí   No",translated,
 message,MESSAGE_36,Message banner,"Weapons system
 resupply complete.","Reabastecimiento del
-armamento completado.",,untranslated,
+armamento completado.","Reposició de l'armament
+completada.",translated,
 message,MESSAGE_37,Message banner,"Energy tank
 recharge complete.","Recarga de los tanques
-de energía completada.",,untranslated,
+de energía completada.","Recàrrega dels tancs
+d'energia completada.",translated,
 message,MESSAGE_38,Message banner,"Weapons and energy
 fully restored.","Munición y energía
-totalmente restablecidas.",,untranslated,
+totalmente restablecidas.","Armament i energia
+totalment restablerts.",translated,
 message,MESSAGE_39,Message banner,"Energy Tank acquired.
 Energy capacity increased.","Tanque de energía almacenado.
-Capacidad de energía ampliada.",,untranslated,
+Capacidad de energía ampliada.","Tanc d'energia obtingut.
+Capacitat augmentada.",translated,
 message,MESSAGE_40,Message banner,"Missile Tank acquired.
 Missile capacity increased.","Tanque de misiles almacenado.
-Capacidad de misiles ampliada.",,untranslated,
+Capacidad de misiles ampliada.","Tanc de míssils obtingut.
+Capacitat augmentada.",translated,
 message,MESSAGE_41,Message banner,"Power Bomb Tank acquired.
 Power Bomb capacity increased.","Tanque de bomba de energía
-almacenado. Capacidad ampliada.",,untranslated,
+almacenado. Capacidad ampliada.","Tanc de bombes d'energia.
+Capacitat augmentada.",translated,
 message,MESSAGE_42,Message banner,"Enemy location abnormal.
 Check message frame position.","Posición anormal del enemigo.
-Revisa el origen del mensaje.",,untranslated,
+Revisa el origen del mensaje.","Posició anormal de l'enemic.
+Comprova el marc del missatge.",translated,
 message,MESSAGE_43,Message banner,"Is your objective clear?
 Yes   No","¿Ha quedado claro?
-Sí   No",,untranslated,
+Sí   No","Has entès l'objectiu?
+Sí   No",translated,
 message,MESSAGE_44,Message banner,"Confirm mission objective?
 Yes   No","¿Quieres confirmar la misión?
-Sí   No",,untranslated,
+Sí   No","Vols confirmar l'objectiu?
+Sí   No",translated,
 message,MESSAGE_45,Message banner,"Engage Sleep Mode?
 To return from Sleep Mode,","¿Usar el salvapantallas?
-Para anularlo, pulsa SELECT",,untranslated,
+Para anularlo, pulsa SELECT","Activar el mode repòs?
+Per sortir del mode repòs,",translated,
 message,MESSAGE_46,Message banner,"press SELECT and the L and R
 Buttons at the same time.","y los Botones L y R al
-mismo tiempo.",,untranslated,
+mismo tiempo.","prem SELECT i els botons L i R
+alhora.",translated,
 message,MESSAGE_47,Message banner,"Yes
 No","Sí
-No",,untranslated,
-location,LOCATION_00,Location banner,Main Deck,Cubierta principal,,untranslated,
-location,LOCATION_01,Location banner,Sector 1 (SRX),Sector 1 -SRX-,,untranslated,
-location,LOCATION_02,Location banner,Sector 2 (TRO),Sector 2 -TRO-,,untranslated,
-location,LOCATION_03,Location banner,Sector 3 (PYR),Sector 3 -PYR-,,untranslated,
-location,LOCATION_04,Location banner,Sector 4 (AQA),Sector 4 -AQA-,,untranslated,
-location,LOCATION_05,Location banner,Sector 5 (ARC),Sector 5 -ARC-,,untranslated,
-location,LOCATION_06,Location banner,Sector 6 (NOC),Sector 6 -NOC-,,untranslated,
-location,LOCATION_07,Location banner,Reactor Silo,Silo del reactor,,untranslated,
-location,LOCATION_08,Location banner,Restricted Zone,Zona restringida,,untranslated,
-location,LOCATION_09,Location banner,Operations Deck,Cubierta de operaciones,,untranslated,
-location,LOCATION_10,Location banner,Habitation Deck,Cubierta del hábitat,,untranslated,
-location,LOCATION_11,Location banner,Docking Bays,Puertos de atraque,,untranslated,
-location,LOCATION_12,Location banner,Navigation Room,Sala de navegación,,untranslated,
-location,LOCATION_13,Location banner,Data Room,Sala de datos,,untranslated,
-location,LOCATION_14,Location banner,Security Room,Sala de seguridad,,untranslated,
-location,LOCATION_15,Location banner,Recharge Room,Estación de recarga,,untranslated,
-location,LOCATION_16,Location banner,Save Room,Estación de guardado,,untranslated,
-location,LOCATION_17,Location banner,Operations Room,Sala de control,,untranslated,
-location,LOCATION_18,Location banner,Quarantine Bay,Sala de cuarentena,,untranslated,
-location,LOCATION_19,Location banner,Sub-Zero Containment,Sala de criogenización,,untranslated,
-location,LOCATION_20,Location banner,Central Reactor Core,Núcleo del reactor central,,untranslated,
-location,LOCATION_21,Location banner,Auxiliary Power Station,Estación de energía auxiliar,,untranslated,
-location,LOCATION_22,Location banner,Restricted Laboratory,Laboratorio de seguridad,,untranslated,
-location,LOCATION_23,Location banner,Pump Control Unit,Unidad de control de bombeo,,untranslated,
-location,LOCATION_24,Location banner,Main Boiler,Caldera principal,,untranslated,
-location,LOCATION_25,Location banner,Main Boiler Control Room,Sala de control de la caldera,,untranslated,
+No","Sí
+No",translated,
+location,LOCATION_00,Location banner,Main Deck,Cubierta principal,Coberta principal,translated,
+location,LOCATION_01,Location banner,Sector 1 (SRX),Sector 1 -SRX-,Sector 1 (SRX),same as English,
+location,LOCATION_02,Location banner,Sector 2 (TRO),Sector 2 -TRO-,Sector 2 (TRO),same as English,
+location,LOCATION_03,Location banner,Sector 3 (PYR),Sector 3 -PYR-,Sector 3 (PYR),same as English,
+location,LOCATION_04,Location banner,Sector 4 (AQA),Sector 4 -AQA-,Sector 4 (AQA),same as English,
+location,LOCATION_05,Location banner,Sector 5 (ARC),Sector 5 -ARC-,Sector 5 (ARC),same as English,
+location,LOCATION_06,Location banner,Sector 6 (NOC),Sector 6 -NOC-,Sector 6 (NOC),same as English,
+location,LOCATION_07,Location banner,Reactor Silo,Silo del reactor,Sitja del reactor,translated,
+location,LOCATION_08,Location banner,Restricted Zone,Zona restringida,Zona restringida,translated,
+location,LOCATION_09,Location banner,Operations Deck,Cubierta de operaciones,Coberta d'operacions,translated,
+location,LOCATION_10,Location banner,Habitation Deck,Cubierta del hábitat,Coberta residencial,translated,
+location,LOCATION_11,Location banner,Docking Bays,Puertos de atraque,Molls d'atracada,translated,
+location,LOCATION_12,Location banner,Navigation Room,Sala de navegación,Sala de navegació,translated,
+location,LOCATION_13,Location banner,Data Room,Sala de datos,Sala de dades,translated,
+location,LOCATION_14,Location banner,Security Room,Sala de seguridad,Sala de seguretat,translated,
+location,LOCATION_15,Location banner,Recharge Room,Estación de recarga,Sala de recàrrega,translated,
+location,LOCATION_16,Location banner,Save Room,Estación de guardado,Sala de guardat,translated,
+location,LOCATION_17,Location banner,Operations Room,Sala de control,Sala d'operacions,translated,
+location,LOCATION_18,Location banner,Quarantine Bay,Sala de cuarentena,Sala de quarantena,translated,
+location,LOCATION_19,Location banner,Sub-Zero Containment,Sala de criogenización,Contenció criogènica,translated,
+location,LOCATION_20,Location banner,Central Reactor Core,Núcleo del reactor central,Nucli del reactor central,translated,
+location,LOCATION_21,Location banner,Auxiliary Power Station,Estación de energía auxiliar,Estació d'energia auxiliar,translated,
+location,LOCATION_22,Location banner,Restricted Laboratory,Laboratorio de seguridad,Laboratori restringit,translated,
+location,LOCATION_23,Location banner,Pump Control Unit,Unidad de control de bombeo,Unitat de control de bombeig,translated,
+location,LOCATION_24,Location banner,Main Boiler,Caldera principal,Caldera principal,translated,
+location,LOCATION_25,Location banner,Main Boiler Control Room,Sala de control de la caldera,Sala de control de la caldera,translated,
 navigation,NAV_000,Navigation Room conversation / typed dialogue,"There's been an explosion in
 the Quarantine Bay.
 
@@ -217,20 +262,54 @@ Contacta desde la sala de
 navegación que hay de camino.
 
 Dirígete a la sala de
-cuarentena.",,untranslated,
+cuarentena.","Hi ha hagut una explosió a la
+sala de quarantena.
+
+Ara mateix s'hi guarden
+càpsules amb mostres recents
+
+d'SR388 i les parts del teu
+vestit infectades pels
+
+paràsits X.
+
+La causa de l'explosió encara
+no és clara. Investiga-ho.
+
+La sala de quarantena és aquí.
+
+Mou-te de pressa i en silenci...
+
+Encara no pots fer servir la
+majoria de les teves
+
+habilitats latents.
+
+No ho oblidis, Samus.
+
+De camí, connecta't a la
+sala de navegació.
+
+Ara, ves a la
+sala de quarantena.",translated,
 navigation,NAV_001,Navigation Room conversation / typed dialogue,Go to the Quarantine Bay.,"Dirígete a la sala de
-cuarentena.",,untranslated,
+cuarentena.",Ves a la sala de quarantena.,translated,
 navigation,NAV_002,Navigation Room conversation / typed dialogue,"The Quarantine Bay is ahead.
 
 Bio-signs are confirmed.
 Be careful.","La sala de cuarentena está
 cerca. Los sistemas detectan
 
-signos de vida. Ten cuidado.",,untranslated,
+signos de vida. Ten cuidado.","La sala de quarantena és
+més endavant.
+
+Senyals de vida confirmats.
+Ves amb compte.",translated,
 navigation,NAV_003,Navigation Room conversation / typed dialogue,Quarantine Bay is just ahead.,"Dirígete a la sala de
-cuarentena.",,untranslated,
-navigation,NAV_004,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_005,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+cuarentena.","La sala de quarantena és
+aquí mateix.",translated,
+navigation,NAV_004,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_005,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_006,Navigation Room conversation / typed dialogue,"This is unfortunate news...
 The specimens brought back by
 
@@ -397,8 +476,90 @@ Ahora, en marcha. He
 desactivado el bloqueo de las
 
 puertas de nivel 0. Busca las
-puertas intermitentes.",,untranslated,
-navigation,NAV_007,Navigation Room conversation / typed dialogue,Proceed to target.,Dirígete a la alerta.,,untranslated,
+puertas intermitentes.","Són males notícies...
+Els espècimens que va portar
+
+l'equip de camp estaven
+infectats per paràsits X.
+
+Els X poden imitar la presa;
+qualsevol espècimen en podia
+
+ser l'hoste. Abans de l'explosió
+un sensor en va escanejar un...
+
+Els paràsits X, gelatinosos,
+envaeixen l'hoste, s'hi
+
+reprodueixen de pressa i
+el maten.
+
+També n'absorbeixen l'ADN i
+el fan servir per imitar-lo.
+
+Una infecció d'X et va estar a
+punt de matar. Només la
+
+vacuna de metroide et va
+salvar la vida.
+
+Sembla que els metroides eren
+els principals depredadors
+
+dels X. Per això la vacuna va
+actuar tan bé i tan de pressa.
+
+Però també ha canviat la teva
+estructura cel·lular.
+
+Els X no et tornaran a
+infectar mai més...
+
+De fet, ara pots absorbir
+els paràsits X lliures, sense
+
+hoste, només tocant-los.
+
+Així recuperaràs energia i
+restabliràs l'armament.
+
+També pots recuperar
+habilitats latents d'aquesta
+
+manera: persegueix els X
+lliures sempre que puguis.
+
+L'estació allotja moltes
+espècies... algunes, violentes.
+
+Hem de mantenir els X fora
+dels entorns de cria costi el
+
+que costi. És vital, Samus.
+
+Ja detecto senyals de vida
+massius en aquesta zona.
+
+Els X s'estan agrupant.
+
+Potser és l'ocasió
+d'exterminar-los, però...
+
+Només tens un 10% de la
+capacitat de combat. Tens
+
+molt poques possibilitats
+de sobreviure.
+
+La Federació et necessita
+viva i en actiu, Samus...
+
+Ara, en marxa. He desblocat les
+comportes de nivell 0.
+
+Busca les comportes que
+fan pampallugues.",translated,
+navigation,NAV_007,Navigation Room conversation / typed dialogue,Proceed to target.,Dirígete a la alerta.,Ves a l'objectiu.,translated,
 navigation,NAV_008,Navigation Room conversation / typed dialogue,"I have received news from HQ.
 
 They can support you with
@@ -436,14 +597,32 @@ para descargar la información.
 Con estos misiles, tus
 probabilidades de
 
-supervivencia son del 20%...",,untranslated,
-navigation,NAV_009,Navigation Room conversation / typed dialogue,Hurry to the Data Room.,Dirígete a la sala de datos.,,untranslated,
+supervivencia son del 20%...","He rebut notícies del quarter
+general.
+
+Et poden donar suport amb
+dades d'armament baixables.
+
+Quan tinguis aquestes dades,
+podràs fer servir míssils.
+
+T'ajudaran contra enemics
+que el raig no pot ferir.
+
+Ves a la sala de dades
+per baixar-les.
+
+La sala de dades és aquí.
+
+Amb míssils, les possibilitats
+de sobreviure pugen al 20%...",translated,
+navigation,NAV_009,Navigation Room conversation / typed dialogue,Hurry to the Data Room.,Dirígete a la sala de datos.,Corre a la sala de dades.,translated,
 navigation,NAV_010,Navigation Room conversation / typed dialogue,The Data Room is just ahead.,"La sala de datos está aquí al
-lado.",,untranslated,
+lado.",La sala de dades és a tocar.,translated,
 navigation,NAV_011,Navigation Room conversation / typed dialogue,Data Room ahead.,"La habitación de al lado es la
-sala de datos.",,untranslated,
-navigation,NAV_012,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_013,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+sala de datos.",Sala de dades al davant.,translated,
+navigation,NAV_012,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_013,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_014,Navigation Room conversation / typed dialogue,"Electrical interference has
 knocked out the elevators
 
@@ -498,10 +677,40 @@ Los misiles son tu única
 esperanza. No dudes en
 
 usarlos. Ahora, busca un modo
-de llegar a la alerta.",,untranslated,
-navigation,NAV_015,Navigation Room conversation / typed dialogue,Proceed to target.,Avanza hacia la alerta.,,untranslated,
-navigation,NAV_016,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_017,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+de llegar a la alerta.","Una interferència elèctrica
+ha inutilitzat els ascensors
+
+de la coberta principal.
+
+Pot tenir relació amb els X.
+Me n'ocupo. Pel que fa a tu...
+
+Intenta trobar un altre camí
+cap a l'objectiu.
+
+És aquí.
+
+Detecto senyals de vida
+enormes: espero que els
+
+míssils funcionin...
+
+Per recarregar míssils, ves a
+una sala de recàrrega o
+
+absorbeix un tipus especial
+de paràsit X. Ja els veuràs.
+
+Prova-ho.
+
+Els míssils són la teva única
+esperança. Fes-los servir.
+
+Ara, troba un camí cap a
+l'objectiu.",translated,
+navigation,NAV_015,Navigation Room conversation / typed dialogue,Proceed to target.,Avanza hacia la alerta.,Ves a l'objectiu.,translated,
+navigation,NAV_016,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_017,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_018,Navigation Room conversation / typed dialogue,"Samus, it's as I feared. The
 breeding environments have
 
@@ -554,8 +763,32 @@ haya dejado entrar al X en el
 sector puede que guarde
 relación con la explosión de
 
-antes...",,untranslated,
-navigation,NAV_019,Navigation Room conversation / typed dialogue,Head to Sector 1 (SRX).,Dirígete al sector 1 (SRX).,,untranslated,
+antes...","Samus, és el que em temia.
+Els entorns de cria han estat
+
+envaïts pels paràsits X.
+
+El sector 1 (SRX) mostra
+anomalies als biosensors.
+
+El sector 1 simula
+l'ecosistema d'SR388.
+
+Per arribar-hi, agafa
+l'ascensor principal fins al
+
+pou d'accés i puja a
+l'ascensor 1.
+
+A l'entrada hi ha una sala de
+navegació: rep-hi les ordres.
+
+No n'estic segur, però crec
+que qui va deixar entrar els X
+
+a l'entorn també té relació
+amb l'explosió d'abans...",translated,
+navigation,NAV_019,Navigation Room conversation / typed dialogue,Head to Sector 1 (SRX).,Dirígete al sector 1 (SRX).,Ves al sector 1 (SRX).,translated,
 navigation,NAV_020,Navigation Room conversation / typed dialogue,"The Main Elevator leading to
 the access shaft has been
 
@@ -614,10 +847,39 @@ en masa...
 Limpia los 5 estabilizadores
 para detener su proliferación.
 
-Adelante.",,untranslated,
+Adelante.","L'ascensor principal que porta
+al pou d'accés ha patit
+
+danys greus.
+
+Per desgràcia, no es podrà
+fer servir durant un temps.
+
+Hi ha un agent desconegut en
+acció.
+
+Una cosa molt poderosa...
+i segur que no és humana.
+
+T'informaré quan en sàpiga
+més. Ara, escolta bé.
+
+Els X del sector 1 han pres els
+estabilitzadors atmosfèrics.
+
+Deuen voler adaptar l'entorn
+a les seves necessitats.
+
+Ja s'estan reproduint.
+
+Neteja els 5 estabilitzadors
+atmosfèrics per aturar-los.
+
+Ara, en marxa.",translated,
 navigation,NAV_021,Navigation Room conversation / typed dialogue,"There are 5 stabilizers.
 Find and clear them all.","Hay 5 estabilizadores.
-Encuéntralos y límpialos.",,untranslated,
+Encuéntralos y límpialos.","Hi ha 5 estabilitzadors.
+Troba'ls i neteja'ls tots.",translated,
 navigation,NAV_022,Navigation Room conversation / typed dialogue,"The Charge Beam will power
 up your weapon rather handily.
 
@@ -636,7 +898,14 @@ limpiar.
 Recuerda que, mientras
 hablamos, el X sigue
 
-reproduciéndose sin cesar...",,untranslated,
+reproduciéndose sin cesar...","El raig de càrrega reforçarà
+força la teva arma.
+
+Però encara queda un
+estabilitzador atmosfèric.
+
+Recorda: mentre parlem,
+els X es reprodueixen...",translated,
 navigation,NAV_023,Navigation Room conversation / typed dialogue,"One stabilizer still
 remains offline.
 
@@ -644,7 +913,11 @@ While we're talking,
 the X are reproducing...","Todavía queda un
 estabilizador atmosférico por
 
-limpiar.",,untranslated,
+limpiar.","Encara queda un estabilitzador
+fora de línia.
+
+Mentre parlem,
+els X es reprodueixen...",translated,
 navigation,NAV_024,Navigation Room conversation / typed dialogue,"Atmospheric stabilizers online.
 
 But many X have already made
@@ -690,10 +963,32 @@ Tenemos que acabar con esto.
 Ponte en marcha.
 
 Te daré instrucciones en la
-sala de navegación de TRO.",,untranslated,
+sala de navegación de TRO.","Estabilitzadors atmosfèrics
+en línia.
+
+Però sembla que molts X ja
+han arribat a altres sectors.
+
+En concret...
+
+El sector 2 (TRO), l'hàbitat
+tropical, mostra anomalies.
+
+Sospito que els X hi han
+entrat amb l'ajuda del nostre
+
+sabotejador invisible.
+Potser ara és a TRO.
+
+Samus, ves-hi.
+Hem de posar fi a tot això.
+
+En marxa. T'informaré a la sala
+de navegació de TRO.",translated,
 navigation,NAV_025,Navigation Room conversation / typed dialogue,"Proceed to (TRO).
 Use Elevator 2 to get there.","Dirígete al sector 2 (TRO).
-Usa el ascensor 2.",,untranslated,
+Usa el ascensor 2.","Ves a (TRO).
+Agafa l'ascensor 2.",translated,
 navigation,NAV_026,Navigation Room conversation / typed dialogue,"I have learned the identity of
 our mystery saboteur...
 
@@ -849,7 +1144,81 @@ la sala de datos y descarga los
 datos de bombas.
 
 Mantén los ojos bien abiertos
-por si aparece el SA-X.",,untranslated,
+por si aparece el SA-X.","He descobert qui és el
+nostre sabotejador misteriós...
+
+Samus, és un X que t'imita.
+L'he anomenat SA-X.
+
+Crec que l'SA-X va sortir de
+la càpsula on hi havia les
+
+parts infectades del vestit.
+
+Va fer servir una bomba
+d'energia per fugir de la
+
+sala de quarantena.
+
+L'explosió va rebentar les
+càpsules amb tots els X que
+
+han causat aquest desastre.
+
+Però ara mateix l'SA-X és el
+que més ens ha de preocupar.
+
+L'SA-X t'imita amb tot el
+poder. No li pots fer front.
+
+Si veus l'SA-X, fuig.
+Ni pensis a lluitar-hi...
+
+Encara ets molt vulnerable al
+fred, un efecte secundari
+
+inesperat de la vacuna de
+metroide.
+
+Com els metroides, et pot
+congelar un raig de gel.
+
+I és clar, l'SA-X porta el
+raig de gel. No t'hi acostis.
+
+Si el veus, fuig.
+
+El quarter general té dades de
+bombes a la sala de dades.
+
+Amb bombes podràs obrir-te
+pas si l'SA-X t'acorrala.
+
+La sala de dades és aquí,
+però la tanca una comporta
+
+de nivell 1.
+
+Hauràs de trobar la sala de
+seguretat i desblocar els
+
+bloquejos de nivell 1.
+
+Però, per seguretat,
+no surt al mapa.
+
+L'hauràs de trobar pel teu
+compte, Samus.
+
+Per tant, primer troba la sala
+de seguretat i desbloca les
+
+comportes de nivell 1. Després
+ves a la sala de dades i baixa
+
+les dades de bombes.
+
+Vigila amb l'SA-X.",translated,
 navigation,NAV_027,Navigation Room conversation / typed dialogue,"Find the Security Room and
 unlock Level 1 hatches. Then go
 
@@ -860,7 +1229,11 @@ para desbloquear las puertas
 de nivel 1. Después, ve a la sala
 de datos y descarga los
 
-datos de bombas.",,untranslated,
+datos de bombas.","Troba la sala de seguretat i
+desbloca les comportes de
+
+nivell 1. Després ves a la sala
+de dades i baixa les bombes.",translated,
 navigation,NAV_028,Navigation Room conversation / typed dialogue,"You've released the Level 1
 security lock, so blue hatches
 
@@ -871,12 +1244,17 @@ seguridad, así que ya puedes
 abrir las puertas azules.
 Ahora descarga los datos de
 
-bombas en la sala de datos.",,untranslated,
+bombas en la sala de datos.","Has desactivat el bloqueig de
+nivell 1: les comportes blaves
+
+ja són actives. Ara ves a la
+sala de dades a baixar bombes.",translated,
 navigation,NAV_029,Navigation Room conversation / typed dialogue,"Proceed to the Data Room to
 download Bomb data.","Dirígete a la sala de datos
-para descargar la información.",,untranslated,
-navigation,NAV_030,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_031,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+para descargar la información.","Ves a la sala de dades i
+baixa les dades de bombes.",translated,
+navigation,NAV_030,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_031,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_032,Navigation Room conversation / typed dialogue,"Samus, we've got trouble.
 
 Releasing the security lock
@@ -923,12 +1301,37 @@ Estoy investigándolo.
 Te daré más información en la
 sala de navegación del sector.
 
-Avanza hasta el sector 4.",,untranslated,
+Avanza hasta el sector 4.","Samus, tenim problemes.
+
+Potser ha estat un error
+desactivar el bloqueig.
+
+L'SA-X ha envaït l'entorn
+aquàtic del sector 4
+
+(AQA) amb milers d'X.
+
+Amb les comportes blaves
+actives, l'SA-X hi ha entrat
+
+sense cap dificultat.
+
+Les criatures i els sistemes
+del sector 4 ja mostren
+
+múltiples irregularitats.
+Ho estic investigant.
+
+T'informaré a la sala de
+navegació quan hi arribis.
+
+Ara, ves al sector 4.",translated,
 navigation,NAV_033,Navigation Room conversation / typed dialogue,"Go to Sector 4 (AQA).
 Brief in the Navigation Room.","Ve al sector 4 (AQA).
 Contacta desde la sala de
 
-navegación.",,untranslated,
+navegación.","Ves al sector 4 (AQA). Rebràs
+ordres a la sala de navegació.",translated,
 navigation,NAV_034,Navigation Room conversation / typed dialogue,"This sector has taken more
 damage than expected...
 
@@ -1058,16 +1461,73 @@ estación.
 Si tocas el agua, te
 electrocutarás. No pierdas de
 
-vista el indicador de energía.",,untranslated,
+vista el indicador de energía.","Aquest sector ha patit més
+danys del que esperava...
+
+Sabia que els X eren poderosos
+i destructius, però tot i així...
+
+Això sembla fet a propòsit.
+
+No podem descartar que
+l'SA-X tingui un alt grau
+
+d'intel·ligència.
+
+Trobo fascinants els X,
+sobretot aquest SA-X.
+
+...Però me'n vaig del tema. En
+aquest sector hi viu una
+
+criatura molt grossa. Els
+investigadors li deien Serris.
+
+És capaç de moure's i atacar
+a velocitat ultraràpida.
+
+La destrucció més cega i
+estesa que veiem aquí es pot
+
+atribuir a Serris.
+
+Segur que l'SA-X l'ha alliberat,
+però encara no sé per què.
+
+Serris ha tornat sovint a
+aquest tanc de cria.
+
+Tornar-hi cada cert temps
+deu ser el seu instint.
+
+És un espècimen valuós, però
+tens autorització per
+
+eliminar-lo. Si no ho fas, pot
+envair altres sectors.
+
+Ves amb compte quan et moguis.
+Uns nodes d'energia trencats
+
+han electrificat l'aigua, però
+no podem tallar el corrent.
+
+Afectaria tota l'estació.
+
+Si toques l'aigua,
+t'electrocutaràs.
+
+Conserva l'energia pel camí.",translated,
 navigation,NAV_035,Navigation Room conversation / typed dialogue,"Terminate Serris.
 Avoid the electrified water.","Destruye a Serris.
 Evita el agua electrificada al
 
-avanzar por el sector.",,untranslated,
-navigation,NAV_036,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_037,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_038,Navigation Room conversation / typed dialogue,Empty,Vaciar,,untranslated,
-navigation,NAV_039,Navigation Room conversation / typed dialogue,Empty.,Vaciar,,untranslated,
+avanzar por el sector.","Elimina Serris.
+Evita l'aigua electrificada.",translated,
+navigation,NAV_036,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_037,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_038,Navigation Room conversation / typed dialogue,Empty,Vaciar,Buit,translated,
+navigation,NAV_039,Navigation Room conversation / typed dialogue,Empty.,Vaciar,Buit.,translated,
 navigation,NAV_040,Navigation Room conversation / typed dialogue,"So Serris had been infected by
 the X, too... Well, as a result,
 
@@ -1162,8 +1622,57 @@ navegación de PYR para
 localizar la sala de datos en el
 mapa del sector.
 
-Dirígete al sector 3 (PYR).",,untranslated,
-navigation,NAV_041,Navigation Room conversation / typed dialogue,Head for Sector 3 (PYR).,Dirígete al sector 3 (PYR).,,untranslated,
+Dirígete al sector 3 (PYR).","O sigui que Serris també
+estava infectat pels X...
+
+Bé, gràcies a això has
+recuperat una altra habilitat.
+
+A aquest ritme, potser encara
+podràs plantar cara a l'SA-X...
+
+Però encara falta molt.
+
+El quarter general té més
+dades de suport. Aquesta
+
+vegada, una millora dels
+míssils.
+
+La necessites amb urgència,
+però la sala de dades d'aquí
+
+està tancada amb un bloqueig
+de nivell 4, el nivell de
+
+seguretat més alt.
+
+Evitem obrir zones sensibles
+si no és necessari.
+
+A més, el camí cap a la sala
+de dades del sector 2 està
+
+tallat per més activitat de
+l'SA-X.
+
+Hi veig una pauta deliberada,
+com si impedís expressament
+
+la teva recuperació.
+
+Samus, sembla que la millor
+opció per fer la baixada és
+
+al sector 3 (PYR).
+
+Trobaràs la sala de dades de
+PYR al mapa quan hi facis
+
+servir una sala de navegació.
+
+Ara, ves al sector 3 (PYR).",translated,
+navigation,NAV_041,Navigation Room conversation / typed dialogue,Head for Sector 3 (PYR).,Dirígete al sector 3 (PYR).,Ves al sector 3 (PYR).,translated,
 navigation,NAV_042,Navigation Room conversation / typed dialogue,"Thankfully, the X have not
 invaded this area yet....
 
@@ -1267,13 +1776,72 @@ atravesar zonas de altas
 temperaturas para llegar,
 así que date la vuelta si
 
-entras en una.",,untranslated,
+entras en una.","Per sort, els X encara no han
+envaït aquesta zona...
+
+La sala de dades d'aquí la
+tanca una altra comporta de
+
+seguretat.
+
+Per fer la baixada has de
+trobar la sala de seguretat i
+
+activar les comportes de
+nivell 2.
+
+Això pot deixar entrar l'SA-X
+i els paràsits X a la zona...
+
+Però no tenim alternativa.
+L'objectiu principal és que et
+
+recuperis.
+
+La sala de dades és aquí.
+Com t'he dit, les sales de
+
+seguretat no surten al mapa.
+
+Ves amb compte, Samus. Aquí hi
+ha organismes molt violents.
+
+I evita les zones de calor
+extrema: el teu vestit encara
+
+no suporta temperatures tan
+altes, però hi treballem.
+
+Les comportes de nivell 2 són
+verdes.
+
+Desactiva el bloqueig i ves a
+la sala de dades a baixar-les.
+
+Les dades de supermíssils són
+a punt. Triplicaràs la potència.
+
+Primer, activa les comportes
+verdes.
+
+Després ves a la sala de
+dades.
+
+En aquesta ruta no hi ha
+zones de calor extrema:
+
+si entres en alguna, torna
+enrere.",translated,
 navigation,NAV_043,Navigation Room conversation / typed dialogue,"First, unlock green hatches.
 Then go to the Data Room.","Primero, desbloquea las
 puertas verdes.
 
 A continuación, accede a la
-sala de datos.",,untranslated,
+sala de datos.","Primer, desbloca les comportes
+verdes.
+
+Després ves a la sala de
+dades.",translated,
 navigation,NAV_044,Navigation Room conversation / typed dialogue,"Level 2 security lock released.
 Green hatches are now active.
 
@@ -1282,12 +1850,17 @@ Super Missile download.","Nivel 2 desbloqueado. Puertas
 verdes operativas.
 
 Descarga los supermisiles en
-la sala de datos.",,untranslated,
+la sala de datos.","Bloqueig de nivell 2 desactivat.
+Comportes verdes actives.
+
+Ves a la sala de dades a
+baixar els supermíssils.",translated,
 navigation,NAV_045,Navigation Room conversation / typed dialogue,"Head to the Data Room for
 Super Missile download.","Descarga los supermisiles en la
-sala de datos.",,untranslated,
-navigation,NAV_046,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_047,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+sala de datos.","Ves a la sala de dades a
+baixar els supermíssils.",translated,
+navigation,NAV_046,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_047,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_048,Navigation Room conversation / typed dialogue,"I see that you encountered a
 rogue Security Robot.
 
@@ -1401,8 +1974,65 @@ Eres la única que puede
 conseguirlo. Ve con pies de
 
 plomo. Puede que el X sea más
-peligroso de lo que creemos...",,untranslated,
-navigation,NAV_049,Navigation Room conversation / typed dialogue,Go to Sector 6 (NOC).,Dirígete al sector 6 (NOC).,,untranslated,
+peligroso de lo que creemos...","Veig que has trobat un robot
+de seguretat descontrolat.
+
+Si el tornes a trobar, pots
+destruir-lo. La teva seguretat
+
+és vital.
+
+Però anem a les ordres... Els
+bloquejos de nivell 2 estan
+
+desactivats i els sectors 5 i 6
+són oberts.
+
+Això vol dir que segurament
+els X ja s'hi han infiltrat.
+
+Són molt més difícils d'aturar
+del que sospitàvem al principi...
+
+El sector 5 (ARC) és sota zero.
+
+Encara ets sensible al fred
+pels efectes de la vacuna,
+
+i patiràs danys només que
+hi posis els peus.
+
+De moment, evita el sector 5.
+El quarter general treballa
+
+en unes dades per adaptar
+el teu vestit a les
+
+temperatures extremes.
+
+Quan rebem la transmissió,
+les podràs baixar, però...
+
+Els X han destruït totes les
+sales de dades que has fet
+
+servir fins ara. Ja no dubto
+que són capaços de raonar.
+
+Hauràs d'anar a la sala de
+dades de l'hàbitat nocturn,
+
+el sector 6 (NOC).
+
+Ves al sector 6 i entra en una
+sala de navegació.
+
+Ves amb molt de compte, Samus.
+Només tu ho pots fer.
+
+I els X poden ser molt més
+perillosos del que sabem...",translated,
+navigation,NAV_049,Navigation Room conversation / typed dialogue,Go to Sector 6 (NOC).,Dirígete al sector 6 (NOC).,Ves al sector 6 (NOC).,translated,
 navigation,NAV_050,Navigation Room conversation / typed dialogue,"Does Samus suspect anything?
 
  No, I do not think so.
@@ -1415,10 +2045,16 @@ No lo creo.
 
 Bien. Vigílala de cerca.
 
-Afirmativo. Corto y cierro.",,untranslated,
-navigation,NAV_051,Navigation Room conversation / typed dialogue,Demo use,Escena automática.,,untranslated,
-navigation,NAV_052,Navigation Room conversation / typed dialogue,Head for Sector 6 (NOC).,Accede al sector 6 (NOC).,,untranslated,
-navigation,NAV_053,Navigation Room conversation / typed dialogue,Head for Sector 6 (NOC).,Accede al sector 6 (NOC).,,untranslated,
+Afirmativo. Corto y cierro.","La Samus sospita res?
+
+ No, crec que no.
+
+ Bé. Vigila-la de prop.
+
+ Afirmatiu. Tallo.",translated,
+navigation,NAV_051,Navigation Room conversation / typed dialogue,Demo use,Escena automática.,Per a la demo,translated,
+navigation,NAV_052,Navigation Room conversation / typed dialogue,Head for Sector 6 (NOC).,Accede al sector 6 (NOC).,Ves al sector 6 (NOC).,translated,
+navigation,NAV_053,Navigation Room conversation / typed dialogue,Head for Sector 6 (NOC).,Accede al sector 6 (NOC).,Ves al sector 6 (NOC).,translated,
 navigation,NAV_054,Navigation Room conversation / typed dialogue,"The Varia Suit data is here
 from HQ, ready to download.
 
@@ -1490,12 +2126,48 @@ Permanece alerta; te están
 buscando, Samus...
 
 Esta área es muy oscura.
-Extrema la precaución.",,untranslated,
+Extrema la precaución.","El quarter general ha enviat
+les dades del vestit climàtic.
+
+Ja es poden baixar.
+Ves a una sala de dades.
+
+Però hi ha un problema...
+
+Hi ha X del sector sota zero,
+ARC, al sector 6 (NOC),
+
+i resulta que...
+
+El fred els ha canviat. Si
+n'absorbeixes un, quedaràs
+
+congelada per dins. Sembla
+una tàctica deliberada.
+
+Amb el vestit climàtic baixat,
+estaràs fora de perill.
+
+Fins llavors, ves amb molt de
+compte.
+
+La sala de dades de NOC és
+aquí. Evita els X blaus.
+
+Dispara'ls amb el raig per
+atordir-los i poder passar.
+
+Ves amb compte. Ara et cacen
+activament, Samus...
+
+I aquesta zona és molt fosca.
+Avança amb la màxima cautela.",translated,
 navigation,NAV_055,Navigation Room conversation / typed dialogue,"Proceed to Data Room for
 Varia Suit modification.","Ve a la sala de datos para
-descargar el traje climático.",,untranslated,
-navigation,NAV_056,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_057,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+descargar el traje climático.","Ves a la sala de dades a
+buscar el vestit climàtic.",translated,
+navigation,NAV_056,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_057,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_058,Navigation Room conversation / typed dialogue,"How did that X download the
 Varia Suit data?
 
@@ -1620,10 +2292,73 @@ utilidad.
 Dirígete al sector 5 (ARC) para
 realizar la descarga.
 
-En marcha.",,untranslated,
+En marcha.","Com ha pogut baixar aquell X
+les dades del vestit climàtic?
+
+No té cap mena de sentit,
+tret que els X...
+
+Tret que els X puguin tractar
+dades de manera orgànica...
+
+Sigui com sigui, ja tens les
+dades del vestit climàtic.
+
+Ara estàs protegida de les
+temperatures extremes.
+
+I el més important: l'SA-X ja
+no et podrà congelar,
+
+i et serà més fàcil fugir.
+
+Però encara ets massa feble.
+Aquella cosa et supera.
+
+Ara mateix no tens manera de
+fer-li mal.
+
+Però les meves simulacions
+indiquen que una arma
+
+perforant com el raig de
+plasma podria funcionar.
+
+Tot i això, el quarter general
+trigarà a preparar les dades
+
+de la modificació.
+
+També és possible que
+recuperis el raig de plasma
+
+absorbint un nucli X gran,
+com vas fer amb la funció del
+
+raig de càrrega.
+
+Pel que fa a recuperar el
+raig de gel, ho dubto...
+
+La teva estructura cel·lular
+actual el rebutjaria.
+
+Per això, el quarter general
+ha creat una millora:
+
+el míssil de gel.
+
+Afegirà un efecte de gel
+als míssils. T'ajudarà.
+
+Ves al sector 5 (ARC) a
+baixar-la.
+
+Ara, en marxa.",translated,
 navigation,NAV_059,Navigation Room conversation / typed dialogue,"Proceed to Sector 5 (ARC) for
 Ice Missile download.","Dirígete al sector 5 (ARC) para
-descargar los misiles de hielo.",,untranslated,
+descargar los misiles de hielo.","Ves al sector 5 (ARC) a
+baixar el míssil de gel.",translated,
 navigation,NAV_060,Navigation Room conversation / typed dialogue,"You need to download data for
 the Ice Missile upgrade, but...
 
@@ -1662,10 +2397,29 @@ misiles, seguro que te sirven
 de ayuda...
 
 Ya sabes lo que tienes que
-hacer. Adelante.",,untranslated,
+hacer. Adelante.","Has de baixar les dades de la
+millora del míssil de gel, però...
+
+Com et pots imaginar, la sala
+de dades d'aquí està tancada.
+
+Les comportes de seguretat
+de nivell 3 són grogues.
+
+Desactiva el bloqueig de
+seguretat i baixa les dades
+
+com sempre.
+
+I prova aquests nous míssils.
+Et seran útils...
+
+Ja saps què has de fer.
+Endavant.",translated,
 navigation,NAV_061,Navigation Room conversation / typed dialogue,"First, release security lock.
 Then access Data Room.","Desactiva el nivel de seguridad
-y penetra en la sala de datos.",,untranslated,
+y penetra en la sala de datos.","Primer, desactiva el bloqueig.
+Després, a la sala de dades.",translated,
 navigation,NAV_062,Navigation Room conversation / typed dialogue,"Level 3 security lock released.
 Yellow hatches are now active.
 
@@ -1677,12 +2431,17 @@ Las puertas amarillas ya están
 operativas. Entra en la sala de
 
 datos para descargar los
-misiles de hielo.",,untranslated,
+misiles de hielo.","Bloqueig de nivell 3 desactivat.
+Comportes grogues actives.
+
+Ves a la sala de dades a
+baixar el míssil de gel.",translated,
 navigation,NAV_063,Navigation Room conversation / typed dialogue,"Proceed to Data Room for
 Ice Missile download.","Avanza hasta la sala de datos
-y descarga los misiles de hielo.",,untranslated,
-navigation,NAV_064,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_065,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+y descarga los misiles de hielo.","Ves a la sala de dades a
+baixar el míssil de gel.",translated,
+navigation,NAV_064,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_065,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_066,Navigation Room conversation / typed dialogue,"Emergency in Sector 3 (PYR).
 The area could melt down soon.
 
@@ -1755,12 +2514,45 @@ asombrosa.
 El tiempo se nos echa encima.
 Corre hacia la sala de control
 
-del sector 3.",,untranslated,
+del sector 3.","Emergència al sector 3 (PYR).
+La zona es pot fondre aviat.
+
+Sembla que la unitat de
+refrigeració de la caldera
+
+principal no funciona bé.
+
+Això podria destruir tota
+l'estació de recerca, perquè
+
+segurament activaria els
+explosius d'autodestrucció.
+
+Tenim uns 6 minuts.
+
+Afanya't cap al sector 3 i
+entra a la sala de control,
+
+al costat de la sala de la
+caldera principal.
+
+Per això han caigut la majoria
+de sistemes de PYR...
+
+Un cop més, sabem qui n'és el
+culpable. L'SA-X deu haver
+
+entrat al fitxer de control del
+sistema. Quina intel·ligència.
+
+Hi ha poc temps. Corre a la
+sala de control del sector 3.",translated,
 navigation,NAV_067,Navigation Room conversation / typed dialogue,"You have little time.
 Hurry to the Control Room.","El tiempo se acaba. Corre a la
-sala de control.",,untranslated,
-navigation,NAV_068,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_069,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+sala de control.","Tens poc temps.
+Corre a la sala de control.",translated,
+navigation,NAV_068,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_069,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_070,Navigation Room conversation / typed dialogue,"The X mimicked a crew member...
 It all makes sense now.
 
@@ -1867,12 +2659,71 @@ eléctrico del ascensor
 principal. Úsalo para volver y
 busca a posibles
 
-supervivientes.",,untranslated,
+supervivientes.","Els X van imitar un tripulant...
+Ara tot encaixa.
+
+Els X poden absorbir els
+records i els coneixements
+
+de les seves preses.
+
+Quina troballa més increïble.
+Ha impressionat molt el
+
+quarter general.
+
+Però no ho trobes estrany?
+Això podia haver destruït
+
+l'estació amb els X a dins,
+i fins i tot l'SA-X.
+
+És insòlit en una espècie que
+es protegeix com els X.
+
+Tret que... la teva presència
+sigui una amenaça encara més
+
+gran, una amenaça per als X
+que hi ha en altres llocs...
+
+Només és una hipòtesi...
+
+Potser...
+l'instint de supervivència
+
+xoca amb la intel·ligència
+que acaben d'adquirir...
+
+No abaixis la guàrdia encara.
+Els X continuen sent una
+
+amenaça.
+
+Samus, veig senyals de vida a
+la coberta residencial.
+
+Supervivents?
+
+El tripulant infectat que has
+vist havia sobreviscut fins
+
+fa poc. Potser encara hi ha
+alguna possibilitat...
+
+Els senyals vénen d'aquí.
+
+Acabo de restablir l'energia
+de l'ascensor principal.
+
+Fes-lo servir per tornar-hi i
+busca supervivents.",translated,
 navigation,NAV_071,Navigation Room conversation / typed dialogue,"Proceed to target.
 Search for survivors.","Avanza hacia la alerta. Busca
-a los supervivientes.",,untranslated,
-navigation,NAV_072,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_073,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+a los supervivientes.","Ves a l'objectiu.
+Busca supervivents.",translated,
+navigation,NAV_072,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_073,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_074,Navigation Room conversation / typed dialogue,"So the survivors were not
 human... Most unfortunate.
 
@@ -1945,12 +2796,51 @@ Descárgalos inmediatamente. La
 única sala de datos accesible
 
 es la del sector 5 (ARC).
-Venga, en marcha.",,untranslated,
+Venga, en marcha.","O sigui que els supervivents
+no eren humans...
+
+És una gran llàstima.
+
+Ara podem confirmar la mort
+de tots els tripulants.
+
+M'imaginava que era així,
+però esperava que no ho fos.
+
+Crec que els X només van
+infectar els humans per
+
+aconseguir coneixements...
+
+Aquella forma és massa feble
+per lluitar. Estic segur que els
+
+altres només eren aliment
+per als X...
+
+Samus, crec que evolucionen.
+Es fan més forts.
+
+Ja n'apareixen alguns que
+resisteixen les teves armes.
+
+El quarter general ho havia
+previst i ha enviat les dades
+
+de la bomba d'energia així que
+l'equip tècnic les ha acabat.
+
+Baixa-les immediatament.
+L'única sala de dades que
+
+ens queda és aquesta, al
+sector 5 (ARC). Ves-hi. Ara.",translated,
 navigation,NAV_075,Navigation Room conversation / typed dialogue,"Proceed to Sector 5 (ARC).
 Download Power Bomb data.","Ve al sector 5 (ARC) y
 descarga los datos de la bomba
 
-de energía.",,untranslated,
+de energía.","Ves al sector 5 (ARC).
+Baixa la bomba d'energia.",translated,
 navigation,NAV_076,Navigation Room conversation / typed dialogue,"You've been to this Data Room
 before, but I'll show you its
 
@@ -1961,18 +2851,25 @@ datos, pero te volveré a
 
 mostrar su posición.
 
-Adelante.",,untranslated,
+Adelante.","Ja has estat en aquesta sala
+de dades, però te'n torno
+
+a ensenyar la posició.
+
+Ara, en marxa.",translated,
 navigation,NAV_077,Navigation Room conversation / typed dialogue,"Proceed to Sector 5 (ARC).
 Download Power Bomb data.","Ve al sector 5 (ARC) y
 descarga los datos de la bomba
 
-de energía.",,untranslated,
-navigation,NAV_078,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_079,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+de energía.","Ves al sector 5 (ARC).
+Baixa la bomba d'energia.",translated,
+navigation,NAV_078,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_079,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_080,Navigation Room conversation / typed dialogue,"Samus, return to your ship.
 I have important information.","Samus, regresa a tu nave.
-Tengo información importante.",,untranslated,
-navigation,NAV_081,Navigation Room conversation / typed dialogue,Return to your ship.,Vuelve a tu nave.,,untranslated,
+Tengo información importante.","Samus, torna a la nau.
+Tinc informació important.",translated,
+navigation,NAV_081,Navigation Room conversation / typed dialogue,Return to your ship.,Vuelve a tu nave.,Torna a la nau.,translated,
 navigation,NAV_082,Navigation Room conversation / typed dialogue,"The main silo of the Reactor
 Core has gone offline.
 
@@ -2059,11 +2956,54 @@ Ah, ya veo. Su supervivencia
 en medio del desastre es muy
 
 significativa...
-Las mantendré aquí dentro.",,untranslated,
+Las mantendré aquí dentro.","La sitja principal del nucli
+del reactor s'ha desconnectat.
+
+Per això han caigut tots els
+ascensors i els sistemes de
+
+l'estació.
+
+Ni els ascensors ni les
+comportes funcionaran.
+
+Això no fa bona pinta...
+
+Si pots arribar a aquest punt,
+potser podràs engegar el
+
+sistema d'energia auxiliar.
+
+Després podrem esbrinar per
+què s'ha desconnectat la
+
+sitja principal...
+
+Per cert, t'he demanat que
+tornessis per dir-te que...
+
+Unes criatures estranyes
+han pujat a la teva nau.
+
+He confirmat que no eren
+hostes d'X i les he allotjat.
+
+Saps res d'aquestes criatures
+estranyes?
+
+Eren l'origen dels senyals de
+vida sans d'abans?
+
+Molt bé, doncs. La seva
+presència enmig d'aquest
+
+desastre deu tenir algun
+sentit... Me les quedaré aquí.",translated,
 navigation,NAV_083,Navigation Room conversation / typed dialogue,Go to Auxiliary Power Station.,"Dirígete a la estación de
-energía auxiliar.",,untranslated,
-navigation,NAV_084,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_085,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+energía auxiliar.","Ves a l'estació d'energia
+auxiliar.",translated,
+navigation,NAV_084,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_085,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_086,Navigation Room conversation / typed dialogue,"Save Rooms and Recharge Rooms
 are now back online, but with
 
@@ -2104,10 +3044,31 @@ componentes del reactor
 central...
 
 Tendrás que encontrar el lugar
-de donde proceden las raíces.",,untranslated,
+de donde proceden las raíces.","Les sales de guardat i les
+sales de recàrrega tornen a
+
+funcionar, però només amb
+l'energia auxiliar no anirà
+
+cap ascensor ni cap comporta.
+
+Sense la sitja principal en
+línia, continuem encallats.
+
+Crec que l'origen del
+problema és la vegetació que
+
+has vist abans ofegant els
+components del nucli del
+
+reactor.
+
+Per continuar, hem de trobar
+l'origen d'aquelles arrels.",translated,
 navigation,NAV_087,Navigation Room conversation / typed dialogue,"Locate and neutralize the
 source of vegetation.","Localiza y destruye el origen
-de esa vegetación.",,untranslated,
+de esa vegetación.","Localitza i neutralitza
+l'origen de la vegetació.",translated,
 navigation,NAV_088,Navigation Room conversation / typed dialogue,"What? You've restored
 Plasma Beam functionality?
 
@@ -2159,10 +3120,38 @@ Samus, corre al sector 5.
 El daño causado es tremendo.
 Averigua qué lo está
 
-provocando.",,untranslated,
+provocando.","Què? Has recuperat la funció
+del raig de plasma?
+
+...Del tot inesperat.
+
+Tot i així, continua evitant
+l'SA-X. Ell també pot ser més
+
+fort.
+
+I encara et falten algunes
+habilitats crucials per
+
+sobreviure...
+
+Espera... Espera un segon...
+Més problemes. Un moment.
+
+........................................................
+N'he aïllat la causa.
+
+Hi ha hagut una explosió a la
+sala de dades d'ARC...
+
+Samus, ves al sector 5.
+
+Els danys són impressionants.
+Esbrina què els provoca.",translated,
 navigation,NAV_089,Navigation Room conversation / typed dialogue,"Trouble in Sector 5.
 Go there immediately.","Problemas en el sector 5.
-Corre hasta el lugar.",,untranslated,
+Corre hasta el lugar.","Problemes al sector 5.
+Ves-hi immediatament.",translated,
 navigation,NAV_090,Navigation Room conversation / typed dialogue,"It's gotten worse. The damage
 seems to have been caused by
 
@@ -2218,14 +3207,43 @@ Esa cosa está fuera de
 control. Encuéntrala antes de
 
 que destruya la estación por
-completo...",,untranslated,
-navigation,NAV_091,Navigation Room conversation / typed dialogue,Find and engage the Nightmare.,Da caza a Pesadilla.,,untranslated,
-navigation,NAV_092,Navigation Room conversation / typed dialogue,Diffusion Missiles: Not used.,Misiles de difusión: no usados.,,untranslated,
+completo...","Ha empitjorat. Sembla que els
+danys els ha causat una
+
+criatura que els investigadors
+tenien aquí. Li deien...
+
+Malson.
+
+Pel que sembla, era un
+organisme biomecànic
+
+dissenyat per a usos militars...
+
+Té un poder fora del comú i
+pot manipular la gravetat.
+
+Hem de suposar que s'ha
+convertit en un hoste d'X.
+
+No tenim alternativa. L'has de
+trobar i derrotar.
+
+No en puc confirmar la
+posició.
+
+Aquella cosa està fora de
+control. Afanya't abans que
+
+destrueixi tota l'estació...",translated,
+navigation,NAV_091,Navigation Room conversation / typed dialogue,Find and engage the Nightmare.,Da caza a Pesadilla.,Troba Malson i enfronta-t'hi.,translated,
+navigation,NAV_092,Navigation Room conversation / typed dialogue,Diffusion Missiles: Not used.,Misiles de difusión: no usados.,Míssils de difusió: no s'usa.,translated,
 navigation,NAV_093,Navigation Room conversation / typed dialogue,"Release security lock and
 proceed to Data Room.","Desconecta el cierre de
 seguridad y avanza hasta la
 
-sala de datos.",,untranslated,
+sala de datos.","Desactiva el bloqueig i
+ves a la sala de dades.",translated,
 navigation,NAV_094,Navigation Room conversation / typed dialogue,"Samus, I'm impressed that you
 were able to make it back.
 
@@ -2268,7 +3286,27 @@ Dejémonos de bromas.
 Samus, vuelve al trabajo.
 
 Me pregunto cuántos jugadores
-verán este mensaje...",,untranslated,
+verán este mensaje...","Samus, m'impressiona que hagis
+aconseguit tornar.
+
+Aquell truc amb el salt llampec
+ha estat molt... enginyós.
+
+Aquesta és la nostra Samus
+Aran! Magnífic, magnífic!
+
+Com a premi, expliquem-li el
+nostre pla. Oi, ordinador?
+
+Això... no és aconsellable.
+
+Bah...
+
+Prou bromes.
+Samus, torna a la feina.
+
+Em pregunto quants jugadors
+veuran aquest missatge...?",translated,
 navigation,NAV_095,Navigation Room conversation / typed dialogue,"Samus, the plan I mentioned...
 
 Samus, return to the correct
@@ -2280,7 +3318,12 @@ hablaba...
 Samus, vuelve a la ruta
 correcta inmediatamente.
 
-...",,untranslated,
+...","Samus, el pla que he esmentat...
+
+Samus, torna a la ruta
+correcta immediatament.
+
+......",translated,
 navigation,NAV_096,Navigation Room conversation / typed dialogue,"You upgraded your missiles?
 That's unusual...
 
@@ -2347,10 +3390,44 @@ esperar e ir a investigar.
 Samus, ya sabes lo que has de
 de hacer...
 
-Al sector 6, rápido.",,untranslated,
+Al sector 6, rápido.","Has millorat els míssils?
+Això és insòlit...
+
+El quarter general no ha dit
+res. Un error de procediment,
+
+n'estic segur...
+
+Tot i així, no vaig aprovar que
+et saltessis el nivell de
+
+seguretat 4.
+
+D'ara endavant actuaràs amb
+més discreció.
+
+En tot cas, Samus, recordes el
+robot de seguretat que vas
+
+combatre abans? Crec que
+els X l'han infectat.
+
+És a dir, s'han apoderat dels
+components orgànics que
+
+formen la seva xarxa neuronal.
+Ha entrat al sector 6 (NOC).
+
+No sé què planeja, però no
+esperem a descobrir-ho.
+
+Samus, ja saps què has de fer.
+
+Al sector 6, de pressa.",translated,
 navigation,NAV_097,Navigation Room conversation / typed dialogue,"Find the Security Robot in
 Sector 6 and neutralize it.","Encuentra al robot en el
-sector 6 y neutralízalo.",,untranslated,
+sector 6 y neutralízalo.","Troba el robot de seguretat al
+sector 6 i neutralitza'l.",translated,
 navigation,NAV_098,Navigation Room conversation / typed dialogue,"The Security Robot seems to
 have gotten much stronger.
 
@@ -2377,10 +3454,25 @@ sector NOC rápidamente.
 El SA-X te está siguiendo.
 
 No permanezcas más tiempo del
-necesario, ¿entendido?",,untranslated,
+necesario, ¿entendido?","Sembla que el robot de
+seguretat és molt més fort.
+
+Això em preocupa. Ves amb
+compte.
+
+Però tenim un altre problema.
+
+Quan acabis, surt de
+NOC immediatament.
+
+L'SA-X et segueix el rastre.
+
+No t'hi quedis més del
+necessari. Entesos?",translated,
 navigation,NAV_099,Navigation Room conversation / typed dialogue,"Find and neutralize Security
 Robot. Then leave immediately.","Encuentra al robot y
-neutralízalo; luego, escapa.",,untranslated,
+neutralízalo; luego, escapa.","Troba i neutralitza el robot.
+Després, surt immediatament.",translated,
 navigation,NAV_100,Navigation Room conversation / typed dialogue,"Samus, you shouldn't have done
 that. You ignored your orders.
 
@@ -2529,8 +3621,80 @@ cuartel general, pero debes
 
 informarles inmediatamente...
 
-En marcha.",,untranslated,
-navigation,NAV_101,Navigation Room conversation / typed dialogue,Get out of there.,Sal de ahí.,,untranslated,
+En marcha.","Samus, no ho hauries d'haver
+fet. Has desobeït les ordres.
+
+Potser ho hauràs de pagar
+ben aviat...
+
+......
+
+Com pots veure, la Federació
+treballava en secret en un
+
+programa de cria de metroides.
+
+Només amb fins pacífics, és
+clar. Entén-ho, si us plau.
+
+Però potser ja sabies que
+aquest programa existia?
+
+Segur que vas tenir dubtes
+quan vas veure el sector 1.
+
+SRX, una rèplica fidel de
+l'ecosistema d'SR388...
+
+Ideal per criar metroides alfa,
+gamma, zeta i fins i tot omega.
+
+La recerca fins i tot va
+descobrir tècniques de
+
+creixement ràpid.
+
+Imagina-t'ho: crear un omega a
+partir d'una larva en dies...
+
+Però aquesta recerca s'ha
+acabat.
+
+Els X han ensumat el seu
+enemic natural, i un dels
+
+SA-X ve cap aquí...
+
+UN? ...Vols dir que hi ha
+més d'un SA-X?
+
+No et sorprenguis tant, Samus.
+
+Saps que els X es reprodueixen
+per divisió asexual.
+
+Per aquest mecanisme, ara hi
+ha no menys de 10 SA-X a
+
+bord de l'estació.
+
+......
+
+Samus, te n'has d'anar.
+Surt. Si t'hi quedes gaire,
+
+l'SA-X et destruirà.
+
+Atura't només en una sala de
+navegació per connectar-te.
+
+No sé com s'ho prendrà el
+quarter general, però els n'has
+
+d'informar immediatament...
+
+Ara, ves-te'n.",translated,
+navigation,NAV_101,Navigation Room conversation / typed dialogue,Get out of there.,Sal de ahí.,Surt d'aquí.,translated,
 navigation,NAV_102,Navigation Room conversation / typed dialogue,"Samus, we're done here. Leave
 the rest to the Federation...
 
@@ -2687,8 +3851,84 @@ que esto siga adelante!
 
 Ya están en camino.
 
-Idiotas...",,untranslated,
-navigation,NAV_103,Navigation Room conversation / typed dialogue,Not used,Not used,,untranslated,
+Idiotas...","Samus, aquí ja hem acabat.
+Deixa la resta a la Federació...
+
+Ens hauríem de preparar per
+evacuar l'estació...
+
+Fas broma?! Saben com són
+de perillosos, els X?
+
+...I com es reprodueixen de
+pressa?
+
+La Federació s'ha interessat
+pels X i per l'SA-X.
+
+Creu que aquesta forma de
+vida té aplicacions infinites.
+
+És ridícul! Els X són unes
+abominacions sense cor!
+
+Quines aplicacions tenen?
+
+No cal que entenguis
+aquestes qüestions.
+
+La Federació ja ve. Hauries
+de marxar sense fer soroll...
+
+És una bogeria! Aquí no
+tindran cap possibilitat!
+
+L'estació els devorarà! Què
+pot valer aquest risc!?
+
+Capturar l'SA-X, és clar.
+
+...De debò? De veritat creuen
+que se'n sortiran?
+
+Serà difícil, sens dubte.
+No esperen la teva ajuda.
+
+Sabien que intentaries
+destruir l'SA-X...
+
+Per això ja no t'enviaven
+dades de suport...
+
+La modificació del raig de
+plasma era a punt feia temps,
+
+però la van retenir perquè
+no t'enfrontessis a l'SA-X.
+
+I tanmateix vas recuperar
+aquesta funció tota sola...
+
+També van intentar retenir la
+millora del míssil de difusió
+
+perquè no volien que et
+fessis massa poderosa.
+
+Però ja l'havien enviada, i tu
+la vas localitzar...
+
+Bravo, Samus.
+
+Han de cancel·lar la missió!
+Obre un canal amb el quarter
+
+general! No ho permetré!
+
+Ja són de camí.
+
+Insensats...",translated,
+navigation,NAV_103,Navigation Room conversation / typed dialogue,Not used,Not used,No s'usa,translated,
 navigation,NAV_104,Navigation Room conversation / typed dialogue,"Open the hatch!
 
 I have been ordered to confine
@@ -2906,9 +4146,117 @@ cuidado.
 
 ¡Es una orden!
 
-¿Alguna objeción, señorita?",,untranslated,
+¿Alguna objeción, señorita?","Obre la comporta!
+
+Tinc ordres de retenir-te fins
+que arribin les naus.
+
+No els ho permetis. No veus
+què passarà, Adam?
+
+...Adam?
+
+.........
+
+...Qui és l'Adam?
+
+...Un amic meu.
+
+I què t'aconsellaria que
+fessis ara, aquest... amic?
+
+Ell sabria que l'única manera
+d'acabar amb això és iniciar
+
+el cicle d'autodestrucció.
+Sabria com és d'important...
+
+Aquest «Adam» t'apreciava?
+Seuria en una sala de
+
+comandament segura i
+t'ordenaria que morissis?
+
+Ell entendria que uns han de
+viure i altres han de morir...
+
+Sabia què volia dir.
+
+Ell ja va fer aquest sacrifici
+una vegada.
+
+O sigui que va triar la vida
+per a tu? La nostra noble
+
+guerrera, Samus Aran...
+
+El teu Adam va donar la vida
+perquè tu poguessis viure...
+
+Pel bé de l'univers...
+
+.........
+
+Quina ximpleria.
+
+Com t'atreveixes! Què en pots
+entendre tu, màquina?
+
+Saps que fer detonar l'estació
+en òrbita alta no garantiria
+
+l'extinció completa dels
+paràsits X,
+
+encara que l'estació quedés
+totalment destruïda...
+
+Només aconseguiries eliminar
+l'únic obstacle per a la ruïna
+
+de la galàxia... tu mateixa.
+
+Passaries per alt aquest fet
+tan senzill i triaries la mort.
+
+Quan l'Adam va decidir qui
+viuria, es va equivocar.
+
+...!
+
+...Si alteressis l'òrbita de
+l'estació, potser podries
+
+incloure el planeta dins el
+camp de vaporització de la
+
+detonació d'autodestrucció.
+
+...?
+
+Hauries d'iniciar ara la
+seqüència de propulsió.
+
+Abans que arribi la Federació.
+
+Samus, aquesta és la teva
+última missió. Ves a la sala
+
+d'operacions i ajusta l'òrbita
+perquè intercepti SR388.
+
+Després torna a la nau
+i fuig.
+
+Mou-te de pressa i
+mantén-te viva.
+
+És una ordre!
+
+Alguna objecció, senyoreta?",translated,
 navigation,NAV_105,Navigation Room conversation / typed dialogue,"Lady, what are you doing!?To the Operations Room!","Señorita, ¡¿qué haces?!
-¡A la sala de control!",,untranslated,
+¡A la sala de control!","Senyoreta, què fas!?
+A la sala d'operacions!",translated,
 navigation,NAV_106,Navigation Room conversation / typed dialogue,"Go to the Operations Room
 and set a course for SR388.
 
@@ -2920,18 +4268,25 @@ para que la estación se
 dirija a SR388.
 
 Después, vuelve a tu nave y
-escapa antes de la colisión.",,untranslated,
-navigation,NAV_107,Navigation Room conversation / typed dialogue,Go to the Operations Room.,Dirígete a la sala de control.,,untranslated,
-navigation,NAV_108,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
-navigation,NAV_109,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,,untranslated,
+escapa antes de la colisión.","Ves a la sala d'operacions i
+fixa el rumb cap a SR388.
+
+Després torna a la nau i
+evacua abans de l'impacte.",translated,
+navigation,NAV_107,Navigation Room conversation / typed dialogue,Go to the Operations Room.,Dirígete a la sala de control.,Ves a la sala d'operacions.,translated,
+navigation,NAV_108,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
+navigation,NAV_109,Navigation Room conversation / typed dialogue,Target eradicated.,Alerta desactivada.,Objectiu eliminat.,translated,
 navigation,NAV_110,Navigation Room conversation / typed dialogue,"Not much time before the
 station impacts SR388.
 
 Get out of there.","No queda mucho para que la
 estación impacte contra SR388.
 
-Sal de ahí.",,untranslated,
-navigation,NAV_111,Navigation Room conversation / typed dialogue,"Hurry, get out of there!","¡Rápido, sal de ahí!",,untranslated,
+Sal de ahí.","Falta poc perquè l'estació
+xoqui amb SR388.
+
+Surt d'aquí.",translated,
+navigation,NAV_111,Navigation Room conversation / typed dialogue,"Hurry, get out of there!","¡Rápido, sal de ahí!","Corre, surt d'aquí!",translated,
 navigation,NAV_112,Navigation Room conversation / typed dialogue,"Lady, what's troubling you?
 
 You wonder how I started
@@ -2942,320 +4297,423 @@ They lent me a hand...","Señorita, ¿qué te ocurre?
 ¿No sabes cómo he puesto en
 marcha tu nave? Es fácil...
 
-Ellos me ayudaron...",,untranslated,
-navigation,NAV_113,Navigation Room conversation / typed dialogue,None,None,,untranslated,
+Ellos me ayudaron...","Senyoreta, què et preocupa?
+
+Et preguntes com he engegat
+la nau? Pensa-hi una mica.
+
+Ells m'han donat un cop de mà...",translated,
+navigation,NAV_113,Navigation Room conversation / typed dialogue,None,None,Cap,translated,
 pause,PAUSE_000,"Pause screen, objective","Go to Quarantine Bay. Access
 Navigation Room en route.","Ve a la sala de cuarentena.
-Accede a la sala de navegación.",,untranslated,
+Accede a la sala de navegación.","Ves a la sala de quarantena.
+Passa per la sala de navegació.",translated,
 pause,PAUSE_001,"Pause screen, objective",Investigate Quarantine Bay.,"Investiga en la sala de
-cuarentena.",,untranslated,
+cuarentena.","Investiga la sala de
+quarantena.",translated,
 pause,PAUSE_002,"Pause screen, objective","Hostile creature sighted.
 Report to Navigation Room.","Criatura hostil detectada.
-Informa desde navegación.",,untranslated,
+Informa desde navegación.","Criatura hostil detectada.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_003,"Pause screen, objective","X parasite presence confirmed.
 Find origin of bio-signs.","Presencia del X confirmada.
-Investiga las señales de vida.",,untranslated,
+Investiga las señales de vida.","Presència de paràsits X.
+Troba l'origen dels senyals.",translated,
 pause,PAUSE_004,"Pause screen, objective","Missile data ready.
 Download immediately.","Datos de misiles listos.
-Descárgalos inmediatamente.",,untranslated,
+Descárgalos inmediatamente.","Dades de míssils a punt.
+Baixa-les immediatament.",translated,
 pause,PAUSE_005,"Pause screen, objective",Download Missile data.,"Descarga los datos de los
-misiles.",,untranslated,
+misiles.",Baixa les dades de míssils.,translated,
 pause,PAUSE_006,"Pause screen, objective",Download Missile data.,"Descarga los datos de los
-misiles.",,untranslated,
+misiles.",Baixa les dades de míssils.,translated,
 pause,PAUSE_007,"Pause screen, objective",Data received. Missiles active.,"Datos recibidos.
-Misiles disponibles.",,untranslated,
+Misiles disponibles.",Dades rebudes. Míssils actius.,translated,
 pause,PAUSE_008,"Pause screen, objective",Missile data download complete.,"Descarga de datos de misiles
-terminada.",,untranslated,
+terminada.",Dades de míssils baixades.,translated,
 pause,PAUSE_009,"Pause screen, objective","Elevators not operational. Find
 alternate route to target.","Ascensores no operativos.
-Busca una ruta alternativa.",,untranslated,
+Busca una ruta alternativa.","Ascensors fora de servei.
+Busca una altra ruta.",translated,
 pause,PAUSE_010,"Pause screen, objective","Morph Ball ability absorbed.
 Proceed to Navigation Room.","Hab. morfosfera recuperada.
-Avanza a la sala de navegación.",,untranslated,
+Avanza a la sala de navegación.","Morfosfera absorbida.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_011,"Pause screen, objective","X detected in Sector 1 (SRX).
 Investigate and gather data.","X detectado en sector 1 (SRX).
-Investiga y recaba datos.",,untranslated,
+Investiga y recaba datos.","X detectats al sector 1 (SRX).
+Investiga i recull dades.",translated,
 pause,PAUSE_012,"Pause screen, objective","X detected in Sector 1 (SRX).
 Investigate and gather data.","X detectado en sector 1 (SRX).
-Investiga y recaba datos.",,untranslated,
+Investiga y recaba datos.","X detectats al sector 1 (SRX).
+Investiga i recull dades.",translated,
 pause,PAUSE_013,"Pause screen, objective","X detected in Sector 1 (SRX).
 Investigate and gather data.","X detectado en sector 1 (SRX).
-Investiga y recaba datos.",,untranslated,
+Investiga y recaba datos.","X detectats al sector 1 (SRX).
+Investiga i recull dades.",translated,
 pause,PAUSE_014,"Pause screen, objective","Atmospheric stabilizers
 corrupted by X. Investigate.","Estabilizadores atmosféricos
-afectados por el X. Investiga.",,untranslated,
+afectados por el X. Investiga.","Estabilitzadors atmosfèrics
+infectats pels X. Investiga.",translated,
 pause,PAUSE_015,"Pause screen, objective","Charge Beam restored. Proceed
 with atmospheric stabilization.","Rayo recarga restablecido.
-Completa la estabilización.",,untranslated,
+Completa la estabilización.","Raig de càrrega recuperat.
+Repara els estabilitzadors.",translated,
 pause,PAUSE_016,"Pause screen, objective","Atmospheric stabilizers online.
 Proceed to Navigation Room.","Estabilizadores en línea.
-Avanza a la sala de navegación.",,untranslated,
+Avanza a la sala de navegación.","Estabilitzadors en línia.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_017,"Pause screen, objective","X detected in Sector 2 (TRO).
 Brief in TRO Navigation Room.","X detectado en sector 2 (TRO).
-Conecta en navegación de TRO.",,untranslated,
+Conecta en navegación de TRO.","X detectats al sector 2 (TRO).
+Ves a la sala de navegació.",translated,
 pause,PAUSE_018,"Pause screen, objective","Bomb data ready. Unlock Data
 Room hatch and download.","Datos de bombas listos. Ve a la
-sala de datos y descárgalos.",,untranslated,
+sala de datos y descárgalos.","Dades de bombes a punt. Obre
+la sala de dades i baixa-les.",translated,
 pause,PAUSE_019,"Pause screen, objective","Blue hatches now active.
 Proceed to Data Room.","Puertas azules habilitadas.
-Avanza hacia la sala de datos.",,untranslated,
+Avanza hacia la sala de datos.","Comportes blaves actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_020,"Pause screen, objective","Blue hatches now active.
 Proceed to Data Room.","Puertas azules habilitadas.
-Avanza hacia la sala de datos.",,untranslated,
+Avanza hacia la sala de datos.","Comportes blaves actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_021,"Pause screen, objective","Blue hatches now active.
 Proceed to Data Room.","Puertas azules habilitadas.
-Avanza hacia la sala de datos.",,untranslated,
+Avanza hacia la sala de datos.","Comportes blaves actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_022,"Pause screen, objective","Bomb data download complete.
 Proceed to Navigation Room.","Datos de bombas descargados.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Dades de bombes baixades.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_023,"Pause screen, objective","Bomb data download complete.
 Proceed to Navigation Room.","Datos de bombas descargados.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Dades de bombes baixades.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_024,"Pause screen, objective","Bomb data download complete.
 Proceed to Navigation Room.","Datos de bombas descargados.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Dades de bombes baixades.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_025,"Pause screen, objective","Hi-Jump ability absorbed.
 Proceed to Navigation Room.","Supersalto y rotosalto
-activos; ve a navegación.",,untranslated,
+activos; ve a navegación.","Supersalt absorbit.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_026,"Pause screen, objective","SA-X encountered. Retreat and
 proceed to Navigation Room.","SA-X localizado. Retirada.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","SA-X a la vista. Retira't i
+ves a la sala de navegació.",translated,
 pause,PAUSE_027,"Pause screen, objective","Aberration in Sector 4 (AQA).
 Proceed to Sector 4.","Anomalía en sector 4 (AQA).
-Dirígete al lugar.",,untranslated,
-pause,PAUSE_028,"Pause screen, objective",Engage Serris.,Detén a Serris.,,untranslated,
+Dirígete al lugar.","Anomalia al sector 4 (AQA).
+Ves al sector 4.",translated,
+pause,PAUSE_028,"Pause screen, objective",Engage Serris.,Detén a Serris.,Enfronta't a Serris.,translated,
 pause,PAUSE_029,"Pause screen, objective","Speed Booster power absorbed.
 Proceed to Navigation Room.","Poder de aceleración activo.
-Ve a la sala de navegación.",,untranslated,
-pause,PAUSE_030,"Pause screen, objective",Not displayed,Mensaje no mostrado.,,untranslated,
+Ve a la sala de navegación.","Acceleració absorbida.
+Ves a la sala de navegació.",translated,
+pause,PAUSE_030,"Pause screen, objective",Not displayed,Mensaje no mostrado.,No es mostra,translated,
 pause,PAUSE_031,"Pause screen, objective","Speed Booster power absorbed.
 Proceed to Navigation Room.","Poder de aceleración activo.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Acceleració absorbida.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_032,"Pause screen, objective","Sinking water level opened new
 areas. Search and proceed.","La bajada del agua ha abierto
-nuevas zonas. Explóralas.",,untranslated,
+nuevas zonas. Explóralas.","L'aigua ha baixat i ha obert
+noves zones. Explora-les.",translated,
 pause,PAUSE_033,"Pause screen, objective","New Missile data ready in
 Sector 3 (PYR) Data Room.","Nuevos datos de misiles en la
-sala de datos del sector 3.",,untranslated,
+sala de datos del sector 3.","Nous míssils a la sala de
+dades del sector 3 (PYR).",translated,
 pause,PAUSE_034,"Pause screen, objective","Locate Security Room and
 activate green hatches.","Localiza la sala de seguridad y
-activa las puertas verdes.",,untranslated,
+activa las puertas verdes.","Troba la sala de seguretat i
+activa les comportes verdes.",translated,
 pause,PAUSE_035,"Pause screen, objective","Green hatches now active.
 Proceed to Data Room.","Puertas verdes habilitadas.
-Ve a la sala de datos.",,untranslated,
+Ve a la sala de datos.","Comportes verdes actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_036,"Pause screen, objective","Green hatches now active.
 Proceed to Data Room.","Puertas verdes habilitadas.
-Ve a la sala de datos.",,untranslated,
+Ve a la sala de datos.","Comportes verdes actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_037,"Pause screen, objective","Green hatches now active.
 Proceed to Data Room.","Puertas verdes habilitadas.
-Ve a la sala de datos.",,untranslated,
+Ve a la sala de datos.","Comportes verdes actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_038,"Pause screen, objective","Super Missile data downloaded.
 Proceed to Navigation Room.","Supermisiles descargados.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Supermíssils baixats.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_039,"Pause screen, objective","An unknown event occured.
 Investigate.","Se ha producido un suceso
-desconocido. Investígalo.",,untranslated,
+desconocido. Investígalo.","Fet desconegut detectat.
+Investiga.",translated,
 pause,PAUSE_040,"Pause screen, objective","Repelled Security Robot.
 Proceed to Navigation Room.","Ataque contrarrestado.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Robot de seguretat repel·lit.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_041,"Pause screen, objective","Download support data.
 Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
-Ve al sector 6 (NOC).",,untranslated,
+Ve al sector 6 (NOC).","Baixa les dades de suport.
+Ves al sector 6 (NOC).",translated,
 pause,PAUSE_042,"Pause screen, objective","Download support data.
 Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
-Ve al sector 6 (NOC).",,untranslated,
+Ve al sector 6 (NOC).","Baixa les dades de suport.
+Ves al sector 6 (NOC).",translated,
 pause,PAUSE_043,"Pause screen, objective","Download support data.
 Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
-Ve al sector 6 (NOC).",,untranslated,
+Ve al sector 6 (NOC).","Baixa les dades de suport.
+Ves al sector 6 (NOC).",translated,
 pause,PAUSE_044,"Pause screen, objective","Download support data.
 Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
-Ve al sector 6 (NOC).",,untranslated,
+Ve al sector 6 (NOC).","Baixa les dades de suport.
+Ves al sector 6 (NOC).",translated,
 pause,PAUSE_045,"Pause screen, objective","Download support data.
 Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
-Ve al sector 6 (NOC).",,untranslated,
+Ve al sector 6 (NOC).","Baixa les dades de suport.
+Ves al sector 6 (NOC).",translated,
 pause,PAUSE_046,"Pause screen, objective","Download support data.
 Proceed to Sector 6 (NOC).","Descarga los datos de ayuda.
-Ve al sector 6 (NOC).",,untranslated,
+Ve al sector 6 (NOC).","Baixa les dades de suport.
+Ves al sector 6 (NOC).",translated,
 pause,PAUSE_047,"Pause screen, objective","Download Varia Suit data.
 Avoid blue X parasites.","Descarga el traje climático.
-Evita a los X azules.",,untranslated,
+Evita a los X azules.","Baixa el vestit climàtic.
+Evita els paràsits X blaus.",translated,
 pause,PAUSE_048,"Pause screen, objective","Download Varia Suit data.
 Avoid blue X parasites.","Descarga el traje climático.
-Evita a los X azules.",,untranslated,
+Evita a los X azules.","Baixa el vestit climàtic.
+Evita els paràsits X blaus.",translated,
 pause,PAUSE_049,"Pause screen, objective","Download Varia Suit data.
 Avoid blue X parasites.","Descarga el traje climático.
-Evita a los X azules.",,untranslated,
+Evita a los X azules.","Baixa el vestit climàtic.
+Evita els paràsits X blaus.",translated,
 pause,PAUSE_050,"Pause screen, objective","An X has acquired the Varia
 Suit data. Find and recover it!","Un X ha descargado datos del
-traje climático. ¡Recupéralos!",,untranslated,
+traje climático. ¡Recupéralos!","Un X té les dades del vestit
+climàtic. Troba'l i recupera'l!",translated,
 pause,PAUSE_051,"Pause screen, objective","Varia Suit effect absorbed.
 Proceed to Navigation Room.","Efecto de traje climático
-asimilado. Ve a navegación.",,untranslated,
+asimilado. Ve a navegación.","Vestit climàtic absorbit.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_052,"Pause screen, objective","Varia Suit abilities initialized.
 Proceed to Navigation Room.","Efecto de traje climático
-asimilado. Ve a navegación.",,untranslated,
+asimilado. Ve a navegación.","Vestit climàtic activat.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_053,"Pause screen, objective","Download Ice Missile data.
 Proceed to Sector 5 (ARC).","Descarga los misiles de hielo.
-Ve al sector 5 (ARC).",,untranslated,
+Ve al sector 5 (ARC).","Baixa els míssils de gel.
+Ves al sector 5 (ARC).",translated,
 pause,PAUSE_054,"Pause screen, objective","Locate Security Room and
 activate yellow hatches.","Localiza la sala de seguridad y
-activa las puertas amarillas.",,untranslated,
+activa las puertas amarillas.","Troba la sala de seguretat i
+activa les comportes grogues.",translated,
 pause,PAUSE_055,"Pause screen, objective","Yellow hatches now active.
 Proceed to Data Room.","Puertas amarillas habilitadas.
-Ve a la sala de datos.",,untranslated,
+Ve a la sala de datos.","Comportes grogues actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_056,"Pause screen, objective","Yellow hatches now active.
 Proceed to Data Room.","Puertas amarillas habilitadas.
-Ve a la sala de datos.",,untranslated,
+Ve a la sala de datos.","Comportes grogues actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_057,"Pause screen, objective","Yellow hatches now active.
 Proceed to Data Room.","Puertas amarillas habilitadas.
-Ve a la sala de datos.",,untranslated,
+Ve a la sala de datos.","Comportes grogues actives.
+Ves a la sala de dades.",translated,
 pause,PAUSE_058,"Pause screen, objective","Ice Missile data downloaded.
 Proceed to Navigation Room.","Misiles de hielo descargados.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Míssils de gel baixats.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_059,"Pause screen, objective","Sector 3 (PYR) overheating.
 Proceed to Control Room.","Sobrecalentamiento en PYR.
-Ve a la sala de control.",,untranslated,
+Ve a la sala de control.","El sector 3 (PYR) s'escalfa.
+Ves a la sala de control.",translated,
 pause,PAUSE_060,"Pause screen, objective","Return temperature to normal
 to avert total meltdown.","Restablece la temperatura
-normal para evitar la fusión.",,untranslated,
+normal para evitar la fusión.","Normalitza la temperatura
+per evitar la fusió total.",translated,
 pause,PAUSE_061,"Pause screen, objective","Cooling unit operational.
 Proceed to Navigation Room.","Refrigeración restablecida.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Refrigeració operativa.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_062,"Pause screen, objective","Bio-signs on Habitation Deck.
 Check for survivors.","Signos de vida en la cubierta
-del hábitat. ¿Supervivientes?",,untranslated,
+del hábitat. ¿Supervivientes?","Coberta residencial: senyals de
+vida. Busca supervivents.",translated,
 pause,PAUSE_063,"Pause screen, objective","Etecoons and Dachoras freed.
 Proceed to Navigation Room.","Etecoones y Dachoras libres.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Etecoons i dachores lliures.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_064,"Pause screen, objective","Download Power Bomb data.
 Proceed to Sector 5 (ARC).","Descarga la bomba de energía.
-Avanza al sector 5 (ARC).",,untranslated,
+Avanza al sector 5 (ARC).","Baixa les bombes d'energia.
+Ves al sector 5 (ARC).",translated,
 pause,PAUSE_065,"Pause screen, objective","Security lock released.
 Proceed to Data Room.","Seguridad desactivada.
-Ve a la sala de datos.",,untranslated,
+Ve a la sala de datos.","Bloqueig de seguretat obert.
+Ves a la sala de dades.",translated,
 pause,PAUSE_066,"Pause screen, objective","Power Bomb data downloaded.
 Proceed to Navigation Room.","Bomba de energía descargada.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Bombes d'energia baixades.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_067,"Pause screen, objective","Power Bomb data downloaded.
 Proceed to Navigation Room.","Bomba de energía descargada.
-Ve a la sala de navegación.",,untranslated,
+Ve a la sala de navegación.","Bombes d'energia baixades.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_068,"Pause screen, objective","Power Bomb data downloaded.
 Proceed to Navigation Room.","Bomba de energía descargada.
-Ve a la sala de navegación.",,untranslated,
-pause,PAUSE_069,"Pause screen, objective",Return to starship.,Regresa a la nave.,,untranslated,
-pause,PAUSE_070,"Pause screen, objective",Return to starship.,Regresa a la nave.,,untranslated,
+Ve a la sala de navegación.","Bombes d'energia baixades.
+Ves a la sala de navegació.",translated,
+pause,PAUSE_069,"Pause screen, objective",Return to starship.,Regresa a la nave.,Torna a la nau.,translated,
+pause,PAUSE_070,"Pause screen, objective",Return to starship.,Regresa a la nave.,Torna a la nau.,translated,
 pause,PAUSE_071,"Pause screen, objective","Central Reactor Core down.
 Engage auxiliary at target.","Reactor central desconectado.
-Activa la energía auxiliar.",,untranslated,
+Activa la energía auxiliar.","Nucli del reactor aturat.
+Activa l'energia auxiliar.",translated,
 pause,PAUSE_072,"Pause screen, objective","Central Reactor Core down.
 Engage auxiliary at target.","Reactor central desconectado.
-Activa la energía auxiliar.",,untranslated,
+Activa la energía auxiliar.","Nucli del reactor aturat.
+Activa l'energia auxiliar.",translated,
 pause,PAUSE_073,"Pause screen, objective","Space Jump ability absorbed.
 Find Auxiliary Power Station.","Salto espacial asimilado. Busca
-estación de energía auxiliar.",,untranslated,
+estación de energía auxiliar.","Salt espacial absorbit. Troba
+l'estació d'energia auxiliar.",translated,
 pause,PAUSE_074,"Pause screen, objective","Auxiliary power engaged.
 Prior outage cause unknown.","Energía auxiliar en uso. Causa
-del apagón desconocida.",,untranslated,
+del apagón desconocida.","Energia auxiliar activada.
+Causa de l'avaria desconeguda.",translated,
 pause,PAUSE_075,"Pause screen, objective","Prior outage caused by plant
 roots in core. Investigate.","Apagón causado por raíces en
-el reactor. Investiga.",,untranslated,
+el reactor. Investiga.","Avaria causada per arrels al
+nucli del reactor. Investiga.",translated,
 pause,PAUSE_076,"Pause screen, objective","Prior outage caused by plant
 roots in core. Investigate.","Origen de las raíces eliminado.
-Rayo de plasma absorbido.",,untranslated,
+Rayo de plasma absorbido.","Avaria causada per arrels al
+nucli del reactor. Investiga.",translated,
 pause,PAUSE_077,"Pause screen, objective","Prior outage caused by plant
 roots in core. Investigate.","Investiga lo ocurrido en el
-sector 5 (ARC).",,untranslated,
+sector 5 (ARC).","Avaria causada per arrels al
+nucli del reactor. Investiga.",translated,
 pause,PAUSE_078,"Pause screen, objective","Source of plant roots treated.
 Plasma Beam ability absorbed.","Origen de las raíces eliminado.
-Rayo de plasma absorbido.",,untranslated,
+Rayo de plasma absorbido.","Origen de les arrels eliminat.
+Raig de plasma absorbit.",translated,
 pause,PAUSE_079,"Pause screen, objective","Locate source of trouble
 in Sector 5 (ARC). Engage.","Problemas en el sector 5 (ARC).
-Halla la causa e intercéptala.",,untranslated,
+Halla la causa e intercéptala.","Troba l'origen del problema
+al sector 5 (ARC) i ataca'l.",translated,
 pause,PAUSE_080,"Pause screen, objective","Organism ‟Nightmare” is on a
 rampage. Find it and engage.","Organismo 〝Pesadilla” fuera de
-control. Encuéntralo y detenlo.",,untranslated,
+control. Encuéntralo y detenlo.","«Malson» ho destrossa tot.
+Troba'l i ataca'l.",translated,
 pause,PAUSE_081,"Pause screen, objective","Gravity Suit effect absorbed.
 Proceed to Navigation Room.","Efecto de traje gravitarorio
-asimilado. Ve a navegación.",,untranslated,
+asimilado. Ve a navegación.","Vestit gravitatori absorbit.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_082,"Pause screen, objective","Gravity Suit effect absorbed.
 Proceed to Navigation Room.","Efecto de traje gravitarorio
-asimilado. Ve a navegación.",,untranslated,
+asimilado. Ve a navegación.","Vestit gravitatori absorbit.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_083,"Pause screen, objective","Level 4 security lock released.
 Proceed to Navigation Room.","Nivel 4 desactivado. Ve a la
-sala de navegación.",,untranslated,
+sala de navegación.","Bloqueig de nivell 4 obert.
+Ves a la sala de navegació.",translated,
 pause,PAUSE_084,"Pause screen, objective","Level 4 security lock released.
 Proceed to Navigation Room.","Nivel 4 desactivado. Ve a la
-sala de navegación.",,untranslated,
-pause,PAUSE_085,"Pause screen, objective",Data Room located.,Sala de datos localizada.,,untranslated,
+sala de navegación.","Bloqueig de nivell 4 obert.
+Ves a la sala de navegació.",translated,
+pause,PAUSE_085,"Pause screen, objective",Data Room located.,Sala de datos localizada.,Sala de dades localitzada.,translated,
 pause,PAUSE_086,"Pause screen, objective","New Missile data downloaded.
 Diffusion added to Missiles.","Nuevos datos descargados.
-Misiles difusos disponibles.",,untranslated,
+Misiles difusos disponibles.","Nous míssils baixats.
+Difusió afegida als míssils.",translated,
 pause,PAUSE_087,"Pause screen, objective","Security Robot B.O.X. detected
 in Sector 6 (NOC). Engage.","Robot B.O.X. detectado en el
-sector 6 (NOC). Intercéptalo.",,untranslated,
+sector 6 (NOC). Intercéptalo.","Robot de seguretat B.O.X. al
+sector 6 (NOC). Ataca'l.",translated,
 pause,PAUSE_088,"Pause screen, objective","Security Robot B.O.X. detected
 in Sector 6 (NOC). Engage.","Robot B.O.X. detectado en el
-sector 6 (NOC). Intercéptalo.",,untranslated,
+sector 6 (NOC). Intercéptalo.","Robot de seguretat B.O.X. al
+sector 6 (NOC). Ataca'l.",translated,
 pause,PAUSE_089,"Pause screen, objective","Security Robot B.O.X. detected
 Sector 6 (NOC). Engage.","Robot B.O.X. detectado en el
-sector 6 (NOC). Intercéptalo.",,untranslated,
+sector 6 (NOC). Intercéptalo.","Robot de seguretat B.O.X. al
+sector 6 (NOC). Ataca'l.",translated,
 pause,PAUSE_090,"Pause screen, objective","Security Robot B.O.X. detected
 Sector 6 (NOC). Engage.","Robot B.O.X. detectado en el
-sector 6 (NOC). Intercéptalo.",,untranslated,
+sector 6 (NOC). Intercéptalo.","Robot de seguretat B.O.X. al
+sector 6 (NOC). Ataca'l.",translated,
 pause,PAUSE_091,"Pause screen, objective","B.O.X. Robot destroyed.
 Leave Sector 6 immediately.","Robot B.O.X. destruido.
-Abandona el sector 6. Rápido.",,untranslated,
+Abandona el sector 6. Rápido.","Robot B.O.X. destruït.
+Surt del sector 6 de seguida.",translated,
 pause,PAUSE_092,"Pause screen, objective","Metroids released by SA-X.
 Evacuate Restricted Lab.","Metroides liberados. Evacua el
-laboratorio de seguridad.",,untranslated,
+laboratorio de seguridad.","L'SA-X ha alliberat metroides.
+Surt del laboratori restringit.",translated,
 pause,PAUSE_093,"Pause screen, objective","Metroids released by SA-X.
 Evacuate Restricted Lab.","Metroides liberados. Evacua el
-laboratorio de seguridad.",,untranslated,
+laboratorio de seguridad.","L'SA-X ha alliberat metroides.
+Surt del laboratori restringit.",translated,
 pause,PAUSE_094,"Pause screen, objective",Restricted Lab jettisoned.,"Laboratorio de seguridad
-desacoplado.",,untranslated,
+desacoplado.",Laboratori restringit ejectat.,translated,
 pause,PAUSE_095,"Pause screen, objective",Restricted Lab jettisoned.,"Laboratorio de seguridad
-desacoplado.",,untranslated,
+desacoplado.",Laboratori restringit ejectat.,translated,
 pause,PAUSE_096,"Pause screen, objective","Screw Attack ability restored.
 Proceed to Navigation Room.","Salto en barrena restablecido.
-Ve a la sala de navegación.",,untranslated,
-pause,PAUSE_097,"Pause screen, objective",They want to capture an SA-X?,¿Quieren capturar un SA-X?,,untranslated,
+Ve a la sala de navegación.","Atac espiral recuperat.
+Ves a la sala de navegació.",translated,
+pause,PAUSE_097,"Pause screen, objective",They want to capture an SA-X?,¿Quieren capturar un SA-X?,Volen capturar un SA-X?,translated,
 pause,PAUSE_098,"Pause screen, objective","Prevent Federation landing.
 Activate self-destruct.","Evita llegada de la Federación.
-Solución: ¿autodestrucción?",,untranslated,
+Solución: ¿autodestrucción?","Que la Federació no aterri.
+Activa l'autodestrucció.",translated,
 pause,PAUSE_099,"Pause screen, objective","Set orbit to impact SR388.
 Return to ship and evacuate.","Cambia la órbita para impactar
-con SR388 y escapa en la nave.",,untranslated,
+con SR388 y escapa en la nave.","Fixa l'òrbita d'impacte amb
+SR388. Torna a la nau i evacua.",translated,
 pause,PAUSE_100,"Pause screen, objective","Set orbit to impact SR388.
 Return to ship and evacuate.","Cambia la órbita para impactar
-con SR388 y escapa en la nave.",,untranslated,
+con SR388 y escapa en la nave.","Fixa l'òrbita d'impacte amb
+SR388. Torna a la nau i evacua.",translated,
 pause,PAUSE_101,"Pause screen, objective","Set orbit to impact SR388.
 Return to ship and evacuate.","Cambia la órbita para impactar
-con SR388 y escapa en la nave.",,untranslated,
+con SR388 y escapa en la nave.","Fixa l'òrbita d'impacte amb
+SR388. Torna a la nau i evacua.",translated,
 pause,PAUSE_102,"Pause screen, objective","Set orbit to impact SR388.
 Return to ship and evacuate.","Cambia la órbita para impactar
-con SR388 y escapa en la nave.",,untranslated,
+con SR388 y escapa en la nave.","Fixa l'òrbita d'impacte amb
+SR388. Torna a la nau i evacua.",translated,
 pause,PAUSE_103,"Pause screen, objective","Return to ship immediately.
 Evacuate station.","Vuelve a tu nave de inmediato.
-Abandona la estación.",,untranslated,
+Abandona la estación.","Torna a la nau immediatament.
+Evacua l'estació.",translated,
 pause,PAUSE_104,"Pause screen, objective","Return to ship immediately.
 Evacuate station.","Vuelve a tu nave de inmediato.
-Abandona la estación.",,untranslated,
+Abandona la estación.","Torna a la nau immediatament.
+Evacua l'estació.",translated,
 pause,PAUSE_105,"Pause screen, objective","Return to ship immediately.
 Evacuate station.","Vuelve a tu nave de inmediato.
-Abandona la estación.",,untranslated,
+Abandona la estación.","Torna a la nau immediatament.
+Evacua l'estació.",translated,
 pause,PAUSE_106,"Pause screen, objective","Return to ship immediately.
 Evacuate station.","Vuelve a tu nave de inmediato.
-Abandona la estación.",,untranslated,
+Abandona la estación.","Torna a la nau immediatament.
+Evacua l'estació.",translated,
 pause,PAUSE_107,"Pause screen, objective","Regained Ice Beam ability.
 Omega Metroid attack possible.","Rayo de hielo recuperado.
-Es posible atacar al Omega.",,untranslated,
-pause,PAUSE_108,"Pause screen, objective",Collision imminent.,Colisión inminente.,,untranslated,
+Es posible atacar al Omega.","Raig de gel recuperat. Ja pots
+atacar el metroide omega.",translated,
+pause,PAUSE_108,"Pause screen, objective",Collision imminent.,Colisión inminente.,Col·lisió imminent.,translated,
 pause,PAUSE_109,"Pause screen, objective","Line 1
 Line 2","Line 1
-Line 2",,untranslated,
+Line 2","Línia 1
+Línia 2",translated,
 pause,PAUSE_110,"Pause screen, objective","Line 1
 Line 2","Line 1
-Line 2",,untranslated,
+Line 2","Línia 1
+Línia 2",translated,
 monologue,MONOLOGUE_00,Monologue or narration,"The ship's computer has
 notified me of our approach to
 the Biologic Space Labs, or
@@ -3322,7 +4780,37 @@ obedecer las órdenes de nadie,
 ésta es la segunda vez que me
 encuentro en la obligación de
 hacerlo. El recuerdo del otro
-O. J. me viene a la mente...",,untranslated,
+O. J. me viene a la mente...","L'ordinador de la nau m'ha
+avisat que ens acostem a
+l'estació de recerca dels
+Laboratoris Espacials Biologic,
+o B.S.L. Durant la meva
+operació, l'equip de recerca
+hi va enviar l'últim lot de
+criatures capturades i també
+les peces infectades del meu
+
+vestit. Quan vaig recobrar
+el coneixement, vaig saber
+que una explosió inexplicada
+havia sacsejat l'estació.
+Per algun motiu, això em va
+despertar una por sense nom,
+i ara m'hi envien a investigar.
+
+El nou ordinador de la nau
+supervisarà la meva missió a
+l'estació B.S.L. Obeir aquest
+comandant informàtic i sec
+és una cosa que he de
+suportar: era la condició
+per quedar-me la nau. Per a
+algú a qui no agrada rebre
+ordres, és la segona vegada
+
+que em toca fer-ho. Em fa
+pensar en l'altre comandant
+que vaig tenir...",translated,
 monologue,MONOLOGUE_01,Monologue or narration,"That computer reminds me of a
 gruff Federation CO I served
 under named Adam Malkovich. He
@@ -3342,7 +4830,15 @@ resultaba elegante.
 
 Con todo mi respeto, y un poco
 de ironía, decidí ponerle el
-mismo nombre...",,untranslated,
+mismo nombre...","Aquest ordinador em recorda
+un comandant esquerp de la
+Federació: l'Adam Malkovich.
+A les missions em deia
+«senyoreta»; d'un altre hauria
+sonat sarcàstic, però ell ho
+feia sonar digne. Per respecte
+i amb certa ironia, he posat
+el seu nom a l'ordinador.",translated,
 monologue,MONOLOGUE_02,Monologue or narration,"As I listened to the briefing,
 my thoughts turned to Adam.
 The real Adam understood me
@@ -3359,7 +4855,15 @@ objeción, señorita?”. Sabía
 que no pondría pegas; era su
 forma de demostrar nuestra
 confianza mutua. ¿Podré fiarme
-también de este ordenador?...",,untranslated,
+también de este ordenador?...","Mentre escoltava les ordres,
+pensava en l'Adam. El de debò
+m'entenia bé. Acabava les
+ordres dient: «Alguna objecció,
+senyoreta?» Sabia que no li
+duria la contrària. Era la seva
+manera de dir que ens fiàvem
+l'un de l'altre. I d'aquest
+ordinador, me'n puc fiar...?",translated,
 monologue,MONOLOGUE_03,Monologue or narration,"The SA-X. An enemy with my
 strongest abilities. But does
 it have reason? Probably not.
@@ -3380,7 +4884,15 @@ como yo, sólo que sin corazón.
 Debo detenerlo antes de que
 descubra su potencial y se
 convierta en una amenaza para
-el universo...",,untranslated,
+el universo...","L'SA-X. Un enemic amb les
+meves millors habilitats. Però
+raona? Segurament no. Només
+és una màquina de matar. Tal
+com estic ara, no li puc
+plantar cara. L'SA-X soc jo,
+però sense cor. L'he d'aturar
+abans que descobreixi el seu
+poder i amenaci l'univers...",translated,
 monologue,MONOLOGUE_04,Monologue or narration,"Etecoons and Dachoras. I've
 met these intelligent beings
 before. They seemed to
@@ -3401,7 +4913,15 @@ que desconocía poseer.
 
 Pero ¿a dónde habrán ido?
 Espero que se encuentren a
-salvo...",,untranslated,
+salvo...","Etecoons i dachores. Ja havia
+trobat abans aquests éssers
+intel·ligents. I semblava que
+ells també em reconeixien.
+Que estrany, retrobar-nos
+aquí. Temps enrere em van
+ajudar a descobrir habilitats
+que no sabia que tenia. On
+han fugit? Que estiguin bé...",translated,
 monologue,MONOLOGUE_05,Monologue or narration,"The real Adam would have said
 the same thing about that
 incident, but he would have
@@ -3420,7 +4940,15 @@ obsesionada con el
 procedimiento.
 
 Este ordenador nunca podría
-llegar a ser tan comprensivo...",,untranslated,
+llegar a ser tan comprensivo...","L'Adam de debò hauria dit el
+mateix d'aquell incident, però
+hauria suavitzat el cop. Era
+implacable quan criticava,
+però sempre es preocupava
+per mi... No era una màquina
+obsessionada pel deure. En
+aquell ordinador no hi pot
+haver una compassió així...",translated,
 monologue,MONOLOGUE_06,Monologue or narration,"As soon as the Federation
 ships land, the X will overwhelm
 them and absorb the knowledge
@@ -3478,7 +5006,34 @@ existir en el planeta.
 Tengo que enterrarlos en el
 olvido. Al parásito, a la
 estación y a mí misma, si
-fuera necesario.",,untranslated,
+fuera necesario.","Així que les naus de la
+Federació aterrin, els X les
+desbordaran i absorbiran el
+saber i el poder dels seus
+ocupants. Els X només
+esperen que comenci la cacera,
+i després s'escamparan per
+l'univers. Serà la fi de la
+civilització galàctica.
+
+Els X tenen fam de forma, de
+saber i de poder, i ho imiten
+tot a la perfecció. Però no
+poden copiar l'ànima. Només
+tenen una idea: l'instint de
+multiplicar-se. Són una plaga,
+i la Federació menysté
+l'amenaça que representen.
+
+Els X no han de sortir d'aquí.
+Els he de destruir tots abans
+que arribi la Federació.
+L'estació té un mecanisme
+d'autodestrucció. L'he d'usar
+per destruir els X d'aquí i
+del planeta. Els he d'enviar a
+l'oblit. A ells, a l'estació i a
+mi mateixa, si cal.",translated,
 monologue,MONOLOGUE_07,Monologue or narration,"That perfect military mind...
 The wisdom of Adam Malkovich
 continued to serve even after
@@ -3565,7 +5120,48 @@ que me encontrara con el
 Metroid Omega, la nave se
 movió sola, controlada por
 alguien o algo... ¿Será...?
-¿Adam?...",,untranslated,
+¿Adam?...","Aquella ment militar perfecta...
+La saviesa de l'Adam Malkovich
+va seguir servint fins i tot
+després de la mort. Fins avui
+no sabia que sovint es
+transferien a ordinadors les
+ments de líders i científics.
+Aquest retrobament increïble
+potser ha salvat l'univers...
+
+Però com veurà l'univers la
+nostra determinació?
+Dubto que entenguin el que
+hem fet... el perill que hem
+evitat pels pèls. Hi haurà
+tribunals i investigacions.
+Ens en faran responsables.
+L'Adam ho entenia, i em va
+parlar enmig de la meva ràbia...
+
+«No pateixis. Algú ho entendrà.
+Algú ho ha d'entendre.»
+
+He reflexionat sobre les seves
+paraules, i hi veig saviesa.
+A tots ens lliguen les nostres
+experiències. Són els límits
+de la nostra consciència.
+
+Però al capdavall, l'ànima
+humana sempre buscarà la
+veritat... Això és el que
+l'Adam em va ensenyar.
+
+Només un detall encara
+m'inquieta. Aquesta nau només
+es pot engegar a mà. Però
+abans que m'enfrontés al
+metroide omega, la nau es va
+moure sola, guiada per les
+mans d'algú. És possible?
+Adam...?",translated,
 monologue,MONOLOGUE_08,Monologue or narration,"I'd been assigned to watch
 over Biologic's research team,
 
@@ -3576,12 +5172,19 @@ equipo de investigación de
 Biometrox, así que volví a
 encontrarme sobre la
 
-superficie de SR388.",,untranslated,
+superficie de SR388.","M'havien encarregat protegir
+l'equip de recerca de Biologic,
+
+i així vaig tornar a trobar-me
+a la superfície d'SR388.",translated,
 monologue,MONOLOGUE_09,Monologue or narration,"It was there that I was
 attacked by a life-form I had
 
 never encountered before.","En mitad de la misión, un
-ser desconocido me atacó.",,untranslated,
+ser desconocido me atacó.","Va ser allà que em va atacar
+una forma de vida que no
+
+havia vist mai abans.",translated,
 monologue,MONOLOGUE_10,Monologue or narration,"It was only later that I
 learned the identity of my
 
@@ -3601,7 +5204,16 @@ Totalmente ajena a lo que me
 estaba sucediendo, decidí
 
 volver a la estación, cuando
-ocurrió el accidente.",,untranslated,
+ocurrió el accidente.","Només més tard vaig saber
+qui era el meu atacant:
+
+l'organisme parasitari que
+ara coneixem com a X.
+
+Sense saber res del meu estat,
+tornava cap a l'estació
+
+quan va arribar el desastre.",translated,
 monologue,MONOLOGUE_11,Monologue or narration,"Once the X had infested my
 central nervous system, I lost
 
@@ -3612,7 +5224,13 @@ mi sistema nervioso central,
 perdí el conocimiento y la
 nave se desvió hacia un
 
-cinturón de asteroides.",,untranslated,
+cinturón de asteroides.","Quan els X van infestar el meu
+sistema nerviós central,
+
+vaig perdre el coneixement i
+la nau va derivar cap a un
+
+cinturó d'asteroides.",translated,
 monologue,MONOLOGUE_12,Monologue or narration,"The ship's emergency systems
 automatically ejected the
 
@@ -3639,7 +5257,20 @@ Mientras, el X seguía
 multiplicándose en mi interior,
 
 corrompiendo distintas partes
-de mi traje...",,untranslated,
+de mi traje...","Abans del xoc, els sistemes
+d'emergència van ejectar la
+
+càpsula de salvament. La nau
+de Biologic la va recollir
+
+i em va dur al quarter general
+de la Federació Galàctica.
+
+Però durant el viatge els X es
+van multiplicar dins meu
+
+i van corrompre grans parts
+del meu vestit.",translated,
 monologue,MONOLOGUE_13,Monologue or narration,"It then came to light that
 the organic components of my
 
@@ -3654,7 +5285,14 @@ traje se habían integrado
 tanto con mi cuerpo que no
 
 podían quitármelo mientras
-seguía inconsciente.",,untranslated,
+seguía inconsciente.","Llavors es va descobrir que
+els components orgànics del
+
+vestit s'havien integrat tant
+amb el meu organisme
+
+que no me'l podien treure
+mentre estava inconscient.",translated,
 monologue,MONOLOGUE_14,Monologue or narration,"Large portions of my suit had
 to be surgically removed,
 
@@ -3677,7 +5315,19 @@ extendido por mi sistema
 nervioso central que no
 pudieron extirparlo.
 
-Me llegaron a dar por muerta.",,untranslated,
+Me llegaron a dar por muerta.","Em van haver d'extirpar grans
+parts del vestit amb cirurgia,
+
+i el meu aspecte físic va
+canviar del tot. Tanmateix,
+
+els X del sistema nerviós
+central eren massa endins
+
+per treure'ls sense perill.
+Em donaven molt poques
+
+possibilitats de sobreviure.",translated,
 monologue,MONOLOGUE_15,Monologue or narration,"Then, someone found a cure.
 
 They proposed using a Metroid
@@ -3702,7 +5352,20 @@ células de la última cría de
 Metroid...
 
 Prepararon el suero y me lo
-inyectaron de inmediato.",,untranslated,
+inyectaron de inmediato.","Llavors, algú va trobar
+un remei.
+
+Van proposar fer una vacuna
+anti-X amb una cèl·lula de
+
+metroide. Pel que sembla, la
+Federació havia conservat
+
+un cultiu de cèl·lules de
+l'última cria de metroide
+
+d'SR388. Van preparar el sèrum
+i me'l van injectar de seguida.",translated,
 monologue,MONOLOGUE_16,Monologue or narration,"The X parasites were
 immediately and completely
 
@@ -3718,7 +5381,16 @@ Y en cuanto a mí, había llegado
 la hora de pasar página en mi
 
 vida y comenzar un nuevo
-capítulo; algo diferente.",,untranslated,
+capítulo; algo diferente.","Els paràsits X van ser
+destruïts immediatament
+
+i per complet.
+
+Pel que fa a mi, una vida es va
+acabar... però vaig sobreviure,
+
+renascuda com una cosa
+diferent.",translated,
 monologue,MONOLOGUE_17,Monologue or narration,"Pondering this fact, I realize...
 
 I owe the Metroid hatchling my
@@ -3726,7 +5398,10 @@ life twice over.","Reflexionando sobre ello, me di
 cuenta de que...
 
 es la segunda vez que un
-Metroid me salva la vida.",,untranslated,
+Metroid me salva la vida.","Quan hi penso, me n'adono...
+
+Dec la vida a la cria de
+metroide per segona vegada.",translated,
 monologue,MONOLOGUE_18,Monologue or narration,"We'll soon be arriving at the
 B.S.L research station.
 
@@ -3734,4 +5409,7 @@ I must prepare for docking.","Pronto llegaremos a la
 estación de investigación de
 
 B.S.L. Debo prepararme para el
-aterrizaje.",,untranslated,
+aterrizaje.","Aviat arribarem a l'estació
+de recerca B.S.L.
+
+M'he de preparar per atracar.",translated,
