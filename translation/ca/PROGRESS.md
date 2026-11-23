@@ -62,16 +62,22 @@ the questions still open. The plan is the nine steps of the original brief.
   change. Seen in the emulator on the Catalan ROM (contact sheets of 300 frames, not kept): the
   whole intro narration, the ship computer's box and the first full-screen monologue. The
   pictures change at the right pages and the 9-line pages fit.
-  - NOT yet seen in game: the first briefing and everything after it, any message banner, the
-    objectives on the pause screen, the ending. `selftest.py`'s route is tied to the English
-    page counts, so a Catalan route (more A presses in the intro and briefing: gameplay starts
-    after about 190 presses instead of 182) still has to be written. Until then the only
-    guarantee for that text is the linter's pen model.
+  - Also seen in game on the Catalan ROM, after the font step (PNG in
+    `translation/ca/build/shots/ca_*.png`, gitignored): the first briefing with its coloured
+    terms, the "Has entès l'objectiu？ Sí / No" prompt and the line after it, the banners
+    "Coberta principal" and "Sala de navegació", the conversation in the first Navigation Room
+    (two pages) and the Sleep Mode prompt of the pause screen. All fit their boxes.
+  - NOT yet seen in game: item and security message banners, the objective line of the pause
+    screen, any briefing after the first Navigation Room, the monologues after the intro, the
+    ending. For those the only guarantee is the linter's pen model (which did predict the
+    frames above correctly). The Catalan route was a scratch script: gameplay starts after
+    about 190 A presses instead of the 182 of `selftest.py`'s English route; the walk and the
+    pokes are the same.
 - Font (step 6): `font/glyphs/0357.png` redraws `·` in Fusion's indices (2 fill, 3 outline) in
   the first three columns at mid x-height, and `font/widths.txt` gives it width 2.
   `romcheck.py` confirms the font in the Catalan ROM is the vanilla font plus that glyph, and
-  that one width byte changed. Looked at in `render.py` only ("cèl·lula", "L·L" read as one
-  word), not yet in game. No other glyph was needed: every Catalan letter, « » and the
+  that one width byte changed. Looked at in `render.py` ("cèl·lula", "L·L" read as one
+  word); no in-game frame with a `·` has been captured yet. No other glyph was needed: every Catalan letter, « » and the
   accented capitals are in the vanilla font.
   - After the font hooks went in: self-test ROM still gives 271 identical screenshots and
     passes `romcheck.py --selftest`; vanilla still matches `mf_us.sha1`.
