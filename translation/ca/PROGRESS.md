@@ -100,9 +100,11 @@ the questions still open. The plan is the nine steps of the original brief.
   --selftest` and 275 identical screenshots), lint 318/318 with no errors or warnings, the
   Catalan ROM's `romcheck.py`, and a 74 861-byte `.bps` that `bps.py apply` and mGBA's own
   loader (`bpscheck`) both turn into exactly `mf_us_ca.gba`.
-  - The two workflow files parse as YAML. Whether they pass on GitHub (agbcc build and cache,
-    the deploy key checkout) is only known once the first run there finishes: see the end of
-    this file.
+  - On GitHub: run 1 of the Catalan workflow (commit 2d5ccae) finished green in under two
+    minutes. Its log shows every part ran: agbcc built and cached, the ROM folder checked out
+    with the deploy key, the emulator comparison, lint 318/318, and a Catalan ROM with the same
+    SHA1 (3f05d044…) and the same 74 861-byte patch as the local build. The artifact
+    `mf-cat-<commit>` holds the patch, the lint report and the `.po`.
   - `release.yml` is mzm-cat's with the names changed. It has never run here.
 - Credits (step 8): the US credits have no TRANSLATION section. `gencredits.py` puts
   "CATALAN / Guillem Roca Castany" after the last name of the LOCALIZATION block of "NOA
@@ -275,7 +277,7 @@ Catalan version is appended and the English pointer repointed):
 | Asset | Text | State |
 |---|---|---|
 | `game_over/text_english.gfx.lz` (192 tiles) | TRY AGAIN ? / YES ( RETURN TO GAME ) / NO ( GO TO TITLE ) | done |
-| `ending/results_english_text.gfx.lz` (448 tiles) | digits, CLEAR TIME, YOUR RATE FOR COLLECTING ITEMS IS, an alphabet, "See you next mission" | to do: selected by a `switch (gLanguage)` in `src/ending.c` (lines 1013 and 1100); the sprites that place the words still have to be read |
+| `ending/results_english_text.gfx.lz` (448 tiles) | digits, CLEAR TIME, YOUR RATE FOR COLLECTING ITEMS IS, an alphabet, "See you next mission" | to do. `src/ending.c` loads it in the `default:` branch of a `switch (gLanguage)` (about line 1013), so the Catalan sheet can be appended and that one call repointed. The hard part is placement: the words are sprites set up by `EndingImageLoadTextOam` and `EndingImageDisplayLinePermanently` (asm, `asm/disasm_0x0809e598.s`), with per-language data and per-language timing (the second `switch (gLanguage)`, about line 1100). Seen in game still in English (`build/shots/results_screen_still_english.png`) |
 
 Shared graphics (one copy for every language, English text; to translate them the graphic is
 edited, put back in place if it still fits when compressed, else appended and every reference
@@ -298,6 +300,22 @@ Useful for screenshots: `gMainGameMode` (0x03000BDE) set to 8 with `gSubGameMode
 (0x03000BE0) set to 0 during gameplay opens the game over screen. 11 starts the credits, which
 run on into the ending pictures and the results screen (about 6400 frames to the Catalan
 credit, 9600 to the results). 9 (the ending cutscene) is untried.
+
+## Where to resume
+
+1. Get the glossary's PROPOSED terms approved first: the remaining graphics draw them
+   (OBJECTIU, the item names of the status screen, the deck names, REPÒS for SLEEP…), and
+   pixel work is the expensive thing to redo.
+2. Step 7, in rising order of difficulty: HUD "ENERGY" (uncompressed, in place); title "PRESS
+   START"; pause and status screens (`menus/pause_screen/obj` and `bg`: export with `gfx.py`
+   after adding them to `gfx_assets.json`; they are shared by all languages, so find every
+   `LZ77UncompVram` of them before repointing, or keep them in place if the edited sheet still
+   compresses into the original slot); file select (locate it inside
+   `Blob_73cfac_7478a0.bin` first); the intro's vaccine panel; the results screen (read the
+   asm above first).
+3. Write a Catalan route tool from `selftest.py` (see `TESTING.md`) and screenshot the text
+   that has not been seen in game.
+4. Release notes in `.github/release-notes/`, once the checklist can be ticked.
 
 ## Open questions
 
