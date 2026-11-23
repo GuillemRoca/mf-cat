@@ -5413,3 +5413,12 @@ aterrizaje.","Aviat arribarem a l'estació
 de recerca B.S.L.
 
 M'he de preparar per atracar.",translated,
+graphics,game_over_prompt,Game over screen,"TRY AGAIN ?
+YES ( RETURN TO GAME )
+NO ( GO TO TITLE )","¿INTENTAR DE NUEVO ?
+SÍ ( CONTINUAR )
+NO ( SALIR )","TORNAR-HO A PROVAR ?
+SÍ ( CONTINUA )
+NO ( SURT )",translated,
+credits,translation,"Staff credits, after the LOCALIZATION names",,,"CATALAN
+Guillem Roca Castany",translated,

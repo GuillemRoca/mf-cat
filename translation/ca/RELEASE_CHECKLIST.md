@@ -61,8 +61,8 @@ do not release before they are.
 
 ## Credits
 
-- [ ] "CATALAN / Guillem Roca Castany" shows after the Italian translator in the staff
-      credits (`credits.txt`).
+- [ ] "CATALAN / Guillem Roca Castany" shows after the LOCALIZATION names of the staff credits
+      (`credits.txt`), and the credits still end in time with the music.
 
 ## Patch
 

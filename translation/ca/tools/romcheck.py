@@ -10,6 +10,7 @@ must be in one of the regions the translation is allowed to write:
   - the appended data: the padding after the last byte of the vanilla ROM (0x79ecc8 on);
   - a pointer listed in gfx_assets.json (an edited graphic), which must also point into the
     appended data;
+  - the staff credits, rewritten in place with the same size (sCredits, 0x74b0b0);
   - the font, edited in place: the tiles of the glyphs in font/glyphs/*.png (sCharactersGfx,
     0x682fac) and the bytes of sCharacterWidths (0x576234) listed in font/widths.txt.
 Both ROMs must have the same size. With --selftest (a CA_SELFTEST=1 build) every English
@@ -23,11 +24,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catext  # noqa: E402
 import font  # noqa: E402
+import gencredits  # noqa: E402
 import gfx  # noqa: E402
 import lz77  # noqa: E402
 
 FONT_OFFSET = 0x682FAC    # sCharactersGfx
 WIDTHS_OFFSET = 0x576234  # sCharacterWidths
+CREDITS_OFFSET = 0x74B0B0  # sCredits
 
 
 def vanilla_end(rom):
@@ -73,6 +76,13 @@ def check(built_path, selftest=False):
                 problems.append(f"{name}: its pointer at 0x{off:x} leads to 0x{target:x}, outside the appended data")
             elif lz77.decompress(built, target)[0] != gfx.asset_tiles(name, info, selftest):
                 problems.append(f"{name}: the appended graphic is not the expected one")
+    credits = gencredits.pack(gencredits.table(vanilla_only=selftest))
+    if built[CREDITS_OFFSET:CREDITS_OFFSET + len(credits)] != credits:
+        problems.append("sCredits in the ROM is not the table gencredits.py builds")
+    if selftest and credits != base[CREDITS_OFFSET:CREDITS_OFFSET + len(credits)]:
+        problems.append("gencredits.py --vanilla doesn't reproduce the vanilla credits")
+    if not selftest:
+        allowed[CREDITS_OFFSET:CREDITS_OFFSET + len(credits)] = b"\x01" * len(credits)
     glyphs = 0
     if not selftest:
         w = catext.widths(catalan=True)

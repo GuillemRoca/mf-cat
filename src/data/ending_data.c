@@ -81,6 +81,9 @@ const u16 sResultsTextPal[PAL_ROW * 4] = INCBIN_U16("data/ending/results_text.pa
 static const u8 sBlob_74a7d8_74b0b0[] = INCBIN_U8("data/Blob_74a7d8_74b0b0.bin");
 
 const struct CreditsEntry sCredits[310] = {
+#ifdef LANG_CA
+#include "ca/credits.inc" // generated: translation/ca/tools/gencredits.py
+#else // !LANG_CA
 	[0] = {
 		.type = CREDIT_LINE_TYPE_WHITE_BIG,
 		.text = ""
@@ -1321,6 +1324,7 @@ const struct CreditsEntry sCredits[310] = {
 		.type = CREDIT_LINE_TYPE_END,
 		.text = ""
 	},
+#endif // LANG_CA
 };
 
 static const u8 sBlob_74dc48_74e620[] = INCBIN_U8("data/Blob_74dc48_74e620.bin");

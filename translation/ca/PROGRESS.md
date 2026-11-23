@@ -15,7 +15,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 5 | Translate all the text | done: 318 of 318 entries, first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
 | 7 | Graphics with baked-in text | in progress: game over prompt done; the rest is inventoried below |
-| 8 | Credits | |
+| 8 | Credits | done (placement to confirm, see Open questions) |
 | 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
 ## Verified
@@ -104,6 +104,17 @@ the questions still open. The plan is the nine steps of the original brief.
     the deploy key checkout) is only known once the first run there finishes: see the end of
     this file.
   - `release.yml` is mzm-cat's with the names changed. It has never run here.
+- Credits (step 8): the US credits have no TRANSLATION section. `gencredits.py` puts
+  "CATALAN / Guillem Roca Castany" after the last name of the LOCALIZATION block of "NOA
+  ENGLISH LOCALIZATION", with the same separator and spacing as the blocks around it. `sCredits`
+  is rewritten in place: still 310 entries and 471 scroll rows (the six entries and nine rows
+  added are taken from the empty lines before the copyright, which leaves 13 empty rows there
+  instead of 22). Seen in game on the Catalan ROM (`build/shots/ca_credits_catalan.png`), by
+  writing 11 to `gMainGameMode` during gameplay. Not checked: that the credits still end in
+  time with the music (the row count says they should; nobody listened).
+  - `romcheck.py` verifies the table in the ROM is the generated one, and that `--vanilla`
+    reproduces the vanilla table. After the hook: self-test ROM passes, 275 identical
+    screenshots, vanilla matches `mf_us.sha1`.
 - `get_baserom.sh`: ROM already present, `$BASEROM_DIR`, and the "no source" error were each run.
   The `$BASEROM_US_URL` branch is the mzm-cat code unchanged and was not exercised here.
 
@@ -232,6 +243,8 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   `ca/font.inc` (same size).
 - `src/data/menus/pause_screen_misc_data.c`: under `#ifdef LANG_CA`, the initializer of
   `sCharacterWidths` comes from the generated `ca/char_widths.inc`.
+- `src/data/ending_data.c`: under `#ifdef LANG_CA`, the initializer of `sCredits` comes from
+  the generated `ca/credits.inc` (same number of entries).
 - `src/menus/game_over.c`: under `#ifdef LANG_CA`, `sGameOverTextGfxPointers[LANGUAGE_ENGLISH]`
   is `sCaGfx_GameOverText` (the appended graphic).
 - `src/new_file_intro.c`: under `#ifdef LANG_CA`, the include of the generated
@@ -282,11 +295,16 @@ Not looked at yet: `title_intro/*`, `ending_cutscene/*`, `monologue/*`, the demo
 screens, the erase-save screen (`GAME_MODE_ERASE_SRAM_MENU`).
 
 Useful for screenshots: `gMainGameMode` (0x03000BDE) set to 8 with `gSubGameMode1`
-(0x03000BE0) set to 0 during gameplay opens the game over screen; 9 is the ending, 11 the
-credits (untried).
+(0x03000BE0) set to 0 during gameplay opens the game over screen. 11 starts the credits, which
+run on into the ending pictures and the results screen (about 6400 frames to the Catalan
+credit, 9600 to the results). 9 (the ending cutscene) is untried.
 
 ## Open questions
 
+- Credits placement: "CATALAN" follows the names of NOA's LOCALIZATION block, the closest
+  equivalent of mzm's TRANSLATION section, but it therefore sits under the red "NOA ENGLISH
+  LOCALIZATION" banner. The alternative is a block of its own after that section's last names,
+  before EXECUTIVE PRODUCER. Say if you prefer that (one constant in `gencredits.py`).
 - Glossary: the 73 PROPOSED terms need approving. The ones that shape the most text, where a
   second option is listed: "Lady" (senyoreta / senyora / Lady), "target" and "objective" (both
   objectiu), download (baixar / descarregar), Quarantine Bay (Sala de quarantena), Nightmare

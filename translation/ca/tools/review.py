@@ -35,8 +35,25 @@ WHERE = {
 BUTTONS = {"A_button": "[A]", "B_button": "[B]", "L_button": "[L]", "R_button": "[R]",
            "Select_button": "[SELECT]", "Up_button": "[UP]", "Down_button": "[DOWN]",
            "Left_button": "[LEFT]", "Right_button": "[RIGHT]"}
-# Functions returning extra rows (graphics, credits); filled in by the tools that own them.
-EXTRA_ROWS = []
+
+
+def graphic_rows():
+    """Strings drawn in graphics (the vanilla English and Spanish as on screen), and the credits."""
+    import gencredits
+    import gfx_game_over
+    rows = [{"section": "graphics", "id": "game_over_prompt", "where": "Game over screen",
+             "english": "\n".join(gfx_game_over.VANILLA["english"]),
+             "spanish": "¿INTENTAR DE NUEVO ?\nSÍ ( CONTINUAR )\nNO ( SALIR )",
+             "catalan": "\n".join(gfx_game_over.CATALAN),
+             "status": "translated" if (catext.CA / "gfx/game_over/text_english.png").exists() else "untranslated"}]
+    heading, names = gencredits.read_credits()
+    rows.append({"section": "credits", "id": "translation", "where": "Staff credits, after the LOCALIZATION names",
+                 "english": "", "spanish": "", "catalan": "\n".join([heading] + names), "status": "translated"})
+    return rows
+
+
+# Functions returning extra rows (graphics, credits).
+EXTRA_ROWS = [graphic_rows]
 
 
 def plain(text):
