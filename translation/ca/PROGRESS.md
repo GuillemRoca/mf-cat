@@ -451,9 +451,14 @@ The erase-all-data screen (`GAME_MODE_ERASE_SRAM_MENU`) is done: two sheets per 
 LZ77 with no entry in `database.json`, English at 0x588478 and 0x589804.
 
 Looked through as contact sheets (every graphic of 16 tiles or more): `new_file_intro/*`,
-`title_intro/*`, `monologue/*` and `ending_cutscene/*`, 70 sheets. Only the first page was
-read closely (it has the vaccine panel); the other five pages were listed, not examined, so
-text in them is still possible. Not looked at: the demo and link screens.
+`title_intro/*`, `monologue/*` and `ending_cutscene/*`, 70 sheets in six pages. Pages 1, 2, 3
+and 6 were read: besides the vaccine panel, the only words are names (SR388, B.S.L, P-1 to
+P-3 on the intro's star chart; B.S.L on hulls), which stay. Two sheets,
+`approaching_bsl_obj` and `monologue_obj`, also hold copies of the map screen's labels
+(SYSTEM, TARGET, MESSAGE, LOCK); the star chart scene of the intro shows none of them
+(looked at in game), and whether any other scene does is not known. Pages 4 and 5 (the
+`sr388_*`, `bsl_object_*`, `samus_sitting_bg_*` and `samus_helmet_closeup_bg_*` strips) were
+only listed by name. Not looked at: the demo and link screens.
 
 Useful for screenshots: `gMainGameMode` (0x03000BDE) set to 8 with `gSubGameMode1`
 (0x03000BE0) set to 0 during gameplay opens the game over screen. 11 starts the credits, which
