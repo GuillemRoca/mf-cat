@@ -14,7 +14,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 4 | Glossary | done; every term APPROVED (2026-11-25) |
 | 5 | Translate all the text | done: 318 of 318 entries, first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
-| 7 | Graphics with baked-in text | in progress: game over (prompt and logo) and the pause and status screens done; the rest is inventoried below |
+| 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens and the HUD done; the rest is inventoried below |
 | 8 | Credits | done |
 | 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
@@ -119,6 +119,18 @@ the questions still open. The plan is the nine steps of the original brief.
   - With the hooks in: `romcheck.py` (324 pointers, 127 288 bytes appended, the legend's 160
     bytes of OAM as generated), `--selftest` on the self-test ROM, 275 identical screenshots,
     vanilla matches `mf_us.sha1`.
+- HUD (step 7): `gfx_hud.py` writes "ENERGIA" over the energy counter, with the label's own
+  letters plus an I and an A. Seen in game (`build/shots/ca_hud_energia.png`). The sheet
+  (`hud/common.gfx`, uncompressed) is edited in place through a generated include, like the
+  font; nothing refers to it by raw address (grep of `asm/` and `src/`). `romcheck.py` allows
+  only the three tiles that differ and checks the sheet in the ROM is the PNG.
+  - What the code showed: the label has 24 px, not the 32 of its sprite. The sprite's fourth
+    tile is the first energy tank tile, which `HudDrawEnergy` rewrites (a first attempt that
+    ran into it showed "ENERGIF" in game).
+  - A save state made before the change keeps showing ENERGY even after pausing: the game
+    restores the sprites it had. A new room or a new game loads the edited sheet.
+  - After the hook: self-test ROM passes, 275 identical screenshots, vanilla matches
+    `mf_us.sha1`.
 - Patch and CI (step 9): `translation/ca/tools/ci.sh` ran here from start to finish with exit
   code 0: 36 tool tests, `extract.py --check`, vanilla SHA1, the self-test ROM (`romcheck.py
   --selftest` and 275 identical screenshots), lint 318/318 with no errors or warnings, the
@@ -261,6 +273,9 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   - Status headers and item names are mzm-cat's (RAIG, MÍSSIL, BOMBA, VESTIT, ALTRES; CÀRREGA,
     AMPLE, ONES, GEL, SÚPER, DIFUSIÓ, ENERGIA, CLIMÀTIC, GRAVITATORI, MORFOSFERA, SUPERSALT,
     ACCELERACIÓ, SALT ESPACIAL, ATAC ESPIRAL).
+  - HUD: ENERGIA is 23 px of letters in a 24 px label, so the box keeps one margin column,
+    on the right where the tanks follow, and its E starts at the left edge of the screen
+    (ENERGY had a margin on both sides). The alternative with both margins is "ENERG.".
   - Left alone: SAMUS (a name), SECTOR, and PREVIEW (the label of the map's preview point,
     `PAUSE_OAM_ID_MAP_PREVIEW_POINT`; not seen in play so far).
 - **agbcc in CI** is pret/agbcc at da598c1 (the commit built and matched here), not the
@@ -289,6 +304,8 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 - `src/menus/pause_screen.c`: under `#ifdef LANG_CA`, the sprite sheet, the background sheet
   and the status tilemap are loaded from `sCaGfx_PauseScreenObj`, `sCaGfx_PauseScreenBg` and
   `sCaGfx_StatusScreenTilemap`.
+- `src/data/hud_data.c`: under `#ifdef LANG_CA`, `sCommonSpritesGfx` comes from the generated
+  `ca/hud_common.inc` (same size).
 - `src/data/menus/pause_screen_data.c`: under `#ifdef LANG_CA`, the eight OAM frames of the
   security level legend (`sPauseScreenOam_L1Lock_Frame0` to `L4Open_Frame0`) come from the
   generated `ca/pause_legend_oam.inc` (same size, edited in place).
@@ -331,7 +348,7 @@ repointed):
 | `menus/pause_screen/obj.gfx.lz`, `bg.gfx.lz` (1024 tiles each), `status_screen.tm.lz` | SLEEP, STATUS, OBJECTIVE, TARGET, START, MAIN DECK, L1-L4 LOCK / OPEN, SYSTEM; status screen (title, ENERGY / MISSILE / P-BOMB, group headers, item names) | done: composed by `gfx_pause.py`, appended, their one pointer each repointed; see Verified and Decisions |
 | `menus/title_screen/objects.gfx.lz` | PRESS START and the title menu | to do |
 | file select (inside `Blob_73cfac_7478a0.bin`, loaded by raw address in `asm/disasm_0x0809e598.s`, e.g. `0x0873DC20`) | SAMUS DATA, ENERGY, TIME, SOUND, EXIT, START / COPY DATA / ERASE DATA | to do; not located precisely |
-| `hud/common.gfx` (uncompressed) | ENERGY | to do |
+| `hud/common.gfx` (uncompressed) | ENERGY | done: "ENERGIA", edited in place by `gfx_hud.py`; see Verified and Decisions |
 | intro (`new_file_intro/*`, 127 assets) | the "Vaccine "Metroid"" panel | to do; asset not identified |
 | `game_over/background.gfx.lz` and `game_over/text.tm.lz` | the GAME OVER logo | done: "FI DE LA / PARTIDA" on two lines (it doesn't fit one at the logo's size), composed by `gfx_game_over_logo.py` from the letters of GAME OVER; the sheet and the tilemap are appended and their one pointer each repointed. Seen in game (`build/shots/ca_game_over.png`) |
 | `ending/credits_character.gfx`, `copyright_text_*.gfx` | credits font, copyright lines | step 8 |
@@ -347,8 +364,7 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 ## Where to resume
 
 1. (Done: the glossary is approved.)
-2. Step 7, what is left, in rising order of difficulty: HUD "ENERGY" (uncompressed, in
-   place); title "PRESS START"; file select (locate it inside `Blob_73cfac_7478a0.bin`
+2. Step 7, what is left, in rising order of difficulty: title "PRESS START"; file select (locate it inside `Blob_73cfac_7478a0.bin`
    first); the intro's vaccine panel; the results screen (read the asm above first). Then
    look at the assets not inventoried yet. `gfx_pause.py` is the model: take the letters from
    the vanilla sheet, redraw, append, repoint the one pointer, screenshot.
@@ -370,3 +386,4 @@ For you to confirm, on the pause and status screens (the space decided; see Deci
 3. P-BOMB as "BOMBA E.".
 4. "TANCAT" / "OBERT" with the legend one map cell further left, rather than four-letter
    abbreviations in the original place.
+5. HUD: "ENERGIA" starting at the edge of the screen, rather than "ENERG." with a margin.

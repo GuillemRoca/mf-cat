@@ -4,7 +4,7 @@ Copy this list into the release issue and tick every item. A release is a `.bps`
 vanilla US ROM (SHA1 `ca33f4348c2c05dd330d37b97e2c5a69531dfe87`); never distribute a ROM.
 
 `PROGRESS.md` says which of these are already known to hold and which work is still open. As
-of this writing some graphics are still in English (title, file select, HUD, the intro's
+of this writing some graphics are still in English (title, file select, the intro's
 vaccine panel, the results screen): do not release before they are done.
 
 ## Build and CI
@@ -37,7 +37,7 @@ vaccine panel, the results screen): do not release before they are done.
       every item name with its accent, each inside its box, as items are collected.
 - [ ] Title screen (PRESS START and its menu) and file select (SAMUS DATA, ENERGY, TIME,
       SOUND, EXIT, START / COPY DATA / ERASE DATA, the erase and copy prompts).
-- [ ] HUD: ENERGY.
+- [ ] HUD: ENERGIA, also with energy tanks (they follow the label) and with more than ten.
 - [ ] Intro: the vaccine panel.
 - [ ] Anything left in English on purpose is listed in `PROGRESS.md` with the reason.
 

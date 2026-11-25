@@ -1,7 +1,13 @@
 #include "data/hud_data.h"
 
 const u16 sCommonSpritesPal[6 * 16] = INCBIN_U16("data/hud/common.pal");
+#ifdef LANG_CA
+const u8 sCommonSpritesGfx[14 * 32 * 32] =
+#include "ca/hud_common.inc" // generated: translation/ca/tools/gfx.py
+;
+#else // !LANG_CA
 const u8 sCommonSpritesGfx[14 * 32 * 32] = INCBIN_U8("data/hud/common.gfx");
+#endif // LANG_CA
 
 const u8 sMissileIconGfx[4 * 32] = INCBIN_U8("data/hud/missile_icon.gfx");
 const u8 sPowerBombIconGfx[4 * 32] = INCBIN_U8("data/hud/power_bomb_icon.gfx");

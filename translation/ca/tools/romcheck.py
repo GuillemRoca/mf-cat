@@ -10,6 +10,8 @@ must be in one of the regions the translation is allowed to write:
   - the appended data: the padding after the last byte of the vanilla ROM (0x79ecc8 on);
   - a pointer listed in gfx_assets.json (an edited graphic), which must also point into the
     appended data;
+  - the tiles that differ in an uncompressed graphic edited in place ("inplace" in
+    gfx_assets.json: the HUD sprites);
   - the staff credits, rewritten in place with the same size (sCredits, 0x74b0b0);
   - the eight OAM frames of the map's security level legend, edited in place (0x566502,
     160 bytes: see gfx_pause.py);
@@ -71,6 +73,14 @@ def check(built_path, selftest=False):
                 if built[target:target + len(data)] != data:
                     problems.append(f"{idx}: the appended string differs from the vanilla English")
     for name, info in gfx.assets().items():
+        if info.get("inplace"):  # same place and size; only the edited tiles may differ
+            off, want = gfx.address(info), gfx.asset_tiles(name, info, selftest)
+            if built[off:off + len(want)] != want:
+                problems.append(f"{name}: the graphic in the ROM is not the expected one")
+            for t in range(len(want) // 32):
+                if want[t * 32:t * 32 + 32] != base[off + t * 32:off + t * 32 + 32]:
+                    allowed[off + t * 32:off + t * 32 + 32] = b"\x01" * 32
+            continue
         for off in (int(p, 16) for p in info["pointers"]):
             allowed[off:off + 4] = b"\x01\x01\x01\x01"
             pointers += 1

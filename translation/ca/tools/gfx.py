@@ -5,6 +5,9 @@
                                      appended after everything else in the ROM. Each one is the
                                      PNG in translation/ca/gfx/<asset>.png, or the vanilla
                                      graphic where there is no PNG (and always with --selftest)
+  gfx.py inc ASSET OUTPUT.inc [--selftest]
+                                     an "inplace" asset as a C initializer, for the source file
+                                     that holds the vanilla graphic to include under LANG_CA
   gfx.py export ASSET OUT.png        the vanilla graphic as an indexed PNG to edit
   gfx.py check                       every PNG has the size and the palette indices its asset
                                      needs, and decompresses back to itself
@@ -16,7 +19,10 @@ the C code points at under LANG_CA, "tiles": the number of 4bpp tiles (the VRAM 
 decompressed into: a PNG may not be bigger), "pointers": ROM offsets of the pointers that are
 repointed (romcheck.py allows exactly those)}. An asset with "raw": true is not tiles but
 data of a fixed size (a tilemap): its file is translation/ca/gfx/<asset>.tm, written by the
-tool that composes the graphic, and it must be exactly as long as the vanilla data.
+tool that composes the graphic, and it must be exactly as long as the vanilla data. An asset
+with "inplace": true is an uncompressed graphic that is edited where it is: it has no symbol and
+no pointers, its PNG holds exactly as many tiles as the vanilla graphic, and romcheck.py allows
+only the tiles that differ.
 
 A PNG is indexed (palette indices 0-15 are the tile's pixels; the palette itself is only for
 viewing) and 256 px wide: 32 tiles per row, in tile order.
@@ -44,9 +50,16 @@ def database():
     return {e["path"]: e for e in json.loads((catext.ROOT / "database.json").read_text())}
 
 
+def address(info, db=None):
+    return int((db or database())[info["source"]]["addr"]["us"], 16)
+
+
 def vanilla_tiles(info, db=None):
     e = (db or database())[info["source"]]
-    return lz77.decompress(catext.rom(), int(e["addr"]["us"], 16))[0]
+    a = int(e["addr"]["us"], 16)
+    if info.get("inplace"):
+        return catext.rom()[a:a + int(e["count"], 16) * e.get("size", 1)]
+    return lz77.decompress(catext.rom(), a)[0]
 
 
 def tiles_to_rows(raw):
@@ -99,7 +112,10 @@ def asset_tiles(name, info, selftest=False, db=None):
     png = GFX / f"{name}.png"
     if selftest or not png.exists():
         return vanilla_tiles(info, db)
-    return rows_to_tiles(read_png(png, info))
+    tiles = rows_to_tiles(read_png(png, info))
+    if info.get("inplace") and len(tiles) != info["tiles"] * 32:
+        sys.exit(f"error: {png} must hold exactly {info['tiles']} tiles")
+    return tiles
 
 
 def cmd_asm(out, selftest):
@@ -108,11 +124,21 @@ def cmd_asm(out, selftest):
              "@ The edited graphics, appended after everything else in the ROM.",
              "\t.section .rodata", ""]
     for name, info in assets().items():
+        if info.get("inplace"):
+            continue
         data = lz77.compress(asset_tiles(name, info, selftest, db))
         lines += ["\t.align 2", f"\t.global {info['symbol']}", f"{info['symbol']}: @ {name}"]
         lines += ["\t.byte " + ",".join(str(b) for b in data[i:i + 32]) for i in range(0, len(data), 32)]
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text("\n".join(lines) + "\n")
+
+
+def cmd_inc(name, out, selftest):
+    info = assets()[name]
+    if not info.get("inplace"):
+        sys.exit(f"error: {name} is not an inplace asset")
+    Path(out).parent.mkdir(parents=True, exist_ok=True)
+    Path(out).write_text("{" + ",".join(str(b) for b in asset_tiles(name, info, selftest)) + "}\n")
 
 
 def cmd_export(name, out):
@@ -134,7 +160,7 @@ def cmd_check():
             print(f"{name}: no file (the vanilla graphic is used)")
             continue
         tiles = asset_tiles(name, info)
-        if lz77.decompress(lz77.compress(tiles))[0] != tiles:
+        if not info.get("inplace") and lz77.decompress(lz77.compress(tiles))[0] != tiles:
             sys.exit(f"error: {name}: the compressed data doesn't decompress to the PNG")
         n += 1
     print(f"{n} edited graphics ok")
@@ -147,7 +173,7 @@ def cmd_roundtrip():
         if not info.get("raw") and len(raw) != info["tiles"] * 32:
             sys.exit(f"error: {name}: {len(raw) // 32} tiles in the ROM, gfx_assets.json says {info['tiles']}")
         tiles_ok = info.get("raw") or rows_to_tiles(tiles_to_rows(raw)) == raw
-        if not tiles_ok or lz77.decompress(lz77.compress(raw))[0] != raw:
+        if not tiles_ok or (not info.get("inplace") and lz77.decompress(lz77.compress(raw))[0] != raw):
             sys.exit(f"error: {name}: the round trip changes the graphic")
     print(f"{len(assets())} assets round-trip")
 
@@ -158,6 +184,10 @@ if __name__ == "__main__":
     a = sub.add_parser("asm")
     a.add_argument("output")
     a.add_argument("--selftest", action="store_true")
+    i = sub.add_parser("inc")
+    i.add_argument("asset")
+    i.add_argument("output")
+    i.add_argument("--selftest", action="store_true")
     e = sub.add_parser("export")
     e.add_argument("asset")
     e.add_argument("png")
@@ -166,6 +196,8 @@ if __name__ == "__main__":
     args = ap.parse_args()
     if args.cmd == "asm":
         cmd_asm(args.output, args.selftest)
+    elif args.cmd == "inc":
+        cmd_inc(args.asset, args.output, args.selftest)
     elif args.cmd == "export":
         cmd_export(args.asset, args.png)
     elif args.cmd == "check":

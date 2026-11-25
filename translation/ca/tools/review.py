@@ -71,6 +71,10 @@ def graphic_rows():
              "\n".join(c for _, c in items))):
         rows.append({"section": "graphics", "id": rid, "where": where, "english": english,
                      "spanish": english, "catalan": catalan, "status": done})
+    import gfx_hud
+    rows.append({"section": "graphics", "id": "hud_energy", "where": "HUD, over the energy counter",
+                 "english": "ENERGY", "spanish": "ENERGY", "catalan": gfx_hud.LABEL,
+                 "status": "translated" if gfx_hud.OUT.exists() else "untranslated"})
     heading, names = gencredits.read_credits()
     rows.append({"section": "credits", "id": "translation", "where": "Staff credits, a group of its own before EXECUTIVE PRODUCER",
                  "english": "", "spanish": "", "catalan": "\n".join([heading] + names), "status": "translated"})

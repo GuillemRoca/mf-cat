@@ -34,6 +34,7 @@ python3 "$CA/tools/gap.py" vanilla | tail -5
 python3 "$CA/tools/gfx.py" roundtrip
 python3 "$CA/tools/gfx.py" check
 python3 "$CA/tools/gfx_pause.py" --check
+python3 "$CA/tools/gfx_hud.py" --check
 python3 "$CA/tools/font.py" check
 endstep
 

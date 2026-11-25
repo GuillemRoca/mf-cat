@@ -22,8 +22,8 @@ patch into `translation/ca/dist/`.
 4. After the first briefing answer "Sí". Once Samus can move, save a state (Shift+F1).
 
 What to expect for now: all the text is in Catalan (banners, briefings, objectives,
-monologues) and so are the game over screen, the pause screen (map and status) and the credit.
-The other graphics with text are still in English: title, file select, the HUD's ENERGY, the
+monologues) and so are the game over screen, the pause screen (map and status), the HUD and
+the credit. The other graphics with text are still in English: title, file select, the
 intro's vaccine panel and the results screen. `PROGRESS.md` has the list.
 
 ## Where each kind of text shows

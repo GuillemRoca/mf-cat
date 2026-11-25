@@ -52,5 +52,12 @@
       "0x76cb4"
     ],
     "note": "sStatusScreenTilemap, loaded once in src/menus/pause_screen.c; points at the repacked item names; written by gfx_pause.py"
+  },
+  "hud/common": {
+    "source": "hud/common.gfx",
+    "inplace": true,
+    "tiles": 448,
+    "pointers": [],
+    "note": "sCommonSpritesGfx (src/data/hud_data.c), uncompressed, edited in place: the HUD's ENERGY label; composed by gfx_hud.py"
   }
 }
