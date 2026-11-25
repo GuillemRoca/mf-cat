@@ -14,7 +14,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 4 | Glossary | done; every term APPROVED (2026-11-25) |
 | 5 | Translate all the text | done: 330 of 330 entries (the 318 of the four tables, and the 12 of the file select table found during step 7), first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
-| 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens, the HUD, the title prompt and the file select done; the rest is inventoried below |
+| 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens, the HUD, the title prompt, the file select and the erase-all-data screen done; the intro's vaccine panel and the results screen are left (inventory below) |
 | 8 | Credits | done |
 | 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
@@ -169,6 +169,22 @@ the questions still open. The plan is the nine steps of the original brief.
     each (tiles 0x118, 0x11c), MAIN DECK a 32 x 16 and a 16 x 16 (tiles 0x8a, 0x8e).
   - After the hook: self-test ROM passes, 275 identical screenshots (they include this
     screen), vanilla matches `mf_us.sha1`.
+- Erase-all-data screen (step 7): hold L and R at power-on (`src/init_game.c`). Each language
+  has two 128-tile sheets, its two questions with their answers, listed in pairs in a table
+  at 0x79c228 that `EraseSramMenuInit` (`asm/disasm_0x0807e678.s`) indexes with the language.
+  The table is inside `data/Blob_79c170_79c27c.bin` (`src/text.c`). `gfx_erase.py` types the
+  Catalan sheets with the game font, the way the shipped ones are laid out; the two English
+  pointers (0x79c238, 0x79c23c: the only references to those sheets in the ROM) are repointed
+  through a generated header, as for the text tables. Seen in game
+  (`build/shots/ca_erase_question.png`, `ca_erase_confirm.png`): "Vols esborrar totes / les
+  dades guardades?" and "Segur que vols esborrar / totes les dades?", each with No and Sí and
+  the cursor beside them.
+  - Not done: answering Sí twice, which erases the save memory. "Operation complete." is in
+    the file select table's reference strings (entry 19) but no graphic with it was found
+    among what this screen loads (its shared sheet at 0x582bbc is the box and the cursor), so
+    whether the US game shows anything after erasing is not known.
+  - After the hook: self-test ROM passes, 275 identical screenshots, vanilla matches
+    `mf_us.sha1`.
 - Patch and CI (step 9): `translation/ca/tools/ci.sh` ran here from start to finish with exit
   code 0: 36 tool tests, `extract.py --check`, vanilla SHA1, the self-test ROM (`romcheck.py
   --selftest` and 275 identical screenshots), lint 318/318 with no errors or warnings, the
@@ -365,6 +381,9 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 - `asm/disasm_0x0809e598.s`: under `.ifdef LANG_CA`, the literal `_0809E9B8` (the file
   select's sprite sheet) is `sCaGfx_FileSelectObj` instead of `0x0873DC20`. The only assembly
   file touched.
+- `src/text.c`: under `#ifdef LANG_CA`, the blob that holds the erase-all-data screen's
+  table of sheets (`sBlob_79c170_79c27c`) becomes an array of pointers from the generated
+  `ca/gfx_tables.h`, the same words except the two English entries.
 - `src/menus/title_screen.c`: under `#ifdef LANG_CA`, the sprite sheet is loaded (twice) from
   `sCaGfx_TitleScreenObjects`.
 - `src/data/hud_data.c`: under `#ifdef LANG_CA`, `sCommonSpritesGfx` comes from the generated
@@ -416,9 +435,11 @@ repointed):
 | `game_over/background.gfx.lz` and `game_over/text.tm.lz` | the GAME OVER logo | done: "FI DE LA / PARTIDA" on two lines (it doesn't fit one at the logo's size), composed by `gfx_game_over_logo.py` from the letters of GAME OVER; the sheet and the tilemap are appended and their one pointer each repointed. Seen in game (`build/shots/ca_game_over.png`) |
 | `ending/credits_character.gfx`, `copyright_text_*.gfx` | credits font, copyright lines | step 8 |
 
+The erase-all-data screen (`GAME_MODE_ERASE_SRAM_MENU`) is done: two sheets per language,
+LZ77 with no entry in `database.json`, English at 0x588478 and 0x589804.
+
 Not looked at yet: `title_intro/*`, `ending_cutscene/*`, `monologue/*`, the demo and link
-screens, the erase-save screen (`GAME_MODE_ERASE_SRAM_MENU`; its wording is entries 19-23 of
-the file select table, "Do you want to erase all saved data?", so its text is graphics).
+screens.
 
 Useful for screenshots: `gMainGameMode` (0x03000BDE) set to 8 with `gSubGameMode1`
 (0x03000BE0) set to 0 during gameplay opens the game over screen. 11 starts the credits, which
@@ -428,8 +449,8 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 ## Where to resume
 
 1. (Done: the glossary is approved.)
-2. Step 7, what is left, in rising order of difficulty: the erase-all-data screen; the
-   intro's vaccine panel; the results screen (read the asm above first). Then
+2. Step 7, what is left, in rising order of difficulty: the intro's vaccine panel (find the
+   asset first); the results screen (read the asm above first). Then
    look at the assets not inventoried yet. `gfx_pause.py` is the model: take the letters from
    the vanilla sheet, redraw, append, repoint the one pointer, screenshot.
 3. Write a Catalan route tool from `selftest.py` (see `TESTING.md`) and screenshot the text

@@ -86,6 +86,16 @@ def graphic_rows():
             ("file_select_area", "File select, the area of a saved file (SECTOR n stays)", "MAIN DECK", fsel.AREA)):
         rows.append({"section": "graphics", "id": rid, "where": where, "english": english, "spanish": english,
                      "catalan": catalan, "status": "translated" if fsel.OUT.exists() else "untranslated"})
+    import gfx_erase
+    for name, where in (("question", "Erase-all-data screen (L+R at power-on)"),
+                        ("confirm", "Erase-all-data screen, after answering yes")):
+        _, lines, answers = gfx_erase.SHEETS[name]
+        rows.append({"section": "graphics", "id": f"erase_{name}", "where": where,
+                     "english": "\n".join(gfx_erase.VANILLA[name] + ["No", "Yes"]).replace("？", "?"),
+                     "spanish": {"question": "¿Quieres borrar todos\nlos datos guardados?\nNo\nSí",
+                                 "confirm": "¿Seguro que quieres\nborrar todos los datos?\nNo\nSí"}[name],
+                     "catalan": "\n".join(lines + answers).replace("？", "?"),
+                     "status": "translated" if (gfx_erase.OUT / f"{name}.png").exists() else "untranslated"})
     heading, names = gencredits.read_credits()
     rows.append({"section": "credits", "id": "translation", "where": "Staff credits, a group of its own before EXECUTIVE PRODUCER",
                  "english": "", "spanish": "", "catalan": "\n".join([heading] + names), "status": "translated"})

@@ -78,5 +78,23 @@
       "0x9e9b8"
     ],
     "note": "the file select's sprite sheet, LZ77 inside data/Blob_73cfac_7478a0.bin, loaded by address in asm/disasm_0x0809e598.s (literal _0809E9B8); ENERGY, TIME and MAIN DECK; composed by gfx_file_select.py"
+  },
+  "menus/erase_sram/question": {
+    "address": "0x588478",
+    "symbol": "sCaGfx_EraseSramQuestion",
+    "tiles": 128,
+    "pointers": [
+      "0x79c238"
+    ],
+    "note": "erase-all-data screen, first question (English entry of the table at 0x79c228, data/Blob_79c170_79c27c.bin in src/text.c); typed with the game font by gfx_erase.py"
+  },
+  "menus/erase_sram/confirm": {
+    "address": "0x589804",
+    "symbol": "sCaGfx_EraseSramConfirm",
+    "tiles": 128,
+    "pointers": [
+      "0x79c23c"
+    ],
+    "note": "erase-all-data screen, second question (same table); typed with the game font by gfx_erase.py"
   }
 }

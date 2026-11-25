@@ -49,6 +49,7 @@ Upstream files touched: `Makefile` (one `include`), `linker.ld` (a section after
 sheet and its tilemap),
 `src/menus/pause_screen.c` (the pause screen's two sheets and the status tilemap),
 `src/menus/title_screen.c` (the title's sprite sheet),
+`src/text.c` (the erase-all-data screen's table of sheets),
 `asm/disasm_0x0809e598.s` (one literal: the file select's sprite sheet, under `.ifdef LANG_CA`),
 `src/data/menus/pause_screen_data.c` (the OAM frames of the map's security level legend),
 `src/data/hud_data.c` (the HUD sprites),
@@ -129,6 +130,7 @@ python3 translation/ca/tools/gfx_pause.py                # composes the pause an
 python3 translation/ca/tools/gfx_hud.py                  # composes the HUD label: gfx/hud/common.png
 python3 translation/ca/tools/gfx_title.py                # composes the title prompt: gfx/menus/title_screen/objects.png
 python3 translation/ca/tools/gfx_file_select.py          # composes the file select labels: gfx/menus/file_select/obj.png
+python3 translation/ca/tools/gfx_erase.py                # types the erase-all-data screen: gfx/menus/erase_sram/*.png
 python3 translation/ca/tools/gfx.py export game_over/text_english out.png   # a vanilla sheet
 python3 translation/ca/tools/gfx.py check                # the PNGs are valid
 python3 translation/ca/tools/gfx.py roundtrip            # the codec reproduces the vanilla assets

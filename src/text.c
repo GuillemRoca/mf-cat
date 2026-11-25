@@ -36,7 +36,12 @@ static u32 sArray_79c14c[9] = {
     [8] = UINT_MAX
 };
 
+#ifdef LANG_CA
+#include "ca/gfx_tables.h" // generated: translation/ca/tools/gfx.py
+static const u16* sBlob_79c170_79c27c[] = { CA_GFX_TABLE_79C170_79C27C };
+#else // !LANG_CA
 static u8 sBlob_79c170_79c27c[] = INCBIN_U8("data/Blob_79c170_79c27c.bin");
+#endif // LANG_CA
 
  /**
  * @brief 79118 | 24 | Gets the width of a text character

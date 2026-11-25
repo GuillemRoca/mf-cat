@@ -5587,5 +5587,25 @@ TIME","ENERGY
 TIME","ENERGIA
 TEMPS",translated,
 graphics,file_select_area,"File select, the area of a saved file (SECTOR n stays)",MAIN DECK,MAIN DECK,COBERTA,translated,
+graphics,erase_question,Erase-all-data screen (L+R at power-on),"Do you want to
+erase all saved data?
+No
+Yes","¿Quieres borrar todos
+los datos guardados?
+No
+Sí","Vols esborrar totes
+les dades guardades?
+No
+Sí",translated,
+graphics,erase_confirm,"Erase-all-data screen, after answering yes","Are you sure you want
+to erase all saved data?
+No
+Yes","¿Seguro que quieres
+borrar todos los datos?
+No
+Sí","Segur que vols esborrar
+totes les dades?
+No
+Sí",translated,
 credits,translation,"Staff credits, a group of its own before EXECUTIVE PRODUCER",,,"CATALAN
 Guillem Roca Castany",translated,

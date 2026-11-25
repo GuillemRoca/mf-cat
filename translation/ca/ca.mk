@@ -13,6 +13,8 @@
 #                                  src/menus/game_over.c (gentext.py tables)
 #   $(CA_BUILD)/ca_gfx.o           the edited graphics of gfx/ (gfx.py asm), which the C code
 #                                  points at by symbol (tools/gfx_assets.json)
+#   $(CA_INC)/ca/gfx_tables.h      the blobs that are tables of pointers to graphics, with the
+#                                  repointed entries (gfx.py tables): src/text.c
 # The font is the one exception: it is edited in place (font.py), which keeps its size:
 #   $(CA_INC)/ca/font.inc          sCharactersGfx with font/glyphs/*.png drawn over it
 #   $(CA_INC)/ca/char_widths.inc   sCharacterWidths with font/widths.txt applied
@@ -48,6 +50,7 @@ CA_WIDTHS_INC := $(CA_INC)/ca/char_widths.inc
 CA_CREDITS_INC := $(CA_INC)/ca/credits.inc
 CA_LEGEND_INC := $(CA_INC)/ca/pause_legend_oam.inc
 CA_HUD_INC := $(CA_INC)/ca/hud_common.inc
+CA_GFX_TABLES_H := $(CA_INC)/ca/gfx_tables.h
 
 ifeq ($(CA_SELFTEST),1)
   CA_GENTEXT_FLAGS := --selftest
@@ -83,6 +86,7 @@ ifeq ($(LANG_CA),1)
   src/data/ending_data.s: $(CA_CREDITS_INC)
   src/data/menus/pause_screen_data.s: $(CA_LEGEND_INC)
   src/data/hud_data.s: $(CA_HUD_INC)
+  src/text.s: $(CA_GFX_TABLES_H)
   $(TARGET:.gba=.elf): $(CA_TEXT_OBJ) $(CA_GFX_OBJ)
 else ifeq ($(CA_SELFTEST),1)
   $(error CA_SELFTEST=1 needs LANG_CA=1)
@@ -111,6 +115,10 @@ $(CA_HUD_INC): $(wildcard $(CA_DIR)/gfx/hud/common.png) $(CA_TOOLS)/gfx.py $(CA_
                $(CA_BASEROM) $(CA_STAMP)
 	$(MSG) GFX $@
 	$Q$(PYTHON) $(CA_TOOLS)/gfx.py inc hud/common $@ $(CA_GENTEXT_FLAGS)
+
+$(CA_GFX_TABLES_H): $(CA_TOOLS)/gfx.py $(CA_TOOLS)/gfx_assets.json $(CA_BASEROM) $(CA_STAMP)
+	$(MSG) GFX $@
+	$Q$(PYTHON) $(CA_TOOLS)/gfx.py tables $@
 
 CA_TEXT_DEPS := $(wildcard $(CA_DIR)/text/*.txt) $(CA_DIR)/charmap.txt $(CA_BASEROM) \
                 $(CA_TOOLS)/gentext.py $(CA_TOOLS)/catext.py $(CA_STAMP)

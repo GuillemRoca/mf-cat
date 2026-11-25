@@ -37,6 +37,7 @@ python3 "$CA/tools/gfx_pause.py" --check
 python3 "$CA/tools/gfx_hud.py" --check
 python3 "$CA/tools/gfx_title.py" --check
 python3 "$CA/tools/gfx_file_select.py" --check
+python3 "$CA/tools/gfx_erase.py" --check
 python3 "$CA/tools/font.py" check
 endstep
 

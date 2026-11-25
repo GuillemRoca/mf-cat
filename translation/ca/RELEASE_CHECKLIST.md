@@ -4,8 +4,8 @@ Copy this list into the release issue and tick every item. A release is a `.bps`
 vanilla US ROM (SHA1 `ca33f4348c2c05dd330d37b97e2c5a69531dfe87`); never distribute a ROM.
 
 `PROGRESS.md` says which of these are already known to hold and which work is still open. As
-of this writing some graphics are still in English (the erase-all-data screen, the intro's
-vaccine panel, the results screen): do not release before they are done.
+of this writing some graphics are still in English (the intro's vaccine panel, the results
+screen): do not release before they are done.
 
 ## Build and CI
 
@@ -38,8 +38,9 @@ vaccine panel, the results screen): do not release before they are done.
 - [ ] Title screen: PREM START, lit and unlit as it blinks.
 - [ ] File select graphics: ENERGIA and TEMPS over the files; the area of a saved file
       (COBERTA, SECTOR n).
-- [ ] Erase-all-data screen (hold L and R at power-on, if the US game has it): its two
-      questions and "Operation complete.".
+- [ ] Erase-all-data screen (hold L and R at power-on): both questions inside the box, the
+      cursor beside No and Sí; on a ROM copy you can lose, answer Sí twice and see what
+      follows.
 - [ ] HUD: ENERGIA, also with energy tanks (they follow the label) and with more than ten.
 - [ ] Intro: the vaccine panel.
 - [ ] Anything left in English on purpose is listed in `PROGRESS.md` with the reason.
