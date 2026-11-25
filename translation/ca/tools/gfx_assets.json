@@ -59,5 +59,15 @@
     "tiles": 448,
     "pointers": [],
     "note": "sCommonSpritesGfx (src/data/hud_data.c), uncompressed, edited in place: the HUD's ENERGY label; composed by gfx_hud.py"
+  },
+  "menus/title_screen/objects": {
+    "source": "menus/title_screen/objects.gfx.lz",
+    "symbol": "sCaGfx_TitleScreenObjects",
+    "tiles": 1024,
+    "pointers": [
+      "0x86ae0",
+      "0x871c4"
+    ],
+    "note": "sTitleScreenObjectsGfx, loaded twice in src/menus/title_screen.c; the PRESS START prompt; composed by gfx_title.py"
   }
 }

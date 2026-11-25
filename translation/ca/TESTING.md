@@ -23,8 +23,8 @@ patch into `translation/ca/dist/`.
 
 What to expect for now: all the text is in Catalan (banners, briefings, objectives,
 monologues) and so are the game over screen, the pause screen (map and status), the HUD and
-the credit. The other graphics with text are still in English: title, file select, the
-intro's vaccine panel and the results screen. `PROGRESS.md` has the list.
+the credit, and the title says PREM START. The other graphics with text are still in
+English: file select, the intro's vaccine panel and the results screen. `PROGRESS.md` has the list.
 
 ## Where each kind of text shows
 

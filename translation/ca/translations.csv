@@ -5500,5 +5500,6 @@ ACCELERACIÓ
 SALT ESPACIAL
 ATAC ESPIRAL",translated,
 graphics,hud_energy,"HUD, over the energy counter",ENERGY,ENERGY,ENERGIA,translated,
+graphics,title_prompt,Title screen,PRESS START,PRESS START,PREM START,translated,
 credits,translation,"Staff credits, a group of its own before EXECUTIVE PRODUCER",,,"CATALAN
 Guillem Roca Castany",translated,

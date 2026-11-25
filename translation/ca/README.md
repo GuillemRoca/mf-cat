@@ -46,6 +46,7 @@ Upstream files touched: `Makefile` (one `include`), `linker.ld` (a section after
 `#ifdef LANG_CA`), `src/new_file_intro.c` (the three English pointer tables),
 `src/menus/game_over.c` (the prompt, the logo's sheet and its tilemap),
 `src/menus/pause_screen.c` (the pause screen's two sheets and the status tilemap),
+`src/menus/title_screen.c` (the title's sprite sheet),
 `src/data/menus/pause_screen_data.c` (the OAM frames of the map's security level legend),
 `src/data/hud_data.c` (the HUD sprites),
 `src/data/ending_data.c` (the staff credits), `src/data/text_data.c` (the font) and
@@ -122,6 +123,7 @@ python3 translation/ca/tools/gfx_game_over.py            # composes gfx/game_ove
 python3 translation/ca/tools/gfx_game_over_logo.py       # composes the logo: background.png, text_tilemap.tm
 python3 translation/ca/tools/gfx_pause.py                # composes the pause and status screens: bg.png, obj.png, status_screen.tm
 python3 translation/ca/tools/gfx_hud.py                  # composes the HUD label: gfx/hud/common.png
+python3 translation/ca/tools/gfx_title.py                # composes the title prompt: gfx/menus/title_screen/objects.png
 python3 translation/ca/tools/gfx.py export game_over/text_english out.png   # a vanilla sheet
 python3 translation/ca/tools/gfx.py check                # the PNGs are valid
 python3 translation/ca/tools/gfx.py roundtrip            # the codec reproduces the vanilla assets

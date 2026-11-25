@@ -4,8 +4,8 @@ Copy this list into the release issue and tick every item. A release is a `.bps`
 vanilla US ROM (SHA1 `ca33f4348c2c05dd330d37b97e2c5a69531dfe87`); never distribute a ROM.
 
 `PROGRESS.md` says which of these are already known to hold and which work is still open. As
-of this writing some graphics are still in English (title, file select, the intro's
-vaccine panel, the results screen): do not release before they are done.
+of this writing some graphics are still in English (file select, the intro's vaccine panel,
+the results screen): do not release before they are done.
 
 ## Build and CI
 
@@ -35,7 +35,8 @@ vaccine panel, the results screen): do not release before they are done.
 - [ ] Briefings: DESTÍ and INICI on the station diagram; SISTEMA on the computer's text box.
 - [ ] Status screen: ESTAT, the counters (ENERGIA, MÍSSIL, BOMBA E.), the five headers and
       every item name with its accent, each inside its box, as items are collected.
-- [ ] Title screen (PRESS START and its menu) and file select (SAMUS DATA, ENERGY, TIME,
+- [ ] Title screen: PREM START, lit and unlit as it blinks.
+- [ ] File select (SAMUS DATA, ENERGY, TIME,
       SOUND, EXIT, START / COPY DATA / ERASE DATA, the erase and copy prompts).
 - [ ] HUD: ENERGIA, also with energy tanks (they follow the label) and with more than ten.
 - [ ] Intro: the vaccine panel.

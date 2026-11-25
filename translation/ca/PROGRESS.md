@@ -14,7 +14,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 4 | Glossary | done; every term APPROVED (2026-11-25) |
 | 5 | Translate all the text | done: 318 of 318 entries, first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
-| 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens and the HUD done; the rest is inventoried below |
+| 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens, the HUD and the title prompt done; the rest is inventoried below |
 | 8 | Credits | done |
 | 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
@@ -129,6 +129,15 @@ the questions still open. The plan is the nine steps of the original brief.
     ran into it showed "ENERGIF" in game).
   - A save state made before the change keeps showing ENERGY even after pausing: the game
     restores the sprites it had. A new room or a new game loads the edited sheet.
+  - After the hook: self-test ROM passes, 275 identical screenshots, vanilla matches
+    `mf_us.sha1`.
+- Title screen (step 7): `gfx_title.py` builds "PREM START" from the sheet's own letter cells
+  (P, R, E of PRESS, the M of START GAME, START whole), in both shadings, centred where PRESS
+  START was. Seen in game (`build/shots/ca_title_prem_start.png`). The sheet is appended and
+  its two pointers (0x86ae0, 0x871c4: the two loads in `src/menus/title_screen.c`) repointed.
+  - The rest of that sheet (START GAME / Language in five languages) is the menu of the other
+    regions' ROMs. In the US game the prompt leads straight to the file select, in vanilla
+    and here, so it is left as it is.
   - After the hook: self-test ROM passes, 275 identical screenshots, vanilla matches
     `mf_us.sha1`.
 - Patch and CI (step 9): `translation/ca/tools/ci.sh` ran here from start to finish with exit
@@ -304,6 +313,8 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 - `src/menus/pause_screen.c`: under `#ifdef LANG_CA`, the sprite sheet, the background sheet
   and the status tilemap are loaded from `sCaGfx_PauseScreenObj`, `sCaGfx_PauseScreenBg` and
   `sCaGfx_StatusScreenTilemap`.
+- `src/menus/title_screen.c`: under `#ifdef LANG_CA`, the sprite sheet is loaded (twice) from
+  `sCaGfx_TitleScreenObjects`.
 - `src/data/hud_data.c`: under `#ifdef LANG_CA`, `sCommonSpritesGfx` comes from the generated
   `ca/hud_common.inc` (same size).
 - `src/data/menus/pause_screen_data.c`: under `#ifdef LANG_CA`, the eight OAM frames of the
@@ -346,7 +357,7 @@ repointed):
 | Asset | Text seen | State |
 |---|---|---|
 | `menus/pause_screen/obj.gfx.lz`, `bg.gfx.lz` (1024 tiles each), `status_screen.tm.lz` | SLEEP, STATUS, OBJECTIVE, TARGET, START, MAIN DECK, L1-L4 LOCK / OPEN, SYSTEM; status screen (title, ENERGY / MISSILE / P-BOMB, group headers, item names) | done: composed by `gfx_pause.py`, appended, their one pointer each repointed; see Verified and Decisions |
-| `menus/title_screen/objects.gfx.lz` | PRESS START and the title menu | to do |
+| `menus/title_screen/objects.gfx.lz` | PRESS START; START GAME / Language (other regions' menu, not shown by the US game) | done: "PREM START", composed by `gfx_title.py`; the menu rows are left alone |
 | file select (inside `Blob_73cfac_7478a0.bin`, loaded by raw address in `asm/disasm_0x0809e598.s`, e.g. `0x0873DC20`) | SAMUS DATA, ENERGY, TIME, SOUND, EXIT, START / COPY DATA / ERASE DATA | to do; not located precisely |
 | `hud/common.gfx` (uncompressed) | ENERGY | done: "ENERGIA", edited in place by `gfx_hud.py`; see Verified and Decisions |
 | intro (`new_file_intro/*`, 127 assets) | the "Vaccine "Metroid"" panel | to do; asset not identified |
@@ -364,7 +375,7 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 ## Where to resume
 
 1. (Done: the glossary is approved.)
-2. Step 7, what is left, in rising order of difficulty: title "PRESS START"; file select (locate it inside `Blob_73cfac_7478a0.bin`
+2. Step 7, what is left, in rising order of difficulty: file select (locate it inside `Blob_73cfac_7478a0.bin`
    first); the intro's vaccine panel; the results screen (read the asm above first). Then
    look at the assets not inventoried yet. `gfx_pause.py` is the model: take the letters from
    the vanilla sheet, redraw, append, repoint the one pointer, screenshot.

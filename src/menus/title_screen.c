@@ -11,6 +11,11 @@
 #include "constants/audio.h"
 #include "constants/menus/title_screen.h"
 
+#ifdef LANG_CA
+// generated: translation/ca/tools/gfx.py
+extern const u32 sCaGfx_TitleScreenObjects[];
+#endif // LANG_CA
+
 /**
  * @brief 86854 | b8 | To document
  * 
@@ -147,7 +152,11 @@ void unk_8690c(void)
     // FIXME TitleScreenDrawDebugText(sTitleScreenDebugTextPointer, VRAM_BASE + 0xF000 + BGCNT_VRAM_TILE_SIZE * 1, 0);
     TitleScreenDrawDebugText(*(const u8** const)0x879c2c8, VRAM_BASE + 0xF000 + BGCNT_VRAM_TILE_SIZE * 1, 0);
 
+#ifdef LANG_CA
+    LZ77UncompVram(sCaGfx_TitleScreenObjects, VRAM_OBJ);
+#else // !LANG_CA
     LZ77UncompVram(sTitleScreenObjectsGfx, VRAM_OBJ);
+#endif // LANG_CA
     DMA3_COPY_32(sTitleScreenObjectsPal, PALRAM_OBJ, sizeof(sTitleScreenObjectsPal) / sizeof(u32));
 
     WRITE_16(REG_BG1CNT, CREATE_BGCNT(2, 30, BGCNT_HIGH_MID_PRIORITY, BGCNT_SIZE_256x256));
@@ -627,7 +636,11 @@ void TitleScreenInit(void)
     // FIXME TitleScreenDrawDebugText(sTitleScreenDebugTextPointer, VRAM_BASE + 0xF000 + BGCNT_VRAM_TILE_SIZE * 1, 0);
     TitleScreenDrawDebugText(*(const u8** const)0x879c2c8, VRAM_BASE + 0xF000 + BGCNT_VRAM_TILE_SIZE * 1, 0);
 
+#ifdef LANG_CA
+    LZ77UncompVram(sCaGfx_TitleScreenObjects, VRAM_OBJ);
+#else // !LANG_CA
     LZ77UncompVram(sTitleScreenObjectsGfx, VRAM_OBJ);
+#endif // LANG_CA
     DMA3_COPY_32(sTitleScreenObjectsPal, PALRAM_OBJ, sizeof(sTitleScreenObjectsPal) / sizeof(u32));
 
     gWrittenToBldalpha_Eva = 0;
