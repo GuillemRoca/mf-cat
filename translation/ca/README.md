@@ -16,11 +16,11 @@ blob, so nothing that exists may move or change size. `LANG_CA=1` therefore only
 - the Catalan text goes in a new object that `linker.ld` places after everything else (the US
   ROM has 398 KB of padding there, so it stays 8 MB);
 - the English pointer tables keep their place and size, and only their pointer values change;
-- the font (one glyph and its width) and the staff credits are edited in place, keeping their
-  size.
+- the font (one glyph and its width), the staff credits and eight small OAM frames of the map
+  screen are edited in place, keeping their size.
 
 `tools/romcheck.py` proves it on every build: a Catalan ROM may differ from the base ROM only in
-those pointers and in the appended area. Plain `make` still matches `mf_us.sha1`.
+those pointers, in those in-place edits and in the appended area. Plain `make` still matches `mf_us.sha1`.
 
 ## Layout
 
@@ -30,7 +30,7 @@ text/<language>/*.txt    the vanilla text of the seven languages, dumped from th
 charmap.txt              the characters and control codes of the text
 font/glyphs/XXXX.png     edited glyphs (char ID in hex), drawn over the extracted font
 font/widths.txt          sCharacterWidths overrides for those glyphs
-gfx/<asset>.png          edited graphics; <asset> is its key in tools/gfx_assets.json
+gfx/<asset>.png          edited graphics (.tm: a tilemap); <asset> is its key in tools/gfx_assets.json
 credits.txt              the Catalan translators, added to the staff credits
 identical.txt            IDs whose Catalan is meant to equal the English
 glossary.md              terminology (APPROVED / PROPOSED), STYLE.md, notes/translator-notes.md
@@ -44,10 +44,11 @@ build/, dist/            generated files and CI outputs; gitignored
 
 Upstream files touched: `Makefile` (one `include`), `linker.ld` (a section after `.data`, under
 `#ifdef LANG_CA`), `src/new_file_intro.c` (the three English pointer tables),
-`src/menus/game_over.c` (the English entry of the prompt graphic), `src/data/ending_data.c`
-(the staff credits), `src/data/text_data.c`
-(the font) and `src/data/menus/pause_screen_misc_data.c` (the character widths), each under
-`#ifdef LANG_CA`.
+`src/menus/game_over.c` (the prompt, the logo's sheet and its tilemap),
+`src/menus/pause_screen.c` (the pause screen's two sheets and the status tilemap),
+`src/data/menus/pause_screen_data.c` (the OAM frames of the map's security level legend),
+`src/data/ending_data.c` (the staff credits), `src/data/text_data.c` (the font) and
+`src/data/menus/pause_screen_misc_data.c` (the character widths), each under `#ifdef LANG_CA`.
 
 ## Building
 
@@ -118,6 +119,7 @@ their text; "Needs work" entries are imported and listed.
 ```sh
 python3 translation/ca/tools/gfx_game_over.py            # composes gfx/game_over/text_english.png
 python3 translation/ca/tools/gfx_game_over_logo.py       # composes the logo: background.png, text_tilemap.tm
+python3 translation/ca/tools/gfx_pause.py                # composes the pause and status screens: bg.png, obj.png, status_screen.tm
 python3 translation/ca/tools/gfx.py export game_over/text_english out.png   # a vanilla sheet
 python3 translation/ca/tools/gfx.py check                # the PNGs are valid
 python3 translation/ca/tools/gfx.py roundtrip            # the codec reproduces the vanilla assets
@@ -127,6 +129,11 @@ python3 translation/ca/tools/gfx.py roundtrip            # the codec reproduces 
 code points at under `LANG_CA`, how many tiles it may hold and which ROM pointers are
 repointed. The graphic is compressed and appended after the text; the vanilla one stays where
 it is. A PNG is indexed, 256 px wide (32 tiles per row); its palette is only for viewing.
+
+The composers build each graphic from letters they take out of the vanilla sheets, so a word
+is changed by editing the constant at the top of the tool and running it again; each tool
+stops with an error if the new word doesn't fit. The words of the pause and status screens
+are in `gfx_pause.py`, and `translations.csv` lists them with the English.
 
 ## Testing in the emulator
 

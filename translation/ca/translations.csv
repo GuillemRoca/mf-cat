@@ -5422,5 +5422,82 @@ SÍ ( CONTINUA )
 NO ( SURT )",translated,
 graphics,game_over_logo,"Game over screen, the logo",GAME OVER,GAME OVER,"FI DE LA
 PARTIDA",translated,
+graphics,pause_tabs,"Pause screen, the L and R tabs","SLEEP
+STATUS","SLEEP
+STATUS","REPÒS
+ESTAT",translated,
+graphics,pause_area,"Map screen, the area name (SECTOR n stays)",MAIN DECK,MAIN DECK,COBERTA,translated,
+graphics,pause_objective,"Map screen, beside the A button",OBJECTIVE,OBJECTIVE,OBJECTIU,translated,
+graphics,pause_target,"Map screen, the flag on the objective; station diagram, its label",TARGET,TARGET,DESTÍ,translated,
+graphics,pause_start,"Station diagram, where Samus is",START,START,INICI,translated,
+graphics,pause_legend,"Map screen, the security levels L1-L4","LOCK
+OPEN","LOCK
+OPEN","TANCAT
+OBERT",translated,
+graphics,pause_system,The computer's text box,SYSTEM,SYSTEM,SISTEMA,translated,
+graphics,status_title,"Status screen, the title",STATUS,STATUS,ESTAT,translated,
+graphics,status_counters,"Status screen, the three counters","ENERGY
+MISSILE
+P-BOMB","ENERGY
+MISSILE
+P-BOMB","ENERGIA
+MÍSSIL
+BOMBA E.",translated,
+graphics,status_headers,"Status screen, the group headers","BEAM
+MISSILE
+BOMB
+SUIT
+MISC.","BEAM
+MISSILE
+BOMB
+SUIT
+MISC.","RAIG
+MÍSSIL
+BOMBA
+VESTIT
+ALTRES",translated,
+graphics,status_items,"Status screen, the item names","CHARGE
+WIDE
+PLASMA
+WAVE
+ICE
+SUPER
+DIFFUSION
+POWER
+VARIA
+GRAVITY
+MORPH BALL
+HI-JUMP
+SPEED BOOSTER
+SPACE JUMP
+SCREW ATTACK","CHARGE
+WIDE
+PLASMA
+WAVE
+ICE
+SUPER
+DIFFUSION
+POWER
+VARIA
+GRAVITY
+MORPH BALL
+HI-JUMP
+SPEED BOOSTER
+SPACE JUMP
+SCREW ATTACK","CÀRREGA
+AMPLE
+PLASMA
+ONES
+GEL
+SÚPER
+DIFUSIÓ
+ENERGIA
+CLIMÀTIC
+GRAVITATORI
+MORFOSFERA
+SUPERSALT
+ACCELERACIÓ
+SALT ESPACIAL
+ATAC ESPIRAL",translated,
 credits,translation,"Staff credits, a group of its own before EXECUTIVE PRODUCER",,,"CATALAN
 Guillem Roca Castany",translated,

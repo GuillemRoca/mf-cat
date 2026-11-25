@@ -14,7 +14,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 4 | Glossary | done; every term APPROVED (2026-11-25) |
 | 5 | Translate all the text | done: 318 of 318 entries, first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
-| 7 | Graphics with baked-in text | in progress: game over prompt done; the rest is inventoried below |
+| 7 | Graphics with baked-in text | in progress: game over (prompt and logo) and the pause and status screens done; the rest is inventoried below |
 | 8 | Credits | done |
 | 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
@@ -95,6 +95,30 @@ the questions still open. The plan is the nine steps of the original brief.
     appended, no stray change) and `--selftest` on the self-test ROM pass; `selftest.py` now
     also visits the game over screen and gives 275 identical screenshots; vanilla matches
     `mf_us.sha1`.
+- Pause and status screens (step 7): `gfx_pause.py` composes both sheets and the status tilemap
+  from letters it takes out of the vanilla sheets (only the letters English lacks are drawn in
+  the tool). Seen in game on the Catalan ROM with every item switched on by RAM pokes
+  (`build/shots/ca_pause_map.png`, `ca_pause_status.png`, `ca_pause_objective.png`,
+  `ca_briefing_diagram_and_legend.png`, and `pause_overview.png` with the four together):
+  - map screen: tabs REPÒS / ESTAT (background and sprite versions), COBERTA, OBJECTIU, the
+    DESTÍ flag, the legend "L1 [door] TANCAT" ending where LOCK ended;
+  - status screen: title ESTAT, counters ENERGIA / MÍSSIL / BOMBA E., headers RAIG, MÍSSIL,
+    BOMBA, VESTIT, ALTRES, and the fifteen item names with their accents, each inside its box;
+  - briefing: DESTÍ on the station diagram, and the legend on the briefing's map.
+  - Not seen in game: OBERT (no security level is unlocked this early), INICI (the station
+    diagram's START label) and SISTEMA (the label on the computer's text box, which is off
+    screen in the scenes reached so far, in vanilla too). They are in the sheet
+    (`gfx/menus/pause_screen/obj.png`) and use the same code paths as LOCK, TARGET and the box.
+  - The target flag is drawn on alternate frames only (its animation is 33 one-frame steps
+    that switch between "flag" and "dot"), so a screenshot shows it or not depending on the
+    frame: take two consecutive ones. That is vanilla behaviour, not a bug.
+  - References checked: each of the three assets has exactly one pointer in the ROM
+    (0x76b30, 0x76b10, 0x76cb4), all in `src/menus/pause_screen.c`. The tiles the legend
+    moves to (0x377-0x37a, 0x3b6-0x3b9) are among those the sheet marks with a cross; no OAM
+    frame uses them and a build with the vanilla sheet showed them still crossed at run time.
+  - With the hooks in: `romcheck.py` (324 pointers, 127 288 bytes appended, the legend's 160
+    bytes of OAM as generated), `--selftest` on the self-test ROM, 275 identical screenshots,
+    vanilla matches `mf_us.sha1`.
 - Patch and CI (step 9): `translation/ca/tools/ci.sh` ran here from start to finish with exit
   code 0: 36 tool tests, `extract.py --check`, vanilla SHA1, the self-test ROM (`romcheck.py
   --selftest` and 275 identical screenshots), lint 318/318 with no errors or warnings, the
@@ -225,6 +249,20 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   don't depend on the rest and they make every later push check the vanilla SHA1 and the
   self-test. `RELEASE_CHECKLIST.md` says not to release before the graphics and credits are
   done.
+- **Graphics wording where the space decided** (all in `gfx_pause.py`, one line each to change):
+  - TARGET is "DESTÍ" and START is "INICI". "OBJECTIU" doesn't fit the flag (28 px) at the
+    flag's letter size, and the A button already says OBJECTIU for the mission text.
+  - MAIN DECK is "COBERTA": "COBERTA PRINCIPAL" needs twice the label's 46 px. The sectors
+    keep "SECTOR n".
+  - P-BOMB is "BOMBA E." (Bomba d'energia); it fills its counter cell to within a pixel.
+  - LOCK / OPEN are "TANCAT" / "OBERT". The label sprite was 16 px (four small letters), so
+    under `LANG_CA` it is a 32 px sprite on spare tiles and the whole legend starts 8 px (one
+    map cell) further left; it ends where it did. The cost: it covers one more column of map.
+  - Status headers and item names are mzm-cat's (RAIG, MÍSSIL, BOMBA, VESTIT, ALTRES; CÀRREGA,
+    AMPLE, ONES, GEL, SÚPER, DIFUSIÓ, ENERGIA, CLIMÀTIC, GRAVITATORI, MORFOSFERA, SUPERSALT,
+    ACCELERACIÓ, SALT ESPACIAL, ATAC ESPIRAL).
+  - Left alone: SAMUS (a name), SECTOR, and PREVIEW (the label of the map's preview point,
+    `PAUSE_OAM_ID_MAP_PREVIEW_POINT`; not seen in play so far).
 - **agbcc in CI** is pret/agbcc at da598c1 (the commit built and matched here), not the
   jiangzhengwenjz fork mzm-cat pins: Fusion's README asks for pret's.
 - **IDs** are table + index (`MESSAGE_07`, `NAV_042`, `PAUSE_003`, `MONOLOGUE_11`): upstream has
@@ -246,7 +284,14 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 - `src/data/ending_data.c`: under `#ifdef LANG_CA`, the initializer of `sCredits` comes from
   the generated `ca/credits.inc` (same number of entries).
 - `src/menus/game_over.c`: under `#ifdef LANG_CA`, `sGameOverTextGfxPointers[LANGUAGE_ENGLISH]`
-  is `sCaGfx_GameOverText` (the appended graphic).
+  is `sCaGfx_GameOverText` (the appended graphic), and the background sheet and the text
+  tilemap are loaded from `sCaGfx_GameOverBg` and `sCaGfx_GameOverTextTilemap`.
+- `src/menus/pause_screen.c`: under `#ifdef LANG_CA`, the sprite sheet, the background sheet
+  and the status tilemap are loaded from `sCaGfx_PauseScreenObj`, `sCaGfx_PauseScreenBg` and
+  `sCaGfx_StatusScreenTilemap`.
+- `src/data/menus/pause_screen_data.c`: under `#ifdef LANG_CA`, the eight OAM frames of the
+  security level legend (`sPauseScreenOam_L1Lock_Frame0` to `L4Open_Frame0`) come from the
+  generated `ca/pause_legend_oam.inc` (same size, edited in place).
 - `src/new_file_intro.c`: under `#ifdef LANG_CA`, the include of the generated
   `ca/text_tables.h`; the two blobs that are pointer tables (`sBlob_79c5c0_79cdd8`,
   `sBlob_79ce10_79e6a0`) become arrays of pointers with the same contents except the English
@@ -283,7 +328,7 @@ repointed):
 
 | Asset | Text seen | State |
 |---|---|---|
-| `menus/pause_screen/obj.gfx.lz`, `bg.gfx.lz` (1024 tiles each) | SLEEP, STATUS, OBJECTIVE, TARGET, area names (MAIN DECK…), L1-L4 LOCK, status screen (ENERGY, BEAM, SUIT, SAMUS, item names) | to do |
+| `menus/pause_screen/obj.gfx.lz`, `bg.gfx.lz` (1024 tiles each), `status_screen.tm.lz` | SLEEP, STATUS, OBJECTIVE, TARGET, START, MAIN DECK, L1-L4 LOCK / OPEN, SYSTEM; status screen (title, ENERGY / MISSILE / P-BOMB, group headers, item names) | done: composed by `gfx_pause.py`, appended, their one pointer each repointed; see Verified and Decisions |
 | `menus/title_screen/objects.gfx.lz` | PRESS START and the title menu | to do |
 | file select (inside `Blob_73cfac_7478a0.bin`, loaded by raw address in `asm/disasm_0x0809e598.s`, e.g. `0x0873DC20`) | SAMUS DATA, ENERGY, TIME, SOUND, EXIT, START / COPY DATA / ERASE DATA | to do; not located precisely |
 | `hud/common.gfx` (uncompressed) | ENERGY | to do |
@@ -302,20 +347,26 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 ## Where to resume
 
 1. (Done: the glossary is approved.)
-2. Step 7, in rising order of difficulty: HUD "ENERGY" (uncompressed, in place); title "PRESS
-   START"; pause and status screens (`menus/pause_screen/obj` and `bg`: export with `gfx.py`
-   after adding them to `gfx_assets.json`; they are shared by all languages, so find every
-   `LZ77UncompVram` of them before repointing, or keep them in place if the edited sheet still
-   compresses into the original slot); file select (locate it inside
-   `Blob_73cfac_7478a0.bin` first); the intro's vaccine panel; the results screen (read the
-   asm above first).
+2. Step 7, what is left, in rising order of difficulty: HUD "ENERGY" (uncompressed, in
+   place); title "PRESS START"; file select (locate it inside `Blob_73cfac_7478a0.bin`
+   first); the intro's vaccine panel; the results screen (read the asm above first). Then
+   look at the assets not inventoried yet. `gfx_pause.py` is the model: take the letters from
+   the vanilla sheet, redraw, append, repoint the one pointer, screenshot.
 3. Write a Catalan route tool from `selftest.py` (see `TESTING.md`) and screenshot the text
    that has not been seen in game.
 4. Release notes in `.github/release-notes/`, once the checklist can be ticked.
 
 ## Open questions
 
-None. Decided on 2026-11-25: every proposed term approved as option 1, except Habitation Deck,
+Decided on 2026-11-25: every proposed term approved as option 1, except Habitation Deck,
 which is "Coberta de l'hàbitat"; the Catalan credit in a group of its own before EXECUTIVE
 PRODUCER; the GAME OVER logo becomes "Fi de la partida"; and every other graphic with text is
 translated, as in mzm-cat.
+
+For you to confirm, on the pause and status screens (the space decided; see Decisions):
+
+1. TARGET as "DESTÍ" and START as "INICI" (not "OBJECTIU", which is the A button's word).
+2. MAIN DECK as "COBERTA" alone.
+3. P-BOMB as "BOMBA E.".
+4. "TANCAT" / "OBERT" with the legend one map cell further left, rather than four-letter
+   abbreviations in the original place.

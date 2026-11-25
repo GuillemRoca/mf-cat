@@ -24,6 +24,13 @@
 #include "structs/minimap.h"
 #include "structs/samus.h"
 
+#ifdef LANG_CA
+// generated: translation/ca/tools/gfx.py
+extern const u32 sCaGfx_PauseScreenBg[];
+extern const u32 sCaGfx_PauseScreenObj[];
+extern const u32 sCaGfx_StatusScreenTilemap[];
+#endif // LANG_CA
+
 static const u32* sMinimapData[MINIMAP_COUNT] = {
     [MINIMAP_MAIN_DECK] = sMainDeckMinimap,
     [MINIMAP_SECTOR_1] = sSector1Minimap,
@@ -548,14 +555,22 @@ bools32 PauseScreenInit(void)
 
     DMA3_COPY_16(sMinimapTilesPal, PALRAM_BASE, 3 * PAL_ROW);
 
+#ifdef LANG_CA
+    CallLZ77UncompVram(sCaGfx_PauseScreenObj, VRAM_OBJ);
+#else // !LANG_CA
     CallLZ77UncompVram(sPauseScreenObjGfx, VRAM_OBJ);
+#endif // LANG_CA
     DmaTransfer(3, sMinimapTilesGfx, VRAM_BASE + 0x8000, 0x3800, 16);
 
     DMA3_COPY_16(sPauseScreenObjPal_565b48, PALRAM_OBJ, COLORS_IN_PAL);
 
     if (PAUSE_SCREEN_DATA.unk_0 == 0)
     {
+#ifdef LANG_CA
+        CallLZ77UncompVram(sCaGfx_PauseScreenBg, VRAM_BASE);
+#else // !LANG_CA
         CallLZ77UncompVram(sPauseScreenBgGfx, VRAM_BASE);
+#endif // LANG_CA
         DMA3_COPY_16(sPauseScreenBgPal_565808, PALRAM_BASE + 3 * PAL_ROW_SIZE, 13 * PAL_ROW);
     }
     else if (PAUSE_SCREEN_DATA.unk_0 == 1)
@@ -607,7 +622,11 @@ bools32 PauseScreenInit(void)
         if (PAUSE_SCREEN_DATA.enableDebug)
             CallLZ77UncompVram(sPauseDebugTilemap, gMinimapData);
         else
+#ifdef LANG_CA
+            CallLZ77UncompVram(sCaGfx_StatusScreenTilemap, gMinimapData);
+#else // !LANG_CA
             CallLZ77UncompVram(sStatusScreenTilemap, gMinimapData);
+#endif // LANG_CA
 
         DMA3_COPY_16(gMinimapData, VRAM_BASE + 0xC800, MINIMAP_SIZE);
     }

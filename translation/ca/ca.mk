@@ -17,6 +17,8 @@
 #   $(CA_INC)/ca/char_widths.inc   sCharacterWidths with font/widths.txt applied
 # and so are the staff credits (gencredits.py), with the same number of entries and rows:
 #   $(CA_INC)/ca/credits.inc       sCredits with the translators of credits.txt
+# and the OAM frames of the map's security level legend (gfx_pause.py --oam), same size:
+#   $(CA_INC)/ca/pause_legend_oam.inc   a wider label sprite, the legend 8 px further left
 # Objects are built in-tree for both modes, so every object that depends on the mode also
 # depends on $(CA_STAMP), which changes whenever the mode does.
 
@@ -41,6 +43,7 @@ CA_TABLES_H := $(CA_INC)/ca/text_tables.h
 CA_FONT_INC := $(CA_INC)/ca/font.inc
 CA_WIDTHS_INC := $(CA_INC)/ca/char_widths.inc
 CA_CREDITS_INC := $(CA_INC)/ca/credits.inc
+CA_LEGEND_INC := $(CA_INC)/ca/pause_legend_oam.inc
 
 ifeq ($(CA_SELFTEST),1)
   CA_GENTEXT_FLAGS := --selftest
@@ -70,6 +73,7 @@ ifeq ($(LANG_CA),1)
   src/data/text_data.s: $(CA_FONT_INC)
   src/data/menus/pause_screen_misc_data.s: $(CA_WIDTHS_INC)
   src/data/ending_data.s: $(CA_CREDITS_INC)
+  src/data/menus/pause_screen_data.s: $(CA_LEGEND_INC)
   $(TARGET:.gba=.elf): $(CA_TEXT_OBJ) $(CA_GFX_OBJ)
 else ifeq ($(CA_SELFTEST),1)
   $(error CA_SELFTEST=1 needs LANG_CA=1)
@@ -89,6 +93,10 @@ $(CA_WIDTHS_INC): src/data/menus/pause_screen_misc_data.c $(CA_FONT_DEPS)
 $(CA_CREDITS_INC): $(CA_DIR)/credits.txt src/data/ending_data.c $(CA_TOOLS)/gencredits.py $(CA_STAMP)
 	$(MSG) CREDITS $@
 	$Q$(PYTHON) $(CA_TOOLS)/gencredits.py $@ $(CA_FONT_FLAGS)
+
+$(CA_LEGEND_INC): $(CA_TOOLS)/gfx_pause.py $(CA_BASEROM) $(CA_STAMP)
+	$(MSG) LEGEND $@
+	$Q$(PYTHON) $(CA_TOOLS)/gfx_pause.py --oam $@ $(CA_FONT_FLAGS)
 
 CA_TEXT_DEPS := $(wildcard $(CA_DIR)/text/*.txt) $(CA_DIR)/charmap.txt $(CA_BASEROM) \
                 $(CA_TOOLS)/gentext.py $(CA_TOOLS)/catext.py $(CA_STAMP)

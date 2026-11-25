@@ -4,8 +4,8 @@ Copy this list into the release issue and tick every item. A release is a `.bps`
 vanilla US ROM (SHA1 `ca33f4348c2c05dd330d37b97e2c5a69531dfe87`); never distribute a ROM.
 
 `PROGRESS.md` says which of these are already known to hold and which work is still open. As
-of this writing the graphics (other than the game over prompt) and the credits are not done:
-do not release before they are.
+of this writing some graphics are still in English (title, file select, HUD, the intro's
+vaccine panel, the results screen): do not release before they are done.
 
 ## Build and CI
 
@@ -28,8 +28,13 @@ do not release before they are.
 - [ ] Game over: the logo "FI DE LA / PARTIDA"; the prompt "TORNAR-HO A PROVAR ?", "SÍ (
       CONTINUA )", "NO ( SURT )"; the helmet cursor lines up with both options.
 - [ ] Ending results screen: clear time, item rate, the last line.
-- [ ] Pause screen: SLEEP / STATUS tabs, OBJECTIVE, TARGET, the area names, the LOCK labels.
-- [ ] Status screen: headings and every item name, each inside its box.
+- [ ] Map screen: the REPÒS / ESTAT tabs (also while one is highlighted), COBERTA and SECTOR
+      n, OBJECTIU, the DESTÍ flag (it flickers, as in English), the legend L1-L4 with TANCAT
+      and, once a level is unlocked, OBERT; the legend doesn't hide anything needed in any
+      sector's map.
+- [ ] Briefings: DESTÍ and INICI on the station diagram; SISTEMA on the computer's text box.
+- [ ] Status screen: ESTAT, the counters (ENERGIA, MÍSSIL, BOMBA E.), the five headers and
+      every item name with its accent, each inside its box, as items are collected.
 - [ ] Title screen (PRESS START and its menu) and file select (SAMUS DATA, ENERGY, TIME,
       SOUND, EXIT, START / COPY DATA / ERASE DATA, the erase and copy prompts).
 - [ ] HUD: ENERGY.

@@ -717,6 +717,10 @@ static const u16 sPauseScreenOam_StatusButton_Frame3[OAM_DATA_SIZE(2)] = {
     OAM_ENTRY(12, -4, OAM_DIMS_8x8, OAM_NO_FLIP, 0x39f, 7, 0),
 };
 
+#ifdef LANG_CA
+// generated: translation/ca/tools/gfx_pause.py
+#include "ca/pause_legend_oam.inc"
+#else // !LANG_CA
 static const u16 sPauseScreenOam_L1Lock_Frame0[OAM_DATA_SIZE(3)] = {
     3,
     OAM_ENTRY(-24, -16, OAM_DIMS_16x8, OAM_NO_FLIP, 0x1c0, 7, 0),
@@ -772,6 +776,7 @@ static const u16 sPauseScreenOam_L4Open_Frame0[OAM_DATA_SIZE(3)] = {
     OAM_ENTRY(-8, 8, OAM_DIMS_8x8, OAM_NO_FLIP, 0x1eb, 7, 0),
     OAM_ENTRY(0, 8, OAM_DIMS_16x8, OAM_NO_FLIP, 0x1ec, 3, 0),
 };
+#endif // LANG_CA
 
 static const u16 sPauseScreenOam_SleepButtonSelected_Frame0[OAM_DATA_SIZE(2)] = {
     2,

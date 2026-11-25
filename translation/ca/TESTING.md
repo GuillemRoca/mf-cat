@@ -22,9 +22,9 @@ patch into `translation/ca/dist/`.
 4. After the first briefing answer "Sí". Once Samus can move, save a state (Shift+F1).
 
 What to expect for now: all the text is in Catalan (banners, briefings, objectives,
-monologues) and so is the game over prompt. The other graphics with text are still in English:
-title, file select, the pause and status screens, the HUD's ENERGY, the results screen and the
-credits. `PROGRESS.md` has the list.
+monologues) and so are the game over screen, the pause screen (map and status) and the credit.
+The other graphics with text are still in English: title, file select, the HUD's ENERGY, the
+intro's vaccine panel and the results screen. `PROGRESS.md` has the list.
 
 ## Where each kind of text shows
 
@@ -67,6 +67,12 @@ Useful addresses (US ROM): `gMainGameMode` 0x03000BDE (1 in game, 3 briefing, 7 
 8 with 0 in `gSubGameMode1`, 0x03000BE0, opens the game over screen), `gCurrentRoom`
 0x0300002D, `gSamusData.xPosition` 0x0300125A and `.yPosition` 0x0300125C (writing them moves
 Samus), `gEventCounter` 0x03000B87.
+
+To see the whole status screen without playing that far, switch every item on before pausing:
+`poke8 300131a ff`, `poke8 300131b ff`, `poke8 300131c ff` (`gEquipment`'s beam, weapon and
+suit/misc flags), then `tap S`, `wait 90`, `tap r`. On the map screen the DESTÍ flag is drawn
+on alternate frames only, as TARGET is in English: take two screenshots one frame apart
+(`shot`, `wait 1`, `shot`) and one of them has it.
 
 With the Catalan ROM the intro and the first briefing have more pages than in English: gameplay
 starts after about 190 presses of A instead of 182, so a route written for the English text

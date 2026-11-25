@@ -25,5 +25,32 @@
       "0x9e10c"
     ],
     "note": "sGameOverTextTilemap, loaded once in src/menus/game_over.c; places the logo; written by gfx_game_over_logo.py"
+  },
+  "menus/pause_screen/bg": {
+    "source": "menus/pause_screen/bg.gfx.lz",
+    "symbol": "sCaGfx_PauseScreenBg",
+    "tiles": 1024,
+    "pointers": [
+      "0x76b30"
+    ],
+    "note": "sPauseScreenBgGfx, loaded once in src/menus/pause_screen.c; status screen title, counters, headers, item names and the L/R tabs; composed by gfx_pause.py"
+  },
+  "menus/pause_screen/obj": {
+    "source": "menus/pause_screen/obj.gfx.lz",
+    "symbol": "sCaGfx_PauseScreenObj",
+    "tiles": 1024,
+    "pointers": [
+      "0x76b10"
+    ],
+    "note": "sPauseScreenObjGfx, loaded once in src/menus/pause_screen.c; map screen labels (tabs, area name, OBJECTIVE, TARGET, START, LOCK/OPEN, SYSTEM); composed by gfx_pause.py"
+  },
+  "menus/pause_screen/status_screen": {
+    "source": "menus/pause_screen/status_screen.tm.lz",
+    "symbol": "sCaGfx_StatusScreenTilemap",
+    "raw": true,
+    "pointers": [
+      "0x76cb4"
+    ],
+    "note": "sStatusScreenTilemap, loaded once in src/menus/pause_screen.c; points at the repacked item names; written by gfx_pause.py"
   }
 }

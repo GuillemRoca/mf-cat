@@ -38,7 +38,8 @@ BUTTONS = {"A_button": "[A]", "B_button": "[B]", "L_button": "[L]", "R_button": 
 
 
 def graphic_rows():
-    """Strings drawn in graphics (the vanilla English and Spanish as on screen), and the credits."""
+    """Strings drawn in graphics (the vanilla English and Spanish as on screen; the pause and
+    status screens are English in every language of the US ROM), and the credits."""
     import gencredits
     import gfx_game_over
     rows = [{"section": "graphics", "id": "game_over_prompt", "where": "Game over screen",
@@ -50,6 +51,26 @@ def graphic_rows():
     rows.append({"section": "graphics", "id": "game_over_logo", "where": "Game over screen, the logo",
                  "english": "GAME OVER", "spanish": "GAME OVER", "catalan": "\n".join(gfx_game_over_logo.LINES),
                  "status": "translated" if (catext.CA / "gfx/game_over/background.png").exists() else "untranslated"})
+    import gfx_pause as gp
+    done = "translated" if (catext.CA / "gfx/menus/pause_screen/obj.png").exists() else "untranslated"
+    items = list(gp.ITEMS.items())
+    for rid, where, english, catalan in (
+            ("pause_tabs", "Pause screen, the L and R tabs", "SLEEP\nSTATUS", f"{gp.TAB_L}\n{gp.TAB_R}"),
+            ("pause_area", "Map screen, the area name (SECTOR n stays)", "MAIN DECK", gp.AREA),
+            ("pause_objective", "Map screen, beside the A button", "OBJECTIVE", gp.OBJECTIVE),
+            ("pause_target", "Map screen, the flag on the objective; station diagram, its label", "TARGET", gp.TARGET),
+            ("pause_start", "Station diagram, where Samus is", "START", gp.START),
+            ("pause_legend", "Map screen, the security levels L1-L4", "LOCK\nOPEN", f"{gp.LOCK}\n{gp.OPEN}"),
+            ("pause_system", "The computer's text box", "SYSTEM", gp.SYSTEM),
+            ("status_title", "Status screen, the title", "STATUS", gp.TITLE),
+            ("status_counters", "Status screen, the three counters", "ENERGY\nMISSILE\nP-BOMB",
+             "\n".join(gp.COUNTERS.values())),
+            ("status_headers", "Status screen, the group headers", "BEAM\nMISSILE\nBOMB\nSUIT\nMISC.",
+             "\n".join(gp.HEADERS.values())),
+            ("status_items", "Status screen, the item names", "\n".join(e for e, _ in items),
+             "\n".join(c for _, c in items))):
+        rows.append({"section": "graphics", "id": rid, "where": where, "english": english,
+                     "spanish": english, "catalan": catalan, "status": done})
     heading, names = gencredits.read_credits()
     rows.append({"section": "credits", "id": "translation", "where": "Staff credits, a group of its own before EXECUTIVE PRODUCER",
                  "english": "", "spanish": "", "catalan": "\n".join([heading] + names), "status": "translated"})
