@@ -80,6 +80,12 @@ def graphic_rows():
     rows.append({"section": "graphics", "id": "title_prompt", "where": "Title screen",
                  "english": "PRESS START", "spanish": "PRESS START", "catalan": " ".join(gfx_title.WORDS),
                  "status": "translated" if gfx_title.OUT.exists() else "untranslated"})
+    import gfx_file_select as fsel
+    for rid, where, english, catalan in (
+            ("file_select_columns", "File select, over the files", "ENERGY\nTIME", f"{fsel.ENERGY}\n{fsel.TIME}"),
+            ("file_select_area", "File select, the area of a saved file (SECTOR n stays)", "MAIN DECK", fsel.AREA)):
+        rows.append({"section": "graphics", "id": rid, "where": where, "english": english, "spanish": english,
+                     "catalan": catalan, "status": "translated" if fsel.OUT.exists() else "untranslated"})
     heading, names = gencredits.read_credits()
     rows.append({"section": "credits", "id": "translation", "where": "Staff credits, a group of its own before EXECUTIVE PRODUCER",
                  "english": "", "spanish": "", "catalan": "\n".join([heading] + names), "status": "translated"})

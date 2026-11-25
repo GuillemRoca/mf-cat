@@ -69,5 +69,14 @@
       "0x871c4"
     ],
     "note": "sTitleScreenObjectsGfx, loaded twice in src/menus/title_screen.c; the PRESS START prompt; composed by gfx_title.py"
+  },
+  "menus/file_select/obj": {
+    "address": "0x73dc20",
+    "symbol": "sCaGfx_FileSelectObj",
+    "tiles": 512,
+    "pointers": [
+      "0x9e9b8"
+    ],
+    "note": "the file select's sprite sheet, LZ77 inside data/Blob_73cfac_7478a0.bin, loaded by address in asm/disasm_0x0809e598.s (literal _0809E9B8); ENERGY, TIME and MAIN DECK; composed by gfx_file_select.py"
   }
 }

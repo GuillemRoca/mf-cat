@@ -65,12 +65,16 @@ $(shell mkdir -p $(CA_BUILD) && (echo '$(CA_MODE)' | cmp -s - $(CA_STAMP) || ech
 # script.
 CA_AFFECTED := $(shell grep -rlF --include='*.c' -e LANG_CA src)
 $(CA_AFFECTED:.c=.s) linker.ld.pp: $(CA_STAMP)
+# Hand-written assembly is not preprocessed: it sees LANG_CA as an assembler symbol (.ifdef).
+CA_AFFECTED_ASM := $(shell grep -lF -e LANG_CA asm/*.s)
+$(CA_AFFECTED_ASM:.s=.o): $(CA_STAMP)
 
 ifeq ($(LANG_CA),1)
   ifneq ($(REGION),us)
     $(error LANG_CA=1 needs REGION=us)
   endif
   CPPFLAGS += -DLANG_CA -I$(CA_INC)
+  ASFLAGS += --defsym LANG_CA=1
   TARGET := $(TARGET:.gba=_ca.gba)
 
   src/new_file_intro.s src/menus/game_over.s: $(CA_TABLES_H)

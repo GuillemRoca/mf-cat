@@ -49,6 +49,7 @@ Upstream files touched: `Makefile` (one `include`), `linker.ld` (a section after
 sheet and its tilemap),
 `src/menus/pause_screen.c` (the pause screen's two sheets and the status tilemap),
 `src/menus/title_screen.c` (the title's sprite sheet),
+`asm/disasm_0x0809e598.s` (one literal: the file select's sprite sheet, under `.ifdef LANG_CA`),
 `src/data/menus/pause_screen_data.c` (the OAM frames of the map's security level legend),
 `src/data/hud_data.c` (the HUD sprites),
 `src/data/ending_data.c` (the staff credits), `src/data/text_data.c` (the font) and
@@ -127,6 +128,7 @@ python3 translation/ca/tools/gfx_game_over_logo.py       # composes the logo: ba
 python3 translation/ca/tools/gfx_pause.py                # composes the pause and status screens: bg.png, obj.png, status_screen.tm
 python3 translation/ca/tools/gfx_hud.py                  # composes the HUD label: gfx/hud/common.png
 python3 translation/ca/tools/gfx_title.py                # composes the title prompt: gfx/menus/title_screen/objects.png
+python3 translation/ca/tools/gfx_file_select.py          # composes the file select labels: gfx/menus/file_select/obj.png
 python3 translation/ca/tools/gfx.py export game_over/text_english out.png   # a vanilla sheet
 python3 translation/ca/tools/gfx.py check                # the PNGs are valid
 python3 translation/ca/tools/gfx.py roundtrip            # the codec reproduces the vanilla assets

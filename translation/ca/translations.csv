@@ -5582,5 +5582,10 @@ SALT ESPACIAL
 ATAC ESPIRAL",translated,
 graphics,hud_energy,"HUD, over the energy counter",ENERGY,ENERGY,ENERGIA,translated,
 graphics,title_prompt,Title screen,PRESS START,PRESS START,PREM START,translated,
+graphics,file_select_columns,"File select, over the files","ENERGY
+TIME","ENERGY
+TIME","ENERGIA
+TEMPS",translated,
+graphics,file_select_area,"File select, the area of a saved file (SECTOR n stays)",MAIN DECK,MAIN DECK,COBERTA,translated,
 credits,translation,"Staff credits, a group of its own before EXECUTIVE PRODUCER",,,"CATALAN
 Guillem Roca Castany",translated,

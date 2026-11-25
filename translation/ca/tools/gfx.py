@@ -14,7 +14,8 @@
   gfx.py roundtrip                   the codec reproduces every asset: PNG -> tiles -> LZ77 ->
                                      tiles gives the vanilla tiles
 
-gfx_assets.json: "<asset>": {"source": the vanilla asset in database.json, "symbol": the label
+gfx_assets.json: "<asset>": {"source": the vanilla asset in database.json (or "address": the ROM
+offset of LZ77 data that has no entry there, inside a blob), "symbol": the label
 the C code points at under LANG_CA, "tiles": the number of 4bpp tiles (the VRAM space it is
 decompressed into: a PNG may not be bigger), "pointers": ROM offsets of the pointers that are
 repointed (romcheck.py allows exactly those)}. An asset with "raw": true is not tiles but
@@ -51,10 +52,14 @@ def database():
 
 
 def address(info, db=None):
+    if "address" in info:
+        return int(info["address"], 16)
     return int((db or database())[info["source"]]["addr"]["us"], 16)
 
 
 def vanilla_tiles(info, db=None):
+    if "address" in info:  # LZ77 data that database.json has no entry for (inside a blob)
+        return lz77.decompress(catext.rom(), int(info["address"], 16))[0]
     e = (db or database())[info["source"]]
     a = int(e["addr"]["us"], 16)
     if info.get("inplace"):

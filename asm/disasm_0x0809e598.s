@@ -469,7 +469,12 @@ _0809E9A8: .4byte 0x84000001
 _0809E9AC: .4byte 0x02000800
 _0809E9B0: .4byte 0x02000340
 _0809E9B4: .4byte 0x00000FFF
-_0809E9B8: .4byte 0x0873DC20
+_0809E9B8:
+.ifdef LANG_CA
+	.4byte sCaGfx_FileSelectObj @ generated: translation/ca/tools/gfx.py
+.else
+	.4byte 0x0873DC20
+.endif
 _0809E9BC: .4byte 0x06010000
 _0809E9C0: .4byte 0x08740D08
 _0809E9C4: .4byte 0x05000200

@@ -14,7 +14,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 4 | Glossary | done; every term APPROVED (2026-11-25) |
 | 5 | Translate all the text | done: 330 of 330 entries (the 318 of the four tables, and the 12 of the file select table found during step 7), first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
-| 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens, the HUD and the title prompt done; the rest is inventoried below |
+| 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens, the HUD, the title prompt and the file select done; the rest is inventoried below |
 | 8 | Credits | done |
 | 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
@@ -156,6 +156,19 @@ the questions still open. The plan is the nine steps of the original brief.
   - The self-test route already photographs this screen and its menu (its first frames,
     now kept as `intro_001` and `intro_002`): still 275 identical screenshots, `romcheck.py
     --selftest` passes with 338 pointers, vanilla matches `mf_us.sha1`.
+- File select graphics (step 7): `gfx_file_select.py` writes ENERGIA, TEMPS and COBERTA into
+  the screen's sprite sheet with the sheet's own letters (COBERTA's come from the Spanish
+  CUBIERTA that the sheet also holds). ENERGIA and TEMPS seen in game
+  (`build/shots/ca_file_select.png`).
+  - Not seen in game: COBERTA, which shows for a file saved on the Main Deck.
+  - The sheet is LZ77 at 0x73dc20 inside `data/Blob_73cfac_7478a0.bin`, with one reference
+    in the ROM: the literal `_0809E9B8` in `asm/disasm_0x0809e598.s`. That file is assembled
+    without the C preprocessor, so the literal sits in an `.ifdef LANG_CA` and `ca.mk` passes
+    `--defsym LANG_CA=1`, the way the Makefile passes the region to assembly.
+  - Sizes come from the OAM data in the same blob: ENERGY and TIME are one 32 x 16 sprite
+    each (tiles 0x118, 0x11c), MAIN DECK a 32 x 16 and a 16 x 16 (tiles 0x8a, 0x8e).
+  - After the hook: self-test ROM passes, 275 identical screenshots (they include this
+    screen), vanilla matches `mf_us.sha1`.
 - Patch and CI (step 9): `translation/ca/tools/ci.sh` ran here from start to finish with exit
   code 0: 36 tool tests, `extract.py --check`, vanilla SHA1, the self-test ROM (`romcheck.py
   --selftest` and 275 identical screenshots), lint 318/318 with no errors or warnings, the
@@ -316,6 +329,8 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   - HUD: ENERGIA is 23 px of letters in a 24 px label, so the box keeps one margin column,
     on the right where the tanks follow, and its E starts at the left edge of the screen
     (ENERGY had a margin on both sides). The alternative with both margins is "ENERG.".
+  - File select: ENERGIA fits its 32 px sprite with its two E's one pixel narrower than
+    ENERGY's; MAIN DECK is "COBERTA", as on the map and as the Spanish sheet does (CUBIERTA).
   - Left alone: SAMUS (a name), SECTOR, and PREVIEW (the label of the map's preview point,
     `PAUSE_OAM_ID_MAP_PREVIEW_POINT`; not seen in play so far).
 - **agbcc in CI** is pret/agbcc at da598c1 (the commit built and matched here), not the
@@ -347,6 +362,9 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
 - `src/menus/pause_screen.c`: under `#ifdef LANG_CA`, the sprite sheet, the background sheet
   and the status tilemap are loaded from `sCaGfx_PauseScreenObj`, `sCaGfx_PauseScreenBg` and
   `sCaGfx_StatusScreenTilemap`.
+- `asm/disasm_0x0809e598.s`: under `.ifdef LANG_CA`, the literal `_0809E9B8` (the file
+  select's sprite sheet) is `sCaGfx_FileSelectObj` instead of `0x0873DC20`. The only assembly
+  file touched.
 - `src/menus/title_screen.c`: under `#ifdef LANG_CA`, the sprite sheet is loaded (twice) from
   `sCaGfx_TitleScreenObjects`.
 - `src/data/hud_data.c`: under `#ifdef LANG_CA`, `sCommonSpritesGfx` comes from the generated
@@ -392,7 +410,7 @@ repointed):
 |---|---|---|
 | `menus/pause_screen/obj.gfx.lz`, `bg.gfx.lz` (1024 tiles each), `status_screen.tm.lz` | SLEEP, STATUS, OBJECTIVE, TARGET, START, MAIN DECK, L1-L4 LOCK / OPEN, SYSTEM; status screen (title, ENERGY / MISSILE / P-BOMB, group headers, item names) | done: composed by `gfx_pause.py`, appended, their one pointer each repointed; see Verified and Decisions |
 | `menus/title_screen/objects.gfx.lz` | PRESS START; START GAME / Language (other regions' menu, not shown by the US game) | done: "PREM START", composed by `gfx_title.py`; the menu rows are left alone |
-| file select sprites: LZ77 at 0x73dc20 inside `Blob_73cfac_7478a0.bin` (512 tiles), loaded by raw address in `asm/disasm_0x0809e598.s` | ENERGY, TIME, SECTOR 1-6, MAIN DECK (and the area names of four other languages), the language names | to do. SAMUS DATA, SOUND, EXIT and the menus turned out to be text (the file select table, done). The background (LZ77 at 0x742fb4, 768 tiles) has English lore text as decoration (B.S.L SPACE LABORATORY, SECTOR:SRX) |
+| file select sprites: LZ77 at 0x73dc20 inside `Blob_73cfac_7478a0.bin` (512 tiles), loaded by raw address in `asm/disasm_0x0809e598.s` | ENERGY, TIME, SECTOR 1-6, MAIN DECK (and the area names of four other languages), the language names | done: ENERGIA, TEMPS, COBERTA, composed by `gfx_file_select.py`. SAMUS DATA, SOUND, EXIT and the menus turned out to be text (the file select table, done). The background (LZ77 at 0x742fb4, 768 tiles) has English lore text as decoration (B.S.L SPACE LABORATORY, SECTOR:SRX): left alone |
 | `hud/common.gfx` (uncompressed) | ENERGY | done: "ENERGIA", edited in place by `gfx_hud.py`; see Verified and Decisions |
 | intro (`new_file_intro/*`, 127 assets) | the "Vaccine "Metroid"" panel | to do; asset not identified |
 | `game_over/background.gfx.lz` and `game_over/text.tm.lz` | the GAME OVER logo | done: "FI DE LA / PARTIDA" on two lines (it doesn't fit one at the logo's size), composed by `gfx_game_over_logo.py` from the letters of GAME OVER; the sheet and the tilemap are appended and their one pointer each repointed. Seen in game (`build/shots/ca_game_over.png`) |
@@ -410,10 +428,8 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 ## Where to resume
 
 1. (Done: the glossary is approved.)
-2. Step 7, what is left, in rising order of difficulty: the file select's sprites (ENERGY,
-   TIME, the area names: LZ77 at 0x73dc20 in `Blob_73cfac_7478a0.bin`, which has no entry of
-   its own in `database.json`, so `gfx.py` must learn to take an address); the erase-all-data
-   screen; the intro's vaccine panel; the results screen (read the asm above first). Then
+2. Step 7, what is left, in rising order of difficulty: the erase-all-data screen; the
+   intro's vaccine panel; the results screen (read the asm above first). Then
    look at the assets not inventoried yet. `gfx_pause.py` is the model: take the letters from
    the vanilla sheet, redraw, append, repoint the one pointer, screenshot.
 3. Write a Catalan route tool from `selftest.py` (see `TESTING.md`) and screenshot the text
