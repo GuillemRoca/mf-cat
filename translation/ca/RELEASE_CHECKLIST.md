@@ -10,7 +10,7 @@ the results screen): do not release before they are done.
 ## Build and CI
 
 - [ ] CI green on the release commit, run with **release mode** (Actions → Catalan → Run
-      workflow → release): lint has 0 errors, 0 warnings, 0 TODOs and 318/318 translated.
+      workflow → release): lint has 0 errors, 0 warnings, 0 TODOs and 330/330 translated.
 - [ ] Vanilla US still matches `mf_us.sha1` (CI).
 - [ ] The LANG_CA self-test passes (CI): `romcheck.py --selftest` finds only repointed pointers
       and appended data, and `selftest.py` gets identical screenshots from both ROMs.
@@ -36,8 +36,7 @@ the results screen): do not release before they are done.
 - [ ] Status screen: ESTAT, the counters (ENERGIA, MÍSSIL, BOMBA E.), the five headers and
       every item name with its accent, each inside its box, as items are collected.
 - [ ] Title screen: PREM START, lit and unlit as it blinks.
-- [ ] File select (SAMUS DATA, ENERGY, TIME,
-      SOUND, EXIT, START / COPY DATA / ERASE DATA, the erase and copy prompts).
+- [ ] File select graphics: ENERGY, TIME and the area name of a saved file.
 - [ ] HUD: ENERGIA, also with energy tanks (they follow the label) and with more than ten.
 - [ ] Intro: the vaccine panel.
 - [ ] Anything left in English on purpose is listed in `PROGRESS.md` with the reason.
@@ -58,6 +57,9 @@ the results screen): do not release before they are done.
 - [ ] Save Room (prompt, Yes/No, complete), Recharge Room (three messages), "Connectar amb
       l'Adam？" at a Navigation Room.
 - [ ] Pause screen: the objective line after each event; Sleep Mode prompt and wake-up.
+- [ ] File select: DADES DE SAMUS, SO, SURT; the menu of an empty file (JUGA / COPIA /
+      ESBORRA) and of a saved one (Continua / Nova partida); the copy and erase prompts, each
+      inside its box with the cursor beside Sí and No.
 - [ ] The elevator monologues (MONOLOGUE_01 to 06) and the ending (MONOLOGUE_07, NAV_112).
 - [ ] The Federation conversations (NAV_050, 100, 102, 104): the right speaker's box for
       every line.

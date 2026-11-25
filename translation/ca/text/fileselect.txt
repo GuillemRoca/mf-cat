@@ -1,0 +1,22 @@
+# File select (the screen after the title: labels, the file menus, the copy and erase prompts,
+# and the messages for a corrupted save)
+#
+# One entry per line: ID = "text", with the IDs of text/english/fileselect.txt. Each entry has
+# the lines of the English one (\n). The boxes are narrow: lint.py says how wide a line may be.
+# FILE_00 is the screen's labels, one per line: the title, three empty lines where the files
+# are listed, then the two options under them. In the prompts the answers are a line of their
+# own, "Sí　　　No" with three wide spaces, as in the Spanish: the cursor's places are fixed.
+# IDs missing here show in English. See translation/ca/README.md.
+
+FILE_00 = "DADES DE SAMUS \n\n\n\nSO\nSURT"
+FILE_01 = "JUGA\nCOPIA\nESBORRA"
+FILE_02 = "On vols copiar\nles dades？"
+FILE_03 = "Vols sobreescriure\nles dades？\nSí　　　No"
+FILE_04 = "Vols esborrar\naquestes dades？\nSí　　　No"
+FILE_05 = "El fitxer A està\nmalmès. S'usaran\ndades anteriors."
+FILE_06 = "El fitxer B està\nmalmès. S'usaran\ndades anteriors."
+FILE_07 = "El fitxer C està\nmalmès. S'usaran\ndades anteriors."
+FILE_08 = "Dades del fitxer A\nmalmeses.\nS'esborraran."
+FILE_09 = "Dades del fitxer B\nmalmeses.\nS'esborraran."
+FILE_10 = "Dades del fitxer C\nmalmeses.\nS'esborraran."
+FILE_24 = "Continua\nNova partida"

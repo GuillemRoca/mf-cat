@@ -5,7 +5,7 @@ exactly as the vanilla ROM does.
   selftest.py [VANILLA.gba] [SELFTEST.gba] [--out DIR] [--keep-all]
 
 Plays the same scripted input on both ROMs with build/gbashot (headless mGBA) from power-on:
-a new game, the whole intro (monologue text and the first typed dialogue), the first briefing
+the file select screen and its menu, a new game, the whole intro (monologue text and the first typed dialogue), the first briefing
 (navigation text with coloured words and the Yes/No prompt), the walk to the first Navigation
 Room (the "Main Deck" and "Navigation Room" location banners), the conversation there, and the
 pause screen (status screen, Sleep Mode prompt) and the game over screen (the prompt graphic).
@@ -33,6 +33,8 @@ MAIN_GAME_MODE, SUB_GAME_MODE_1 = 0x03000BDE, 0x03000BE0  # 8 = GAME_MODE_GAME_O
 
 # Shots kept as PNG: (label, what it shows)
 KEEP = {
+    "intro_001": "file select: its labels (file select table)",
+    "intro_002": "file select: the file menu",
     "intro_005": "intro: monologue text over the cutscene",
     "intro_105": "intro: typed dialogue box (navigation table)",
     "intro_112": "intro: full-screen monologue",

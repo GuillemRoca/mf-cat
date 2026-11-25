@@ -5413,6 +5413,87 @@ aterrizaje.","Aviat arribarem a l'estació
 de recerca B.S.L.
 
 M'he de preparar per atracar.",translated,
+fileselect,FILE_00,File select screen,"SAMUS DATA
+
+SOUND
+EXIT","DATOS DE SAMUS
+
+SONIDO
+SALIR","DADES DE SAMUS
+
+SO
+SURT",translated,
+fileselect,FILE_01,File select screen,"START
+COPY DATA
+ERASE DATA","JUGAR
+COPIAR
+BORRAR","JUGA
+COPIA
+ESBORRA",translated,
+fileselect,FILE_02,File select screen,"Where do you want
+to copy it to?","¿Dónde copiar
+los datos?","On vols copiar
+les dades?",translated,
+fileselect,FILE_03,File select screen,"Existing file will
+be erased. OK?
+Yes　　　No","¿Sobrescribir los
+datos existentes?
+Sí　　　No","Vols sobreescriure
+les dades?
+Sí　　　No",translated,
+fileselect,FILE_04,File select screen,"Erase this data?
+
+Yes　　　No","¿Borrar los datos?
+
+Sí　　　No","Vols esborrar
+aquestes dades?
+Sí　　　No",translated,
+fileselect,FILE_05,File select screen,"Save Data A is
+corrupt. Using
+previous data.","Archivo A dañado.
+Usando datos
+anteriores...","El fitxer A està
+malmès. S'usaran
+dades anteriors.",translated,
+fileselect,FILE_06,File select screen,"Save Data B is
+corrupt. Using
+previous data.","Archivo B dañado.
+Usando datos
+anteriores...","El fitxer B està
+malmès. S'usaran
+dades anteriors.",translated,
+fileselect,FILE_07,File select screen,"Save Data C is
+corrupt. Using
+previous data.","Archivo C dañado.
+Usando datos
+anteriores...","El fitxer C està
+malmès. S'usaran
+dades anteriors.",translated,
+fileselect,FILE_08,File select screen,"The save data in
+file A is corrupt.
+Erasing data.","Datos de archivo A
+dañados.
+Borrando datos...","Dades del fitxer A
+malmeses.
+S'esborraran.",translated,
+fileselect,FILE_09,File select screen,"The save data in
+file B is corrupt.
+Erasing data.","Datos de archivo B
+dañados.
+Borrando datos...","Dades del fitxer B
+malmeses.
+S'esborraran.",translated,
+fileselect,FILE_10,File select screen,"The save data in
+file C is corrupt.
+Erasing data.","Datos de archivo C
+dañados.
+Borrando datos...","Dades del fitxer C
+malmeses.
+S'esborraran.",translated,
+fileselect,FILE_24,File select screen,"Continue
+Start Over","Continuar
+Empezar","Continua
+Nova partida",translated,
 graphics,game_over_prompt,Game over screen,"TRY AGAIN ?
 YES ( RETURN TO GAME )
 NO ( GO TO TITLE )","¿INTENTAR DE NUEVO ?

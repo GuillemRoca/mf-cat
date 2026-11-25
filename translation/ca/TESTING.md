@@ -32,6 +32,8 @@ English: file select, the intro's vaccine panel and the results screen. `PROGRES
 
 | IDs | Where |
 |---|---|
+| `FILE_00`, `FILE_01` | the file select (Start on the title): its labels; A on a file opens the menu |
+| `FILE_24`, `FILE_02` to `04` | the same with a saved file: its menu, and the copy and erase prompts |
 | `MONOLOGUE_08` to `18` | the intro, in order |
 | `MONOLOGUE_00` | full screen, right after the intro's last picture |
 | `NAV_000` | the first briefing, before Samus can move |

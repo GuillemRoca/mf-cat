@@ -46,7 +46,11 @@ class ExtractTest(unittest.TestCase):
     def test_tables(self):
         counts = {c: len(catext.entry_ids(c)) for c in catext.CATEGORIES}
         self.assertEqual(counts, {"message": 48, "location": 26, "navigation": 114, "pause": 111,
-                                  "monologue": 19})
+                                  "monologue": 19, "fileselect": 12})
+        # the file select table: 25 pointers per block, 13 of them not strings the game draws
+        self.assertEqual(catext.entry_ids("fileselect")[-2:], ["FILE_10", "FILE_24"])
+        self.assertEqual(catext.pointer_offsets("fileselect", "english")[-1], 0x79EACC)
+        self.assertEqual(catext.vanilla_text("fileselect", "hiragana"), catext.vanilla_text("fileselect", "japanese"))
         self.assertEqual(len(catext.entry_ids("pause", "hiragana")), 108)
         # the game's own view of the split: sPauseScreenTextPointers = navigation table + 114
         self.assertEqual(catext.pointer_offsets("pause", "english")[0], 0x79D6D4)
@@ -57,12 +61,12 @@ class ExtractTest(unittest.TestCase):
             extract.cmd_extract(Path(tmp))
             problems, total = extract.check(Path(tmp))
         self.assertEqual(problems, [])
-        self.assertEqual(total, 2223)
+        self.assertEqual(total, 2223 + 7 * 12)
 
     def test_committed_dumps_reproduce_the_rom(self):
         problems, total = extract.check(catext.CA / "text")
         self.assertEqual(problems, [])
-        self.assertEqual(total, 2223)
+        self.assertEqual(total, 2223 + 7 * 12)
 
     def test_committed_dumps_are_current(self):
         for language in catext.LANGUAGES:

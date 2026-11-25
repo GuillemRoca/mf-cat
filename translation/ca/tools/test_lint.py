@@ -45,7 +45,8 @@ class LintTest(unittest.TestCase):
         items, progress = self.run_lint({})
         self.assertEqual(items, [])
         self.assertEqual({c: n for c, (_, n) in progress.items()},
-                         {"message": 48, "location": 26, "navigation": 114, "pause": 111, "monologue": 19})
+                         {"message": 48, "location": 26, "navigation": 114, "pause": 111, "monologue": 19,
+                          "fileselect": 12})
         self.assertEqual(sum(d for d, _ in progress.values()), 0)
 
     def test_good_entry(self):
@@ -151,6 +152,15 @@ class LintTest(unittest.TestCase):
         entry = 'LOCATION_16 = "%s"' % centred("location", "Cel·la")
         self.assertOnly(self.run_lint({"location": [entry]}, middot_glyph=False)[0], "todo", "0357.png")
         self.assertEqual(self.run_lint({"location": [entry]})[0], [])
+
+    def test_file_select_boxes(self):
+        ok = 'FILE_04 = "Vols esborrar\\naquestes dades？\\nSí　　　No"'
+        self.assertEqual(self.run_lint({"fileselect": [ok]})[0], [])
+        self.assertOnly(self.run_lint({"fileselect": ['FILE_04 = "Vols esborrar aquestes dades？\\n\\nSí　　　No"']})[0],
+                        "error", "no shipped language is over")
+        self.assertOnly(self.run_lint({"fileselect": ['FILE_04 = "Vols esborrar\\naquestes dades？\\nSí No"']})[0],
+                        "error", "three wide spaces")
+        self.assertOnly(self.run_lint({"fileselect": ['FILE_01 = "JUGA\\nCOPIA"']})[0], "error", "2 lines, the English has 3")
 
     def test_shipped_translations_pass(self):
         # The rules must accept what Nintendo shipped: no errors in German, French or Spanish.

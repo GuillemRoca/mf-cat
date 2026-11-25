@@ -39,7 +39,12 @@ static const u32* sGameOverTextGfxPointers[LANGUAGE_COUNT] = {
     sGameOverTextGfx_Spanish
 };
 
+#ifdef LANG_CA
+#include "ca/text_tables.h" // generated: translation/ca/tools/gentext.py
+static const u16* sBlob_79e890_79eca0[] = { CA_TABLES_79E890_79ECA0 };
+#else // !LANG_CA
 static u8 sBlob_79e890_79eca0[] = INCBIN_U8("data/Blob_79e890_79eca0.bin");
+#endif // LANG_CA
 
  /**
  * @brief 9deb4 | a4 | Main handler for the game over menu

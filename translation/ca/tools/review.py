@@ -31,6 +31,7 @@ WHERE = {
     "navigation": "Navigation Room conversation / typed dialogue",
     "pause": "Pause screen, objective",
     "monologue": "Monologue or narration",
+    "fileselect": "File select screen",
 }
 BUTTONS = {"A_button": "[A]", "B_button": "[B]", "L_button": "[L]", "R_button": "[R]",
            "Select_button": "[SELECT]", "Up_button": "[UP]", "Down_button": "[DOWN]",

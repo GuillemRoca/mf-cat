@@ -13,7 +13,8 @@ Errors (exit 1):
   - a line that crosses 224 px (the game would break it in the middle of a word)
   - too many lines: message, location and pause text have exactly the lines of the Spanish;
     a navigation page has at most 2; a monologue page at most what the shipped languages use
-    for that monologue (9 on the full-screen ones, 2 over the cutscenes)
+    for that monologue (9 on the full-screen ones, 2 over the cutscenes); a file select entry
+    has the lines of the English one, none wider than the widest any shipped language has there
   - event codes that differ, in order, from both the Spanish and the English: {SPEAKER(n)},
     {PLAY(n)}, {STOP(n)}, the raw {xHHHH} codes, and in message banners the buttons and
     {INDENT(n)}
@@ -73,6 +74,32 @@ def colours(text):
             if current:
                 used.add(current)
     return used, current
+
+
+FILE_PROMPTS = ["FILE_%02d" % i for i in range(2, 11)]   # they share one box
+FILE_ANSWERS = re.compile(r"^\S+ ?\u3000{3}\S+$")        # "Yes　　　No": the cursor's places are fixed
+
+
+def file_lines(text):
+    """The lines of a file select entry, without the empty ones at its end."""
+    lines = text.split("\\n")
+    while len(lines) > 1 and not lines[-1]:
+        lines.pop()
+    return lines
+
+
+def file_select_limit(idx, line, others):
+    """The widest a line is, in any shipped Western language, in the box that entry is drawn
+    in: the boxes of that screen are narrower than a text line and their size is not known
+    otherwise. FILE_00 is a label per line; the prompts share one box."""
+    w = catext.widths()
+    best = 0
+    for o in others:
+        for i in (FILE_PROMPTS if idx in FILE_PROMPTS else [idx]):
+            lines = file_lines(o[i])
+            for l in (lines[line:line + 1] if idx == "FILE_00" else lines):
+                best = max(best, catext.line_layout(l, w)["pen_end"])
+    return best
 
 
 def page_limit(category, idx, others):
@@ -140,7 +167,20 @@ def lint(text_dir=catext.CA / "text", middot_glyph=catext.CA / "font" / "glyphs"
                     f" and the English {events(category, en)}")
 
             ca_pages, es_pages = pages(text), pages(es)
-            if category in FIXED_LINES:
+            if category == "fileselect":
+                lines, en_lines = file_lines(text), file_lines(en)
+                if len(ca_pages) != 1 or len(lines) != len(en_lines):
+                    err(f"{len(lines)} lines, the English has {len(en_lines)} (the box is fixed)")
+                for ln, line in enumerate(lines):
+                    limit = file_select_limit(idx, ln, others)
+                    px = catext.line_layout(line, w)["pen_end"]
+                    if px > limit:
+                        err(f"line {ln + 1} is {px} px; no shipped language is over {limit} px in that box")
+                for ln, line in enumerate(en_lines):
+                    if FILE_ANSWERS.match(line) and not (ln < len(lines) and FILE_ANSWERS.match(lines[ln])):
+                        err(f"line {ln + 1} must be the two answers with three wide spaces between"
+                            " them, as in the English (Yes　　　No)")
+            elif category in FIXED_LINES:
                 if len(ca_pages) != 1 or len(ca_pages[0]) != len(es_pages[0]):
                     err(f"{len(text.split(chr(92) + 'n'))} lines, the Spanish has {len(es_pages[0])} (the box is fixed)")
             else:
@@ -155,7 +195,7 @@ def lint(text_dir=catext.CA / "text", middot_glyph=catext.CA / "font" / "glyphs"
                     lay = catext.line_layout(line, w)
                     if lay["overflow"]:
                         err(f"line {ln} (page {pn}) is {lay['pen_end']} px, over the {catext.LINE_LIMIT} px limit")
-                if category not in FIXED_LINES:
+                if category not in FIXED_LINES and category != "fileselect":
                     visible = [l for l in page if catext.line_layout(l, w)["glyph_width"]]
                     last = pn == len(ca_pages)
                     if not visible and not (last and page == [""]) and \

@@ -28,16 +28,21 @@ REFERENCE = "spanish"
 WESTERN = ["english", "german", "french", "italian", "spanish"]
 
 TEXT_BLOB = (0x6B2FAC, 0x72EEE0)  # data/Blob_6b2fac_72eee0.bin
+FILE_BLOB = (0x73CFAC, 0x7478A0)  # data/Blob_73cfac_7478a0.bin: the file select's data and text
 
 # Pointer tables, as ROM offsets per language.
 #   message, location   data/Blob_79c5c0_79cdd8.bin: per language 48 + 26 pointers
 #   navigation          data/Blob_79ce10_79e6a0.bin: 225 pointers (222 in hiragana)
 #   monologue           sMonologueTextPointers<Language>, src/new_file_intro.c
+#   fileselect          data/Blob_79e890_79eca0.bin (src/menus/game_over.c): per language 25
+#                       pointers, indexed through the table at 0x79EC68 (hiragana shares the
+#                       Japanese block). Their strings are in data/Blob_73cfac_7478a0.bin.
 _MSG = [0x79C5C0 + 0x128 * i for i in range(7)]
 _LOC = [0x79C680 + 0x128 * i for i in range(7)]
 _NAV = [0x79CE10, 0x79D194, 0x79D50C, 0x79D890, 0x79DC14, 0x79DF98, 0x79E31C]
 _NAV_COUNT = [225, 222, 225, 225, 225, 225, 225]
 _MONO = [0x79E6A0, 0x79E6A0, 0x79E6EC, 0x79E738, 0x79E784, 0x79E7D0, 0x79E81C]
+_FILE = [0x79EA08, 0x79EA08, 0x79EA6C, 0x79EAD0, 0x79EB34, 0x79EB98, 0x79EBFC]
 NAV_SPLIT = 114  # sPauseScreenTextPointers[lang] == sNavConversationTextPointers[lang] + 114
 
 # name: (file, ID format, table of each language, first index, count of each language)
@@ -47,13 +52,19 @@ CATEGORIES = {
     "navigation": ("navigation.txt", "NAV_%03d", _NAV, 0, [NAV_SPLIT] * 7),
     "pause": ("pause.txt", "PAUSE_%03d", _NAV, NAV_SPLIT, [n - NAV_SPLIT for n in _NAV_COUNT]),
     "monologue": ("monologue.txt", "MONOLOGUE_%02d", _MONO, 0, [19] * 7),
+    "fileselect": ("fileselect.txt", "FILE_%02d", _FILE, 0, [25] * 7),
 }
+# Table entries that are not strings the game draws. File select entries 11 to 23 have no
+# terminator: they are the wording of text that is drawn as graphics (PRESS START, the game
+# over prompt, the results screen, the erase-all-data screen), kept in the ROM for reference.
+SKIP = {"fileselect": set(range(11, 24))}
 HEADERS = {
     "message": "Message banners (item and security-level messages, save and recharge prompts)",
     "location": "Location banners",
     "navigation": "Navigation Room conversations and other typed dialogue",
     "pause": "Pause screen text (objectives, sleep mode, the rest of the navigation table)",
     "monologue": "Samus's monologues and the intro and ending narration",
+    "fileselect": "File select screen (labels, the file menus, the copy and erase prompts, corrupted save messages)",
 }
 
 LINE_LIMIT = 224  # px: a text line is 28 tiles wide
@@ -99,14 +110,14 @@ def lang_index(language):
 
 def entry_ids(category, language=SLOT):
     _, fmt, _, _, counts = CATEGORIES[category]
-    return [fmt % i for i in range(counts[lang_index(language)])]
+    return [fmt % i for i in range(counts[lang_index(language)]) if i not in SKIP.get(category, ())]
 
 
 def pointer_offsets(category, language):
     """ROM offsets of the pointers of a category's table."""
     _, _, tables, first, counts = CATEGORIES[category]
     li = lang_index(language)
-    return [tables[li] + 4 * (first + i) for i in range(counts[li])]
+    return [tables[li] + 4 * (first + i) for i in range(counts[li]) if i not in SKIP.get(category, ())]
 
 
 def vanilla_codes(category, language):

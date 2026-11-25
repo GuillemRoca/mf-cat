@@ -36,6 +36,7 @@ LIMITS = {
     "navigation": "Pages ({NEW_PAGE}) of at most 2 lines, each within 224 px.",
     "pause": "2 lines, each within 224 px.",
     "monologue": "Lines within 224 px; pages of at most 9 lines (full screen) or 2 (over a cutscene).",
+    "fileselect": "The same number of lines as the English; no line wider than the shipped languages' (lint.py says).",
 }
 HEADER = """\
 # Metroid Fusion, Catalan translation (English slot of the US release).

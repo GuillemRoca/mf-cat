@@ -77,7 +77,10 @@ def check(base):
         return gap not in (b"", terminator) and (len(gap) > 3 or any(gap))
 
     pos = start
+    other = catext.FILE_BLOB
     for a, b in sorted(set(covered)):
+        if other[0] <= a and b <= other[1]:
+            continue  # file select strings live with that screen's data, not in the text blob
         if a < start or b > end:
             problems.append(f"string at 0x{a:x} is outside the text blob")
         elif a > pos and unowned(pos, a):

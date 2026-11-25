@@ -5,7 +5,8 @@
 
 Compares BUILT (default mf_us_ca.gba) with the base ROM byte by byte. Every byte that differs
 must be in one of the regions the translation is allowed to write:
-  - a pointer of the English slot (message, location, navigation and monologue tables), which
+  - a pointer of the English slot (message, location, navigation, monologue and file select
+    tables), which
     must now point into the appended data;
   - the appended data: the padding after the last byte of the vanilla ROM (0x79ecc8 on);
   - a pointer listed in gfx_assets.json (an edited graphic), which must also point into the

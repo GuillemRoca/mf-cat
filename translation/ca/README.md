@@ -15,7 +15,8 @@ blob, so nothing that exists may move or change size. `LANG_CA=1` therefore only
 
 - the Catalan text goes in a new object that `linker.ld` places after everything else (the US
   ROM has 398 KB of padding there, so it stays 8 MB);
-- the English pointer tables keep their place and size, and only their pointer values change;
+- the English pointer tables (five of them, in three blobs and one C array) keep their place
+  and size, and only their pointer values change;
 - the font (one glyph and its width), the staff credits, the HUD sprites (one label) and eight
   small OAM frames of the map screen are edited in place, keeping their size.
 
@@ -25,7 +26,7 @@ those pointers, in those in-place edits and in the appended area. Plain `make` s
 ## Layout
 
 ```
-text/<category>.txt      the Catalan text: message, location, navigation, pause, monologue
+text/<category>.txt      the Catalan text: message, location, navigation, pause, monologue, fileselect
 text/<language>/*.txt    the vanilla text of the seven languages, dumped from the ROM (generated)
 charmap.txt              the characters and control codes of the text
 font/glyphs/XXXX.png     edited glyphs (char ID in hex), drawn over the extracted font
@@ -43,8 +44,9 @@ build/, dist/            generated files and CI outputs; gitignored
 ```
 
 Upstream files touched: `Makefile` (one `include`), `linker.ld` (a section after `.data`, under
-`#ifdef LANG_CA`), `src/new_file_intro.c` (the three English pointer tables),
-`src/menus/game_over.c` (the prompt, the logo's sheet and its tilemap),
+`#ifdef LANG_CA`), `src/new_file_intro.c` (the English pointer tables of the game text),
+`src/menus/game_over.c` (the file select's pointer table; the game over prompt, the logo's
+sheet and its tilemap),
 `src/menus/pause_screen.c` (the pause screen's two sheets and the status tilemap),
 `src/menus/title_screen.c` (the title's sprite sheet),
 `src/data/menus/pause_screen_data.c` (the OAM frames of the map's security level legend),
@@ -69,7 +71,7 @@ Tools need python3 with Pillow, and libmgba-dev for the emulator tools.
 ## Translating text
 
 Each `text/<category>.txt` line is `ID = "text"`. IDs are the table and the index in it
-(`MESSAGE_33`, `NAV_042`, `PAUSE_003`, `MONOLOGUE_11`), the same in every language; the vanilla
+(`MESSAGE_33`, `NAV_042`, `PAUSE_003`, `MONOLOGUE_11`, `FILE_01`), the same in every language; the vanilla
 text of each language is in `text/<language>/`. IDs left out show in English, so the game
 always builds.
 
@@ -80,8 +82,9 @@ always builds.
 | `navigation` | Navigation Room conversations and other typed dialogue | pages (`{NEW_PAGE}`) of 1 or 2 lines |
 | `pause` | objectives on the pause screen | 2 lines |
 | `monologue` | Samus's monologues, intro and ending narration | pages of up to 9 lines (full screen) or 2 (over a cutscene), each ending `{ARROW}{NEW_PAGE}` |
+| `fileselect` | the file select screen: labels, menus, copy and erase prompts, corrupted save messages | the lines of the English entry; narrow boxes (the linter gives each line's limit) |
 
-No line may pass 224 px. `charmap.txt` lists the control codes; `PROGRESS.md` explains them.
+No line may pass 224 px (less on the file select). `charmap.txt` lists the control codes; `PROGRESS.md` explains them.
 Keep `{SPEAKER(n)}`, `{PLAY(n)}`, `{STOP(n)}` and the raw `{xHHHH}` codes exactly as the
 original has them: they drive sound, the map and who is speaking.
 

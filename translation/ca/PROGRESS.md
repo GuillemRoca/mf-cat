@@ -12,7 +12,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 2 | Plumbing self-test (`LANG_CA=1 CA_SELFTEST=1`) | done |
 | 3 | Tooling (gentext, lint, render, gap, po, glossary, review) | done |
 | 4 | Glossary | done; every term APPROVED (2026-11-25) |
-| 5 | Translate all the text | done: 318 of 318 entries, first draft, all awaiting your review |
+| 5 | Translate all the text | done: 330 of 330 entries (the 318 of the four tables, and the 12 of the file select table found during step 7), first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
 | 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens, the HUD and the title prompt done; the rest is inventoried below |
 | 8 | Credits | done |
@@ -140,6 +140,22 @@ the questions still open. The plan is the nine steps of the original brief.
     and here, so it is left as it is.
   - After the hook: self-test ROM passes, 275 identical screenshots, vanilla matches
     `mf_us.sha1`.
+- File select text (step 5, found in step 7): the twelve strings are extracted for the seven
+  languages (`text/<language>/fileselect.txt`; `extract.py --check` now re-encodes 2307
+  strings), translated (`text/fileselect.txt`) and appended like the rest; the English block's
+  twelve pointers are repointed in place. Seen in game (`build/shots/ca_file_select.png`,
+  `ca_file_select_menu.png`): "DADES DE SAMUS", "SO", "SURT" and the menu "JUGA / COPIA /
+  ESBORRA".
+  - Not seen in game: the copy and erase prompts (`FILE_02` to `04`, which need a saved
+    file), the corrupted-save messages (`FILE_05` to `10`) and `FILE_24` ("Continua / Nova
+    partida", shown for a file that has a save).
+  - The boxes of that screen are narrower than a text line and their widths are not known
+    from the code. `lint.py` holds each Catalan line to the widest line any shipped Western
+    language has in the same box (130 px for the title, 78 for the menu, 138 for the
+    prompts), and to the English number of lines.
+  - The self-test route already photographs this screen and its menu (its first frames,
+    now kept as `intro_001` and `intro_002`): still 275 identical screenshots, `romcheck.py
+    --selftest` passes with 338 pointers, vanilla matches `mf_us.sha1`.
 - Patch and CI (step 9): `translation/ca/tools/ci.sh` ran here from start to finish with exit
   code 0: 36 tool tests, `extract.py --check`, vanilla SHA1, the self-test ROM (`romcheck.py
   --selftest` and 275 identical screenshots), lint 318/318 with no errors or warnings, the
@@ -177,6 +193,21 @@ the questions still open. The plan is the nine steps of the original brief.
     0x79dc14, 0x79df98, 0x79e31c (`data/Blob_79ce10_79e6a0.bin`).
   - monologue (19) in C, `sMonologueTextPointers<Language>` in `src/new_file_intro.c`
     (English at 0x79e6ec).
+  - file select (found during step 7; the brief's list of tables didn't have it): 25
+    pointers per language block at 0x79ea08 (Japanese), 0x79ea6c (English), 0x79ead0,
+    0x79eb34, 0x79eb98, 0x79ebfc, inside `data/Blob_79e890_79eca0.bin`
+    (`src/menus/game_over.c`). A seven-entry table at 0x79ec68 gives each language its block
+    (hiragana uses the Japanese one); `asm/disasm_0x0809e598.s` reads it nine times with
+    `gLanguage`. The strings are not in the text blob but in `data/Blob_73cfac_7478a0.bin`
+    (0x740f08 on). Entries 0-10 and 24 are strings the game draws (`FILE_00` to `FILE_10`,
+    `FILE_24`): the screen's labels, the file menu, the copy and erase prompts, six messages
+    for a corrupted save, and "Continue / Start Over". The code reads entries 0-4 and 24 by
+    constant offset; 5-10 (the corrupted-save messages) by a computed one, not traced.
+    Entries 11-23 have no terminator and nothing was found that draws them: they are the
+    wording of text that is graphics (PRESS START, SELECT LANGUAGE, the game over prompt, the
+    results screen, and the erase-all-data screen). They are left as they are.
+  - A second seven-entry table at 0x79ec84 points every language at the same two strings
+    ("--:--" and a list of three-letter area codes): not language text, left alone.
 - References to those tables, found by grepping src/, include/ and asm/ and by scanning the
   whole ROM for words that point into them:
   - `sMessageTextPointers` (0x79cdf4) and `sLocationTextPointers` (0x79cdd8), also reached by
@@ -307,7 +338,10 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   `sCharacterWidths` comes from the generated `ca/char_widths.inc`.
 - `src/data/ending_data.c`: under `#ifdef LANG_CA`, the initializer of `sCredits` comes from
   the generated `ca/credits.inc` (same number of entries).
-- `src/menus/game_over.c`: under `#ifdef LANG_CA`, `sGameOverTextGfxPointers[LANGUAGE_ENGLISH]`
+- `src/menus/game_over.c`: under `#ifdef LANG_CA`, the blob that is the file select's pointer
+  tables (`sBlob_79e890_79eca0`) becomes an array of pointers from the generated
+  `ca/text_tables.h`, the same words except the English strings' pointers. Also there:
+  `sGameOverTextGfxPointers[LANGUAGE_ENGLISH]`
   is `sCaGfx_GameOverText` (the appended graphic), and the background sheet and the text
   tilemap are loaded from `sCaGfx_GameOverBg` and `sCaGfx_GameOverTextTilemap`.
 - `src/menus/pause_screen.c`: under `#ifdef LANG_CA`, the sprite sheet, the background sheet
@@ -358,14 +392,15 @@ repointed):
 |---|---|---|
 | `menus/pause_screen/obj.gfx.lz`, `bg.gfx.lz` (1024 tiles each), `status_screen.tm.lz` | SLEEP, STATUS, OBJECTIVE, TARGET, START, MAIN DECK, L1-L4 LOCK / OPEN, SYSTEM; status screen (title, ENERGY / MISSILE / P-BOMB, group headers, item names) | done: composed by `gfx_pause.py`, appended, their one pointer each repointed; see Verified and Decisions |
 | `menus/title_screen/objects.gfx.lz` | PRESS START; START GAME / Language (other regions' menu, not shown by the US game) | done: "PREM START", composed by `gfx_title.py`; the menu rows are left alone |
-| file select (inside `Blob_73cfac_7478a0.bin`, loaded by raw address in `asm/disasm_0x0809e598.s`, e.g. `0x0873DC20`) | SAMUS DATA, ENERGY, TIME, SOUND, EXIT, START / COPY DATA / ERASE DATA | to do; not located precisely |
+| file select sprites: LZ77 at 0x73dc20 inside `Blob_73cfac_7478a0.bin` (512 tiles), loaded by raw address in `asm/disasm_0x0809e598.s` | ENERGY, TIME, SECTOR 1-6, MAIN DECK (and the area names of four other languages), the language names | to do. SAMUS DATA, SOUND, EXIT and the menus turned out to be text (the file select table, done). The background (LZ77 at 0x742fb4, 768 tiles) has English lore text as decoration (B.S.L SPACE LABORATORY, SECTOR:SRX) |
 | `hud/common.gfx` (uncompressed) | ENERGY | done: "ENERGIA", edited in place by `gfx_hud.py`; see Verified and Decisions |
 | intro (`new_file_intro/*`, 127 assets) | the "Vaccine "Metroid"" panel | to do; asset not identified |
 | `game_over/background.gfx.lz` and `game_over/text.tm.lz` | the GAME OVER logo | done: "FI DE LA / PARTIDA" on two lines (it doesn't fit one at the logo's size), composed by `gfx_game_over_logo.py` from the letters of GAME OVER; the sheet and the tilemap are appended and their one pointer each repointed. Seen in game (`build/shots/ca_game_over.png`) |
 | `ending/credits_character.gfx`, `copyright_text_*.gfx` | credits font, copyright lines | step 8 |
 
 Not looked at yet: `title_intro/*`, `ending_cutscene/*`, `monologue/*`, the demo and link
-screens, the erase-save screen (`GAME_MODE_ERASE_SRAM_MENU`).
+screens, the erase-save screen (`GAME_MODE_ERASE_SRAM_MENU`; its wording is entries 19-23 of
+the file select table, "Do you want to erase all saved data?", so its text is graphics).
 
 Useful for screenshots: `gMainGameMode` (0x03000BDE) set to 8 with `gSubGameMode1`
 (0x03000BE0) set to 0 during gameplay opens the game over screen. 11 starts the credits, which
@@ -375,8 +410,10 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 ## Where to resume
 
 1. (Done: the glossary is approved.)
-2. Step 7, what is left, in rising order of difficulty: file select (locate it inside `Blob_73cfac_7478a0.bin`
-   first); the intro's vaccine panel; the results screen (read the asm above first). Then
+2. Step 7, what is left, in rising order of difficulty: the file select's sprites (ENERGY,
+   TIME, the area names: LZ77 at 0x73dc20 in `Blob_73cfac_7478a0.bin`, which has no entry of
+   its own in `database.json`, so `gfx.py` must learn to take an address); the erase-all-data
+   screen; the intro's vaccine panel; the results screen (read the asm above first). Then
    look at the assets not inventoried yet. `gfx_pause.py` is the model: take the letters from
    the vanilla sheet, redraw, append, repoint the one pointer, screenshot.
 3. Write a Catalan route tool from `selftest.py` (see `TESTING.md`) and screenshot the text

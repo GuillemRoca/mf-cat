@@ -9,7 +9,8 @@
 # goes in objects that linker.ld places after everything else in the ROM, and only pointers
 # (in tables that keep their place and size) change:
 #   $(CA_BUILD)/ca_text.o          the text of the English slot (gentext.py asm)
-#   $(CA_INC)/ca/text_tables.h     the pointer tables of src/new_file_intro.c (gentext.py tables)
+#   $(CA_INC)/ca/text_tables.h     the pointer tables of src/new_file_intro.c and
+#                                  src/menus/game_over.c (gentext.py tables)
 #   $(CA_BUILD)/ca_gfx.o           the edited graphics of gfx/ (gfx.py asm), which the C code
 #                                  points at by symbol (tools/gfx_assets.json)
 # The font is the one exception: it is edited in place (font.py), which keeps its size:
@@ -72,7 +73,7 @@ ifeq ($(LANG_CA),1)
   CPPFLAGS += -DLANG_CA -I$(CA_INC)
   TARGET := $(TARGET:.gba=_ca.gba)
 
-  src/new_file_intro.s: $(CA_TABLES_H)
+  src/new_file_intro.s src/menus/game_over.s: $(CA_TABLES_H)
   src/data/text_data.s: $(CA_FONT_INC)
   src/data/menus/pause_screen_misc_data.s: $(CA_WIDTHS_INC)
   src/data/ending_data.s: $(CA_CREDITS_INC)
