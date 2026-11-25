@@ -460,6 +460,41 @@ P-3 on the intro's star chart; B.S.L on hulls), which stay. Two sheets,
 `sr388_*`, `bsl_object_*`, `samus_sitting_bg_*` and `samus_helmet_closeup_bg_*` strips) were
 only listed by name. Not looked at: the demo and link screens.
 
+### The results screen (not done): what the code does
+
+Read on 2026-11-25; nothing is built yet.
+
+- `src/ending.c` loads the text sheet in the `default:` branch of its first
+  `switch (gLanguage)` (`sResultsScreenEnglishTextGfx`), so a Catalan sheet can be appended
+  and that one call switched under `LANG_CA`.
+- The three result lines are typed letter by letter. `EndingImageLoadTextOam(line)`
+  (`asm/disasm_0x0809e598.s`, 0x080A1664) branches on the language; the English branch
+  (`_080A1A28`) copies, for line 0, 1 or 2, a table of 12-byte entries into `ENDING_DATA`:
+  one entry per letter = {1, delay (1, 5, 9... four frames apart), 0, 0, x of the line's
+  centre (120), y of the line (40, 92, 108), pointer to an OAM frame}. Each frame is one
+  16 x 16 sprite (8 x 16 for I) at an x offset from the centre, its tile the letter in the
+  sheet's alphabet (A = 0x100, C = 0x104, E = 0x108, I = 0x110, L = 0x114, M = 0x116,
+  O = 0x11a, R = 0x11e, S = 0x140, T = 0x142, U = 0x146, Y = 0x14a...).
+  - line 0: table 0x74dc90, 9 letters, CLEAR TIME; line 1: 0x74dcfc, 11 letters, YOUR RATE
+    FOR; line 2: 0x74dd80, 17 letters, COLLECTING ITEMS IS.
+  - The letter counts are in the code: the loop bound (`cmp r3, #8`, `#0xa`, `#0x10`) and a
+    byte stored at `gNonGameplayRam + 0x9b` (0xf, 0x11, 0x17 = count + 6). The RAM arrays
+    hold 30 letters a line.
+- So a Catalan results screen needs: its own letter tables and frames (new data, appended);
+  the three table pointers and the six immediates in that branch under `.ifdef LANG_CA`
+  (same instruction sizes, so nothing moves); the same look at
+  `EndingImageDisplayLinePermanently` (0x080A1B60), which has not been read; and a sheet with
+  any letters the English alphabet lacks.
+- Not read yet: lines 3 to 5 (`EndingImageDisplayLinePermanently(3..5)`, probably "See you
+  next mission" and the totals), and how the percentage and time digits are placed.
+- The second `switch (gLanguage)` in `EndingImage` only matters for timing: English and
+  Italian show a third line, the others two.
+- Wording to use, from mzm-cat's approved results screen: TEMPS TOTAL DE JOC, OBJECTES
+  ACONSEGUITS, "Fins a la propera missió!". Three lines are available here (9, 11 and 17
+  letters in English); how to split them is open.
+- To see the screen: `gMainGameMode` = 11 starts the credits; the results follow at about
+  9600 frames.
+
 Useful for screenshots: `gMainGameMode` (0x03000BDE) set to 8 with `gSubGameMode1`
 (0x03000BE0) set to 0 during gameplay opens the game over screen. 11 starts the credits, which
 run on into the ending pictures and the results screen (about 6400 frames to the Catalan
@@ -468,7 +503,8 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 ## Where to resume
 
 1. (Done: the glossary is approved.)
-2. Step 7, what is left: the results screen (read the asm above first). Then
+2. Step 7, what is left: the results screen ("The results screen (not done)" above has what
+   the code does and what a Catalan one needs). Then
    look at the assets not inventoried yet. `gfx_pause.py` is the model: take the letters from
    the vanilla sheet, redraw, append, repoint the one pointer, screenshot.
 3. Write a Catalan route tool from `selftest.py` (see `TESTING.md`) and screenshot the text
