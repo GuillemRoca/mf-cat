@@ -11,11 +11,11 @@ the questions still open. The plan is the nine steps of the original brief.
 | 1 | Extractor and round-trip test | done |
 | 2 | Plumbing self-test (`LANG_CA=1 CA_SELFTEST=1`) | done |
 | 3 | Tooling (gentext, lint, render, gap, po, glossary, review) | done |
-| 4 | Glossary | done (all Fusion-only terms PROPOSED, awaiting review) |
+| 4 | Glossary | done; every term APPROVED (2026-11-25) |
 | 5 | Translate all the text | done: 318 of 318 entries, first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
 | 7 | Graphics with baked-in text | in progress: game over prompt done; the rest is inventoried below |
-| 8 | Credits | done (placement to confirm, see Open questions) |
+| 8 | Credits | done |
 | 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
 ## Verified
@@ -107,13 +107,11 @@ the questions still open. The plan is the nine steps of the original brief.
     `mf-cat-<commit>` holds the patch, the lint report and the `.po`.
   - `release.yml` is mzm-cat's with the names changed. It has never run here.
 - Credits (step 8): the US credits have no TRANSLATION section. `gencredits.py` puts
-  "CATALAN / Guillem Roca Castany" after the last name of the LOCALIZATION block of "NOA
-  ENGLISH LOCALIZATION", with the same separator and spacing as the blocks around it. `sCredits`
-  is rewritten in place: still 310 entries and 471 scroll rows (the six entries and nine rows
-  added are taken from the empty lines before the copyright, which leaves 13 empty rows there
-  instead of 22). Seen in game on the Catalan ROM (`build/shots/ca_credits_catalan.png`), by
-  writing 11 to `gMainGameMode` during gameplay. Not checked: that the credits still end in
-  time with the music (the row count says they should; nobody listened).
+  "CATALAN / Guillem Roca Castany" in a group of its own right before EXECUTIVE PRODUCER (your
+  decision of 2026-11-25), in place of the middle one of the three spacers there. `sCredits` is
+  rewritten in place: still 310 entries and 471 scroll rows (two blank lines before the
+  copyright become one empty big line to give back the extra entry). Not checked: that the
+  credits still end in time with the music (the row count says they should; nobody listened).
   - `romcheck.py` verifies the table in the ROM is the generated one, and that `--vanilla`
     reproduces the vanilla table. After the hook: self-test ROM passes, 275 identical
     screenshots, vanilla matches `mf_us.sha1`.
@@ -303,9 +301,7 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 
 ## Where to resume
 
-1. Get the glossary's PROPOSED terms approved first: the remaining graphics draw them
-   (OBJECTIU, the item names of the status screen, the deck names, REPÒS for SLEEP…), and
-   pixel work is the expensive thing to redo.
+1. (Done: the glossary is approved.)
 2. Step 7, in rising order of difficulty: HUD "ENERGY" (uncompressed, in place); title "PRESS
    START"; pause and status screens (`menus/pause_screen/obj` and `bg`: export with `gfx.py`
    after adding them to `gfx_assets.json`; they are shared by all languages, so find every
@@ -319,11 +315,7 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 
 ## Open questions
 
-- Credits placement: "CATALAN" follows the names of NOA's LOCALIZATION block, the closest
-  equivalent of mzm's TRANSLATION section, but it therefore sits under the red "NOA ENGLISH
-  LOCALIZATION" banner. The alternative is a block of its own after that section's last names,
-  before EXECUTIVE PRODUCER. Say if you prefer that (one constant in `gencredits.py`).
-- Glossary: the 73 PROPOSED terms need approving. The ones that shape the most text, where a
-  second option is listed: "Lady" (senyoreta / senyora / Lady), "target" and "objective" (both
-  objectiu), download (baixar / descarregar), Quarantine Bay (Sala de quarantena), Nightmare
-  (Malson), Etecoons and Dachoras (etecoons i dachores), bio-signs (senyals de vida).
+None. Decided on 2026-11-25: every proposed term approved as option 1, except Habitation Deck,
+which is "Coberta de l'hàbitat"; the Catalan credit in a group of its own before EXECUTIVE
+PRODUCER; the GAME OVER logo becomes "Fi de la partida"; and every other graphic with text is
+translated, as in mzm-cat.

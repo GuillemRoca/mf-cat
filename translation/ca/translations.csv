@@ -191,7 +191,7 @@ location,LOCATION_06,Location banner,Sector 6 (NOC),Sector 6 -NOC-,Sector 6 (NOC
 location,LOCATION_07,Location banner,Reactor Silo,Silo del reactor,Sitja del reactor,translated,
 location,LOCATION_08,Location banner,Restricted Zone,Zona restringida,Zona restringida,translated,
 location,LOCATION_09,Location banner,Operations Deck,Cubierta de operaciones,Coberta d'operacions,translated,
-location,LOCATION_10,Location banner,Habitation Deck,Cubierta del hábitat,Coberta residencial,translated,
+location,LOCATION_10,Location banner,Habitation Deck,Cubierta del hábitat,Coberta de l'hàbitat,translated,
 location,LOCATION_11,Location banner,Docking Bays,Puertos de atraque,Molls d'atracada,translated,
 location,LOCATION_12,Location banner,Navigation Room,Sala de navegación,Sala de navegació,translated,
 location,LOCATION_13,Location banner,Data Room,Sala de datos,Sala de dades,translated,
@@ -2701,7 +2701,7 @@ Els X continuen sent una
 amenaça.
 
 Samus, veig senyals de vida a
-la coberta residencial.
+la coberta de l'hàbitat.
 
 Supervivents?
 
@@ -4539,8 +4539,8 @@ Ve a la sala de navegación.","Refrigeració operativa.
 Ves a la sala de navegació.",translated,
 pause,PAUSE_062,"Pause screen, objective","Bio-signs on Habitation Deck.
 Check for survivors.","Signos de vida en la cubierta
-del hábitat. ¿Supervivientes?","Coberta residencial: senyals de
-vida. Busca supervivents.",translated,
+del hábitat. ¿Supervivientes?","Coberta de l'hàbitat: senyals
+de vida. Busca supervivents.",translated,
 pause,PAUSE_063,"Pause screen, objective","Etecoons and Dachoras freed.
 Proceed to Navigation Room.","Etecoones y Dachoras libres.
 Ve a la sala de navegación.","Etecoons i dachores lliures.
@@ -5420,5 +5420,5 @@ SÍ ( CONTINUAR )
 NO ( SALIR )","TORNAR-HO A PROVAR ?
 SÍ ( CONTINUA )
 NO ( SURT )",translated,
-credits,translation,"Staff credits, after the LOCALIZATION names",,,"CATALAN
+credits,translation,"Staff credits, a group of its own before EXECUTIVE PRODUCER",,,"CATALAN
 Guillem Roca Castany",translated,

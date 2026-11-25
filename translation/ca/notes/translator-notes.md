@@ -23,14 +23,18 @@ Some entries are placeholders or debug strings ("Empty", "Demo use", "Not used",
 "Line 1 / Line 2", "Not displayed", the "Enemy location abnormal" message). They are translated
 anyway, plainly, so that nothing in the Catalan ROM is left in English; none needs review.
 
-## PROPOSED terms in use
+## Terms — APPROVED
 
-All 73 PROPOSED rows of `glossary.md` are in use except Command Room's alternatives; the text
-follows option 1 of each. The ones that appear most, and where: Lady → "senyoreta"
-(MONOLOGUE_01, 02; NAV_104, 105, 112); target and objective → "objectiu" (every "Objectiu
-eliminat." and "Ves a l'objectiu.", MESSAGE_43, 44); download → "baixar" (banners 04 to 07, the
-objectives, most briefings); HQ → "quarter general"; CO → "comandant"; Quarantine Bay → "sala
-de quarantena"; bio-signs → "senyals de vida"; Nightmare → "Malson"; Etecoons and Dachoras →
-"etecoons i dachores"; Jumpball → "morfosalt"; Shinespark → "salt llampec" (NAV_094 only).
-Changing one means searching `text/*.txt` for it and re-running `lint.py`: a longer word can
-push a line over 224 px.
+Approved by Guillem on 2026-11-25: every Fusion-only term of `glossary.md` as first proposed,
+except the Habitation Deck, which is "Coberta de l'hàbitat" (his choice: in the game it is the
+habitat of some of the species kept on the station, not where the crew lived).
+
+## Credits — DECIDED
+
+"CATALAN / Guillem Roca Castany" is a group of its own right before EXECUTIVE PRODUCER (decided
+by Guillem), not a line under NOA's LOCALIZATION names. The credits fonts have no accents, so
+the heading is in English.
+
+## Game over — DECIDED
+
+The big GAME OVER logo is translated: "Fi de la partida" (decided by Guillem).

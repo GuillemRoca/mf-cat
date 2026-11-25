@@ -20,8 +20,8 @@ do not release before they are.
       green and its patch is `mf-cat-v1.0.0.bps` (see README, "Releasing").
 - [ ] `gap.py check` clean; `gfx.py roundtrip` and `gfx.py check` pass; `extract.py --check`
       passes; `translations.csv` current and every row "translated" or "same as English".
-- [ ] Every PROPOSED glossary term in use is confirmed (APPROVED) or listed as an open choice
-      in `notes/translator-notes.md`.
+- [ ] No PROPOSED term left in `glossary.md` (or each one listed as an open choice in
+      `notes/translator-notes.md`).
 
 ## Graphics
 
@@ -61,7 +61,7 @@ do not release before they are.
 
 ## Credits
 
-- [ ] "CATALAN / Guillem Roca Castany" shows after the LOCALIZATION names of the staff credits
+- [ ] "CATALAN / Guillem Roca Castany" shows as a group of its own before EXECUTIVE PRODUCER
       (`credits.txt`), and the credits still end in time with the music.
 
 ## Patch

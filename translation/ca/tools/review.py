@@ -47,7 +47,7 @@ def graphic_rows():
              "catalan": "\n".join(gfx_game_over.CATALAN),
              "status": "translated" if (catext.CA / "gfx/game_over/text_english.png").exists() else "untranslated"}]
     heading, names = gencredits.read_credits()
-    rows.append({"section": "credits", "id": "translation", "where": "Staff credits, after the LOCALIZATION names",
+    rows.append({"section": "credits", "id": "translation", "where": "Staff credits, a group of its own before EXECUTIVE PRODUCER",
                  "english": "", "spanish": "", "catalan": "\n".join([heading] + names), "status": "translated"})
     return rows
 

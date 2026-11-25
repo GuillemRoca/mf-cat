@@ -4,15 +4,15 @@ Catalan translators from translation/ca/credits.txt.
 
 The input is the vanilla array (the `#else // !LANG_CA` branch around
 `#include "ca/credits.inc"` in src/data/ending_data.c). The US credits have no TRANSLATION
-section; the closest equivalent is the LOCALIZATION block of "NOA ENGLISH LOCALIZATION". A
-"CATALAN" block goes right after its last name, laid out like the blocks around it (a blank
-coloured line, two empty lines, the blue heading, a blank line, the name).
+section, so the "CATALAN" block is a group of its own, right before EXECUTIVE PRODUCER: it
+takes the place of the middle one of the three spacers that separate the staff groups there.
 
 The array has a fixed size and the decomp is not shiftable, so the table is rewritten in place
 with the same number of entries. The credits scroll one row at a time (WHITE_BIG lines take 2
 rows, the others 1) and stop at the END line; to keep them exactly as long as vanilla, in time
-with the music, the rows added are taken from the empty lines between the executive producer
-and the copyright. Entries and rows are both checked to come out as in vanilla.
+with the music, any row or entry added is taken from the empty lines between the executive
+producer and the copyright (two blank lines become one empty big line: same rows, one entry
+less). Entries and rows are both checked to come out as in vanilla.
 
 usage: gencredits.py OUTPUT [--vanilla]   (--vanilla: reproduce vanilla, plumbing self-test)
 """
@@ -33,7 +33,7 @@ BLUE_OK = re.compile(r"[A-Z .,&]+")          # the blue font: capitals, . , &
 NAME_OK = re.compile(r"[A-Za-z .,-]+")       # WHITE_BIG: letters, space, . , - (no accents)
 LINE_CHARS = 30                              # a credits line is 30 characters wide
 TEXT_SIZE = 35                               # struct CreditsEntry: u8 text[35]
-AFTER = "LOCALIZATION"                       # the block the Catalan one follows
+BEFORE = "EXECUTIVE PRODUCER"                # the group the Catalan block comes before
 BEFORE_COPYRIGHT = "ALL_RIGHTS"
 
 
@@ -78,34 +78,54 @@ def centred(text):
 
 def catalan(entries):
     heading, names = read_credits()
-    # the LOCALIZATION block: its heading, then (BLANK, name) pairs
-    start = next(i for i, (t, x) in enumerate(entries) if t == "BLUE" and x.strip() == AFTER)
-    end = start + 1
-    while entries[end][0] == "BLANK" and entries[end + 1][0] == BIG and entries[end + 1][1].strip():
-        end += 2
-    separator = entries[end:end + 3]  # the blank coloured line and two empty lines between blocks
-    if [t for t, _ in separator] != ["RED", BIG, BIG] or any(x.strip() for _, x in separator):
-        sys.exit("error: the lines after the LOCALIZATION block are not the expected separator")
-    block = list(separator) + [("BLUE", centred(heading))]
+    # The staff groups are separated by three spacers (a blank blue line and two empty lines).
+    # The Catalan block takes the place of the middle spacer before EXECUTIVE PRODUCER, so it
+    # has one spacer above it and one below.
+    ep = next(i for i, (t, x) in enumerate(entries) if t == "BLUE" and x.strip() == BEFORE)
+    spacers = entries[ep - 9:ep]
+    if [t for t, _ in spacers] != ["BLUE", BIG, BIG] * 3 or any(x.strip() for _, x in spacers):
+        sys.exit(f"error: the lines before {BEFORE} are not the three expected spacers")
+    block = [("BLANK", ""), ("BLUE", centred(heading))]
     for name in names:
         block += [("BLANK", ""), (BIG, centred(name))]
-    out = entries[:end] + block + entries[end:]
-    # give back the rows and the entries from the empty lines before the copyright
-    need_rows, need_entries = rows(block), len(block)
+    out = entries[:ep - 6] + block + entries[ep - 3:]
+    # Give back the difference in rows and entries from the empty lines before the copyright.
+    need_rows = rows(out) - rows(entries)
+    need_entries = len(out) - len(entries)
     stop = next(i for i, (t, _) in enumerate(out) if t == BEFORE_COPYRIGHT)
-    i = stop - 1
-    while (need_rows or need_entries) and i > end + len(block):
-        t, x = out[i]
-        if x.strip() or t not in (BIG, "BLANK"):
+    first = ep - 6 + len(block) + 3 + 3  # after EXECUTIVE PRODUCER, its blank line and its name
+
+    def empties(kind):
+        return [i for i in range(stop - 1, first, -1) if out[i] == (kind, "") or (out[i][0] == kind and not out[i][1].strip())]
+
+    while need_rows > 0:
+        big, blank = empties(BIG), empties("BLANK")
+        if need_rows >= 2 and big:
+            del out[big[0]]
+            need_rows -= 2
+        elif blank:
+            del out[blank[0]]
+            need_rows -= 1
+        else:
             break
-        r = ROWS.get(t, 1)
-        # take big lines while the rows left allow it, so that entries and rows run out together
-        if r <= need_rows and need_entries and (need_rows - r) >= (need_entries - 1):
-            del out[i]
-            need_rows -= r
-            need_entries -= 1
-        i -= 1
-    if need_rows or need_entries or len(out) != len(entries) or rows(out) != rows(entries):
+        need_entries -= 1
+        stop -= 1
+    while need_entries > 0:  # two blank lines become one empty big line: same rows, one entry less
+        blank = empties("BLANK")
+        if len(blank) < 2:
+            break
+        out[blank[0]] = (BIG, "")
+        del out[blank[1]]
+        need_entries -= 1
+        stop -= 1
+    while need_entries < 0:  # and the other way round
+        big = empties(BIG)
+        if not big:
+            break
+        out[big[0]:big[0] + 1] = [("BLANK", ""), ("BLANK", "")]
+        need_entries += 1
+        stop += 1
+    if len(out) != len(entries) or rows(out) != rows(entries):
         sys.exit(f"error: can't keep the credits' size: {len(out)} entries and {rows(out)} rows, vanilla has"
                  f" {len(entries)} and {rows(entries)}")
     return out
