@@ -44,7 +44,7 @@ build/, dist/            generated files and CI outputs; gitignored
 ```
 
 Upstream files touched: `Makefile` (one `include`), `linker.ld` (a section after `.data`, under
-`#ifdef LANG_CA`), `src/new_file_intro.c` (the English pointer tables of the game text),
+`#ifdef LANG_CA`), `src/new_file_intro.c` (the English pointer tables of the game text; the vaccine panel's sheet),
 `src/menus/game_over.c` (the file select's pointer table; the game over prompt, the logo's
 sheet and its tilemap),
 `src/menus/pause_screen.c` (the pause screen's two sheets and the status tilemap),
@@ -131,6 +131,7 @@ python3 translation/ca/tools/gfx_hud.py                  # composes the HUD labe
 python3 translation/ca/tools/gfx_title.py                # composes the title prompt: gfx/menus/title_screen/objects.png
 python3 translation/ca/tools/gfx_file_select.py          # composes the file select labels: gfx/menus/file_select/obj.png
 python3 translation/ca/tools/gfx_erase.py                # types the erase-all-data screen: gfx/menus/erase_sram/*.png
+python3 translation/ca/tools/gfx_intro.py                # composes the intro's vaccine panel title: gfx/new_file_intro/metroid_vaccine_obj.png
 python3 translation/ca/tools/gfx.py export game_over/text_english out.png   # a vanilla sheet
 python3 translation/ca/tools/gfx.py check                # the PNGs are valid
 python3 translation/ca/tools/gfx.py roundtrip            # the codec reproduces the vanilla assets

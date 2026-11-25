@@ -14,7 +14,7 @@ the questions still open. The plan is the nine steps of the original brief.
 | 4 | Glossary | done; every term APPROVED (2026-11-25) |
 | 5 | Translate all the text | done: 330 of 330 entries (the 318 of the four tables, and the 12 of the file select table found during step 7), first draft, all awaiting your review |
 | 6 | Font (· and any missing glyph) | done |
-| 7 | Graphics with baked-in text | in progress: game over (prompt and logo), the pause and status screens, the HUD, the title prompt, the file select and the erase-all-data screen done; the intro's vaccine panel and the results screen are left (inventory below) |
+| 7 | Graphics with baked-in text | in progress: everything found is done (game over, pause and status screens, HUD, title, file select, erase-all-data screen, the intro's vaccine panel) except the results screen; three asset folders still to look through (inventory below) |
 | 8 | Credits | done |
 | 9 | Patch, CI, release | done ahead of steps 7 and 8 (see Decisions); no release notes yet |
 
@@ -185,6 +185,17 @@ the questions still open. The plan is the nine steps of the original brief.
     whether the US game shows anything after erasing is not known.
   - After the hook: self-test ROM passes, 275 identical screenshots, vanilla matches
     `mf_us.sha1`.
+- Intro vaccine panel (step 7): the title Vaccine "Metroid" is in
+  `new_file_intro/metroid_vaccine_obj.gfx.lz` (one pointer, 0x8c7f4, the load in
+  `src/new_file_intro.c`). `gfx_intro.py` makes it Vacuna "Metroid" from the title's own
+  letters; the u is built from the rows of the n. Seen in game
+  (`build/shots/ca_intro_vaccine_panel.png`, the 76th press of A in the intro). Two leftovers
+  of the i showed up in game and were fixed: its top row and its dot sit above the letters'
+  rows.
+  - The rest of that sheet and of `samus_nervous_system_obj` is diagrams, digits and small
+    print that is not readable text.
+  - After the hook: self-test ROM passes, 275 identical screenshots (the intro frames include
+    this panel), vanilla matches `mf_us.sha1`.
 - Patch and CI (step 9): `translation/ca/tools/ci.sh` ran here from start to finish with exit
   code 0: 36 tool tests, `extract.py --check`, vanilla SHA1, the self-test ROM (`romcheck.py
   --selftest` and 275 identical screenshots), lint 318/318 with no errors or warnings, the
@@ -392,7 +403,8 @@ Button icons are two codes each (`{B_button}` = 030A 030B).
   security level legend (`sPauseScreenOam_L1Lock_Frame0` to `L4Open_Frame0`) come from the
   generated `ca/pause_legend_oam.inc` (same size, edited in place).
 - `src/new_file_intro.c`: under `#ifdef LANG_CA`, the include of the generated
-  `ca/text_tables.h`; the two blobs that are pointer tables (`sBlob_79c5c0_79cdd8`,
+  `ca/text_tables.h`; the vaccine panel's sprite sheet is loaded from
+  `sCaGfx_IntroMetroidVaccineObj`; the two blobs that are pointer tables (`sBlob_79c5c0_79cdd8`,
   `sBlob_79ce10_79e6a0`) become arrays of pointers with the same contents except the English
   entries; `sMonologueTextPointersEnglish` gets its 19 pointers from the same header.
 
@@ -431,15 +443,17 @@ repointed):
 | `menus/title_screen/objects.gfx.lz` | PRESS START; START GAME / Language (other regions' menu, not shown by the US game) | done: "PREM START", composed by `gfx_title.py`; the menu rows are left alone |
 | file select sprites: LZ77 at 0x73dc20 inside `Blob_73cfac_7478a0.bin` (512 tiles), loaded by raw address in `asm/disasm_0x0809e598.s` | ENERGY, TIME, SECTOR 1-6, MAIN DECK (and the area names of four other languages), the language names | done: ENERGIA, TEMPS, COBERTA, composed by `gfx_file_select.py`. SAMUS DATA, SOUND, EXIT and the menus turned out to be text (the file select table, done). The background (LZ77 at 0x742fb4, 768 tiles) has English lore text as decoration (B.S.L SPACE LABORATORY, SECTOR:SRX): left alone |
 | `hud/common.gfx` (uncompressed) | ENERGY | done: "ENERGIA", edited in place by `gfx_hud.py`; see Verified and Decisions |
-| intro (`new_file_intro/*`, 127 assets) | the "Vaccine "Metroid"" panel | to do; asset not identified |
+| `new_file_intro/metroid_vaccine_obj.gfx.lz` | the title of the vaccine panel, Vaccine "Metroid" | done: Vacuna "Metroid", composed by `gfx_intro.py` |
 | `game_over/background.gfx.lz` and `game_over/text.tm.lz` | the GAME OVER logo | done: "FI DE LA / PARTIDA" on two lines (it doesn't fit one at the logo's size), composed by `gfx_game_over_logo.py` from the letters of GAME OVER; the sheet and the tilemap are appended and their one pointer each repointed. Seen in game (`build/shots/ca_game_over.png`) |
 | `ending/credits_character.gfx`, `copyright_text_*.gfx` | credits font, copyright lines | step 8 |
 
 The erase-all-data screen (`GAME_MODE_ERASE_SRAM_MENU`) is done: two sheets per language,
 LZ77 with no entry in `database.json`, English at 0x588478 and 0x589804.
 
-Not looked at yet: `title_intro/*`, `ending_cutscene/*`, `monologue/*`, the demo and link
-screens.
+Looked through as contact sheets (every graphic of 16 tiles or more): `new_file_intro/*`,
+`title_intro/*`, `monologue/*` and `ending_cutscene/*`, 70 sheets. Only the first page was
+read closely (it has the vaccine panel); the other five pages were listed, not examined, so
+text in them is still possible. Not looked at: the demo and link screens.
 
 Useful for screenshots: `gMainGameMode` (0x03000BDE) set to 8 with `gSubGameMode1`
 (0x03000BE0) set to 0 during gameplay opens the game over screen. 11 starts the credits, which
@@ -449,8 +463,7 @@ credit, 9600 to the results). 9 (the ending cutscene) is untried.
 ## Where to resume
 
 1. (Done: the glossary is approved.)
-2. Step 7, what is left, in rising order of difficulty: the intro's vaccine panel (find the
-   asset first); the results screen (read the asm above first). Then
+2. Step 7, what is left: the results screen (read the asm above first). Then
    look at the assets not inventoried yet. `gfx_pause.py` is the model: take the letters from
    the vanilla sheet, redraw, append, repoint the one pointer, screenshot.
 3. Write a Catalan route tool from `selftest.py` (see `TESTING.md`) and screenshot the text

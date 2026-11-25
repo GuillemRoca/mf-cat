@@ -96,5 +96,14 @@
       "0x79c23c"
     ],
     "note": "erase-all-data screen, second question (same table); typed with the game font by gfx_erase.py"
+  },
+  "new_file_intro/metroid_vaccine_obj": {
+    "source": "new_file_intro/metroid_vaccine_obj.gfx.lz",
+    "symbol": "sCaGfx_IntroMetroidVaccineObj",
+    "tiles": 1024,
+    "pointers": [
+      "0x8c7f4"
+    ],
+    "note": "sIntroMetroidVaccineObjGfx, loaded once in src/new_file_intro.c; the title of the intro's vaccine panel; composed by gfx_intro.py"
   }
 }

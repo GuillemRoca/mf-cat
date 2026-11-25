@@ -20,6 +20,7 @@
 
 #ifdef LANG_CA
 #include "ca/text_tables.h" // generated: translation/ca/tools/gentext.py
+extern const u32 sCaGfx_IntroMetroidVaccineObj[]; // generated: translation/ca/tools/gfx.py
 #endif // LANG_CA
 
 void unk_99940(void); // For V-blank callback
@@ -4817,7 +4818,11 @@ void NewFileIntroSamusGettingCuredInit(void)
 
     CUTSCENE_DATA.pText2 = pText2;
 
+#ifdef LANG_CA
+    LZ77UncompVram(sCaGfx_IntroMetroidVaccineObj, VRAM_OBJ);
+#else // !LANG_CA
     LZ77UncompVram(sIntroMetroidVaccineObjGfx, VRAM_OBJ);
+#endif // LANG_CA
 
     DMA3_COPY_32(sIntroMetroidVaccineObjPal, PALRAM_OBJ, 16 * PAL_ROW_SIZE / sizeof(u32));
     DMA3_COPY_32(sNextPageArrowGfx, VRAM_OBJ + 0x7FE0, 8);

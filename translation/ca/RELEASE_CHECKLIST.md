@@ -4,8 +4,7 @@ Copy this list into the release issue and tick every item. A release is a `.bps`
 vanilla US ROM (SHA1 `ca33f4348c2c05dd330d37b97e2c5a69531dfe87`); never distribute a ROM.
 
 `PROGRESS.md` says which of these are already known to hold and which work is still open. As
-of this writing some graphics are still in English (the intro's vaccine panel, the results
-screen): do not release before they are done.
+of this writing the results screen is still in English: do not release before they are done.
 
 ## Build and CI
 
@@ -42,7 +41,7 @@ screen): do not release before they are done.
       cursor beside No and Sí; on a ROM copy you can lose, answer Sí twice and see what
       follows.
 - [ ] HUD: ENERGIA, also with energy tanks (they follow the label) and with more than ten.
-- [ ] Intro: the vaccine panel.
+- [ ] Intro: the vaccine panel's title, Vacuna "Metroid".
 - [ ] Anything left in English on purpose is listed in `PROGRESS.md` with the reason.
 
 ## Playthrough coverage (real hardware or mGBA)

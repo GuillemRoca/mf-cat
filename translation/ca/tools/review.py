@@ -96,6 +96,10 @@ def graphic_rows():
                                  "confirm": "¿Seguro que quieres\nborrar todos los datos?\nNo\nSí"}[name],
                      "catalan": "\n".join(lines + answers).replace("？", "?"),
                      "status": "translated" if (gfx_erase.OUT / f"{name}.png").exists() else "untranslated"})
+    import gfx_intro
+    rows.append({"section": "graphics", "id": "intro_vaccine_panel", "where": "Intro, the panel beside the vaccine",
+                 "english": 'Vaccine "Metroid"', "spanish": 'Vaccine "Metroid"', "catalan": f'{gfx_intro.WORD} "Metroid"',
+                 "status": "translated" if gfx_intro.OUT.exists() else "untranslated"})
     heading, names = gencredits.read_credits()
     rows.append({"section": "credits", "id": "translation", "where": "Staff credits, a group of its own before EXECUTIVE PRODUCER",
                  "english": "", "spanish": "", "catalan": "\n".join([heading] + names), "status": "translated"})
