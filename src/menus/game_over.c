@@ -19,7 +19,10 @@ static const struct FrameData* sGameOverOamPointers[3] = {
 };
 
 #ifdef LANG_CA
-extern const u32 sCaGfx_GameOverText[]; // generated: translation/ca/tools/gfx.py
+// generated: translation/ca/tools/gfx.py
+extern const u32 sCaGfx_GameOverText[];
+extern const u32 sCaGfx_GameOverBg[];
+extern const u32 sCaGfx_GameOverTextTilemap[];
 #endif // LANG_CA
 
 static const u32* sGameOverTextGfxPointers[LANGUAGE_COUNT] = {
@@ -144,13 +147,21 @@ void GameOverInit(void)
 
     DMA3_COPY_32(sGameOverObjPal, PALRAM_OBJ, 16 * PAL_ROW_SIZE / sizeof(u32));
 
+#ifdef LANG_CA
+    LZ77UncompVram(sCaGfx_GameOverBg, VRAM_BASE);
+#else // !LANG_CA
     LZ77UncompVram(sGameOverBgGfx, VRAM_BASE);
+#endif // LANG_CA
 
     if (gLanguage > LANGUAGE_HIRAGANA)
         LZ77UncompVram(sGameOverTextGfxPointers[gLanguage], VRAM_BASE);
 
     LZ77UncompVram(sGameOverBgTilemap, VRAM_BASE + 0xF800);
+#ifdef LANG_CA
+    LZ77UncompVram(sCaGfx_GameOverTextTilemap, VRAM_BASE + 0xF000);
+#else // !LANG_CA
     LZ77UncompVram(sGameOverTextTilemap, VRAM_BASE + 0xF000);
+#endif // LANG_CA
 
     DMA3_COPY_32(sGameOverBgPal, PALRAM_BASE, 16 * PAL_ROW_SIZE / sizeof(u32));
 

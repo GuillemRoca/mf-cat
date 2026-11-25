@@ -5420,5 +5420,7 @@ SÍ ( CONTINUAR )
 NO ( SALIR )","TORNAR-HO A PROVAR ?
 SÍ ( CONTINUA )
 NO ( SURT )",translated,
+graphics,game_over_logo,"Game over screen, the logo",GAME OVER,GAME OVER,"FI DE LA
+PARTIDA",translated,
 credits,translation,"Staff credits, a group of its own before EXECUTIVE PRODUCER",,,"CATALAN
 Guillem Roca Castany",translated,

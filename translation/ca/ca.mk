@@ -101,7 +101,7 @@ $(CA_TABLES_H): $(CA_BASEROM) $(CA_TOOLS)/gentext.py $(CA_TOOLS)/catext.py $(CA_
 	$(MSG) GENTEXT $@
 	$Q$(PYTHON) $(CA_TOOLS)/gentext.py tables $@
 
-$(CA_GFX_ASM): $(shell find $(CA_DIR)/gfx -name '*.png' 2>/dev/null) $(CA_TOOLS)/gfx.py $(CA_TOOLS)/gfx_assets.json \
+$(CA_GFX_ASM): $(shell find $(CA_DIR)/gfx -name '*.png' -o -name '*.tm' 2>/dev/null) $(CA_TOOLS)/gfx.py $(CA_TOOLS)/gfx_assets.json \
                $(CA_TOOLS)/lz77.py $(CA_BASEROM) $(CA_STAMP)
 	$(MSG) GFX $@
 	$Q$(PYTHON) $(CA_TOOLS)/gfx.py asm $@ $(CA_GENTEXT_FLAGS)

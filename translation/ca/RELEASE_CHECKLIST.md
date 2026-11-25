@@ -25,8 +25,8 @@ do not release before they are.
 
 ## Graphics
 
-- [ ] Game over prompt: "TORNAR-HO A PROVAR ?", "SÍ ( CONTINUA )", "NO ( SURT )"; the helmet
-      cursor lines up with both options.
+- [ ] Game over: the logo "FI DE LA / PARTIDA"; the prompt "TORNAR-HO A PROVAR ?", "SÍ (
+      CONTINUA )", "NO ( SURT )"; the helmet cursor lines up with both options.
 - [ ] Ending results screen: clear time, item rate, the last line.
 - [ ] Pause screen: SLEEP / STATUS tabs, OBJECTIVE, TARGET, the area names, the LOCK labels.
 - [ ] Status screen: headings and every item name, each inside its box.

@@ -14,7 +14,9 @@
 gfx_assets.json: "<asset>": {"source": the vanilla asset in database.json, "symbol": the label
 the C code points at under LANG_CA, "tiles": the number of 4bpp tiles (the VRAM space it is
 decompressed into: a PNG may not be bigger), "pointers": ROM offsets of the pointers that are
-repointed (romcheck.py allows exactly those)}.
+repointed (romcheck.py allows exactly those)}. An asset with "raw": true is not tiles but
+data of a fixed size (a tilemap): its file is translation/ca/gfx/<asset>.tm, written by the
+tool that composes the graphic, and it must be exactly as long as the vanilla data.
 
 A PNG is indexed (palette indices 0-15 are the tile's pixels; the palette itself is only for
 viewing) and 256 px wide: 32 tiles per row, in tile order.
@@ -84,6 +86,16 @@ def read_png(path, info):
 
 
 def asset_tiles(name, info, selftest=False, db=None):
+    """The uncompressed data of an asset as built: tiles, or the raw bytes of a "raw" asset."""
+    if info.get("raw"):
+        path = GFX / f"{name}.tm"
+        vanilla = vanilla_tiles(info, db)
+        if selftest or not path.exists():
+            return vanilla
+        data = path.read_bytes()
+        if len(data) != len(vanilla):
+            sys.exit(f"error: {path} is {len(data)} bytes, the vanilla data is {len(vanilla)}")
+        return data
     png = GFX / f"{name}.png"
     if selftest or not png.exists():
         return vanilla_tiles(info, db)
@@ -117,11 +129,11 @@ def cmd_export(name, out):
 def cmd_check():
     n = 0
     for name, info in assets().items():
-        png = GFX / f"{name}.png"
+        png = GFX / (f"{name}.tm" if info.get("raw") else f"{name}.png")
         if not png.exists():
-            print(f"{name}: no PNG (the vanilla graphic is used)")
+            print(f"{name}: no file (the vanilla graphic is used)")
             continue
-        tiles = rows_to_tiles(read_png(png, info))
+        tiles = asset_tiles(name, info)
         if lz77.decompress(lz77.compress(tiles))[0] != tiles:
             sys.exit(f"error: {name}: the compressed data doesn't decompress to the PNG")
         n += 1
@@ -132,9 +144,10 @@ def cmd_roundtrip():
     db = database()
     for name, info in assets().items():
         raw = vanilla_tiles(info, db)
-        if len(raw) != info["tiles"] * 32:
+        if not info.get("raw") and len(raw) != info["tiles"] * 32:
             sys.exit(f"error: {name}: {len(raw) // 32} tiles in the ROM, gfx_assets.json says {info['tiles']}")
-        if rows_to_tiles(tiles_to_rows(raw)) != raw or lz77.decompress(lz77.compress(raw))[0] != raw:
+        tiles_ok = info.get("raw") or rows_to_tiles(tiles_to_rows(raw)) == raw
+        if not tiles_ok or lz77.decompress(lz77.compress(raw))[0] != raw:
             sys.exit(f"error: {name}: the round trip changes the graphic")
     print(f"{len(assets())} assets round-trip")
 

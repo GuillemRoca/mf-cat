@@ -90,7 +90,7 @@ the questions still open. The plan is the nine steps of the original brief.
     NO ( SURT )" (mzm-cat's approved wording) from glyphs cut out of the five vanilla prompts;
     the hyphen is built from the crossbar of the red H. Seen in game on the Catalan ROM
     (`build/shots/ca_game_over.png`): the three lines fit and the helmet cursor sits beside
-    "SÍ". The big "GAME OVER" logo is part of the shared background and stays, as in mzm-cat.
+    "SÍ".
   - With the hooks in: `romcheck.py` on the Catalan ROM (319 pointers repointed, 78 772 bytes
     appended, no stray change) and `--selftest` on the self-test ROM pass; `selftest.py` now
     also visits the game over screen and gives 275 identical screenshots; vanilla matches
@@ -288,7 +288,7 @@ repointed):
 | file select (inside `Blob_73cfac_7478a0.bin`, loaded by raw address in `asm/disasm_0x0809e598.s`, e.g. `0x0873DC20`) | SAMUS DATA, ENERGY, TIME, SOUND, EXIT, START / COPY DATA / ERASE DATA | to do; not located precisely |
 | `hud/common.gfx` (uncompressed) | ENERGY | to do |
 | intro (`new_file_intro/*`, 127 assets) | the "Vaccine "Metroid"" panel | to do; asset not identified |
-| `game_over/background.gfx.lz` | the GAME OVER logo | kept in English, as mzm-cat does |
+| `game_over/background.gfx.lz` and `game_over/text.tm.lz` | the GAME OVER logo | done: "FI DE LA / PARTIDA" on two lines (it doesn't fit one at the logo's size), composed by `gfx_game_over_logo.py` from the letters of GAME OVER; the sheet and the tilemap are appended and their one pointer each repointed. Seen in game (`build/shots/ca_game_over.png`) |
 | `ending/credits_character.gfx`, `copyright_text_*.gfx` | credits font, copyright lines | step 8 |
 
 Not looked at yet: `title_intro/*`, `ending_cutscene/*`, `monologue/*`, the demo and link

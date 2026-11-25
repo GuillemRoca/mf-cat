@@ -3,7 +3,27 @@
     "source": "game_over/text_english.gfx.lz",
     "symbol": "sCaGfx_GameOverText",
     "tiles": 192,
-    "pointers": ["0x79e87c"],
+    "pointers": [
+      "0x79e87c"
+    ],
     "note": "sGameOverTextGfxPointers[LANGUAGE_ENGLISH] in src/menus/game_over.c; composed by gfx_game_over.py"
+  },
+  "game_over/background": {
+    "source": "game_over/background.gfx.lz",
+    "symbol": "sCaGfx_GameOverBg",
+    "tiles": 1024,
+    "pointers": [
+      "0x9e0f8"
+    ],
+    "note": "sGameOverBgGfx, loaded once in src/menus/game_over.c; holds the logo tiles (0x340 on); composed by gfx_game_over_logo.py"
+  },
+  "game_over/text_tilemap": {
+    "source": "game_over/text.tm.lz",
+    "symbol": "sCaGfx_GameOverTextTilemap",
+    "raw": true,
+    "pointers": [
+      "0x9e10c"
+    ],
+    "note": "sGameOverTextTilemap, loaded once in src/menus/game_over.c; places the logo; written by gfx_game_over_logo.py"
   }
 }

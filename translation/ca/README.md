@@ -117,6 +117,7 @@ their text; "Needs work" entries are imported and listed.
 
 ```sh
 python3 translation/ca/tools/gfx_game_over.py            # composes gfx/game_over/text_english.png
+python3 translation/ca/tools/gfx_game_over_logo.py       # composes the logo: background.png, text_tilemap.tm
 python3 translation/ca/tools/gfx.py export game_over/text_english out.png   # a vanilla sheet
 python3 translation/ca/tools/gfx.py check                # the PNGs are valid
 python3 translation/ca/tools/gfx.py roundtrip            # the codec reproduces the vanilla assets

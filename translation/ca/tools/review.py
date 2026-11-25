@@ -46,6 +46,10 @@ def graphic_rows():
              "spanish": "¿INTENTAR DE NUEVO ?\nSÍ ( CONTINUAR )\nNO ( SALIR )",
              "catalan": "\n".join(gfx_game_over.CATALAN),
              "status": "translated" if (catext.CA / "gfx/game_over/text_english.png").exists() else "untranslated"}]
+    import gfx_game_over_logo
+    rows.append({"section": "graphics", "id": "game_over_logo", "where": "Game over screen, the logo",
+                 "english": "GAME OVER", "spanish": "GAME OVER", "catalan": "\n".join(gfx_game_over_logo.LINES),
+                 "status": "translated" if (catext.CA / "gfx/game_over/background.png").exists() else "untranslated"})
     heading, names = gencredits.read_credits()
     rows.append({"section": "credits", "id": "translation", "where": "Staff credits, a group of its own before EXECUTIVE PRODUCER",
                  "english": "", "spanish": "", "catalan": "\n".join([heading] + names), "status": "translated"})
